@@ -89,3 +89,15 @@
 - **Affected Files:** All governance files in `fnb-smart-v5/00_KIM_CHI_NAM/`, `01_STATE/`, `02_CONTROL/`, `05_SESSION/`.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / BASELINE FREEZE`. Next Step: Clean Rebuild Master Specification.
+
+### DEC-2026-REF-ARCHITECTURE-V5.1
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức xác nhận `PO_VERIFIED / PROTECTED / LOCKED` cho **F&B SMART V5.1 REFERENCE ARCHITECTURE LIBRARY** (Prompt 061).
+- **Content:**
+  1. Phê duyệt 12 reference repositories (REF-001 đến REF-012) làm tài liệu nghiên cứu kiến trúc tham khảo.
+  2. Xác nhận ranh giới: `REFERENCE ONLY — NOT AUTHORITY — NO CODE COPY — NO REQUIREMENT INHERITANCE`.
+  3. Khẳng định F&B Smart Authority luôn thắng mọi xung đột thiết kế.
+  4. Khóa cứng tài liệu thành Reference Architecture Library Baseline V5.1 trong repository.
+- **Affected Files:** `docs-123/REFERENCE_ARCHITECTURE_LIBRARY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/REFERENCE_ARCHITECTURE_LIBRARY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.

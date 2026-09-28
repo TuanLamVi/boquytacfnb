@@ -24,6 +24,11 @@ PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED
 - **Status:** `PO_VERIFIED / PROTECTED / LOCKED`
 - **Rule:** Đã khóa hành vi và invariant theo hồ sơ lịch sử. Muốn can thiệp bắt buộc phải có lệnh `UNLOCK` chính thức từ PO Tuấn.
 
+### 4. REFERENCE ARCHITECTURE LIBRARY V5.1 (PROMPT 061)
+- **Status:** `PO_VERIFIED / PROTECTED / LOCKED`
+- **Protected Content:** `REFERENCE_ARCHITECTURE_LIBRARY_V5.1.md` (REF-001 to REF-012 mapping, useful ideas, conflicts, and licensing notes).
+- **Rule:** Strict classification (`REFERENCE ONLY — NOT AUTHORITY — NO CODE COPY — NO REQUIREMENT INHERITANCE`). F&B Smart Authority wins. Cannot be modified or used to inherit unapproved requirements without PO Decision.
+
 ---
 
 ## Phân tích Ảnh hưởng Vùng Bảo vệ (LOCKED SCOPE IMPACT)

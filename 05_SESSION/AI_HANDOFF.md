@@ -25,6 +25,7 @@ Theo LAW-017, khi bắt đầu phiên mới, AI bắt buộc phải đọc các 
 
 ```text
 GOVERNANCE BASELINE V5.1 = PO_VERIFIED / BASELINE FREEZE (DEC-2026-GOVERNANCE-BASELINE-V5.1)
+REFERENCE ARCHITECTURE V5.1 = PO_VERIFIED / PROTECTED / LOCKED (DEC-2026-REF-ARCHITECTURE-V5.1)
 OPERATING MODE           = CLEAN_REBUILD MODE ACTIVE
 LEGACY SYSTEM STATUS     = FROZEN / READ-ONLY FORENSIC REFERENCE
 APPLICATION CODE CHANGES = NONE (Legacy code untouched)
@@ -32,7 +33,7 @@ APPLICATION CODE CHANGES = NONE (Legacy code untouched)
 A0, A1, A2-01, A2-02, A3-01, A3-02, A3-03, A3-05, A3-06, GP-01 = PO_VERIFIED / LOCKED (Legacy Frozen)
 GOV-025, GOV-026, GOV-027, GOV-028                             = PO_VERIFIED / PROTECTED / LOCKED
 A6-02 (Legacy POS Payment Fix)                                 = BLOCKED / FIRST FAILURE / LEGACY FROZEN
-CLEAN_REBUILD_V5.1                                             = ACTIVE / IN_PROGRESS
+CLEAN_REBUILD_V5.1                                             = ACTIVE / DESIGN & RESEARCH
 ```
 
 ---
