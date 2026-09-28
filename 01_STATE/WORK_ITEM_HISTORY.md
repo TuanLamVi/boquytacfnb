@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-064 — QUICK SETUP, BUSINESS MODEL & MENU TEMPLATE PRODUCT DISCOVERY (FINAL DRAFT)
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN FINAL DRAFT)`
+- Objective: Hoàn thiện Prompt 063 thành bản final draft cho Quick Setup, khóa số lượng bàn mẫu ở mức chính xác 10 bàn, phân tách rõ ràng giữa Topping (Paid/Quantity) và Product Options (Qualitative/Attributes).
+- Scope: `docs-123/QUICK_SETUP_MENU_TEMPLATE_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/QUICK_SETUP_MENU_TEMPLATE_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery & UX Design Final Draft).
+- Technical Result: PASS — Hoàn thiện đầy đủ các phần A đến H theo Prompt 064.
+- PO Status: `PROPOSED — PO REVIEW REQUIRED`
+- Evidence: Discovery final draft created, archived, committed, and synced to GitHub.
+- Next: PO Review of Prompt 064.
+
 ### WORK ITEM: PROMPT-063 — QUICK SETUP, BUSINESS MODEL & MENU TEMPLATE PRODUCT DISCOVERY
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN ONLY)`

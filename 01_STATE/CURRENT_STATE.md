@@ -23,7 +23,7 @@
 |---|---|---|
 | Governance Baseline V5.1 | `PO_VERIFIED / BASELINE FREEZE` | Bộ luật KIM CHỈ NAM thống nhất cho Rehabilitation & Clean Rebuild (DEC-2026-GOVERNANCE-BASELINE-V5.1) |
 | Reference Architecture V5.1 | `PO_VERIFIED / PROTECTED / LOCKED` | F&B Smart V5.1 Reference Architecture Library REF-001 to REF-012 (DEC-2026-REF-ARCHITECTURE-V5.1) |
-| Quick Setup & Menu Discovery V5.1 | `IN_PROGRESS / PROPOSED` | Prompt 063: Quick Setup, 20 Business Models, Menu Templates, Starter Data |
+| Quick Setup & Menu Discovery V5.1 | `FINAL DRAFT / PROPOSED` | Prompt 064 Final Draft: Quick Setup, 20 Business Models, Menu Templates, Topping vs Product Options split, 10 fixed Starter Tables |
 | A0 Foundation | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
 | A1 Account & Store | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
 | A2-01 Duplicate Join | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
