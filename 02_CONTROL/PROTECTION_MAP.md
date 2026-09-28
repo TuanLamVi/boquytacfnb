@@ -34,6 +34,11 @@ PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED
 - **Protected Content:** `BUSINESS_MODELS_MENU_TEMPLATES_V5.1.md` (20 Business Models, Menu Template Structure, Store Menu independent copy, Topping vs Product Options rules, Representative Models).
 - **Rule:** Locked product-design baseline. No work item may alter the 20 business models, store menu copy mechanism, topping quantity model, or product options pricing rules without valid PO Decision and Unlock.
 
+### 6. TABLE MERGE / TABLE TRANSFER PRODUCT RULES V5.1 (PROMPT 074)
+- **Status:** `PO_VERIFIED / PROTECTED / LOCKED`
+- **Protected Content:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md` (Non-destructive table merge preserving original orders via service group reference, strict table transfer state machine `occupied → cleaning → available`, post-checkout/invoice transfer/merge prohibition, and partial transfer deferred to post-MVP).
+- **Rule:** Locked product-design baseline. No work item may alter table merge/transfer rules without valid PO Decision and Unlock.
+
 ---
 
 ## Phân tích Ảnh hưởng Vùng Bảo vệ (LOCKED SCOPE IMPACT)

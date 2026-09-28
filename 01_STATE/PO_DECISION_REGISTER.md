@@ -112,6 +112,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
 
+### DEC-2026-TM-03, TM-04, TM-05 (PROMPT 074 DECISIONS)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức phê duyệt các quyết định Table Merge & Transfer cho F&B Smart V5.1:
+  1. **DECISION-TM-03 (Table Merge Confirmed):** Ghép bàn bảo toàn Order gốc (Order A và Order B độc lập, quản lý qua service group reference, không xóa order cũ, giữ nguyên lịch sử).
+  2. **DECISION-TM-04 (Post-Checkout Restriction Confirmed):** Cấm Ghép bàn và Chuyển bàn sau khi Order đã bắt đầu Checkout hoặc Invoice đã được post.
+  3. **DECISION-TM-05 (Partial Transfer Deferred to Post-MVP):** Chuyển một phần SaleLine (Partial Transfer) bị hoãn sang Post-MVP; MVP chỉ hỗ trợ chuyển toàn bộ Order / toàn bộ nhóm khách.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
+
 ### DEC-2026-BUSINESS-MODELS-MENU-V5.1
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận `PO_VERIFIED / PROTECTED / LOCKED` cho **PROMPT 066 — 20 BUSINESS MODELS & MENU TEMPLATE STRUCTURE**.
@@ -133,5 +143,15 @@
   2. **DECISION 071-02 (Table Merge + Transfer Confirmed):** Chính thức đưa tính năng Ghép bàn (`Table Merge`) và Chuyển bàn (`Table Transfer`) vào phạm vi V5.1. Nhân viên thực hiện theo quyền được Chủ quán cấp.
   3. **DECISION 071-03 (Permission Effective Immediately Confirmed):** Khi Chủ quán thay đổi quyền Lego của nhân viên, quyền mới có hiệu lực ngay lập tức (`Permission effective immediately`).
 - **Affected Files:** `STAFF_LEGO_PERMISSION_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
+
+### DEC-2026-TM-03, TM-04, TM-05 (PROMPT 074 DECISIONS)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức phê duyệt các quyết định Table Merge & Transfer cho F&B Smart V5.1:
+  1. **DECISION-TM-03 (Table Merge Confirmed):** Ghép bàn bảo toàn Order gốc (Order A và Order B độc lập, quản lý qua service group reference, không xóa order cũ, giữ nguyên lịch sử).
+  2. **DECISION-TM-04 (Post-Checkout Restriction Confirmed):** Cấm Ghép bàn và Chuyển bàn sau khi Order đã bắt đầu Checkout hoặc Invoice đã được post.
+  3. **DECISION-TM-05 (Partial Transfer Deferred to Post-MVP):** Chuyển một phần SaleLine (Partial Transfer) bị hoãn sang Post-MVP; MVP chỉ hỗ trợ chuyển toàn bộ Order / toàn bộ nhóm khách.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
