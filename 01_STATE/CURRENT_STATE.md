@@ -37,7 +37,7 @@
 | GOV-027 LAW-016 Bridge | `PO_VERIFIED` | Governance Rule |
 | GOV-028 LAW-017 Reentry | `PO_VERIFIED` | Governance Rule |
 | A6-02 POS Payment UI (Legacy) | `BLOCKED / FIRST FAILURE / LEGACY FROZEN` | Vá luồng cũ bị dừng vĩnh viễn theo DEC-2026-PO-PAYMENT-V5.1 |
-| CLEAN_REBUILD_V5.1 | `ACTIVE / IN_PROGRESS` | Clean Rebuild Master Specification & Boundary Setup |
+| CLEAN_REBUILD_V5.1 | `ACTIVE / DESIGN & RESEARCH` | Clean Rebuild Master UX/UI Blueprint V5.1 & Reference Architecture Library V5.1 completed (Prompts 060 & 061) |
 
 ---
 

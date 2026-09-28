@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-060 & 061 — F&B SMART V5.1 MASTER UX/UI BLUEPRINT & REFERENCE ARCHITECTURE LIBRARY
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (DESIGN & RESEARCH PHASE)`
+- Objective: Xây dựng Master UX/UI Blueprint V5.1 (Prompt 060) và Reference Architecture Library V5.1 bao gồm 12 reference repos với ranh giới phân loại strict (Prompt 061).
+- Scope: `docs-123/MASTER_UX_UI_BLUEPRINT_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/MASTER_UX_UI_BLUEPRINT_V5.1.md`, `docs-123/REFERENCE_ARCHITECTURE_LIBRARY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/REFERENCE_ARCHITECTURE_LIBRARY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Design & Architecture Research).
+- Technical Result: PASS — Hoàn tất 31 UX modules, user flows, POS & KDS workflows, and reference architecture library with strict F&B Smart Authority rules.
+- PO Status: `PROPOSED / PO DECISION REQUIRED`
+- Evidence: Markdown documentation created, archived, and committed to repository.
+- Next: CLEAN REBUILD MASTER SPECIFICATION.
+
 ### WORK ITEM: AI-START-01 — ROLLBACK & CANCELLED
 - Date: 2026-09-28
 - Objective: Gỡ bỏ hoàn toàn màn hình AI START khỏi ứng dụng F&B SMART theo chỉ đạo của PO.
