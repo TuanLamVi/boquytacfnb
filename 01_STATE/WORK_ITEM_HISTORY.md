@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-085 — CHECKOUT & PAYMENT FINAL CORRECTION
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY FINAL CORRECTION)`
+- Objective: Hoàn thiện Prompt 084 thành bản Final Correction cho Checkout & Payment, làm rõ ranh giới Debt Lite, tích hợp mô hình Lego Permissions thay cho role cứng, bổ sung chi tiết về Promotions/Discounts (stacking, priority, audit trail), và khóa chặt các cross-domain boundaries (KDS independence, online financial settlement, table cleaning sequence).
+- Scope: `docs-123/CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery Final Correction).
+- Technical Result: PASS — Hoàn tất các phần A đến D và các yêu cầu hiệu chỉnh theo Prompt 085.
+- PO Status: `FINAL DRAFT — PO REVIEW REQUIRED`
+- Evidence: Discovery final correction documentation created, archived, committed, and synced to GitHub.
+- Next: PO Review of Prompt 085.
+
 ### WORK ITEM: PROMPT-084 — CHECKOUT & PAYMENT PRODUCT DISCOVERY
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN ONLY)`

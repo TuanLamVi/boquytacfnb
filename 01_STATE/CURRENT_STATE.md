@@ -23,7 +23,7 @@
 |---|---|---|
 | Governance Baseline V5.1 | `PO_VERIFIED / BASELINE FREEZE` | Bộ luật KIM CHỈ NAM thống nhất cho Rehabilitation & Clean Rebuild (DEC-2026-GOVERNANCE-BASELINE-V5.1) |
 | Reference Architecture V5.1 | `PO_VERIFIED / PROTECTED / LOCKED` | F&B Smart V5.1 Reference Architecture Library REF-001 to REF-012 (DEC-2026-REF-ARCHITECTURE-V5.1) |
-| Checkout & Payment V5.1 | `IN_PROGRESS / PROPOSED` | Prompt 084: Checkout UX, Discounts, Invoice lifecycle, Cash, payOS QR, Split payment, Debt Lite, 3-layer PaymentAttempt/Allocation/Settlement, Order/Table closure boundary |
+| Checkout & Payment V5.1 | `FINAL DRAFT / PO REVIEW REQUIRED` | Prompt 085 Final Correction: Debt Lite lifecycle open decisions, Lego permission model integration, Promotions/discounts stacking rules, Cross-domain boundary locks |
 | A0 Foundation | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
 | A1 Account & Store | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
 | A2-01 Duplicate Join | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
