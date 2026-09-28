@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-099 — A7 REPORTS & ANALYTICS FINAL CORRECTION
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN FINAL CORRECTION)`
+- Objective: Hoàn thiện Prompt 098 thành bản Final Correction cho A7 Reports & Analytics (Đơn giản hóa Doanh thu = Tạm tính - Giảm giá, Đã thu ≠ Ghi nợ, Tiền két tiền theo công thức A6 đã khóa, hoãn Excel/PDF và COGS/Profit sang Post-MVP).
+- Scope: `docs-123/REPORTS_ANALYTICS_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/REPORTS_ANALYTICS_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery & UX Design Final Correction).
+- Technical Result: PASS — Hoàn tất các phần A đến H theo Prompt 099.
+- PO Status: `FINAL DRAFT — PO REVIEW REQUIRED`
+- Evidence: Final correction discovery documentation created, archived, committed, and synced to GitHub.
+- Next: PO Review of Prompt 099 Final Draft.
+
 ### WORK ITEM: PROMPT-098 — A7 REPORTS & ANALYTICS PRODUCT DISCOVERY
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN ONLY)`
