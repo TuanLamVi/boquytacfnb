@@ -23,7 +23,7 @@
 |---|---|---|
 | Governance Baseline V5.1 | `PO_VERIFIED / BASELINE FREEZE` | Bộ luật KIM CHỈ NAM thống nhất cho Rehabilitation & Clean Rebuild (DEC-2026-GOVERNANCE-BASELINE-V5.1) |
 | Reference Architecture V5.1 | `PO_VERIFIED / PROTECTED / LOCKED` | F&B Smart V5.1 Reference Architecture Library REF-001 to REF-012 (DEC-2026-REF-ARCHITECTURE-V5.1) |
-| Table Management & Merge/Transfer V5.1 | `PO_VERIFIED / PROTECTED / LOCKED` | Prompt 074: Table Merge & Transfer rules (DEC-2026-TM-03, TM-04, TM-05) |
+| POS Ordering & Dispatch V5.1 | `IN_PROGRESS / PROPOSED` | Prompt 076: Open table flow, POS menu UX, product detail, size, structured toppings (`[-] N [+]`), product options, cart, add order (gọi thêm món), send kitchen, offline outbox |
 | A0 Foundation | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
 | A1 Account & Store | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
 | A2-01 Duplicate Join | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |

@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-076 — ORDER / GỌI MÓN / POS PRODUCT DISCOVERY
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN ONLY)`
+- Objective: Thiết kế toàn diện quy trình gọi món POS (Mở bàn, Tạo order, Menu UX, Product Detail, Size, Topping số lượng `[-] N [+]`, Product Options, Cart, Gọi thêm món, Gửi bếp/KOT, Lịch sử order, Tích hợp merge/transfer, Offline outbox) cho F&B Smart V5.1.
+- Scope: `docs-123/POS_ORDERING_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/POS_ORDERING_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery & UX Design).
+- Technical Result: PASS — Hoàn tất các phần A đến N theo Prompt 076.
+- PO Status: `PROPOSED — PO REVIEW REQUIRED`
+- Evidence: Discovery documentation created, archived, committed, and synced to GitHub.
+- Next: PO Review of Prompt 076.
+
 ### WORK ITEM: PROMPT-074 — TABLE MERGE & TRANSFER PRODUCT RULES (CLOSE-OUT & LOCK)
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCK)`
