@@ -8,6 +8,18 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-096 — A6 SHIFT MANAGEMENT PRODUCT RULES (CLOSE-OUT, PROTECT & LOCK)
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCK)`
+- Objective: PO Tuấn chính thức xác nhận PASS, PO_VERIFIED, PROTECTED, LOCKED cho phân hệ A6 Shift Management & Cash Drawer V5.1 (No fixed cashier, multi-staff collection, collection by table/order, `Còn phải thu ≠ Nợ`, physical cash isolation, optional shift handover, opening cash immutability, close shift blocking rules, table flow wording `Chờ dọn → Staff confirms cleaning → Bàn trống`).
+- Scope: `docs-123/SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, `PO_DECISION_REGISTER.md`.
+- Application Code Changes: `NONE` (100% Governance Close-out).
+- Technical Result: PASS — Hoàn tất đóng task, bảo vệ và khóa cứng baseline A6 Shift Management & Cash Drawer V5.1.
+- PO Decision Reference: `DEC-2026-A6-SHIFT`
+- PO Status: `PO_VERIFIED / PROTECTED / LOCKED`
+- Evidence: Governance and discovery records updated, archived, committed, and synchronized to GitHub.
+- Next: Continue Product Discovery.
+
 ### WORK ITEM: PROMPT-099 — A7 REPORTS & ANALYTICS FINAL CORRECTION
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN FINAL CORRECTION)`
