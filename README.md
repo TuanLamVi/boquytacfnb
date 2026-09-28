@@ -1,21 +1,37 @@
-# BO QUY TAC FNB SMART
+# BỘ QUY TẮC F&B SMART
 
-Repository nguồn chuẩn cho bộ Governance / KIM CHỈ NAM của F&B SMART V5.
+Repository này là nơi lưu **bộ KIM CHỈ NAM và các ghi chép quản trị** để Tuấn, ChatGPT và Coding Agent cùng nhìn vào một nguồn.
 
-## Nguyên tắc nguồn dữ liệu
+## Anh chỉ cần nhớ 4 chỗ
 
-- Repository GitHub là Source of Truth của governance và các record vận hành được kiểm soát.
-- KIM CHỈ NAM / LAW không được tự ý sửa bởi Codex.
-- Các record như CURRENT_STATE, WORK_ITEM_HISTORY, PROTECTION_MAP, REGRESSION_LOG được cập nhật theo quy trình.
-- Mọi thay đổi phải có Git history để có thể truy vết.
-- Trước mỗi Work Item, Codex phải READ-FIRST các tài liệu governance bắt buộc.
-- Sau khi hoàn tất Work Item, Codex phải cập nhật record cần thiết và push lên GitHub.
+1. **KIM_CHI_NAM.md** — luật chính.
+2. **CURRENT_STATE.md** — dự án đang ở đâu.
+3. **WORK_ITEM_HISTORY.md** — đã làm những gì.
+4. **PROTECTION_MAP.md** — phần nào đang được bảo vệ.
 
-## Trạng thái bootstrap
+## Khi bắt đầu phiên mới
 
-Repository vừa được khởi tạo. Bộ tài liệu chuẩn đang được migrate từ gói tài liệu nguồn của PO.
+Đọc:
+`00_KIM_CHI_NAM/AI_READ_FIRST.md`
 
-Xem:
-- `docs/00_MIGRATION/CODEX_MIGRATION_INSTRUCTIONS.md`
+Không lấy chat history hoặc trí nhớ AI làm nguồn chính.
 
-## Không được coi repository này là hoàn chỉnh cho đến khi migration được xác nhận.
+## Khi một Work Item hoàn tất
+
+Cập nhật đúng hồ sơ liên quan → ghi lịch sử Git → đồng bộ GitHub.
+
+Không tạo nhiều nhật ký trùng nhau.
+
+## HTML
+
+Mở:
+`00_KIM_CHI_NAM/KIM_CHI_NAM.html`
+
+HTML là bản đọc dễ nhìn. Markdown mới là nơi lưu nội dung để Git/Codex/AI theo dõi thay đổi.
+
+## Lưu ý
+
+Nhánh migration hiện tại:
+`codex/migrate-kim-chi-nam-20260928`
+
+Chưa merge vào `main` cho đến khi kiểm tra xong.
