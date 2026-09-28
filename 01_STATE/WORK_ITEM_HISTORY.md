@@ -29,14 +29,15 @@ Hồ sơ đó được giữ làm nguồn lịch sử. Các kết quả lịch s
 
 ## Mẫu thêm mục
 
-### WORK ITEM: <ID>
-- Date:
-- Objective:
-- Scope:
-- Technical Result:
-- PO Verification:
-- Evidence:
-- Checkpoint:
-- Protection:
-- Commit:
-- Next:
+### WORK ITEM: AI START SCREEN — F&B SMART V5
+- Date: 2026-09-28
+- Objective: Tạo màn hình tiện ích nội bộ AI Start Commands và tích hợp route `/ai-start`
+- Scope: `lib/features/ai_start/ai_start_commands_page.dart` và `lib/main.dart`
+- Technical Result: Màn hình utility hiển thị 2 nút copy prompt cho ChatGPT và Codex/Gemini bằng Flutter Clipboard API (`Clipboard.setData`), có SnackBar thông báo. Chạy `flutter analyze` thành công.
+- PO Verification: PENDING (READY_FOR_PO_REVIEW)
+- Evidence: `flutter analyze` PASSED, UI tiện ích độc lập không đụng chạm POS/Firestore/Business logic.
+- Checkpoint: AI-START-01
+- Protection: None (Chưa PO_VERIFIED, không đụng tới vùng LOCKED)
+- Commit: Uncommitted (DIRTY worktree)
+- Next: PO Verification
+

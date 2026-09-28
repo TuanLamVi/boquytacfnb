@@ -41,6 +41,7 @@
 | A3-05 | `PO_VERIFIED / PROTECTED / LOCKED` | Shift foundation |
 | A3-06 | `PO_VERIFIED / PROTECTED / LOCKED` | Shift Management UI |
 | A6-02 | `READY_FOR_PO_VERIFICATION` | Canonical POS Payment UI Integration & Test Surface |
+| AI START SCREEN | `READY_FOR_PO_REVIEW` | Màn hình tiện ích nội bộ AI Start Commands |
 
 ## A2-02
 
