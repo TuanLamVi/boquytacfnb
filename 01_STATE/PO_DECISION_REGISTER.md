@@ -102,6 +102,13 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
 ### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
@@ -113,6 +120,13 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
 ### DEC-2026-091 (PROMPT 091 PARTIAL COLLECTION & DEBT BOUNDARY)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Partial Collection & Debt Boundary** (Prompt 091):
@@ -121,6 +135,13 @@
   3. **Multi-Staff & Multi-Tender:** Hỗ trợ thu tiền nhiều lần, kết hợp nhiều hình thức (Cash + QR, Cash + Cash, v.v.), nhiều nhân viên cùng thu tiền (lưu vết operator ID, timestamp, tender method).
   4. **Tách bạch két tiền A6 Shift:** Chỉ phần tiền mặt thực tế thu mới đi vào két tiền mặt của ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
 - **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -158,6 +179,13 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
 ### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
@@ -169,6 +197,13 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
 ### DEC-2026-091 (PROMPT 091 PARTIAL COLLECTION & DEBT BOUNDARY)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Partial Collection & Debt Boundary** (Prompt 091):
@@ -177,6 +212,13 @@
   3. **Multi-Staff & Multi-Tender:** Hỗ trợ thu tiền nhiều lần, kết hợp nhiều hình thức (Cash + QR, Cash + Cash, v.v.), nhiều nhân viên cùng thu tiền (lưu vết operator ID, timestamp, tender method).
   4. **Tách bạch két tiền A6 Shift:** Chỉ phần tiền mặt thực tế thu mới đi vào két tiền mặt của ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
 - **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -214,6 +256,13 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
 ### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
@@ -225,6 +274,13 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
 ### DEC-2026-091 (PROMPT 091 PARTIAL COLLECTION & DEBT BOUNDARY)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Partial Collection & Debt Boundary** (Prompt 091):
@@ -233,6 +289,13 @@
   3. **Multi-Staff & Multi-Tender:** Hỗ trợ thu tiền nhiều lần, kết hợp nhiều hình thức (Cash + QR, Cash + Cash, v.v.), nhiều nhân viên cùng thu tiền (lưu vết operator ID, timestamp, tender method).
   4. **Tách bạch két tiền A6 Shift:** Chỉ phần tiền mặt thực tế thu mới đi vào két tiền mặt của ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
 - **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -250,6 +313,13 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
 ### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
@@ -261,6 +331,13 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
 ### DEC-2026-091 (PROMPT 091 PARTIAL COLLECTION & DEBT BOUNDARY)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Partial Collection & Debt Boundary** (Prompt 091):
@@ -269,6 +346,13 @@
   3. **Multi-Staff & Multi-Tender:** Hỗ trợ thu tiền nhiều lần, kết hợp nhiều hình thức (Cash + QR, Cash + Cash, v.v.), nhiều nhân viên cùng thu tiền (lưu vết operator ID, timestamp, tender method).
   4. **Tách bạch két tiền A6 Shift:** Chỉ phần tiền mặt thực tế thu mới đi vào két tiền mặt của ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
 - **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -306,6 +390,13 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
 ### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
@@ -317,6 +408,13 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
 ### DEC-2026-091 (PROMPT 091 PARTIAL COLLECTION & DEBT BOUNDARY)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Partial Collection & Debt Boundary** (Prompt 091):
@@ -325,6 +423,13 @@
   3. **Multi-Staff & Multi-Tender:** Hỗ trợ thu tiền nhiều lần, kết hợp nhiều hình thức (Cash + QR, Cash + Cash, v.v.), nhiều nhân viên cùng thu tiền (lưu vết operator ID, timestamp, tender method).
   4. **Tách bạch két tiền A6 Shift:** Chỉ phần tiền mặt thực tế thu mới đi vào két tiền mặt của ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
 - **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -362,6 +467,13 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
 ### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
@@ -373,6 +485,13 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
 ### DEC-2026-091 (PROMPT 091 PARTIAL COLLECTION & DEBT BOUNDARY)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Partial Collection & Debt Boundary** (Prompt 091):
@@ -381,5 +500,12 @@
   3. **Multi-Staff & Multi-Tender:** Hỗ trợ thu tiền nhiều lần, kết hợp nhiều hình thức (Cash + QR, Cash + Cash, v.v.), nhiều nhân viên cùng thu tiền (lưu vết operator ID, timestamp, tender method).
   4. **Tách bạch két tiền A6 Shift:** Chỉ phần tiền mặt thực tế thu mới đi vào két tiền mặt của ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
 - **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.

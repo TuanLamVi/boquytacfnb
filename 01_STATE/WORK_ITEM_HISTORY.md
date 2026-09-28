@@ -8,6 +8,18 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-090-UPDATE — TABLE FLOW ENTRY BRANCHES CLARIFICATION
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCK)`
+- Objective: PO Tuấn bổ sung làm rõ 2 hướng từ BÀN TRỐNG (Đặt trước hoặc Khách vào trực tiếp), xác nhận `ĐẶT TRƯỚC` là tính năng chọn thêm chứ không phải bước bắt buộc, và khóa cứng toàn bộ tài liệu Table Management & Payment Operating Model.
+- Scope: `docs-123/TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `PO_DECISION_REGISTER.md`.
+- Application Code Changes: `NONE` (100% Governance Close-out).
+- Technical Result: PASS — Hoàn tất làm rõ Table Flow 2 nhánh và đóng task.
+- PO Decision Reference: `DEC-2026-090-FLOW-UPDATE`
+- PO Status: `PO_VERIFIED / PROTECTED / LOCKED`
+- Evidence: Governance and discovery records updated, archived, committed, and synced to GitHub.
+- Next: READ-FIRST REQUIRED.
+
 ### WORK ITEM: PROMPT-092 — CLOSE-OUT & LOCK TABLE + CHECKOUT PAYMENT OPERATING MODEL
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCK)`
