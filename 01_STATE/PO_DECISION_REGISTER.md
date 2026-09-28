@@ -102,6 +102,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-071-01, 071-02, 071-03 (PROMPT 071 DECISIONS)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 03 quyết định quan trọng cho F&B Smart V5.1:
+  1. **DECISION 071-01 (Multi-Store Staff Confirmed):** Một User/nhân viên được phép làm việc tại nhiều Store (nhiều store trong cùng Tenant hoặc store của Tenant khác qua các Membership riêng biệt). Mỗi Store có Membership và Permission độc lập.
+  2. **DECISION 071-02 (Table Merge + Transfer Confirmed):** Chính thức đưa tính năng Ghép bàn (`Table Merge`) và Chuyển bàn (`Table Transfer`) vào phạm vi V5.1. Nhân viên thực hiện theo quyền được Chủ quán cấp.
+  3. **DECISION 071-03 (Permission Effective Immediately Confirmed):** Khi Chủ quán thay đổi quyền Lego của nhân viên, quyền mới có hiệu lực ngay lập tức (`Permission effective immediately`).
+- **Affected Files:** `STAFF_LEGO_PERMISSION_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
+
 ### DEC-2026-BUSINESS-MODELS-MENU-V5.1
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận `PO_VERIFIED / PROTECTED / LOCKED` cho **PROMPT 066 — 20 BUSINESS MODELS & MENU TEMPLATE STRUCTURE**.
@@ -115,3 +125,13 @@
 - **Affected Files:** `docs-123/BUSINESS_MODELS_MENU_TEMPLATES_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/BUSINESS_MODELS_MENU_TEMPLATES_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-071-01, 071-02, 071-03 (PROMPT 071 DECISIONS)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt 03 quyết định quan trọng cho F&B Smart V5.1:
+  1. **DECISION 071-01 (Multi-Store Staff Confirmed):** Một User/nhân viên được phép làm việc tại nhiều Store (nhiều store trong cùng Tenant hoặc store của Tenant khác qua các Membership riêng biệt). Mỗi Store có Membership và Permission độc lập.
+  2. **DECISION 071-02 (Table Merge + Transfer Confirmed):** Chính thức đưa tính năng Ghép bàn (`Table Merge`) và Chuyển bàn (`Table Transfer`) vào phạm vi V5.1. Nhân viên thực hiện theo quyền được Chủ quán cấp.
+  3. **DECISION 071-03 (Permission Effective Immediately Confirmed):** Khi Chủ quán thay đổi quyền Lego của nhân viên, quyền mới có hiệu lực ngay lập tức (`Permission effective immediately`).
+- **Affected Files:** `STAFF_LEGO_PERMISSION_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.

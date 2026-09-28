@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-071 — PO DECISIONS CONFIRMATION (MULTI-STORE STAFF, TABLE MERGE/TRANSFER, PERMISSION EFFECTIVE TIME)
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PO DECISION & PRODUCT DISCOVERY CONFIRMATION)`
+- Objective: PO Tuấn chính thức chốt 3 quyết định quan trọng (DECISION 071-01 Multi-Store Staff, DECISION 071-02 Table Merge & Transfer, DECISION 071-03 Permission Effective Immediately) và cập nhật hồ sơ sản phẩm, đăng ký quyết định PO.
+- Scope: `docs-123/STAFF_LEGO_PERMISSION_DISCOVERY_V5.1.md`, `docs-123/TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `PO_DECISION_REGISTER.md`.
+- Application Code Changes: `NONE` (100% PO Decision & Governance Record Update).
+- Technical Result: PASS — Hoàn tất ghi nhận 3 quyết định PO và cập nhật tài liệu discovery.
+- PO Status: `PO_CONFIRMED`
+- Evidence: Governance and discovery records updated, archived, committed, and synced to GitHub.
+- Next: Continue Product Discovery.
+
 ### WORK ITEM: PROMPT-070 — STAFF MANAGEMENT + LEGO PERMISSION MODEL PRODUCT DISCOVERY (FINAL DRAFT)
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN FINAL DRAFT)`
