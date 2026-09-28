@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-072 — TABLE MANAGEMENT + MERGE + TRANSFER PRODUCT DISCOVERY
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN ONLY)`
+- Objective: Thiết kế đầy đủ nghiệp vụ quản lý bàn (Khu vực, Bàn, Table Map UX, Ghép bàn, Chuyển bàn, Table + Order, Table + Checkout, Staff permissions) cho F&B Smart V5.1 tuân thủ State Machine (`available` → `occupied` → `cleaning` → `available`).
+- Scope: `docs-123/TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/TABLE_MANAGEMENT_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery & UX Design).
+- Technical Result: PASS — Hoàn tất các phần A đến J theo Prompt 072.
+- PO Status: `PROPOSED — PO REVIEW REQUIRED`
+- Evidence: Discovery documentation created, archived, committed, and synced to GitHub.
+- Next: PO Review of Prompt 072.
+
 ### WORK ITEM: PROMPT-071 — PO DECISIONS CONFIRMATION (MULTI-STORE STAFF, TABLE MERGE/TRANSFER, PERMISSION EFFECTIVE TIME)
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PO DECISION & PRODUCT DISCOVERY CONFIRMATION)`
