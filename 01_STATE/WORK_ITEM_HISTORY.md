@@ -54,4 +54,12 @@ Hồ sơ đó được giữ làm nguồn lịch sử. Các kết quả lịch s
 - Protection: NONE (Chưa PO_VERIFIED, duy trì bảo vệ A3-01, A3-02, A3-03, A3-05, A3-06, GP-01)
 - Next: PO Verification A6-02 trên Samsung Note 8 và Samsung M51.
 
+### WORK ITEM: PAYMENT-V5.1 — LIMITED A3-02 UNLOCK & CONVERGENCE
+- Date: 2026-09-28
+- Objective: Thực hiện PO Decision DEC-2026-PO-PAYMENT-V5.1 và DEC-2026-A3-02-UNLOCK: Mở khóa có phạm vi giới hạn cho A3-02 để chuẩn hóa canonical Order & Order Lines integration cho Checkout/Payment, hội tụ Flow A và Flow B vào cùng canonical payment pipeline.
+- Scope: `packages/core_saas/lib/data/repos/order_repository.dart`, `packages/core_saas/lib/models/order_model.dart`, `packages/feature_fnb_pos/lib/controllers/checkout/`.
+- Protection Status: A3-02 UNLOCKED (LIMITED SCOPE FOR PAYMENT V5.1). Sẽ relock sau khi test PASS và được PO xác nhận.
+- Next: Implement Payment V5.1 canonical pipeline and converge Flow A & Flow B.
+
+
 
