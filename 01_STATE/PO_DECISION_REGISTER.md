@@ -112,12 +112,17 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
 
-### DEC-2026-POS-03, POS-04 (PROMPT 078 POS DECISIONS)
+### DEC-2026-KDS-081 (PROMPT 081 KDS OPERATIONS)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho các quyết định POS Ordering cho F&B Smart V5.1 (Prompt 078):
-  1. **DECISION-POS-03 (Cart Line Grouping Confirmed):** Cho phép gộp Order Lines khi các thuộc tính chính trùng khớp hoàn toàn (Product, Size, Topping, Topping quantities, Product Options, Unit Price). Khác biệt bất kỳ thuộc tính nào thì giữ line riêng.
-  2. **DECISION-POS-04 (Offline Boundary Confirmed):** Chỉ các thao tác được Offline Contract/Governance xác định là `Offline-Eligible` mới được thực hiện offline và đưa vào Local Outbox. Thanh toán và nghiệp vụ tài chính bắt buộc online.
-- **Affected Files:** `POS_ORDERING_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **KDS & Kitchen Operations Product Discovery** (Prompt 081):
+  1. **KDS State Flow:** `queued → acknowledged → preparing → ready → served`.
+  2. **Ready / Served Independence:** `Ready ≠ Payment Gate` and `Served ≠ Payment Gate`.
+  3. **Payment Independence:** Payment workflow is fully independent of KDS states.
+  4. **Table Cleaning Boundary:** Table transitions strictly `OCCUPIED → CLEANING → AVAILABLE` upon payment/order close; KDS does not directly control table states.
+  5. **Reservation Boundary:** Reservation is managed via Table Management / Booking, not a KDS state.
+  6. **Inventory & Hardware:** Inventory deduction is deferred; KDS printer formatting/hardware details are deferred.
+  7. **Multi-Round Dispatches & Idempotency:** Distinct rounds (`Round 1`, `Round 2`, `Round 3`) with client-side UUIDs for idempotency.
+- **Affected Files:** `KDS_KITCHEN_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -131,12 +136,17 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
 
-### DEC-2026-POS-03, POS-04 (PROMPT 078 POS DECISIONS)
+### DEC-2026-KDS-081 (PROMPT 081 KDS OPERATIONS)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho các quyết định POS Ordering cho F&B Smart V5.1 (Prompt 078):
-  1. **DECISION-POS-03 (Cart Line Grouping Confirmed):** Cho phép gộp Order Lines khi các thuộc tính chính trùng khớp hoàn toàn (Product, Size, Topping, Topping quantities, Product Options, Unit Price). Khác biệt bất kỳ thuộc tính nào thì giữ line riêng.
-  2. **DECISION-POS-04 (Offline Boundary Confirmed):** Chỉ các thao tác được Offline Contract/Governance xác định là `Offline-Eligible` mới được thực hiện offline và đưa vào Local Outbox. Thanh toán và nghiệp vụ tài chính bắt buộc online.
-- **Affected Files:** `POS_ORDERING_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **KDS & Kitchen Operations Product Discovery** (Prompt 081):
+  1. **KDS State Flow:** `queued → acknowledged → preparing → ready → served`.
+  2. **Ready / Served Independence:** `Ready ≠ Payment Gate` and `Served ≠ Payment Gate`.
+  3. **Payment Independence:** Payment workflow is fully independent of KDS states.
+  4. **Table Cleaning Boundary:** Table transitions strictly `OCCUPIED → CLEANING → AVAILABLE` upon payment/order close; KDS does not directly control table states.
+  5. **Reservation Boundary:** Reservation is managed via Table Management / Booking, not a KDS state.
+  6. **Inventory & Hardware:** Inventory deduction is deferred; KDS printer formatting/hardware details are deferred.
+  7. **Multi-Round Dispatches & Idempotency:** Distinct rounds (`Round 1`, `Round 2`, `Round 3`) with client-side UUIDs for idempotency.
+- **Affected Files:** `KDS_KITCHEN_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -164,12 +174,17 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
 
-### DEC-2026-POS-03, POS-04 (PROMPT 078 POS DECISIONS)
+### DEC-2026-KDS-081 (PROMPT 081 KDS OPERATIONS)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho các quyết định POS Ordering cho F&B Smart V5.1 (Prompt 078):
-  1. **DECISION-POS-03 (Cart Line Grouping Confirmed):** Cho phép gộp Order Lines khi các thuộc tính chính trùng khớp hoàn toàn (Product, Size, Topping, Topping quantities, Product Options, Unit Price). Khác biệt bất kỳ thuộc tính nào thì giữ line riêng.
-  2. **DECISION-POS-04 (Offline Boundary Confirmed):** Chỉ các thao tác được Offline Contract/Governance xác định là `Offline-Eligible` mới được thực hiện offline và đưa vào Local Outbox. Thanh toán và nghiệp vụ tài chính bắt buộc online.
-- **Affected Files:** `POS_ORDERING_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **KDS & Kitchen Operations Product Discovery** (Prompt 081):
+  1. **KDS State Flow:** `queued → acknowledged → preparing → ready → served`.
+  2. **Ready / Served Independence:** `Ready ≠ Payment Gate` and `Served ≠ Payment Gate`.
+  3. **Payment Independence:** Payment workflow is fully independent of KDS states.
+  4. **Table Cleaning Boundary:** Table transitions strictly `OCCUPIED → CLEANING → AVAILABLE` upon payment/order close; KDS does not directly control table states.
+  5. **Reservation Boundary:** Reservation is managed via Table Management / Booking, not a KDS state.
+  6. **Inventory & Hardware:** Inventory deduction is deferred; KDS printer formatting/hardware details are deferred.
+  7. **Multi-Round Dispatches & Idempotency:** Distinct rounds (`Round 1`, `Round 2`, `Round 3`) with client-side UUIDs for idempotency.
+- **Affected Files:** `KDS_KITCHEN_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -183,11 +198,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
 
-### DEC-2026-POS-03, POS-04 (PROMPT 078 POS DECISIONS)
+### DEC-2026-KDS-081 (PROMPT 081 KDS OPERATIONS)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho các quyết định POS Ordering cho F&B Smart V5.1 (Prompt 078):
-  1. **DECISION-POS-03 (Cart Line Grouping Confirmed):** Cho phép gộp Order Lines khi các thuộc tính chính trùng khớp hoàn toàn (Product, Size, Topping, Topping quantities, Product Options, Unit Price). Khác biệt bất kỳ thuộc tính nào thì giữ line riêng.
-  2. **DECISION-POS-04 (Offline Boundary Confirmed):** Chỉ các thao tác được Offline Contract/Governance xác định là `Offline-Eligible` mới được thực hiện offline và đưa vào Local Outbox. Thanh toán và nghiệp vụ tài chính bắt buộc online.
-- **Affected Files:** `POS_ORDERING_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **KDS & Kitchen Operations Product Discovery** (Prompt 081):
+  1. **KDS State Flow:** `queued → acknowledged → preparing → ready → served`.
+  2. **Ready / Served Independence:** `Ready ≠ Payment Gate` and `Served ≠ Payment Gate`.
+  3. **Payment Independence:** Payment workflow is fully independent of KDS states.
+  4. **Table Cleaning Boundary:** Table transitions strictly `OCCUPIED → CLEANING → AVAILABLE` upon payment/order close; KDS does not directly control table states.
+  5. **Reservation Boundary:** Reservation is managed via Table Management / Booking, not a KDS state.
+  6. **Inventory & Hardware:** Inventory deduction is deferred; KDS printer formatting/hardware details are deferred.
+  7. **Multi-Round Dispatches & Idempotency:** Distinct rounds (`Round 1`, `Round 2`, `Round 3`) with client-side UUIDs for idempotency.
+- **Affected Files:** `KDS_KITCHEN_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
