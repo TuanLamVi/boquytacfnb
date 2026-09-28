@@ -1,32 +1,36 @@
 # SYNC RULE
 
-## Một nơi làm luật
+## Luồng hai chiều
 
-**GitHub `TuanLamVi/boquytacfnb` là nơi giữ bộ KIM CHỈ NAM chuẩn.**
+### GitHub → máy
 
-Bản copy trong Android Studio chỉ phục vụ cho AI đọc trong lúc lập trình.
+```
+GitHub boquytacfnb
+→ SYNC_GOVERNANCE_FROM_GITHUB.ps1
+→ fnb-smart-v5
+→ Codex/Gemini đọc
+```
 
-## Quy tắc cập nhật
+### Máy → GitHub
 
-### Thay đổi LAW / KIM CHỈ NAM
+```
+Codex/Gemini
+→ cập nhật fnb-smart-v5
+→ SYNC_LOCAL_RECORDS_TO_GITHUB.ps1
+→ GitHub boquytacfnb
+→ ChatGPT đọc được
+```
 
-1. Cập nhật bộ chuẩn trên GitHub.
-2. Đồng bộ lại vào `docs/boquytacfnb/`.
-3. Kiểm tra `AGENTS.md`.
-4. Cho Codex/Gemini đọc lại `AI_READ_FIRST.md`.
+## Cái gì được đồng bộ?
 
-### Thay đổi trạng thái dự án
+- 00_KIM_CHI_NAM
+- 01_STATE
+- 02_CONTROL
+- 03_EVIDENCE
+- 05_SESSION
 
-Cập nhật các file trạng thái đúng nơi:
-- `CURRENT_STATE.md`
-- `WORK_ITEM_HISTORY.md`
-- `PO_DECISION_REGISTER.md`
-- `CHECKPOINTS.md`
-- `PROTECTION_MAP.md`
-- `REGRESSION_LOG.md`
-- `TEST_EVIDENCE.md`
-- `AI_HANDOFF.md`
+Không đồng bộ mã ứng dụng.
 
-## Mục tiêu
+## Đặc biệt
 
-Không để cùng một thông tin bị sửa ở nhiều chỗ một cách tùy ý.
+Thay đổi LAW/KIM CHỈ NAM không được tự động push bằng sync thường.
