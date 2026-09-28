@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-104 — A8 CUSTOMER PROFILE & LOYALTY FINAL CORRECTION
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN FINAL CORRECTION)`
+- Objective: Hoàn thiện Prompt 103 thành bản Final Correction cho A8 Customer Profile & Loyalty (Tách biệt SĐT khách làm key nhận diện khỏi đăng nhập OTP, chuẩn hóa toàn bộ Customer Profile, Debt Lite và Loyalty foundation thành scoped per Store, tùy chọn gắn khách hàng cho order).
+- Scope: `docs-123/CUSTOMER_LOYALTY_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/CUSTOMER_LOYALTY_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery & UX Design Final Correction).
+- Technical Result: PASS — Hoàn tất các phần A đến F theo Prompt 104.
+- PO Status: `READY FOR PO_VERIFIED`
+- Evidence: Final correction discovery documentation created, archived, committed, and synced to GitHub.
+- Next: PO_VERIFIED → PROTECTED → LOCKED.
+
 ### WORK ITEM: PROMPT-103 — A8 CUSTOMER PROFILE & LOYALTY PRODUCT DISCOVERY
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN ONLY)`
