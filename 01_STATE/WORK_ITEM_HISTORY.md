@@ -49,7 +49,7 @@ Hồ sơ đó được giữ làm nguồn lịch sử. Các kết quả lịch s
   - Fresh Artifact (2026-09-28 13:39:37): SHA256 `AB42AFBFD9BEB239DE71E5207DBF4742E289FD09CF0CD67DD8C37C139D5AA6C7` | Size: 216,954,169 bytes | Package: `com.tuan.fnbsmart` | Version: 1.4.0 (13)
 - Device Verification:
   - Samsung Galaxy Note 8 (`SM-N950F`): Streamed Install SUCCESS | `versionName=1.4.0`, `versionCode=13`.
-  - Samsung Galaxy M51: Chờ kết nối thiết bị để cài đặt.
+  - Samsung Galaxy M51 (`SM-M515F`): Streamed Install SUCCESS | `versionName=1.4.0`, `versionCode=13`.
 - PO Verification: PENDING (READY_FOR_PO_VERIFICATION)
 - Protection: NONE (Chưa PO_VERIFIED, duy trì bảo vệ A3-01, A3-02, A3-03, A3-05, A3-06, GP-01)
 - Next: PO Verification A6-02 trên Samsung Note 8 và Samsung M51.
