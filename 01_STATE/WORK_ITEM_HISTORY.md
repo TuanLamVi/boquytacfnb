@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-086 — CHECKOUT & PAYMENT FINAL PO DECISION LOCK
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY FINAL CONFIRMED & DOCUMENTATION UPDATE)`
+- Objective: Cập nhật tài liệu Checkout & Payment theo các quyết định nghiệp vụ chính thức của PO Tuấn (Prompt 086): Thanh toán độc lập với KDS (Ready/Served không phải payment gate), Ghi nợ hợp lệ đóng order và chuyển bàn qua cleaning (`Ghi nợ ≠ Đã nhận tiền`), Table cleaning sequence (`Occupied → Cleaning → Available`), Simple Promotions/Discounts, và Post-invoice immutable history.
+- Scope: `docs-123/CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery & Governance Update).
+- Technical Result: PASS — Hoàn tất cập nhật toàn bộ tài liệu theo các quyết định PO chốt.
+- PO Status: `READY FOR PO_VERIFIED`
+- Evidence: Discovery documentation finalized, archived, committed, and synced to GitHub.
+- Next: PO_VERIFIED → PROTECTED → LOCKED.
+
 ### WORK ITEM: PROMPT-085 — CHECKOUT & PAYMENT FINAL CORRECTION
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY FINAL CORRECTION)`
