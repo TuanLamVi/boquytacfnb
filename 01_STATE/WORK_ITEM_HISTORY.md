@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-063 — QUICK SETUP, BUSINESS MODEL & MENU TEMPLATE PRODUCT DISCOVERY
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN ONLY)`
+- Objective: Thiết kế trải nghiệm Quick Setup, 20 mô hình kinh doanh, Menu Templates, 15 món mẫu/mô hình, cấu trúc Topping (`[-] N [+]`), Starter Area + 10 tables, và Ready-to-Sell rules cho F&B Smart V5.1.
+- Scope: `docs-123/QUICK_SETUP_MENU_TEMPLATE_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/QUICK_SETUP_MENU_TEMPLATE_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery & UX Design).
+- Technical Result: PASS — Hoàn tất đặc tả Quick Setup, 20 business models, starter data cloning, và topping quantity UX.
+- PO Status: `PROPOSED — PO REVIEW REQUIRED`
+- Evidence: Discovery documentation created, archived, and committed to repository.
+- Next: PO Review of Quick Setup & Menu Template Product Discovery.
+
 ### WORK ITEM: PROMPT-060 & 061 — F&B SMART V5.1 MASTER UX/UI BLUEPRINT & REFERENCE ARCHITECTURE LIBRARY
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (DESIGN & RESEARCH PHASE)`
