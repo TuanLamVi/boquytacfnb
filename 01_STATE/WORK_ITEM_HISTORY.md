@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-110 — GOVERNANCE CHANGE PROPOSAL & IMPACT REVIEW
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (GOVERNANCE CHANGE PROPOSAL)`
+- Objective: Thực hiện Governance Change Proposal và Impact Review khắc phục vấn đề Work Item Identity, Prompt ID vs Work Item ID separation, closure integrity, và enforcement của bước Regression Check.
+- Scope: `docs-123/GOVERNANCE_CHANGE_PROPOSAL_PROMPT_110.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/GOVERNANCE_CHANGE_PROPOSAL_PROMPT_110.md`.
+- Application Code Changes: `NONE` (100% Governance Change Proposal & Impact Review).
+- Technical Result: PASS — Hoàn tất lập đề xuất thay đổi governance và đánh giá tác động.
+- PO Status: `READY FOR PO APPROVAL`
+- Evidence: Governance change proposal created, archived, committed, and synced to GitHub.
+- Next: PO Approval of Governance Change Proposal.
+
 ### WORK ITEM: PROMPT-101 — A6 SHIFT MANAGEMENT PO_VERIFIED & CLOSE-OUT (PROTECT & LOCK)
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCK)`
@@ -74,6 +85,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 - PO Status: `PROPOSED — PO REVIEW REQUIRED`
 - Evidence: Discovery documentation created, archived, committed, and synced to GitHub.
 - Next: PO Review of Prompt 103 A8 Customer Profile & Loyalty Discovery.
+
+### WORK ITEM: PROMPT-110 — GOVERNANCE CHANGE PROPOSAL & IMPACT REVIEW
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (GOVERNANCE CHANGE PROPOSAL)`
+- Objective: Thực hiện Governance Change Proposal và Impact Review khắc phục vấn đề Work Item Identity, Prompt ID vs Work Item ID separation, closure integrity, và enforcement của bước Regression Check.
+- Scope: `docs-123/GOVERNANCE_CHANGE_PROPOSAL_PROMPT_110.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/GOVERNANCE_CHANGE_PROPOSAL_PROMPT_110.md`.
+- Application Code Changes: `NONE` (100% Governance Change Proposal & Impact Review).
+- Technical Result: PASS — Hoàn tất lập đề xuất thay đổi governance và đánh giá tác động.
+- PO Status: `READY FOR PO APPROVAL`
+- Evidence: Governance change proposal created, archived, committed, and synced to GitHub.
+- Next: PO Approval of Governance Change Proposal.
 
 ### WORK ITEM: PROMPT-101 — A6 SHIFT MANAGEMENT PO_VERIFIED & CLOSE-OUT (PROTECT & LOCK)
 - Date: 2026-09-28
