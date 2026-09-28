@@ -1,66 +1,42 @@
-# Gói kết nối KIM CHỈ NAM với Android Studio
+# KẾT NỐI F&B SMART VỚI KIM CHỈ NAM
 
-## Dùng để làm gì?
-
-Gói này giúp **Codex và Gemini trong Android Studio** nhìn thấy cùng một bộ quy tắc.
-
-## Cài vào project F&B SMART
-
-Chép:
-
-`INTEGRATION/AGENTS.md`
-
-vào **thư mục ngoài cùng của project F&B SMART** và đổi tên thành:
-
-`AGENTS.md`
-
-Sau đó chép thư mục:
-
-`00_KIM_CHI_NAM/`
-`01_STATE/`
-`02_CONTROL/`
-`03_EVIDENCE/`
-`05_SESSION/`
-
-vào:
-
-`docs/boquytacfnb/`
-
-## Sau khi chép
-
-Cấu trúc phải giống:
+## Cấu trúc thật
 
 ```
-F&B SMART V5/
+fnb_smart\
 ├── AGENTS.md
-├── android/
-├── lib/
-├── docs/
-│   └── boquytacfnb/
-│       ├── 00_KIM_CHI_NAM/
-│       ├── 01_STATE/
-│       ├── 02_CONTROL/
-│       ├── 03_EVIDENCE/
-│       └── 05_SESSION/
-└── ...
+├── android\
+├── lib\
+├── pubspec.yaml
+└── fnb-smart-v5\
+    ├── 00_KIM_CHI_NAM\
+    ├── 01_STATE\
+    ├── 02_CONTROL\
+    ├── 03_EVIDENCE\
+    ├── 05_SESSION\
+    └── INTEGRATION\
 ```
 
-## Lưu ý
+## Ý nghĩa
 
-- `AGENTS.md` là bảng chỉ đường.
-- Markdown trong `docs/boquytacfnb/` là nội dung để AI đọc.
-- HTML chỉ để Tuấn đọc dễ hơn.
-- Bộ chuẩn gốc vẫn nằm ở repository `TuanLamVi/boquytacfnb`.
+- `fnb_smart`: ứng dụng.
+- `fnb-smart-v5`: bộ luật và hồ sơ quản trị.
+- GitHub `TuanLamVi/boquytacfnb`: nơi giữ bản chuẩn.
 
-## Khi bộ quy tắc thay đổi
+## Sau Work Item
 
-Không sửa riêng bản trong Android Studio rồi quên GitHub.
-
-Quy trình:
+Codex/Gemini cập nhật các file trong `fnb-smart-v5`, sau đó chạy:
 
 ```
-GitHub
-→ cập nhật bộ chuẩn
-→ đồng bộ xuống Android Studio
-→ Codex/Gemini đọc bản mới
+SYNC_LOCAL_RECORDS_TO_GITHUB.ps1
 ```
+
+## Không đưa code ứng dụng lên repository governance
+
+Script chỉ gửi các thư mục governance được chỉ định.
+
+## Quy tắc
+
+GitHub = bản chuẩn.
+Máy tính = bản đang dùng.
+Git history = lịch sử thay đổi.
