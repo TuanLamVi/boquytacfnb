@@ -109,16 +109,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
-### DEC-2026-090, 091, 090-FLOW-UPDATE (PROMPTS 090/091/092 TABLE & PAYMENT OPERATING MODEL)
+### DEC-2026-A6-SHIFT (PROMPT 089/094/095 SHIFT MANAGEMENT & CASH DRAWER)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ mô hình vận hành **Table Management & Payment Operating Model**:
-  1. **Table Flow 2 Branches:** BÀN TRỐNG có 2 hướng vào: (1) ĐẶT TRƯỚC → Vào bàn, hoặc (2) KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng chọn thêm, KHÔNG bắt buộc.
-  2. **Table Lifecycle:** `VÀO BÀN → GỌI MÓN / PHỤC VỤ → THANH TOÁN → CHỜ DỌN → DỌN XONG → BÀN TRỐNG`.
-  3. **Chờ dọn → Gọi thêm món:** Nếu khách gọi thêm món khi bàn ở trạng thái `CHỜ DỌN`: `CHỜ DỌN → GỌI THÊM MÓN → ĐANG PHỤC VỤ` (bảo toàn lịch sử thanh toán trước).
-  4. **Thu tiền theo Bàn / Order & Multi-Staff:** Thanh toán theo tổng bill bàn/order, hỗ trợ thu tiền nhiều lần, nhiều hình thức (Cash/QR), nhiều nhân viên cùng thu.
-  5. **Còn phải thu ≠ Nợ:** `Còn phải thu` chỉ có nghĩa chưa thu xong, `Partial Payment ≠ Debt`. Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
-  6. **A6 Shift Physical Cash Separation:** Chỉ phần tiền mặt thực tế thu mới vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho phân hệ **A6 — Shift Management & Cash Drawer Product Discovery** (Prompts 089/094/095):
+  1. **No Fixed Cashier & Multi-Staff Service:** Không thu ngân cố định; nhiều nhân viên cùng phục vụ và thu tiền theo Lego permission.
+  2. **Multi-Collection & Multi-Tender:** Thu tiền nhiều lần theo Bàn/Order, `Còn phải thu ≠ Nợ`, Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
+  3. **Physical Cash Isolation:** Chỉ tiền mặt thực tế đã thu mới đi vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+  4. **Opening Cash Immutability:** Tiền đầu ca không sửa trực tiếp sau khi mở ca; sai sót dùng phiếu điều chỉnh/thu chi bổ sung.
+  5. **Close Shift Blocking & Handover:** Đóng ca cấm khi còn bàn/order phục vụ hoặc payment pending; bàn giao ca linh hoạt giữa các nhóm nhân viên.
+  6. **Table Flow Wording:** `Đang phục vụ → Chờ dọn (Cleaning) → Nhân viên xác nhận đã dọn → Bàn trống (Available)`. `Chờ dọn → Gọi thêm món → Đang phục vụ`.
+- **Affected Files:** `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -181,16 +181,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
-### DEC-2026-090, 091, 090-FLOW-UPDATE (PROMPTS 090/091/092 TABLE & PAYMENT OPERATING MODEL)
+### DEC-2026-A6-SHIFT (PROMPT 089/094/095 SHIFT MANAGEMENT & CASH DRAWER)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ mô hình vận hành **Table Management & Payment Operating Model**:
-  1. **Table Flow 2 Branches:** BÀN TRỐNG có 2 hướng vào: (1) ĐẶT TRƯỚC → Vào bàn, hoặc (2) KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng chọn thêm, KHÔNG bắt buộc.
-  2. **Table Lifecycle:** `VÀO BÀN → GỌI MÓN / PHỤC VỤ → THANH TOÁN → CHỜ DỌN → DỌN XONG → BÀN TRỐNG`.
-  3. **Chờ dọn → Gọi thêm món:** Nếu khách gọi thêm món khi bàn ở trạng thái `CHỜ DỌN`: `CHỜ DỌN → GỌI THÊM MÓN → ĐANG PHỤC VỤ` (bảo toàn lịch sử thanh toán trước).
-  4. **Thu tiền theo Bàn / Order & Multi-Staff:** Thanh toán theo tổng bill bàn/order, hỗ trợ thu tiền nhiều lần, nhiều hình thức (Cash/QR), nhiều nhân viên cùng thu.
-  5. **Còn phải thu ≠ Nợ:** `Còn phải thu` chỉ có nghĩa chưa thu xong, `Partial Payment ≠ Debt`. Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
-  6. **A6 Shift Physical Cash Separation:** Chỉ phần tiền mặt thực tế thu mới vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho phân hệ **A6 — Shift Management & Cash Drawer Product Discovery** (Prompts 089/094/095):
+  1. **No Fixed Cashier & Multi-Staff Service:** Không thu ngân cố định; nhiều nhân viên cùng phục vụ và thu tiền theo Lego permission.
+  2. **Multi-Collection & Multi-Tender:** Thu tiền nhiều lần theo Bàn/Order, `Còn phải thu ≠ Nợ`, Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
+  3. **Physical Cash Isolation:** Chỉ tiền mặt thực tế đã thu mới đi vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+  4. **Opening Cash Immutability:** Tiền đầu ca không sửa trực tiếp sau khi mở ca; sai sót dùng phiếu điều chỉnh/thu chi bổ sung.
+  5. **Close Shift Blocking & Handover:** Đóng ca cấm khi còn bàn/order phục vụ hoặc payment pending; bàn giao ca linh hoạt giữa các nhóm nhân viên.
+  6. **Table Flow Wording:** `Đang phục vụ → Chờ dọn (Cleaning) → Nhân viên xác nhận đã dọn → Bàn trống (Available)`. `Chờ dọn → Gọi thêm món → Đang phục vụ`.
+- **Affected Files:** `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -253,16 +253,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
-### DEC-2026-090, 091, 090-FLOW-UPDATE (PROMPTS 090/091/092 TABLE & PAYMENT OPERATING MODEL)
+### DEC-2026-A6-SHIFT (PROMPT 089/094/095 SHIFT MANAGEMENT & CASH DRAWER)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ mô hình vận hành **Table Management & Payment Operating Model**:
-  1. **Table Flow 2 Branches:** BÀN TRỐNG có 2 hướng vào: (1) ĐẶT TRƯỚC → Vào bàn, hoặc (2) KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng chọn thêm, KHÔNG bắt buộc.
-  2. **Table Lifecycle:** `VÀO BÀN → GỌI MÓN / PHỤC VỤ → THANH TOÁN → CHỜ DỌN → DỌN XONG → BÀN TRỐNG`.
-  3. **Chờ dọn → Gọi thêm món:** Nếu khách gọi thêm món khi bàn ở trạng thái `CHỜ DỌN`: `CHỜ DỌN → GỌI THÊM MÓN → ĐANG PHỤC VỤ` (bảo toàn lịch sử thanh toán trước).
-  4. **Thu tiền theo Bàn / Order & Multi-Staff:** Thanh toán theo tổng bill bàn/order, hỗ trợ thu tiền nhiều lần, nhiều hình thức (Cash/QR), nhiều nhân viên cùng thu.
-  5. **Còn phải thu ≠ Nợ:** `Còn phải thu` chỉ có nghĩa chưa thu xong, `Partial Payment ≠ Debt`. Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
-  6. **A6 Shift Physical Cash Separation:** Chỉ phần tiền mặt thực tế thu mới vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho phân hệ **A6 — Shift Management & Cash Drawer Product Discovery** (Prompts 089/094/095):
+  1. **No Fixed Cashier & Multi-Staff Service:** Không thu ngân cố định; nhiều nhân viên cùng phục vụ và thu tiền theo Lego permission.
+  2. **Multi-Collection & Multi-Tender:** Thu tiền nhiều lần theo Bàn/Order, `Còn phải thu ≠ Nợ`, Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
+  3. **Physical Cash Isolation:** Chỉ tiền mặt thực tế đã thu mới đi vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+  4. **Opening Cash Immutability:** Tiền đầu ca không sửa trực tiếp sau khi mở ca; sai sót dùng phiếu điều chỉnh/thu chi bổ sung.
+  5. **Close Shift Blocking & Handover:** Đóng ca cấm khi còn bàn/order phục vụ hoặc payment pending; bàn giao ca linh hoạt giữa các nhóm nhân viên.
+  6. **Table Flow Wording:** `Đang phục vụ → Chờ dọn (Cleaning) → Nhân viên xác nhận đã dọn → Bàn trống (Available)`. `Chờ dọn → Gọi thêm món → Đang phục vụ`.
+- **Affected Files:** `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -305,16 +305,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
-### DEC-2026-090, 091, 090-FLOW-UPDATE (PROMPTS 090/091/092 TABLE & PAYMENT OPERATING MODEL)
+### DEC-2026-A6-SHIFT (PROMPT 089/094/095 SHIFT MANAGEMENT & CASH DRAWER)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ mô hình vận hành **Table Management & Payment Operating Model**:
-  1. **Table Flow 2 Branches:** BÀN TRỐNG có 2 hướng vào: (1) ĐẶT TRƯỚC → Vào bàn, hoặc (2) KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng chọn thêm, KHÔNG bắt buộc.
-  2. **Table Lifecycle:** `VÀO BÀN → GỌI MÓN / PHỤC VỤ → THANH TOÁN → CHỜ DỌN → DỌN XONG → BÀN TRỐNG`.
-  3. **Chờ dọn → Gọi thêm món:** Nếu khách gọi thêm món khi bàn ở trạng thái `CHỜ DỌN`: `CHỜ DỌN → GỌI THÊM MÓN → ĐANG PHỤC VỤ` (bảo toàn lịch sử thanh toán trước).
-  4. **Thu tiền theo Bàn / Order & Multi-Staff:** Thanh toán theo tổng bill bàn/order, hỗ trợ thu tiền nhiều lần, nhiều hình thức (Cash/QR), nhiều nhân viên cùng thu.
-  5. **Còn phải thu ≠ Nợ:** `Còn phải thu` chỉ có nghĩa chưa thu xong, `Partial Payment ≠ Debt`. Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
-  6. **A6 Shift Physical Cash Separation:** Chỉ phần tiền mặt thực tế thu mới vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho phân hệ **A6 — Shift Management & Cash Drawer Product Discovery** (Prompts 089/094/095):
+  1. **No Fixed Cashier & Multi-Staff Service:** Không thu ngân cố định; nhiều nhân viên cùng phục vụ và thu tiền theo Lego permission.
+  2. **Multi-Collection & Multi-Tender:** Thu tiền nhiều lần theo Bàn/Order, `Còn phải thu ≠ Nợ`, Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
+  3. **Physical Cash Isolation:** Chỉ tiền mặt thực tế đã thu mới đi vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+  4. **Opening Cash Immutability:** Tiền đầu ca không sửa trực tiếp sau khi mở ca; sai sót dùng phiếu điều chỉnh/thu chi bổ sung.
+  5. **Close Shift Blocking & Handover:** Đóng ca cấm khi còn bàn/order phục vụ hoặc payment pending; bàn giao ca linh hoạt giữa các nhóm nhân viên.
+  6. **Table Flow Wording:** `Đang phục vụ → Chờ dọn (Cleaning) → Nhân viên xác nhận đã dọn → Bàn trống (Available)`. `Chờ dọn → Gọi thêm món → Đang phục vụ`.
+- **Affected Files:** `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -377,16 +377,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
-### DEC-2026-090, 091, 090-FLOW-UPDATE (PROMPTS 090/091/092 TABLE & PAYMENT OPERATING MODEL)
+### DEC-2026-A6-SHIFT (PROMPT 089/094/095 SHIFT MANAGEMENT & CASH DRAWER)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ mô hình vận hành **Table Management & Payment Operating Model**:
-  1. **Table Flow 2 Branches:** BÀN TRỐNG có 2 hướng vào: (1) ĐẶT TRƯỚC → Vào bàn, hoặc (2) KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng chọn thêm, KHÔNG bắt buộc.
-  2. **Table Lifecycle:** `VÀO BÀN → GỌI MÓN / PHỤC VỤ → THANH TOÁN → CHỜ DỌN → DỌN XONG → BÀN TRỐNG`.
-  3. **Chờ dọn → Gọi thêm món:** Nếu khách gọi thêm món khi bàn ở trạng thái `CHỜ DỌN`: `CHỜ DỌN → GỌI THÊM MÓN → ĐANG PHỤC VỤ` (bảo toàn lịch sử thanh toán trước).
-  4. **Thu tiền theo Bàn / Order & Multi-Staff:** Thanh toán theo tổng bill bàn/order, hỗ trợ thu tiền nhiều lần, nhiều hình thức (Cash/QR), nhiều nhân viên cùng thu.
-  5. **Còn phải thu ≠ Nợ:** `Còn phải thu` chỉ có nghĩa chưa thu xong, `Partial Payment ≠ Debt`. Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
-  6. **A6 Shift Physical Cash Separation:** Chỉ phần tiền mặt thực tế thu mới vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho phân hệ **A6 — Shift Management & Cash Drawer Product Discovery** (Prompts 089/094/095):
+  1. **No Fixed Cashier & Multi-Staff Service:** Không thu ngân cố định; nhiều nhân viên cùng phục vụ và thu tiền theo Lego permission.
+  2. **Multi-Collection & Multi-Tender:** Thu tiền nhiều lần theo Bàn/Order, `Còn phải thu ≠ Nợ`, Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
+  3. **Physical Cash Isolation:** Chỉ tiền mặt thực tế đã thu mới đi vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+  4. **Opening Cash Immutability:** Tiền đầu ca không sửa trực tiếp sau khi mở ca; sai sót dùng phiếu điều chỉnh/thu chi bổ sung.
+  5. **Close Shift Blocking & Handover:** Đóng ca cấm khi còn bàn/order phục vụ hoặc payment pending; bàn giao ca linh hoạt giữa các nhóm nhân viên.
+  6. **Table Flow Wording:** `Đang phục vụ → Chờ dọn (Cleaning) → Nhân viên xác nhận đã dọn → Bàn trống (Available)`. `Chờ dọn → Gọi thêm món → Đang phục vụ`.
+- **Affected Files:** `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -449,16 +449,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
-### DEC-2026-090, 091, 090-FLOW-UPDATE (PROMPTS 090/091/092 TABLE & PAYMENT OPERATING MODEL)
+### DEC-2026-A6-SHIFT (PROMPT 089/094/095 SHIFT MANAGEMENT & CASH DRAWER)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ mô hình vận hành **Table Management & Payment Operating Model**:
-  1. **Table Flow 2 Branches:** BÀN TRỐNG có 2 hướng vào: (1) ĐẶT TRƯỚC → Vào bàn, hoặc (2) KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng chọn thêm, KHÔNG bắt buộc.
-  2. **Table Lifecycle:** `VÀO BÀN → GỌI MÓN / PHỤC VỤ → THANH TOÁN → CHỜ DỌN → DỌN XONG → BÀN TRỐNG`.
-  3. **Chờ dọn → Gọi thêm món:** Nếu khách gọi thêm món khi bàn ở trạng thái `CHỜ DỌN`: `CHỜ DỌN → GỌI THÊM MÓN → ĐANG PHỤC VỤ` (bảo toàn lịch sử thanh toán trước).
-  4. **Thu tiền theo Bàn / Order & Multi-Staff:** Thanh toán theo tổng bill bàn/order, hỗ trợ thu tiền nhiều lần, nhiều hình thức (Cash/QR), nhiều nhân viên cùng thu.
-  5. **Còn phải thu ≠ Nợ:** `Còn phải thu` chỉ có nghĩa chưa thu xong, `Partial Payment ≠ Debt`. Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
-  6. **A6 Shift Physical Cash Separation:** Chỉ phần tiền mặt thực tế thu mới vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho phân hệ **A6 — Shift Management & Cash Drawer Product Discovery** (Prompts 089/094/095):
+  1. **No Fixed Cashier & Multi-Staff Service:** Không thu ngân cố định; nhiều nhân viên cùng phục vụ và thu tiền theo Lego permission.
+  2. **Multi-Collection & Multi-Tender:** Thu tiền nhiều lần theo Bàn/Order, `Còn phải thu ≠ Nợ`, Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
+  3. **Physical Cash Isolation:** Chỉ tiền mặt thực tế đã thu mới đi vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+  4. **Opening Cash Immutability:** Tiền đầu ca không sửa trực tiếp sau khi mở ca; sai sót dùng phiếu điều chỉnh/thu chi bổ sung.
+  5. **Close Shift Blocking & Handover:** Đóng ca cấm khi còn bàn/order phục vụ hoặc payment pending; bàn giao ca linh hoạt giữa các nhóm nhân viên.
+  6. **Table Flow Wording:** `Đang phục vụ → Chờ dọn (Cleaning) → Nhân viên xác nhận đã dọn → Bàn trống (Available)`. `Chờ dọn → Gọi thêm món → Đang phục vụ`.
+- **Affected Files:** `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 

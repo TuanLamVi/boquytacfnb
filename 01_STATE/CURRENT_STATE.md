@@ -23,7 +23,7 @@
 |---|---|---|
 | Governance Baseline V5.1 | `PO_VERIFIED / BASELINE FREEZE` | Bộ luật KIM CHỈ NAM thống nhất cho Rehabilitation & Clean Rebuild (DEC-2026-GOVERNANCE-BASELINE-V5.1) |
 | Table & Payment Operating Model V5.1 | `PO_VERIFIED / PROTECTED / LOCKED` | Prompts 090/091/092: Table flow (2 branches from Trống: Đặt trước or Walk-in → Vào bàn → Gọi món → Thanh toán → Chờ dọn → Dọn xong → Trống), Partial Collection (`Còn phải thu ≠ Nợ`), Multi-staff collection, Multi-tender, Cash drawer physical cash separation (DEC-2026-090, DEC-2026-091) |
-| Shift Management & Cash Drawer V5.1 | `FINAL DRAFT / PO REVIEW REQUIRED` | Prompt 094 Final Correction: Multi-staff service & cash collection, no fixed cashier, active service collection, expected cash formula, optional handover, table cleaning boundary |
+| Shift Management & Cash Drawer V5.1 | `PO_VERIFIED / PROTECTED / LOCKED` | Prompt 095: A6 Shift Management & Cash Drawer rules (DEC-2026-A6-SHIFT) |
 | A0 Foundation | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
 | A1 Account & Store | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
 | A2-01 Duplicate Join | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |

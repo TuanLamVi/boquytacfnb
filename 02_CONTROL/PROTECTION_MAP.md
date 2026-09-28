@@ -54,6 +54,11 @@ PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED
 - **Protected Content:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md` (Checkout UX, Cash, payOS QR webhook verification, Split Payment, Debt Lite `Ghi nợ ≠ Đã nhận tiền`, `Còn phải thu ≠ Nợ`, multi-staff collection, multi-tender support, simple promotions/discounts, invoice lifecycle, 3-layer payment attempt/allocation/settlement, order closure & table cleaning sequence `occupied → cleaning → available`, LEGO permissions effective immediately, and online-required financial boundary).
 - **Rule:** Locked product-design baseline. No work item may alter checkout or payment rules without valid PO Decision and Unlock.
 
+### 10. A6 SHIFT MANAGEMENT & CASH DRAWER PRODUCT DISCOVERY V5.1 (PROMPT 095)
+- **Status:** `PO_VERIFIED / PROTECTED / LOCKED`
+- **Protected Content:** `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md` (Shift lifecycle, opening cash immutability post-opening, expected cash formula, physical cash isolation excluding QR/debt/uncollected balance, optional shift handover, close shift blocking rules, LEGO permissions, multi-store scoping, and offline boundary).
+- **Rule:** Locked product-design baseline. No work item may alter shift management or cash drawer rules without valid PO Decision and Unlock.
+
 ---
 
 ## Phân tích Ảnh hưởng Vùng Bảo vệ (LOCKED SCOPE IMPACT)
