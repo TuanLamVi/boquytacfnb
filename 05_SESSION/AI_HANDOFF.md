@@ -88,10 +88,10 @@ Working tree DIRTY; bảo toàn thay đổi có sẵn.
 ## 8. NEXT
 
 ```text
-CURRENT WORK ITEM: A6-02 — Canonical POS Payment UI Integration & Test Surface (Parallel Coexistence)
-STATUS: READY_FOR_PO_VERIFICATION
-CANONICAL ID: A6-02
-NEXT: PO verification on Samsung Note 8 & Samsung M51.
+CURRENT WORK ITEM: PAYMENT-V5.1-P1 — Canonical Checkout + Invoice Foundation
+STATUS: IMPLEMENTATION_IN_PROGRESS (A3-02 Limited Unlock Active)
+CANONICAL ID: PAYMENT-V5.1-P1
+NEXT: Implement canonical Checkout + Invoice integration ensuring Flow A & Flow B convergence.
 ```
 
 Không tự suy ra task mới từ lịch sử cũ.
