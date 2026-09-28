@@ -23,7 +23,7 @@
 |---|---|---|
 | Governance Baseline V5.1 | `PO_VERIFIED / BASELINE FREEZE` | Bộ luật KIM CHỈ NAM thống nhất cho Rehabilitation & Clean Rebuild (DEC-2026-GOVERNANCE-BASELINE-V5.1) |
 | Reference Architecture V5.1 | `PO_VERIFIED / PROTECTED / LOCKED` | F&B Smart V5.1 Reference Architecture Library REF-001 to REF-012 (DEC-2026-REF-ARCHITECTURE-V5.1) |
-| KDS & Kitchen Operations V5.1 | `PO_VERIFIED / PROTECTED / LOCKED` | Prompt 081: KDS & Kitchen Operations rules (DEC-2026-KDS-081) |
+| Checkout & Payment V5.1 | `IN_PROGRESS / PROPOSED` | Prompt 084: Checkout UX, Discounts, Invoice lifecycle, Cash, payOS QR, Split payment, Debt Lite, 3-layer PaymentAttempt/Allocation/Settlement, Order/Table closure boundary |
 | A0 Foundation | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
 | A1 Account & Store | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
 | A2-01 Duplicate Join | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
