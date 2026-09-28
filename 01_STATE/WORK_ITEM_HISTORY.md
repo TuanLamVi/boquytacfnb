@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-069 — STAFF MANAGEMENT + LEGO PERMISSION MODEL PRODUCT DISCOVERY
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN ONLY)`
+- Objective: Thiết kế nghiệp vụ Nhân viên và phân công công việc kiểu Lego (Capability Dictionary, Store Join + Approval, Multi-job Staff, Permission Change & History, Suspend/Remove/Resign, Multi-store scope) cho F&B Smart V5.1.
+- Scope: `docs-123/STAFF_LEGO_PERMISSION_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/STAFF_LEGO_PERMISSION_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery & UX Design).
+- Technical Result: PASS — Hoàn tất các phần A đến J theo Prompt 069.
+- PO Status: `PROPOSED — PO REVIEW REQUIRED`
+- Evidence: Discovery documentation created, archived, committed, and synced to GitHub.
+- Next: PO Review of Prompt 069.
+
 ### WORK ITEM: PROMPT-066 — 20 BUSINESS MODELS & MENU TEMPLATE STANDARDIZATION (FINAL CORRECTION)
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY FINAL CORRECTION)`
