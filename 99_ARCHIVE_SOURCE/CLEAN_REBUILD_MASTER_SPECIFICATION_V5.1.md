@@ -6,7 +6,7 @@
 - **Status:** DRAFT — READY FOR PO REVIEW
 - **Build Mode:** CLEAN_REBUILD
 - **Primary Work Item:** MASTER-SPECIFICATION-GATE
-- **Prompt ID:** PROMPT-123
+- **Prompt ID:** PROMPT-124
 - **Author:** Architecture Governance & Product Team
 - **Source Authority:** KIM CHỈ NAM, PO Decisions, Four V5.1 Contracts (`PRODUCT_CHARTER_V5.1.md`, `DATABASE_SCHEMA_V0.1.md`, `STATE_MACHINES_V0.1.md`, `FIRESTORE_QUERY_COST_BUDGET_V0.1.md`), and Locked Product Discovery modules.
 - **Canonical Remote Repository Path:** `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md` (Repository: `TuanLamVi/boquytacfnb`, Branch: `codex/migrate-kim-chi-nam-20260928`).
@@ -108,7 +108,7 @@ The scope encompasses the complete end-to-end lifecycle for F&B Smart V5.1 MVP:
 ---
 
 ## 13. Order & Order Line
-- Immutable line items after kitchen dispatch.
+- Immutable line items after kitchen dispatch (`submissionRevision = Order.revision + 1`).
 - Managed via service group references for merged tables and round-based ticketing.
 
 ---
@@ -203,79 +203,90 @@ The scope encompasses the complete end-to-end lifecycle for F&B Smart V5.1 MVP:
 
 ### 24.1 Table State Machine
 - **States:** `available`, `occupied`, `cleaning`.
-- **T1:** `available` $\xrightarrow[\text{Table/Zone active; currentOrderId absent}]{\text{openTableOrder}}$ `occupied`.
-- **T2:** `occupied` $\xrightarrow[\text{Order active/unfenced; no submit/ticket/invoice}]{\text{cancelDraftOrder}}$ `cleaning`.
-- **T3A:** `occupied` $\xrightarrow[\text{Checkout link; exact lines; Shift open; faceValue=0}]{\text{postInvoice (zero-total)}}$ `cleaning`.
-- **T3B:** `occupied` $\xrightarrow[\text{Attempt/Invoice/Shift guards; newAllocated=faceValue}]{\text{confirmPayment (paid)}}$ `cleaning`.
-- **T4:** `cleaning` $\xrightarrow[\text{Table active; currentOrderId absent}]{\text{markTableClean}}$ `available`.
+- **T1:** `available` $\xrightarrow[\text{Table+Zone active; currentOrderId absent; candidate Order absent; expected revision}]{\text{openTableOrder}}$ `occupied`.
+- **T2:** `occupied` $\xrightarrow[\text{Link match; Order active/unfenced; no submit/ticket/invoice/return pending}]{\text{cancelDraftOrder (side effect)}}$ `cleaning` (Cancels draft lines).
+- **T3A:** `occupied` $\xrightarrow[\text{Checkout link; exact lines; ShiftLock+Shift open; faceValue=0}]{\text{postInvoice (zero-total)}}` `cleaning`.
+- **T3B:** `occupied` $\xrightarrow[\text{Attempt/Invoice/Shift/link/counter guards; newAllocated=faceValue}]{\text{confirmPayment (paid)}}` `cleaning`.
+- **T4:** `cleaning` $\xrightarrow[\text{Table active; currentOrderId absent; expected revision}]{\text{markTableClean}}$ `available`. (If already available, returns `business_no_op`; if occupied, returns `TABLE_NOT_CLEANING`).
 
 ### 24.2 Order & Checkout Fence Machine
 - **States:** `active_unfenced`, `active_fenced`, `finalized`, `closed`, `cancelled`.
-- **O1:** `active_unfenced` $\xrightarrow[\text{draftCount=0; pendingReturnCount=0; activeLines>0}]{\text{beginCheckout}}$ `active_fenced`.
-- **O2:** `active_fenced` $\xrightarrow[\text{invoiceId absent; session match}]{\text{cancelCheckout}}$ `active_unfenced`.
-- **O3:** `active_fenced` $\xrightarrow[\text{Shift open; exact lines; faceValue>0}]{\text{postInvoice (unpaid)}}$ `finalized` (Invoice status = `unpaid`).
-- **O4:** `finalized` $\xrightarrow[\text{newAllocated=faceValue; pending=0}]{\text{confirmPayment (paid)}}$ `closed`.
-- **O5:** `active_unfenced` $\xrightarrow[\text{no submit/ticket/invoice/return}]{\text{cancelDraftOrder}}$ `cancelled`.
-- **O6:** `active_fenced` $\xrightarrow[\text{Shift open; faceValue=0}]{\text{postInvoice (zero-total)}}$ `closed`.
+- **O1:** `active_unfenced` $\xrightarrow[\text{draftLineCount=0; pendingReturnLineCount=0; activeLineCount>0; session absent}]{\text{beginCheckout}}$ `active_fenced`.
+- **O2:** `active_fenced` $\xrightarrow[\text{invoiceId absent; session match; reasonCode}]{\text{cancelCheckout}}$ `active_unfenced`.
+- **O3:** `active_fenced` $\xrightarrow[\text{ShiftLock+Shift open; exact submitted/preparing/ready/served lines; faceValue>0}]{\text{postInvoice (unpaid)}}$ `finalized` (Creates Invoice `unpaid` with `allocated=0`, `pending=0`).
+- **O4:** `finalized` $\xrightarrow[\text{newAllocated=faceValue; pending=0; links valid}]{\text{confirmPayment (paid)}}$ `closed`.
+- **O5:** `active_unfenced` $\xrightarrow[\text{no submit/ticket/invoice/return pending; reasonCode}]{\text{cancelDraftOrder}}$ `cancelled`.
+- **O6:** `active_fenced` $\xrightarrow[\text{Shift open; exact line set/sums; faceValue=0}]{\text{postInvoice (zero-total)}}$ `closed` (Invoice `paid` with amount 0 and server `paidAt`).
 
 ### 24.3 Sale Line Machine
 - **States:** `draft`, `submitted`, `preparing`, `ready`, `served`, `draft_cancelled`.
-- **L1:** N/A $\xrightarrow[\text{Order active/unfenced; catalog active; quantity 1-999}]{\text{addLine}}$ `draft`.
-- **L2:** `draft` $\xrightarrow[\text{Expected Order revision; group by station}]{\text{submitKitchen}}$ `submitted` / `served`.
-- **L3A:** `draft` $\xrightarrow[\text{Expected Line revision}]{\text{adjustDraftQuantity}}$ `draft`.
-- **L3B:** `draft` $\xrightarrow[\text{Expected Line revision}]{\text{cancelDraftLine}}$ `draft_cancelled`.
+- **L1:** N/A $\xrightarrow[\text{Order active/unfenced; catalog active/available; qty 1-999; modifier valid; overflow safe}]{\text{addLine}}$ `draft` (Stores immutable snapshots).
+- **L2:** `draft` $\xrightarrow[\text{Expected Order revision; submissionRevision=Order.revision+1; max 50 items/500KiB; group station}]{\text{submitKitchen}}$ `submitted` / `served` (`preparationMode=none` transitions directly to `served`).
+- **L3A:** `draft` $\xrightarrow[\text{Expected Line revision; qty 1-999}]{\text{adjustDraftQuantity}}$ `draft`.
+- **L3B:** `draft` $\xrightarrow[\text{Expected Line revision; reasonCode}]{\text{cancelDraftLine}}$ `draft_cancelled`.
 - **L4:** KDS Ticket transition $\rightarrow$ `preparing` $\rightarrow$ `ready` $\rightarrow$ `served`.
 
 ### 24.4 Return Line Machine
 - **States:** `pending_approval`, `applied`, `rejected`.
-- **R1:** N/A $\xrightarrow[\text{Order active/unfenced; status submitted..served; reason}]{\text{requestReturn}}$ `pending_approval`.
-- **R2:** `pending_approval` $\xrightarrow[\text{Approved by manager; order unfenced}]{\text{approveReturn}}$ `applied`.
-- **R3:** `pending_approval` $\xrightarrow[\text{Rejected by manager}]{\text{rejectReturn}}$ `rejected`.
+- **R1:** N/A $\xrightarrow[\text{Order active/unfenced; invoice absent; status submitted..served; avail qty; reason}]{\text{requestReturn}}$ `pending_approval`.
+- **R2:** `pending_approval` $\xrightarrow[\text{Expected Return+Original revisions; links; order unfenced}]{\text{approveReturn}}$ `applied` (Creates negative line amount = $-(UnitPrice \times Qty)$ with overflow guard).
+- **R3:** `pending_approval` $\xrightarrow[\text{Expected revisions; reason; order unfenced}]{\text{rejectReturn}}$ `rejected`.
 
 ### 24.5 Kitchen Ticket Machines
 - **Normal Ticket:** `queued → acknowledged → preparing → ready → served`.
+  - KT1: `acknowledgeTicket` (`queued` $\rightarrow$ `acknowledged`, holds `submitted` lines).
+  - KT2: `startPreparing` (`acknowledged` $\rightarrow$ `preparing`, lines `submitted` $\rightarrow$ `preparing`).
+  - KT3: `markReady` (`preparing` $\rightarrow$ `ready`, lines `preparing` $\rightarrow$ `ready`).
+  - KT4: `markServed` (`ready` $\rightarrow$ `served`, lines `ready` $\rightarrow$ `served`).
+  - Guard: `update_kds`, expected Ticket revision, ticketType normal, exact lineIds, Line ticketId/orderId/submissionRevision/station match. Mismatch returns `TICKET_LINE_STATE_MISMATCH`.
 - **Return Ticket:** `queued → acknowledged → served`.
+  - Commands `acknowledgeReturnTicket`, `markReturnServed`. Guard: `update_kds`, ticketType return, ReturnLine applied. Does not alter SaleLines.
 
 ### 24.6 Shift & ShiftLock Machine
 - **States:** `closed → open → closing → closed`.
-- **S1:** `closed` $\xrightarrow[\text{openingCash>=0; device lock free}]{\text{openShift}}$ `open`.
-- **S2:** `open` $\xrightarrow[\text{pendingAttemptCount=0; countedCash>=0}]{\text{startClosingShift}}$ `closing`.
-- **S3:** `closing` $\xrightarrow[\text{pendingAttemptCount=0}]{\text{closeShift}}$ `closed`.
+- **S1:** `closed` $\xrightarrow[\text{openingCash>=0; ID absent; device lock free}]{\text{openShift}}$ `open` (Creates active ShiftLock + opening CashEntry).
+- **S2:** `open` $\xrightarrow[\text{Expected revision; Lock active/link; pendingAttemptCount=0; countedCash>=0}]{\text{startClosingShift}}$ `closing`.
+- **S3:** `closing` $\xrightarrow[\text{Expected revision; Lock active/link; pendingAttemptCount=0}]{\text{closeShift}}$ `closed`.
 
 ### 24.7 PaymentAttempt & Invoice Projection Machine
 - **Attempt States:** `pending_confirmation`, `success`, `expired`, `cancelled`.
-- **P1:** N/A $\xrightarrow[\text{Shift open; invoice unpaid/partial}]{\text{beginPayment}}$ `pending_confirmation`.
-- **P2:** `pending_confirmation` $\xrightarrow[\text{Webhook/cash confirmed; shift open}]{\text{confirmPayment}}$ `success`.
-- **P3:** `pending_confirmation` $\xrightarrow[\text{User cancel; shift open}]{\text{cancelPaymentAttempt}}$ `cancelled`.
-- **P4:** `pending_confirmation` $\xrightarrow[\text{Server time>=expiresAt}]{\text{expirePaymentAttempt}}$ `expired`.
-- **Invoice Projections:** `unpaid`, `partially_paid`, `paid`, `reversed`.
+- **P1:** N/A $\xrightarrow[\text{Shift open from ShiftLock; Invoice unpaid/partial; method allowlist; amount/capacity; ID absent}]{\text{beginPayment}}$ `pending_confirmation`.
+- **P2:** `pending_confirmation` $\xrightarrow[\text{Attempt/Invoice/Shift links; Shift open; counter/reserve; deterministic Settlement absent}]{\text{confirmPayment}}$ `success` (Creates Settlement `SET_PAY_{attemptId}`, allocates Invoice, updates Shift totals, CashEntry/Claim, Contribution).
+- **P3:** `pending_confirmation` $\xrightarrow[\text{User permission; reason; Shift open; reserve/count guards}]{\text{cancelPaymentAttempt}}$ `cancelled`.
+- **P4:** `pending_confirmation` $\xrightarrow[\text{System principal; server time>=expiresAt; Settlement absent}]{\text{expirePaymentAttempt}}$ `expired`.
+- **Invoice Projections:**
+  - `unpaid`: faceValue > 0 and allocated == 0.
+  - `partially_paid`: 0 < allocated < faceValue.
+  - `paid`: faceValue == 0 or allocated == faceValue and pending == 0.
+  - `reversed`: paid $\rightarrow$ reversed via `reverseInvoice`.
 
 ### 24.8 Settlement Lifecycle Machine
 - **Settlement ID Formats:** `SET_PAY_{attemptId}`, `SET_DEBT_{mutationId}`, `SET_FUND_{mutationId}`.
 - **State Transition:** N/A $\xrightarrow[\text{Payment/Debt/Fund success}]{\text{confirmPayment / allocateDebt / allocateFund}}$ `active` $\xrightarrow[\text{adjustPayment / reverseInvoice}]{\text{SettlementConsumption}}$ `consumed`.
 
 ### 24.9 Debt Allocation & Collection Machine
-- **Allocation:** Invoice unpaid/partial $\xrightarrow[\text{Customer Debt enabled; DebtAccount active; openCount<50}]{\text{allocateDebt}}$ DebtOrigination (`open`).
-- **Collection:** Origination (`open`) $\xrightarrow[\text{collectDebt; FIFO up to 50; partial or full}]{\text{collectDebt}}$ Origination (`open` if balance > 0, `settled` if balance == 0).
+- **Allocation:** Invoice unpaid/partial $\xrightarrow[\text{Customer Debt enabled; DebtAccount active; openCount<50; amount/capacity; Shift open}]{\text{allocateDebt}}$ DebtOrigination (`open`).
+- **Collection:** Origination (`open`) $\xrightarrow[\text{collectDebt; FIFO up to 50 open originations}]{\text{collectDebt}}$ Origination (`open` if openBalance > 0, `settled` if openBalance == 0). Account balance equals sum of open outstanding originations.
 
 ### 24.10 Unallocated Fund Machine
 - **States:** `unallocated → partially_allocated → allocated`; refund branch `unallocated|partially_allocated → refund_pending → refunded`.
-- **F1:** N/A $\xrightarrow[\text{Bank/QR payment received; amount>0}]{\text{createUnallocatedFund}}$ `unallocated`.
-- **F2:** `unallocated` / `partially_allocated` $\xrightarrow[\text{Invoice sale unpaid/partial}]{\text{allocateUnallocatedFund}}$ `partially_allocated` / `allocated`.
+- **F1:** N/A $\xrightarrow[\text{Bank/QR payment received; PaymentAccount/Shift active; raw ref unique; amount>0}]{\text{createUnallocatedFund}}$ `unallocated`.
+- **F2:** `unallocated` / `partially_allocated` $\xrightarrow[\text{Fund/Claim link; Invoice sale unpaid/partial; capacity/store/currency}]{\text{allocateUnallocatedFund}}$ `partially_allocated` / `allocated`.
 - **F3:** `unallocated` / `partially_allocated` $\xrightarrow[\text{Full remaining amount}]{\text{requestUnallocatedFundRefund}}$ `refund_pending`.
 
 ### 24.11 Payment Adjustment Machine
-- Active Settlement $\xrightarrow[\text{Invoice paid; method matrix valid; consumption absent}]{\text{adjustPayment}}$ Reversal Settlement (negative) + Replacement Settlement (positive).
+- Active Settlement $\xrightarrow[\text{Invoice paid; amount unchanged; method matrix valid; consumption absent}]{\text{adjustPayment}}$ Reversal Settlement (negative) + Replacement Settlement (positive).
 - Branching:
   - Original Shift Open: Updates shift adjustment nets, creates correction CashEntry if cash delta $\neq 0$.
   - Original Shift Closing: `SHIFT_CLOSING_RETRY_LATER`.
   - Original Shift Closed: Reclassifies financial ledger without modifying closed shift.
-- Cash Delta Movement (Closed Shift): Closed Shift $\xrightarrow[\text{recordAdjustmentCashMovement; current Shift open}]{\text{recordAdjustmentCashMovement}}$ AdjustmentCashMovement in current open shift.
+- Cash Delta Movement (Closed Shift): Closed Shift $\xrightarrow[\text{Original Shift actually and snapshot closed; current Shift open; cash delta != 0}]{\text{recordAdjustmentCashMovement}}$ AdjustmentCashMovement in current open shift.
 
 ### 24.12 Full Invoice Reversal Machine
-- Paid Invoice $\xrightarrow[\text{reverseInvoice; Settlements<=20; Lines<=200; debt <= 50; preflight request-size}]{\text{reverseInvoice}}$ Reversal Invoice + Lines (negative) + RefundObligations. (Formula: $L + S + F + D + 2R + 2A + U + 5$).
+- Paid Invoice $\xrightarrow[\text{reverseInvoice; reversal link absent; Lines<=200; Settlements<=20; debt<=50; preflight request-size}]{\text{reverseInvoice}}$ Reversal Invoice + Lines (negative) + RefundObligations. (Atomic write formula: $L + S + F + D + 2R + 2A + U + 5$). Does NOT modify closed Order status or TableState.
 
 ### 24.13 Refund Obligation & Attempt Machine
+- **Obligation Capacity:** `completed + pending + requested <= total`.
 - **Obligation States:** `requested → pending → completed` / `failed`.
 - **RF1:** `requested` $\xrightarrow[\text{Shift open; cash drawer sufficient}]{\text{completeCashRefund}}$ `completed` (CashEntry created directly, no pending attempt phase).
 - **RF2A:** `requested` $\xrightarrow[\text{Reserve obligation capacity; match original method}]{\text{beginBankRefundAttempt}}$ `pending`.
@@ -292,8 +303,8 @@ The scope encompasses the complete end-to-end lifecycle for F&B Smart V5.1 MVP:
 ## 26. Firestore Query & Cost Constraints
 - Governed strictly by `FIRESTORE_QUERY_COST_BUDGET_V0.1.md`:
   - Bounded reads, pagination, index governance.
-  - General request-size safety target: **< 8 MiB** per transaction payload.
-  - Kitchen Ticket payload size target: **<= 500 KiB** per ticket.
+  - General transaction safety target: **< 8 MiB** per transaction payload.
+  - Kitchen Ticket payload size target: **<= 500 KiB** per ticket payload.
   - Planning cost cap budget: **$509.01 USD / month**.
 
 ---

@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-124 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — FINAL CONTRACT-EXACT RECONCILIATION
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
+- Objective: Thực hiện rà soát và hòa giải kỹ thuật hợp đồng cuối cùng đối chiếu trực tiếp với `STATE_MACHINES_V0.1.md` và 3 hợp đồng V5.1 còn lại, hoàn thiện toàn bộ guards/actions (Table T1-T4, Order O1-O6, SaleLine L1-L4, KDS KT1-KT4, Payment P1-P4, Debt FIFO, Unallocated Funds F1-F3, Payment Adjustments, Physical Cash Movement, Reversal formula $L + S + F + D + 2R + 2A + U + 5$, Refund RF1/RF2A/RF2B/RF2C), và cập nhật blob SHA chuẩn (`a8946e70fc8d9973ab51a24072171943564ea71a`).
+- Scope: `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md` & `docs-123/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`.
+- Application Code Changes: `NONE` (100% Contract-Exact Reconciliation Document Audit).
+- Technical Result: PASS — Master Spec Draft V0.1 100% contract-exact with 4 Technical Contracts V5.1.
+- PO Status: `DRAFT V0.1 — READY FOR PO REVIEW`
+- Evidence: Exact git blob SHA `a8946e70fc8d9973ab51a24072171943564ea71a`, GitHub sync output.
+- Next: PO Review of Clean Rebuild Master Specification V5.1 Draft V0.1.
+
 ### WORK ITEM: PROMPT-123 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — FINAL SEMANTIC RECONCILIATION
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
