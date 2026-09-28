@@ -109,21 +109,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
-### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
+### DEC-2026-090, 091, 090-FLOW-UPDATE (PROMPTS 090/091/092 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
-  1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
-  2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
-  3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
-  4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
-- **Decided By:** Tuấn — Chủ đầu tư / PO
-- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
-
-### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
-- **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ mô hình vận hành **Table Management & Payment Operating Model**:
+  1. **Table Flow 2 Branches:** BÀN TRỐNG có 2 hướng vào: (1) ĐẶT TRƯỚC → Vào bàn, hoặc (2) KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng chọn thêm, KHÔNG bắt buộc.
+  2. **Table Lifecycle:** `VÀO BÀN → GỌI MÓN / PHỤC VỤ → THANH TOÁN → CHỜ DỌN → DỌN XONG → BÀN TRỐNG`.
+  3. **Chờ dọn → Gọi thêm món:** Nếu khách gọi thêm món khi bàn ở trạng thái `CHỜ DỌN`: `CHỜ DỌN → GỌI THÊM MÓN → ĐANG PHỤC VỤ` (bảo toàn lịch sử thanh toán trước).
+  4. **Thu tiền theo Bàn / Order & Multi-Staff:** Thanh toán theo tổng bill bàn/order, hỗ trợ thu tiền nhiều lần, nhiều hình thức (Cash/QR), nhiều nhân viên cùng thu.
+  5. **Còn phải thu ≠ Nợ:** `Còn phải thu` chỉ có nghĩa chưa thu xong, `Partial Payment ≠ Debt`. Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
+  6. **A6 Shift Physical Cash Separation:** Chỉ phần tiền mặt thực tế thu mới vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -186,21 +181,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
-### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
+### DEC-2026-090, 091, 090-FLOW-UPDATE (PROMPTS 090/091/092 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
-  1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
-  2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
-  3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
-  4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
-- **Decided By:** Tuấn — Chủ đầu tư / PO
-- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
-
-### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
-- **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ mô hình vận hành **Table Management & Payment Operating Model**:
+  1. **Table Flow 2 Branches:** BÀN TRỐNG có 2 hướng vào: (1) ĐẶT TRƯỚC → Vào bàn, hoặc (2) KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng chọn thêm, KHÔNG bắt buộc.
+  2. **Table Lifecycle:** `VÀO BÀN → GỌI MÓN / PHỤC VỤ → THANH TOÁN → CHỜ DỌN → DỌN XONG → BÀN TRỐNG`.
+  3. **Chờ dọn → Gọi thêm món:** Nếu khách gọi thêm món khi bàn ở trạng thái `CHỜ DỌN`: `CHỜ DỌN → GỌI THÊM MÓN → ĐANG PHỤC VỤ` (bảo toàn lịch sử thanh toán trước).
+  4. **Thu tiền theo Bàn / Order & Multi-Staff:** Thanh toán theo tổng bill bàn/order, hỗ trợ thu tiền nhiều lần, nhiều hình thức (Cash/QR), nhiều nhân viên cùng thu.
+  5. **Còn phải thu ≠ Nợ:** `Còn phải thu` chỉ có nghĩa chưa thu xong, `Partial Payment ≠ Debt`. Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
+  6. **A6 Shift Physical Cash Separation:** Chỉ phần tiền mặt thực tế thu mới vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -263,21 +253,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
-### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
+### DEC-2026-090, 091, 090-FLOW-UPDATE (PROMPTS 090/091/092 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
-  1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
-  2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
-  3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
-  4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
-- **Decided By:** Tuấn — Chủ đầu tư / PO
-- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
-
-### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
-- **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ mô hình vận hành **Table Management & Payment Operating Model**:
+  1. **Table Flow 2 Branches:** BÀN TRỐNG có 2 hướng vào: (1) ĐẶT TRƯỚC → Vào bàn, hoặc (2) KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng chọn thêm, KHÔNG bắt buộc.
+  2. **Table Lifecycle:** `VÀO BÀN → GỌI MÓN / PHỤC VỤ → THANH TOÁN → CHỜ DỌN → DỌN XONG → BÀN TRỐNG`.
+  3. **Chờ dọn → Gọi thêm món:** Nếu khách gọi thêm món khi bàn ở trạng thái `CHỜ DỌN`: `CHỜ DỌN → GỌI THÊM MÓN → ĐANG PHỤC VỤ` (bảo toàn lịch sử thanh toán trước).
+  4. **Thu tiền theo Bàn / Order & Multi-Staff:** Thanh toán theo tổng bill bàn/order, hỗ trợ thu tiền nhiều lần, nhiều hình thức (Cash/QR), nhiều nhân viên cùng thu.
+  5. **Còn phải thu ≠ Nợ:** `Còn phải thu` chỉ có nghĩa chưa thu xong, `Partial Payment ≠ Debt`. Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
+  6. **A6 Shift Physical Cash Separation:** Chỉ phần tiền mặt thực tế thu mới vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -320,21 +305,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
-### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
+### DEC-2026-090, 091, 090-FLOW-UPDATE (PROMPTS 090/091/092 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
-  1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
-  2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
-  3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
-  4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
-- **Decided By:** Tuấn — Chủ đầu tư / PO
-- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
-
-### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
-- **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ mô hình vận hành **Table Management & Payment Operating Model**:
+  1. **Table Flow 2 Branches:** BÀN TRỐNG có 2 hướng vào: (1) ĐẶT TRƯỚC → Vào bàn, hoặc (2) KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng chọn thêm, KHÔNG bắt buộc.
+  2. **Table Lifecycle:** `VÀO BÀN → GỌI MÓN / PHỤC VỤ → THANH TOÁN → CHỜ DỌN → DỌN XONG → BÀN TRỐNG`.
+  3. **Chờ dọn → Gọi thêm món:** Nếu khách gọi thêm món khi bàn ở trạng thái `CHỜ DỌN`: `CHỜ DỌN → GỌI THÊM MÓN → ĐANG PHỤC VỤ` (bảo toàn lịch sử thanh toán trước).
+  4. **Thu tiền theo Bàn / Order & Multi-Staff:** Thanh toán theo tổng bill bàn/order, hỗ trợ thu tiền nhiều lần, nhiều hình thức (Cash/QR), nhiều nhân viên cùng thu.
+  5. **Còn phải thu ≠ Nợ:** `Còn phải thu` chỉ có nghĩa chưa thu xong, `Partial Payment ≠ Debt`. Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
+  6. **A6 Shift Physical Cash Separation:** Chỉ phần tiền mặt thực tế thu mới vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -397,21 +377,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
-### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
+### DEC-2026-090, 091, 090-FLOW-UPDATE (PROMPTS 090/091/092 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
-  1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
-  2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
-  3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
-  4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
-- **Decided By:** Tuấn — Chủ đầu tư / PO
-- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
-
-### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
-- **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ mô hình vận hành **Table Management & Payment Operating Model**:
+  1. **Table Flow 2 Branches:** BÀN TRỐNG có 2 hướng vào: (1) ĐẶT TRƯỚC → Vào bàn, hoặc (2) KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng chọn thêm, KHÔNG bắt buộc.
+  2. **Table Lifecycle:** `VÀO BÀN → GỌI MÓN / PHỤC VỤ → THANH TOÁN → CHỜ DỌN → DỌN XONG → BÀN TRỐNG`.
+  3. **Chờ dọn → Gọi thêm món:** Nếu khách gọi thêm món khi bàn ở trạng thái `CHỜ DỌN`: `CHỜ DỌN → GỌI THÊM MÓN → ĐANG PHỤC VỤ` (bảo toàn lịch sử thanh toán trước).
+  4. **Thu tiền theo Bàn / Order & Multi-Staff:** Thanh toán theo tổng bill bàn/order, hỗ trợ thu tiền nhiều lần, nhiều hình thức (Cash/QR), nhiều nhân viên cùng thu.
+  5. **Còn phải thu ≠ Nợ:** `Còn phải thu` chỉ có nghĩa chưa thu xong, `Partial Payment ≠ Debt`. Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
+  6. **A6 Shift Physical Cash Separation:** Chỉ phần tiền mặt thực tế thu mới vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -474,21 +449,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
-### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
+### DEC-2026-090, 091, 090-FLOW-UPDATE (PROMPTS 090/091/092 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
-  1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
-  2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
-  3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
-  4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
-- **Decided By:** Tuấn — Chủ đầu tư / PO
-- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
-
-### DEC-2026-090-FLOW-UPDATE (TABLE FLOW ENTRY BRANCHES)
-- **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức chốt 2 hướng từ BÀN TRỐNG: (1) BÀN TRỐNG → ĐẶT TRƯỚC → Vào bàn; (2) BÀN TRỐNG → KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng tùy chọn, KHÔNG phải bước bắt buộc trước khi vào bàn.
-- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ mô hình vận hành **Table Management & Payment Operating Model**:
+  1. **Table Flow 2 Branches:** BÀN TRỐNG có 2 hướng vào: (1) ĐẶT TRƯỚC → Vào bàn, hoặc (2) KHÁCH TRỰC TIẾP → Vào bàn. `ĐẶT TRƯỚC` là tính năng chọn thêm, KHÔNG bắt buộc.
+  2. **Table Lifecycle:** `VÀO BÀN → GỌI MÓN / PHỤC VỤ → THANH TOÁN → CHỜ DỌN → DỌN XONG → BÀN TRỐNG`.
+  3. **Chờ dọn → Gọi thêm món:** Nếu khách gọi thêm món khi bàn ở trạng thái `CHỜ DỌN`: `CHỜ DỌN → GỌI THÊM MÓN → ĐANG PHỤC VỤ` (bảo toàn lịch sử thanh toán trước).
+  4. **Thu tiền theo Bàn / Order & Multi-Staff:** Thanh toán theo tổng bill bàn/order, hỗ trợ thu tiền nhiều lần, nhiều hình thức (Cash/QR), nhiều nhân viên cùng thu.
+  5. **Còn phải thu ≠ Nợ:** `Còn phải thu` chỉ có nghĩa chưa thu xong, `Partial Payment ≠ Debt`. Ghi nợ là quyết định riêng (`Còn phải thu → Ghi nợ → Sổ nợ`).
+  6. **A6 Shift Physical Cash Separation:** Chỉ phần tiền mặt thực tế thu mới vào két tiền ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 

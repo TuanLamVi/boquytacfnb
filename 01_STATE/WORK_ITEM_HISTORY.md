@@ -19,17 +19,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 - Evidence: Final correction discovery documentation created, archived, committed, and synced to GitHub.
 - Next: PO Review of Prompt 094 Final Draft.
 
-### WORK ITEM: PROMPT-090-UPDATE — TABLE FLOW ENTRY BRANCHES CLARIFICATION
+### WORK ITEM: PROMPT-092 — CLOSE-OUT & LOCK TABLE + CHECKOUT PAYMENT OPERATING MODEL
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCK)`
-- Objective: PO Tuấn bổ sung làm rõ 2 hướng từ BÀN TRỐNG (Đặt trước hoặc Khách vào trực tiếp), xác nhận `ĐẶT TRƯỚC` là tính năng chọn thêm chứ không phải bước bắt buộc, và khóa cứng toàn bộ tài liệu Table Management & Payment Operating Model.
-- Scope: `docs-123/TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `PO_DECISION_REGISTER.md`.
+- Objective: PO Tuấn chính thức xác nhận PASS, PO_VERIFIED, PROTECTED, LOCKED cho toàn bộ mô hình vận hành Bàn & Thanh toán (Prompts 090 & 091: Table flow 2 branches từ Trống, `Còn phải thu ≠ Nợ`, Multi-staff collection, Multi-tender, `Chờ dọn → Gọi thêm món → Đang phục vụ`, A6 Shift physical cash separation).
+- Scope: `docs-123/TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `docs-123/CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `PO_DECISION_REGISTER.md`.
 - Application Code Changes: `NONE` (100% Governance Close-out).
-- Technical Result: PASS — Hoàn tất làm rõ Table Flow 2 nhánh và đóng task.
-- PO Decision Reference: `DEC-2026-090-FLOW-UPDATE`
+- Technical Result: PASS — Hoàn tất đóng task, bảo vệ và khóa cứng baseline Table Management & Checkout Payment V5.1.
+- PO Decision Reference: `DEC-2026-090, DEC-2026-091`
 - PO Status: `PO_VERIFIED / PROTECTED / LOCKED`
-- Evidence: Governance and discovery records updated, archived, committed, and synced to GitHub.
-- Next: READ-FIRST REQUIRED.
+- Evidence: Governance and discovery records updated, archived, committed, and synchronized to GitHub.
+- Next: Continue Product Discovery.
 
 ### WORK ITEM: PROMPT-092 — CLOSE-OUT & LOCK TABLE + CHECKOUT PAYMENT OPERATING MODEL
 - Date: 2026-09-28

@@ -34,9 +34,9 @@ PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED
 - **Protected Content:** `BUSINESS_MODELS_MENU_TEMPLATES_V5.1.md` (20 Business Models, Menu Template Structure, Store Menu independent copy, Topping vs Product Options rules, Representative Models).
 - **Rule:** Locked product-design baseline. No work item may alter the 20 business models, store menu copy mechanism, topping quantity model, or product options pricing rules without valid PO Decision and Unlock.
 
-### 6. TABLE MERGE / TABLE TRANSFER / OPERATING MODEL V5.1 (PROMPTS 074/090/091)
+### 6. TABLE MERGE / TABLE TRANSFER / OPERATING MODEL V5.1 (PROMPTS 074/090/091/092)
 - **Status:** `PO_VERIFIED / PROTECTED / LOCKED`
-- **Protected Content:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md` (Table flow: `Trống → Đặt trước → Vào bàn → Gọi món → Thanh toán → Chờ dọn → Dọn xong → Trống`, multi-staff collection, non-destructive table merge, strict table transfer state machine `occupied → cleaning → available`, post-checkout prohibition, and `Chờ dọn → Gọi thêm món` dynamic).
+- **Protected Content:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md` (Table flow: 2 entry branches from BÀN TRỐNG [Đặt trước or Walk-in] → Vào bàn → Gọi món → Thanh toán → Chờ dọn → Dọn xong → Trống, multi-staff collection, non-destructive table merge, strict table transfer state machine `occupied → cleaning → available`, post-checkout prohibition, and `Chờ dọn → Gọi thêm món` dynamic).
 - **Rule:** Locked product-design baseline. No work item may alter table operating rules without valid PO Decision and Unlock.
 
 ### 7. POS ORDERING / CART / CUSTOMIZATION / KITCHEN DISPATCH / OFFLINE BOUNDARY V5.1 (PROMPT 078)
