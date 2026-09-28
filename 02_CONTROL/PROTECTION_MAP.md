@@ -34,10 +34,10 @@ PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED
 - **Protected Content:** `BUSINESS_MODELS_MENU_TEMPLATES_V5.1.md` (20 Business Models, Menu Template Structure, Store Menu independent copy, Topping vs Product Options rules, Representative Models).
 - **Rule:** Locked product-design baseline. No work item may alter the 20 business models, store menu copy mechanism, topping quantity model, or product options pricing rules without valid PO Decision and Unlock.
 
-### 6. TABLE MERGE / TABLE TRANSFER PRODUCT RULES V5.1 (PROMPT 074)
+### 6. TABLE MERGE / TABLE TRANSFER / OPERATING MODEL V5.1 (PROMPTS 074/090/091)
 - **Status:** `PO_VERIFIED / PROTECTED / LOCKED`
-- **Protected Content:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md` (Non-destructive table merge preserving original orders via service group reference, strict table transfer state machine `occupied → cleaning → available`, post-checkout/invoice transfer/merge prohibition, and partial transfer deferred to post-MVP).
-- **Rule:** Locked product-design baseline. No work item may alter table merge/transfer rules without valid PO Decision and Unlock.
+- **Protected Content:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md` (Table flow: `Trống → Đặt trước → Vào bàn → Gọi món → Thanh toán → Chờ dọn → Dọn xong → Trống`, multi-staff collection, non-destructive table merge, strict table transfer state machine `occupied → cleaning → available`, post-checkout prohibition, and `Chờ dọn → Gọi thêm món` dynamic).
+- **Rule:** Locked product-design baseline. No work item may alter table operating rules without valid PO Decision and Unlock.
 
 ### 7. POS ORDERING / CART / CUSTOMIZATION / KITCHEN DISPATCH / OFFLINE BOUNDARY V5.1 (PROMPT 078)
 - **Status:** `PO_VERIFIED / PROTECTED / LOCKED`
@@ -49,9 +49,9 @@ PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED
 - **Protected Content:** `KDS_KITCHEN_DISCOVERY_V5.1.md` (KDS main screen UX, kitchen ticket model, state flow `queued → acknowledged → preparing → ready → served`, Ready/Served independence from payment gate, payment independence, table cleaning boundary, reservation boundary, multi-round dispatches, and idempotency UUIDs).
 - **Rule:** Locked product-design baseline. No work item may alter KDS or kitchen operations rules without valid PO Decision and Unlock.
 
-### 9. CHECKOUT & PAYMENT PRODUCT RULES V5.1 (PROMPT 084/085/086)
+### 9. CHECKOUT & PAYMENT PRODUCT RULES V5.1 (PROMPTS 084/085/086/090/091)
 - **Status:** `PO_VERIFIED / PROTECTED / LOCKED`
-- **Protected Content:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md` (Checkout UX, Cash, payOS QR webhook verification, Split Payment, Debt Lite `Ghi nợ ≠ Đã nhận tiền`, simple promotions/discounts, invoice lifecycle, 3-layer payment attempt/allocation/settlement, order closure & table cleaning sequence `occupied → cleaning → available`, LEGO permissions effective immediately, and online-required financial boundary).
+- **Protected Content:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md` (Checkout UX, Cash, payOS QR webhook verification, Split Payment, Debt Lite `Ghi nợ ≠ Đã nhận tiền`, `Còn phải thu ≠ Nợ`, multi-staff collection, multi-tender support, simple promotions/discounts, invoice lifecycle, 3-layer payment attempt/allocation/settlement, order closure & table cleaning sequence `occupied → cleaning → available`, LEGO permissions effective immediately, and online-required financial boundary).
 - **Rule:** Locked product-design baseline. No work item may alter checkout or payment rules without valid PO Decision and Unlock.
 
 ---

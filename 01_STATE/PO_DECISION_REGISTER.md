@@ -104,14 +104,25 @@
 
 ### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức chốt mô hình vận hành bàn và thanh toán cho F&B Smart V5.1 (Prompt 090):
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
   1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
   2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
   3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
   4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
 - **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
-- **Result:** `PO_CONFIRMED`.
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-091 (PROMPT 091 PARTIAL COLLECTION & DEBT BOUNDARY)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Partial Collection & Debt Boundary** (Prompt 091):
+  1. **Còn phải thu ≠ Nợ:** Khoản tiền chưa thu đủ (`Còn phải thu`) chỉ có nghĩa là bill chưa thu xong; tuyệt đối không tự động chuyển thành `Nợ`. `Partial Payment ≠ Debt`.
+  2. **Ghi nợ là quyết định riêng:** Chỉ khi quán chủ động đồng ý cho khách nợ thì `Còn phải thu` mới chuyển thành `Ghi nợ` (Sổ nợ).
+  3. **Multi-Staff & Multi-Tender:** Hỗ trợ thu tiền nhiều lần, kết hợp nhiều hình thức (Cash + QR, Cash + Cash, v.v.), nhiều nhân viên cùng thu tiền (lưu vết operator ID, timestamp, tender method).
+  4. **Tách bạch két tiền A6 Shift:** Chỉ phần tiền mặt thực tế thu mới đi vào két tiền mặt của ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+- **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
 ### DEC-2026-071-01, 071-02, 071-03 (PROMPT 071 DECISIONS)
 - **Date:** 2026-09-28
@@ -123,6 +134,17 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
 
+### DEC-2026-091 (PROMPT 091 PARTIAL COLLECTION & DEBT BOUNDARY)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt quy tắc thu tiền nhiều lần và ranh giới công nợ cho F&B Smart V5.1 (Prompt 091):
+  1. **Còn phải thu ≠ Nợ:** Khoản tiền chưa thu đủ (`Còn phải thu`) chỉ có nghĩa là bill chưa thu xong; tuyệt đối không tự động chuyển thành `Nợ`. `Partial Payment ≠ Debt`.
+  2. **Ghi nợ là quyết định riêng:** Chỉ khi quán chủ động đồng ý cho khách nợ thì `Còn phải thu` mới chuyển thành `Ghi nợ` (Sổ nợ).
+  3. **Multi-Staff & Multi-Tender:** Hỗ trợ thu tiền nhiều lần, kết hợp nhiều hình thức (Cash + QR, Cash + Cash, v.v.), nhiều nhân viên cùng thu tiền (lưu vết operator ID, timestamp, tender method).
+  4. **Tách bạch két tiền A6 Shift:** Chỉ phần tiền mặt thực tế thu mới đi vào két tiền mặt của ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+- **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
+
 ### DEC-2026-CHECKOUT-PAYMENT-V5.1 (PROMPT 084/085/086 CHECKOUT & PAYMENT)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ phân hệ **Checkout & Payment Product Discovery** (Prompts 084/085/086):
@@ -138,14 +160,25 @@
 
 ### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức chốt mô hình vận hành bàn và thanh toán cho F&B Smart V5.1 (Prompt 090):
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
   1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
   2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
   3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
   4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
 - **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
-- **Result:** `PO_CONFIRMED`.
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-091 (PROMPT 091 PARTIAL COLLECTION & DEBT BOUNDARY)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Partial Collection & Debt Boundary** (Prompt 091):
+  1. **Còn phải thu ≠ Nợ:** Khoản tiền chưa thu đủ (`Còn phải thu`) chỉ có nghĩa là bill chưa thu xong; tuyệt đối không tự động chuyển thành `Nợ`. `Partial Payment ≠ Debt`.
+  2. **Ghi nợ là quyết định riêng:** Chỉ khi quán chủ động đồng ý cho khách nợ thì `Còn phải thu` mới chuyển thành `Ghi nợ` (Sổ nợ).
+  3. **Multi-Staff & Multi-Tender:** Hỗ trợ thu tiền nhiều lần, kết hợp nhiều hình thức (Cash + QR, Cash + Cash, v.v.), nhiều nhân viên cùng thu tiền (lưu vết operator ID, timestamp, tender method).
+  4. **Tách bạch két tiền A6 Shift:** Chỉ phần tiền mặt thực tế thu mới đi vào két tiền mặt của ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+- **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
 ### DEC-2026-TM-03, TM-04, TM-05 (PROMPT 074 DECISIONS)
 - **Date:** 2026-09-28
@@ -157,6 +190,17 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
 
+### DEC-2026-091 (PROMPT 091 PARTIAL COLLECTION & DEBT BOUNDARY)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt quy tắc thu tiền nhiều lần và ranh giới công nợ cho F&B Smart V5.1 (Prompt 091):
+  1. **Còn phải thu ≠ Nợ:** Khoản tiền chưa thu đủ (`Còn phải thu`) chỉ có nghĩa là bill chưa thu xong; tuyệt đối không tự động chuyển thành `Nợ`. `Partial Payment ≠ Debt`.
+  2. **Ghi nợ là quyết định riêng:** Chỉ khi quán chủ động đồng ý cho khách nợ thì `Còn phải thu` mới chuyển thành `Ghi nợ` (Sổ nợ).
+  3. **Multi-Staff & Multi-Tender:** Hỗ trợ thu tiền nhiều lần, kết hợp nhiều hình thức (Cash + QR, Cash + Cash, v.v.), nhiều nhân viên cùng thu tiền (lưu vết operator ID, timestamp, tender method).
+  4. **Tách bạch két tiền A6 Shift:** Chỉ phần tiền mặt thực tế thu mới đi vào két tiền mặt của ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+- **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
+
 ### DEC-2026-CHECKOUT-PAYMENT-V5.1 (PROMPT 084/085/086 CHECKOUT & PAYMENT)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ phân hệ **Checkout & Payment Product Discovery** (Prompts 084/085/086):
@@ -172,14 +216,25 @@
 
 ### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức chốt mô hình vận hành bàn và thanh toán cho F&B Smart V5.1 (Prompt 090):
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
   1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
   2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
   3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
   4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
 - **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
-- **Result:** `PO_CONFIRMED`.
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-091 (PROMPT 091 PARTIAL COLLECTION & DEBT BOUNDARY)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Partial Collection & Debt Boundary** (Prompt 091):
+  1. **Còn phải thu ≠ Nợ:** Khoản tiền chưa thu đủ (`Còn phải thu`) chỉ có nghĩa là bill chưa thu xong; tuyệt đối không tự động chuyển thành `Nợ`. `Partial Payment ≠ Debt`.
+  2. **Ghi nợ là quyết định riêng:** Chỉ khi quán chủ động đồng ý cho khách nợ thì `Còn phải thu` mới chuyển thành `Ghi nợ` (Sổ nợ).
+  3. **Multi-Staff & Multi-Tender:** Hỗ trợ thu tiền nhiều lần, kết hợp nhiều hình thức (Cash + QR, Cash + Cash, v.v.), nhiều nhân viên cùng thu tiền (lưu vết operator ID, timestamp, tender method).
+  4. **Tách bạch két tiền A6 Shift:** Chỉ phần tiền mặt thực tế thu mới đi vào két tiền mặt của ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+- **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
 ### DEC-2026-BUSINESS-MODELS-MENU-V5.1
 - **Date:** 2026-09-28
@@ -197,14 +252,25 @@
 
 ### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức chốt mô hình vận hành bàn và thanh toán cho F&B Smart V5.1 (Prompt 090):
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
   1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
   2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
   3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
   4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
 - **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
-- **Result:** `PO_CONFIRMED`.
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-091 (PROMPT 091 PARTIAL COLLECTION & DEBT BOUNDARY)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Partial Collection & Debt Boundary** (Prompt 091):
+  1. **Còn phải thu ≠ Nợ:** Khoản tiền chưa thu đủ (`Còn phải thu`) chỉ có nghĩa là bill chưa thu xong; tuyệt đối không tự động chuyển thành `Nợ`. `Partial Payment ≠ Debt`.
+  2. **Ghi nợ là quyết định riêng:** Chỉ khi quán chủ động đồng ý cho khách nợ thì `Còn phải thu` mới chuyển thành `Ghi nợ` (Sổ nợ).
+  3. **Multi-Staff & Multi-Tender:** Hỗ trợ thu tiền nhiều lần, kết hợp nhiều hình thức (Cash + QR, Cash + Cash, v.v.), nhiều nhân viên cùng thu tiền (lưu vết operator ID, timestamp, tender method).
+  4. **Tách bạch két tiền A6 Shift:** Chỉ phần tiền mặt thực tế thu mới đi vào két tiền mặt của ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+- **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
 ### DEC-2026-071-01, 071-02, 071-03 (PROMPT 071 DECISIONS)
 - **Date:** 2026-09-28
@@ -216,6 +282,17 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
 
+### DEC-2026-091 (PROMPT 091 PARTIAL COLLECTION & DEBT BOUNDARY)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt quy tắc thu tiền nhiều lần và ranh giới công nợ cho F&B Smart V5.1 (Prompt 091):
+  1. **Còn phải thu ≠ Nợ:** Khoản tiền chưa thu đủ (`Còn phải thu`) chỉ có nghĩa là bill chưa thu xong; tuyệt đối không tự động chuyển thành `Nợ`. `Partial Payment ≠ Debt`.
+  2. **Ghi nợ là quyết định riêng:** Chỉ khi quán chủ động đồng ý cho khách nợ thì `Còn phải thu` mới chuyển thành `Ghi nợ` (Sổ nợ).
+  3. **Multi-Staff & Multi-Tender:** Hỗ trợ thu tiền nhiều lần, kết hợp nhiều hình thức (Cash + QR, Cash + Cash, v.v.), nhiều nhân viên cùng thu tiền (lưu vết operator ID, timestamp, tender method).
+  4. **Tách bạch két tiền A6 Shift:** Chỉ phần tiền mặt thực tế thu mới đi vào két tiền mặt của ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+- **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
+
 ### DEC-2026-CHECKOUT-PAYMENT-V5.1 (PROMPT 084/085/086 CHECKOUT & PAYMENT)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ phân hệ **Checkout & Payment Product Discovery** (Prompts 084/085/086):
@@ -231,14 +308,25 @@
 
 ### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức chốt mô hình vận hành bàn và thanh toán cho F&B Smart V5.1 (Prompt 090):
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
   1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
   2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
   3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
   4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
 - **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
-- **Result:** `PO_CONFIRMED`.
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-091 (PROMPT 091 PARTIAL COLLECTION & DEBT BOUNDARY)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Partial Collection & Debt Boundary** (Prompt 091):
+  1. **Còn phải thu ≠ Nợ:** Khoản tiền chưa thu đủ (`Còn phải thu`) chỉ có nghĩa là bill chưa thu xong; tuyệt đối không tự động chuyển thành `Nợ`. `Partial Payment ≠ Debt`.
+  2. **Ghi nợ là quyết định riêng:** Chỉ khi quán chủ động đồng ý cho khách nợ thì `Còn phải thu` mới chuyển thành `Ghi nợ` (Sổ nợ).
+  3. **Multi-Staff & Multi-Tender:** Hỗ trợ thu tiền nhiều lần, kết hợp nhiều hình thức (Cash + QR, Cash + Cash, v.v.), nhiều nhân viên cùng thu tiền (lưu vết operator ID, timestamp, tender method).
+  4. **Tách bạch két tiền A6 Shift:** Chỉ phần tiền mặt thực tế thu mới đi vào két tiền mặt của ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+- **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
 ### DEC-2026-TM-03, TM-04, TM-05 (PROMPT 074 DECISIONS)
 - **Date:** 2026-09-28
@@ -250,6 +338,17 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
 
+### DEC-2026-091 (PROMPT 091 PARTIAL COLLECTION & DEBT BOUNDARY)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt quy tắc thu tiền nhiều lần và ranh giới công nợ cho F&B Smart V5.1 (Prompt 091):
+  1. **Còn phải thu ≠ Nợ:** Khoản tiền chưa thu đủ (`Còn phải thu`) chỉ có nghĩa là bill chưa thu xong; tuyệt đối không tự động chuyển thành `Nợ`. `Partial Payment ≠ Debt`.
+  2. **Ghi nợ là quyết định riêng:** Chỉ khi quán chủ động đồng ý cho khách nợ thì `Còn phải thu` mới chuyển thành `Ghi nợ` (Sổ nợ).
+  3. **Multi-Staff & Multi-Tender:** Hỗ trợ thu tiền nhiều lần, kết hợp nhiều hình thức (Cash + QR, Cash + Cash, v.v.), nhiều nhân viên cùng thu tiền (lưu vết operator ID, timestamp, tender method).
+  4. **Tách bạch két tiền A6 Shift:** Chỉ phần tiền mặt thực tế thu mới đi vào két tiền mặt của ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+- **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
+
 ### DEC-2026-CHECKOUT-PAYMENT-V5.1 (PROMPT 084/085/086 CHECKOUT & PAYMENT)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ phân hệ **Checkout & Payment Product Discovery** (Prompts 084/085/086):
@@ -265,11 +364,22 @@
 
 ### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức chốt mô hình vận hành bàn và thanh toán cho F&B Smart V5.1 (Prompt 090):
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Table & Payment Operating Model** (Prompt 090):
   1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
   2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
   3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
   4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
 - **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
-- **Result:** `PO_CONFIRMED`.
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-091 (PROMPT 091 PARTIAL COLLECTION & DEBT BOUNDARY)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **Partial Collection & Debt Boundary** (Prompt 091):
+  1. **Còn phải thu ≠ Nợ:** Khoản tiền chưa thu đủ (`Còn phải thu`) chỉ có nghĩa là bill chưa thu xong; tuyệt đối không tự động chuyển thành `Nợ`. `Partial Payment ≠ Debt`.
+  2. **Ghi nợ là quyết định riêng:** Chỉ khi quán chủ động đồng ý cho khách nợ thì `Còn phải thu` mới chuyển thành `Ghi nợ` (Sổ nợ).
+  3. **Multi-Staff & Multi-Tender:** Hỗ trợ thu tiền nhiều lần, kết hợp nhiều hình thức (Cash + QR, Cash + Cash, v.v.), nhiều nhân viên cùng thu tiền (lưu vết operator ID, timestamp, tender method).
+  4. **Tách bạch két tiền A6 Shift:** Chỉ phần tiền mặt thực tế thu mới đi vào két tiền mặt của ca. QR, `Còn phải thu` và `Ghi nợ` không thuộc két tiền mặt.
+- **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.

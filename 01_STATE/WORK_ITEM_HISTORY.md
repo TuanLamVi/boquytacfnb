@@ -8,6 +8,18 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-092 — CLOSE-OUT & LOCK TABLE + CHECKOUT PAYMENT OPERATING MODEL
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCK)`
+- Objective: PO Tuấn chính thức xác nhận PASS, PO_VERIFIED, PROTECTED, LOCKED cho toàn bộ mô hình vận hành Bàn & Thanh toán (Prompts 090 & 091: Table flow `Trống → Đặt trước → Vào bàn → Gọi món → Thanh toán → Chờ dọn → Dọn xong → Trống`, `Còn phải thu ≠ Nợ`, Multi-staff collection, Multi-tender, `Chờ dọn → Gọi thêm món → Đang phục vụ`, A6 Shift physical cash separation).
+- Scope: `docs-123/TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `docs-123/CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `PO_DECISION_REGISTER.md`.
+- Application Code Changes: `NONE` (100% Governance Close-out).
+- Technical Result: PASS — Hoàn tất đóng task, bảo vệ và khóa cứng baseline Table Management & Checkout Payment V5.1.
+- PO Decision Reference: `DEC-2026-090, DEC-2026-091`
+- PO Status: `PO_VERIFIED / PROTECTED / LOCKED`
+- Evidence: Governance and discovery records updated, archived, committed, and synchronized to GitHub.
+- Next: Continue Product Discovery.
+
 ### WORK ITEM: PROMPT-090 — TABLE & PAYMENT OPERATING MODEL PO CONFIRMATION
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PO DECISION CONFIRMATION)`
