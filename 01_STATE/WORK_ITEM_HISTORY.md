@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-117 — MASTER SPECIFICATION DRAFT PROVENANCE & REPOSITORY RECONCILIATION
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
+- Objective: Kiểm toán provenance của Master Specification Draft V0.1, phát hiện discrepancy (File tồn tại local nhưng bị bỏ sót/untracked trong commit `ba09947` của Prompt-116, do đó chưa có trên GitHub), và thực hiện correction addendum chính xác theo nguyên tắc Source of Truth.
+- Scope: Provenance audit & discrepancy reconciliation of Prompt-116 Master Spec Draft.
+- Application Code Changes: `NONE` (100% Provenance Audit).
+- Technical Result: CONFLICT RESOLVED / CORRECTION APPLIED — Xác định local file = YES, GitHub file = NO, yêu cầu commit và sync chính thức ở action tiếp theo.
+- PO Status: `DRAFT — PENDING COMMIT & GITHUB SYNC`
+- Evidence: Git status audit, file provenance check, reconciliation table.
+- Next: Commit Master Spec Draft files and synchronize to GitHub via authorized action.
+
 ### WORK ITEM: PROMPT-116 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — DRAFT AUTHORING
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD`
