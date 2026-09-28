@@ -11,7 +11,8 @@ Trước khi sửa code hoặc đưa ra quyết định kỹ thuật, hãy đọ
 5. `docs/boquytacfnb/02_CONTROL/CHECKPOINTS.md`
 6. `docs/boquytacfnb/02_CONTROL/PROTECTION_MAP.md`
 7. `docs/boquytacfnb/02_CONTROL/REGRESSION_LOG.md`
-8. Tài liệu kỹ thuật liên quan trực tiếp đến việc đang làm.
+8. `docs/boquytacfnb/00_KIM_CHI_NAM/LOGGING_PROTOCOL.md`
+9. Tài liệu kỹ thuật liên quan trực tiếp đến việc đang làm.
 
 ## Quy tắc dễ nhớ
 
@@ -24,6 +25,21 @@ Trước khi sửa code hoặc đưa ra quyết định kỹ thuật, hãy đọ
 - Phát hiện lỗi hồi quy ở phần đã bảo vệ → STOP.
 - Không xóa lịch sử.
 - Sau Work Item phải cập nhật đúng hồ sơ và ghi lịch sử Git.
+- Không tạo một file nhật ký mới cho mỗi lần Codex chạy.
+
+## Ghi nhật ký
+
+Dùng `LOGGING_PROTOCOL.md`.
+
+Thông thường:
+- Work Item History = lịch sử chính;
+- Current State = trạng thái hiện tại;
+- Protection Map = phần được bảo vệ;
+- Regression Log = lỗi hồi quy;
+- Test Evidence = bằng chứng;
+- PO Decision Register = quyết định PO.
+
+Git commit history giữ lịch sử thay đổi file. Không cần chép cùng một Final Report vào hàng loạt file.
 
 ## Vai trò
 
