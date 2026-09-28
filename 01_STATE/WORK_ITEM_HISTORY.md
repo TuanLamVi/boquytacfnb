@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-094 — A6 SHIFT MANAGEMENT FINAL CORRECTION
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN FINAL CORRECTION)`
+- Objective: Hoàn thiện Prompt 089 thành bản Final Correction cho A6 Shift Management & Cash Drawer (Multi-staff collection, no fixed cashier, collection during active service, table/order level collection, physical cash drawer separation, optional handover, close shift cash audit & variance).
+- Scope: `docs-123/SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery & UX Design Final Correction).
+- Technical Result: PASS — Hoàn tất các phần A đến G theo Prompt 094.
+- PO Status: `FINAL DRAFT — PO REVIEW REQUIRED`
+- Evidence: Final correction discovery documentation created, archived, committed, and synced to GitHub.
+- Next: PO Review of Prompt 094 Final Draft.
+
 ### WORK ITEM: PROMPT-090-UPDATE — TABLE FLOW ENTRY BRANCHES CLARIFICATION
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCK)`
