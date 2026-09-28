@@ -8,6 +8,17 @@
 
 ## 2. DANH SÁCH QUYẾT ĐỊNH
 
+### DEC-2026-GOV-PROMPT-110-112-APPROVAL
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức phê duyệt (PO APPROVAL):
+  1. Prompt-110 (Governance Change Proposal & Impact Review)
+  2. Prompt-111 (Governance Identity & Closure Reconciliation)
+  3. Prompt-112 (A7 Reports & Analytics Canonical Status Reconciliation - maintained at FINAL CONFIRMED / READY FOR PO_VERIFIED)
+- **Reason:** Hoàn tất kiểm toán quản trị và hòa giải ID/Closure theo yêu cầu của PO Tuấn. Cho phép chuyển sang bước Governance Implementation trong prompt tiếp theo.
+- **Affected Phase:** Governance V5.1
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_APPROVED / GOVERNANCE APPROVED`.
+
 ### DEC-R0-001
 - **Date:** 2026-03-31
 - **Decision:** Phê duyệt thiết lập bộ khung kim chỉ nam và 11 tài liệu quản lý phục hồi dự án F&B SMART (`docs/rehabilitation/`).
