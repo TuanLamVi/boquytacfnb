@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-065 — 20 BUSINESS MODELS & MENU TEMPLATE STANDARDIZATION
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & BUSINESS MODEL STANDARDIZATION)`
+- Objective: Chuẩn hóa 20 mô hình kinh doanh, cấu trúc Menu Template, phân loại Topping vs Product Options, đặc tả các mô hình giá đặc biệt (Seafood, BBQ, Combo, Hybrid) và các hạng mục đề xuất hoãn sang post-MVP.
+- Scope: `docs-123/BUSINESS_MODELS_MENU_TEMPLATES_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/BUSINESS_MODELS_MENU_TEMPLATES_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery & Business Standardization).
+- Technical Result: PASS — Hoàn tất các phần A đến G theo Prompt 065.
+- PO Status: `PROPOSED — PO REVIEW REQUIRED`
+- Evidence: Standardization documentation created, archived, committed, and synced to GitHub.
+- Next: PO Review of Prompt 065.
+
 ### WORK ITEM: PROMPT-064 — QUICK SETUP, BUSINESS MODEL & MENU TEMPLATE PRODUCT DISCOVERY (FINAL DRAFT)
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN FINAL DRAFT)`
