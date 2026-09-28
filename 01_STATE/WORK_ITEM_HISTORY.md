@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-098 — A7 REPORTS & ANALYTICS PRODUCT DISCOVERY
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN ONLY)`
+- Objective: Thiết kế hệ thống Báo cáo & Báo cáo tổng quan (Dashboard Hôm nay, Doanh thu, Thu tiền, Còn phải thu, Sổ nợ, Ca & Chênh lệch két tiền A6, Thu tiền nhân viên, Món & Bàn, Discount, Lego permissions) cho F&B Smart V5.1.
+- Scope: `docs-123/REPORTS_ANALYTICS_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/REPORTS_ANALYTICS_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery & UX Design).
+- Technical Result: PASS — Hoàn tất các phần A đến K theo Prompt 098.
+- PO Status: `PROPOSED — PO REVIEW REQUIRED`
+- Evidence: Discovery documentation created, archived, committed, and synced to GitHub.
+- Next: PO Review of Prompt 098 Reports & Analytics Discovery.
+
 ### WORK ITEM: PROMPT-095 — A6 SHIFT MANAGEMENT PRODUCT RULES (CLOSE-OUT, PROTECT & LOCK)
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCK)`
