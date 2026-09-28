@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-118 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — COMMIT & SYNC DRAFT
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD`
+- Objective: Đưa chính thức Clean Rebuild Master Specification V5.1 Draft V0.1 vào repository GitHub, khôi phục đầy đủ commit provenance và đồng bộ hóa với kho từ xa (`TuanLamVi/boquytacfnb`, branch `codex/migrate-kim-chi-nam-20260928`, commit `355bf92`).
+- Scope: `docs-123/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`, `fnb-smart-v5/INTEGRATION/SYNC_LOCAL_RECORDS_TO_GITHUB.ps1`.
+- Application Code Changes: `NONE` (100% Provenance Restoration & Sync).
+- Technical Result: PASS — Master Spec Draft V0.1 committed và synced thành công lên GitHub (`DONG BO THANH CONG`).
+- PO Status: `DRAFT V0.1 — READY FOR PO REVIEW`
+- Evidence: GitHub commit `355bf92cb33424ce3cef3d8e34a2b22425d61840`, sync script execution output.
+- Next: PO Review of Clean Rebuild Master Specification V5.1.
+
 ### WORK ITEM: PROMPT-117 — MASTER SPECIFICATION DRAFT PROVENANCE & REPOSITORY RECONCILIATION
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
