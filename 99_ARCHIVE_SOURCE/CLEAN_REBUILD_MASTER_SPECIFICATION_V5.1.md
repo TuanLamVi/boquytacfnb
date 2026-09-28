@@ -6,7 +6,7 @@
 - **Status:** DRAFT — READY FOR PO REVIEW
 - **Build Mode:** CLEAN_REBUILD
 - **Primary Work Item:** MASTER-SPECIFICATION-GATE
-- **Prompt ID:** PROMPT-122
+- **Prompt ID:** PROMPT-123
 - **Author:** Architecture Governance & Product Team
 - **Source Authority:** KIM CHỈ NAM, PO Decisions, Four V5.1 Contracts (`PRODUCT_CHARTER_V5.1.md`, `DATABASE_SCHEMA_V0.1.md`, `STATE_MACHINES_V0.1.md`, `FIRESTORE_QUERY_COST_BUDGET_V0.1.md`), and Locked Product Discovery modules.
 - **Canonical Remote Repository Path:** `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md` (Repository: `TuanLamVi/boquytacfnb`, Branch: `codex/migrate-kim-chi-nam-20260928`).
@@ -33,7 +33,7 @@ The scope encompasses the complete end-to-end lifecycle for F&B Smart V5.1 MVP:
 - Checkout & Payment (Cash, payOS QR webhook verification, Split payment, Debt Lite, 3-layer payment attempt/allocation/settlement, discounts, Payment Reference Claim).
 - Debt Allocation & Collection (`allocateDebt` DebtOrigination, `collectDebt` FIFO allocation up to 50 originations, DebtAccount balance lifecycle).
 - Unallocated Funds (F1 `createUnallocatedFund`, F2 `allocateUnallocatedFund`, F3 `requestUnallocatedFundRefund` for late/unclassified payments).
-- Payment Adjustments & Physical Cash Movement (Settlement consumption, reversal/replacement, open-shift vs closed-shift deltas, `recordAdjustmentCashMovement`).
+- Payment Adjustments & Physical Cash Movement (Settlement consumption, reversal/replacement, open-shift vs closing-shift vs closed-shift deltas, `recordAdjustmentCashMovement`).
 - Full Invoice Reversals (`reverseInvoice` consuming active settlements, creating negative reversal invoice/lines, releasing debt, generating RefundObligations).
 - Shift Management & Cash Drawer (Shift lifecycle `closed → open → closing → closed`, ShiftLock, opening cash immutability, physical cash isolation, close shift blocking).
 - Customer Profile & Debt Ledger (Store-scoped debt ledger, debt origination, FIFO collection allocation, preventing negative balances `Còn nợ < 0` blocked).
@@ -131,14 +131,19 @@ The scope encompasses the complete end-to-end lifecycle for F&B Smart V5.1 MVP:
 ## 16. Return Line, Item Void, Invoice Reversals & Refunds (MVP Scope)
 - **Return Line Workflow:** `requestReturn` (`pending_approval`) → `approveReturn` (`applied`) / `rejectReturn` (`rejected`).
 - **Return Tickets:** Approved return lines for items already in kitchen dispatch generate ReturnTickets sent to kitchen stations.
-- **Full Invoice Reversal (`reverseInvoice`):** Atomically consumes active settlements via `SettlementConsumption`, creates reversal negative invoices/lines, releases debt outstanding, and creates RefundObligations using atomic write formula $L + S + F + D + 2R + 2A + U + 5$.
-- **Refund Obligations & Completion:** `completeCashRefund` (completes cash refund against open shift cash drawer), `beginBankRefundAttempt` / `completeBankRefund` (bank/QR asynchronous refund preserving original payment method).
+- **Full Invoice Reversal (`reverseInvoice`):** Atomically consumes active settlements via `SettlementConsumption`, creates reversal negative invoices/lines, releases debt outstanding, and creates RefundObligations using atomic write formula $L + S + F + D + 2R + 2A + U + 5$. Does NOT modify closed order status or table state.
+- **Refund Obligations & Attempts:**
+  - Cash Refund (`completeCashRefund`): Direct completed attempt against open shift cash drawer (no pending attempt phase).
+  - Bank Refund Attempt (`beginBankRefundAttempt`): `requested` $\rightarrow$ `pending`.
+  - `cancelBankRefund` & `failBankRefund`: Releases reserved obligation capacity exactly once (`pending` $\rightarrow$ `cancelled` / `failed`).
+  - `completeBankRefund`: `pending` $\rightarrow$ `completed`. Original payment method preserved.
 
 ---
 
 ## 17. Debt Allocation & Collection (MVP Scope)
-- **`allocateDebt`:** Invoice sale unpaid/partial, Customer Debt enabled, DebtAccount active, open count < 50. Atomically creates debt Settlement, DebtOrigination (open), DebtEntry (positive); updates DebtAccount, Invoice, Shift debt originated; creates two Contribution entries.
-- **`collectDebt`:** Reads open originations FIFO (up to 50), creates DebtCollection, DebtCollectionAllocations, negative DebtEntries; updates Originations, DebtAccount, Invoice counters, Shift totals, CashEntry or Claim.
+- **`allocateDebt`:** Invoice sale unpaid/partial, Customer Debt enabled, DebtAccount active, open count < 50. Atomically creates debt Settlement, DebtOrigination (`open`), DebtEntry (positive); updates DebtAccount, Invoice, Shift debt originated; creates two Contribution entries.
+- **`collectDebt`:** Reads open originations FIFO (up to 50), creates DebtCollection, DebtCollectionAllocations, negative DebtEntries; updates Originations, DebtAccount balance, Invoice counters, Shift totals, CashEntry or Claim.
+- **Origination Lifecycle:** Origination stays `open` if partially collected; transitions to `settled` only when remaining open balance is 0. Settled origination reduces open count exactly once.
 - **Invariant:** Collection total equals sum of Allocations; Account balance equals sum of open outstanding originations. Prevent negative balance (`Còn nợ < 0` blocked). Debt collection increases cash drawer without double-counting sales revenue.
 
 ---
@@ -147,13 +152,14 @@ The scope encompasses the complete end-to-end lifecycle for F&B Smart V5.1 MVP:
 - **State Machine:** `unallocated → partially_allocated → allocated`; refund branch `unallocated|partially_allocated → refund_pending → refunded`.
 - **`createUnallocatedFund` (F1):** Bank/QR payment received without immediate invoice link. Creates UnallocatedFund + PaymentClaim + Contribution.
 - **`allocateUnallocatedFund` (F2):** Allocates fund to unpaid/partial invoice. Creates Settlement + FundEntry + reduces Fund + updates Invoice + Contribution.
-- **`requestUnallocatedFundRefund` (F3):** Initiates refund obligation for unallocated fund.
+- **`requestUnallocatedFundRefund` (F3):** Initiates refund obligation for unallocated fund. Complete bank refund creates FundEntry refund and two Contributions.
 
 ---
 
 ## 19. Payment Adjustments & Physical Cash Movement (MVP Scope)
 - **`adjustPayment`:** Consumes an Active Settlement via `SettlementConsumption`, creates PaymentAdjustment, negative reversal Settlement, and positive replacement Settlement.
   - Original Shift Open: Updates shift adjustment nets, creates correction CashEntry if cash delta $\neq 0$.
+  - Original Shift Closing: `SHIFT_CLOSING_RETRY_LATER`.
   - Original Shift Closed: Reclassifies financial ledger without modifying closed shift. Cash delta movement created in current open shift via `recordAdjustmentCashMovement`.
 
 ---
@@ -180,7 +186,7 @@ The scope encompasses the complete end-to-end lifecycle for F&B Smart V5.1 MVP:
 ## 22. Offline Boundary, Local Outbox & Receipt Canonicalization
 - Read operations supported via cached local storage.
 - Outbox pattern for queued offline mutations using `mutationId` and receipt document canonicalization.
-- **Financial Settlement:** Strictly `ONLINE-REQUIRED` with Server Final Authority. Clients cannot self-declare financial success offline.
+- **Financial Settlement:** Strictly `ONLINE-REQUIRED` with Server Final Authority. Clients cannot self-declare financial success offline. Ambiguous timeouts trigger backoff/reconciliation without creating duplicate settlements.
 
 ---
 
@@ -226,9 +232,9 @@ The scope encompasses the complete end-to-end lifecycle for F&B Smart V5.1 MVP:
 - **R2:** `pending_approval` $\xrightarrow[\text{Approved by manager; order unfenced}]{\text{approveReturn}}$ `applied`.
 - **R3:** `pending_approval` $\xrightarrow[\text{Rejected by manager}]{\text{rejectReturn}}$ `rejected`.
 
-### 24.5 Kitchen Ticket Machine
-- **States:** `queued → acknowledged → preparing → ready → served`.
-- **Return Tickets:** `queued → acknowledged → served`.
+### 24.5 Kitchen Ticket Machines
+- **Normal Ticket:** `queued → acknowledged → preparing → ready → served`.
+- **Return Ticket:** `queued → acknowledged → served`.
 
 ### 24.6 Shift & ShiftLock Machine
 - **States:** `closed → open → closing → closed`.
@@ -246,11 +252,11 @@ The scope encompasses the complete end-to-end lifecycle for F&B Smart V5.1 MVP:
 
 ### 24.8 Settlement Lifecycle Machine
 - **Settlement ID Formats:** `SET_PAY_{attemptId}`, `SET_DEBT_{mutationId}`, `SET_FUND_{mutationId}`.
-- **State Transition:** `N/A` $\xrightarrow[\text{Payment/Debt/Fund success}]{\text{confirmPayment / allocateDebt / allocateFund}}$ `active` $\xrightarrow[\text{adjustPayment / reverseInvoice}]{\text{SettlementConsumption}}$ `consumed`.
+- **State Transition:** N/A $\xrightarrow[\text{Payment/Debt/Fund success}]{\text{confirmPayment / allocateDebt / allocateFund}}$ `active` $\xrightarrow[\text{adjustPayment / reverseInvoice}]{\text{SettlementConsumption}}$ `consumed`.
 
 ### 24.9 Debt Allocation & Collection Machine
 - **Allocation:** Invoice unpaid/partial $\xrightarrow[\text{Customer Debt enabled; DebtAccount active; openCount<50}]{\text{allocateDebt}}$ DebtOrigination (`open`).
-- **Collection:** Originations (`open`) $\xrightarrow[\text{collectDebt; FIFO up to 50}]{\text{collectDebt}}$ Originations (`settled`).
+- **Collection:** Origination (`open`) $\xrightarrow[\text{collectDebt; FIFO up to 50; partial or full}]{\text{collectDebt}}$ Origination (`open` if balance > 0, `settled` if balance == 0).
 
 ### 24.10 Unallocated Fund Machine
 - **States:** `unallocated → partially_allocated → allocated`; refund branch `unallocated|partially_allocated → refund_pending → refunded`.
@@ -260,15 +266,21 @@ The scope encompasses the complete end-to-end lifecycle for F&B Smart V5.1 MVP:
 
 ### 24.11 Payment Adjustment Machine
 - Active Settlement $\xrightarrow[\text{Invoice paid; method matrix valid; consumption absent}]{\text{adjustPayment}}$ Reversal Settlement (negative) + Replacement Settlement (positive).
-- Cash Delta Movement (Closed Shift): Closed Shift $\xrightarrow[\text{recordAdjustmentCashMovement; current Shift open}]{\text{recordAdjustmentCashMovement}}$ AdjustmentCashMovement in current shift.
+- Branching:
+  - Original Shift Open: Updates shift adjustment nets, creates correction CashEntry if cash delta $\neq 0$.
+  - Original Shift Closing: `SHIFT_CLOSING_RETRY_LATER`.
+  - Original Shift Closed: Reclassifies financial ledger without modifying closed shift.
+- Cash Delta Movement (Closed Shift): Closed Shift $\xrightarrow[\text{recordAdjustmentCashMovement; current Shift open}]{\text{recordAdjustmentCashMovement}}$ AdjustmentCashMovement in current open shift.
 
 ### 24.12 Full Invoice Reversal Machine
-- Paid Invoice $\xrightarrow[\text{reverseInvoice; Settlements<=20; Lines<=200}]{\text{reverseInvoice}}$ Reversal Invoice + Lines (negative) + RefundObligations.
+- Paid Invoice $\xrightarrow[\text{reverseInvoice; Settlements<=20; Lines<=200; debt <= 50; preflight request-size}]{\text{reverseInvoice}}$ Reversal Invoice + Lines (negative) + RefundObligations. (Formula: $L + S + F + D + 2R + 2A + U + 5$).
 
 ### 24.13 Refund Obligation & Attempt Machine
 - **Obligation States:** `requested → pending → completed` / `failed`.
-- **RF1:** `requested` $\xrightarrow[\text{Shift open; cash drawer sufficient}]{\text{completeCashRefund}}$ `completed` (CashEntry created).
-- **RF2:** `requested` $\xrightarrow[\text{Bank refund attempt initiated}]{\text{beginBankRefundAttempt}}$ `pending` $\xrightarrow[\text{Bank confirmation}]{\text{completeBankRefund}}$ `completed`.
+- **RF1:** `requested` $\xrightarrow[\text{Shift open; cash drawer sufficient}]{\text{completeCashRefund}}$ `completed` (CashEntry created directly, no pending attempt phase).
+- **RF2A:** `requested` $\xrightarrow[\text{Reserve obligation capacity; match original method}]{\text{beginBankRefundAttempt}}$ `pending`.
+- **RF2B:** `pending` $\xrightarrow[\text{Bank refund confirmed}]{\text{completeBankRefund}}$ `completed`.
+- **RF2C:** `pending` $\xrightarrow[\text{User cancel / bank failure}]{\text{cancelBankRefund / failBankRefund}}$ `cancelled` / `failed` (Releases reserved capacity exactly once).
 
 ---
 
@@ -280,8 +292,8 @@ The scope encompasses the complete end-to-end lifecycle for F&B Smart V5.1 MVP:
 ## 26. Firestore Query & Cost Constraints
 - Governed strictly by `FIRESTORE_QUERY_COST_BUDGET_V0.1.md`:
   - Bounded reads, pagination, index governance.
-  - General request-size safety target: **< 8 MiB** per transaction.
-  - Kitchen Ticket payload size target: **<= 500 KiB** per ticket/payload.
+  - General request-size safety target: **< 8 MiB** per transaction payload.
+  - Kitchen Ticket payload size target: **<= 500 KiB** per ticket.
   - Planning cost cap budget: **$509.01 USD / month**.
 
 ---

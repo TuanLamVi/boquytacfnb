@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-123 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — FINAL SEMANTIC RECONCILIATION
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
+- Objective: Thực hiện vòng hòa giải semantic cuối cùng, tinh chỉnh chính xác trạng thái và guards cho Debt Machine (open balance, FIFO, no negative balance), Refund Machine (`completeCashRefund` direct vs `beginBankRefundAttempt` pending, release reservation on cancel/fail), Payment Adjustments, Invoice Reversal, và cập nhật blob SHA chuẩn (`0bee33639116be712850e6e77bf752c459a82aa3`).
+- Scope: `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md` & `docs-123/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`.
+- Application Code Changes: `NONE` (100% Semantic Reconciliation Document Audit).
+- Technical Result: PASS — Master Spec Draft V0.1 100% semantically exact with 4 Technical Contracts V5.1.
+- PO Status: `DRAFT V0.1 — READY FOR PO REVIEW`
+- Evidence: Exact git blob SHA `0bee33639116be712850e6e77bf752c459a82aa3`, GitHub sync output.
+- Next: PO Review of Clean Rebuild Master Specification V5.1 Draft V0.1.
+
 ### WORK ITEM: PROMPT-122 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — FINAL CONTRACT-EXACT AUDIT
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
