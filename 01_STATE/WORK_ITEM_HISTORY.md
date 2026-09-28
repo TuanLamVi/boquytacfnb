@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-103 — A8 CUSTOMER PROFILE & LOYALTY PRODUCT DISCOVERY
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN ONLY)`
+- Objective: Thiết kế nghiệp vụ Khách hàng và nền tảng Loyalty cho F&B Smart V5.1 (Customer Profile foundation với Phone+OTP, Customer & Order linkage, Lịch sử mua hàng, Tích hợp Debt Lite `Còn phải thu ≠ Nợ`, Loyalty foundation framework, Lego permissions, Multi-store open decisions).
+- Scope: `docs-123/CUSTOMER_LOYALTY_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/CUSTOMER_LOYALTY_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery & UX Design).
+- Technical Result: PASS — Hoàn tất các phần A đến H theo Prompt 103.
+- PO Status: `PROPOSED — PO REVIEW REQUIRED`
+- Evidence: Discovery documentation created, archived, committed, and synced to GitHub.
+- Next: PO Review of Prompt 103 A8 Customer Profile & Loyalty Discovery.
+
 ### WORK ITEM: PROMPT-101 — A6 SHIFT MANAGEMENT PO_VERIFIED & CLOSE-OUT (PROTECT & LOCK)
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCK)`
