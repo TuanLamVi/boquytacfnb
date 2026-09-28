@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-073 — TABLE MERGE & TRANSFER PRODUCT DISCOVERY (FINAL DRAFT)
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN FINAL DRAFT)`
+- Objective: Hoàn thiện Prompt 072 thành bản Final Draft cho Table Merge & Transfer, làm rõ cơ chế ghép bàn bảo toàn order gốc (service group reference), ép buộc source table chuyển qua `cleaning` sau transfer, và đề xuất chính sách cấm ghép/chuyển bàn sau khi đã checkout/invoice.
+- Scope: `docs-123/TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/TABLE_MANAGEMENT_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery & UX Design Final Draft).
+- Technical Result: PASS — Hoàn tất các phần A đến F theo Prompt 073.
+- PO Status: `FINAL DRAFT — PO REVIEW REQUIRED`
+- Evidence: Discovery final draft created, archived, committed, and synced to GitHub.
+- Next: PO Review of Prompt 073.
+
 ### WORK ITEM: PROMPT-072 — TABLE MANAGEMENT + MERGE + TRANSFER PRODUCT DISCOVERY
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN ONLY)`
