@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-066 — 20 BUSINESS MODELS & MENU TEMPLATE STANDARDIZATION (FINAL CORRECTION)
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY FINAL CORRECTION)`
+- Objective: Hoàn thiện Prompt 065 thành bản final correction, làm rõ Product Options có thể có giá hoặc miễn phí, min/max áp dụng ở cấp individual topping, phân loại rõ các mô hình giá đặc biệt (Seafood, Buffet, Combo) là deferred/TBD, và xác định Bún/Phở & Cà phê là Representative Models.
+- Scope: `docs-123/BUSINESS_MODELS_MENU_TEMPLATES_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/BUSINESS_MODELS_MENU_TEMPLATES_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery Final Correction).
+- Technical Result: PASS — Hoàn thiện đầy đủ các phần A đến E theo Prompt 066.
+- PO Status: `FINAL DRAFT — PO REVIEW REQUIRED`
+- Evidence: Final correction documentation created, archived, committed, and synced to GitHub.
+- Next: PO Review of Prompt 066.
+
 ### WORK ITEM: PROMPT-065 — 20 BUSINESS MODELS & MENU TEMPLATE STANDARDIZATION
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & BUSINESS MODEL STANDARDIZATION)`
