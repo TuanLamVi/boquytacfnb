@@ -21,7 +21,7 @@
 
 | Item / Module | Status | Ghi chú & Ranh giới |
 |---|---|---|
-| Governance Change Proposal V5.1 | `READY FOR PO APPROVAL` | Prompt 110: Governance Change Proposal & Impact Review (Work Item Identity + Closure Integrity + Regression Check enforcement) |
+| Governance Reconciliation V5.1 (Prompt 111) | `READY FOR PO APPROVAL` | Prompt 111: Governance Identity Model, Prompt 101 collision resolution, A6/A7/A8 reconciliation, Closure sequence enforcement |
 | Shift Management & Cash Drawer V5.1 (A6) | `PO_VERIFIED / PROTECTED / LOCKED` | Prompts 089/094/095/096/101: A6 Shift Management & Cash Drawer rules (DEC-2026-A6-SHIFT) |
 | Customer Profile & Debt Ledger V5.1 | `READY FOR PO_VERIFIED` | Prompt 107 Final Boundary: No overpayment rule (`Còn nợ < 0` blocked), Server-verified QR debt repayment, Cash repayment increasing shift cash drawer without sales revenue inflation, Store-scoped debt ledger |
 | Reports & Analytics V5.1 | `FINAL CONFIRMED / READY FOR PO_VERIFIED` | Prompt 099 Final Correction: Revenue formula (`Tạm tính - Giảm giá`), `Đã thu ≠ Ghi nợ`, Cash drawer formula synced with A6, Excel/PDF & COGS deferred |
