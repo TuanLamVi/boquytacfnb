@@ -25,6 +25,8 @@ if (Get-Command gh -ErrorAction SilentlyContinue) {
 }
 
 $SyncRoot = Join-Path $env:LOCALAPPDATA "FNB-SMART-GOVERNANCE"
+$GitUserName = "TuanLamVi"
+$GitUserEmail = "272980783+TuanLamVi@users.noreply.github.com"
 $GovernanceClone = Join-Path $SyncRoot "boquytacfnb"
 
 New-Item -ItemType Directory -Path $SyncRoot -Force | Out-Null
@@ -34,6 +36,8 @@ if (-not (Test-Path (Join-Path $GovernanceClone ".git"))) {
     if ($LASTEXITCODE -ne 0) {
         throw "Khong tai duoc governance repository."
     }
+    git -C $GovernanceClone config user.name $GitUserName
+    git -C $GovernanceClone config user.email $GitUserEmail
 }
 else {
     Push-Location $GovernanceClone
@@ -42,6 +46,9 @@ else {
         if ($status) {
             throw "Bo governance tam dang co thay doi chua xu ly. Dung de tranh ghi de."
         }
+
+        git config user.name $GitUserName
+        git config user.email $GitUserEmail
 
         git fetch origin
         git checkout $Branch
