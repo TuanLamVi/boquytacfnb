@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-114 — GOVERNANCE IMPLEMENTATION (PROMPT 110-112 ENHANCEMENTS)
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (GOVERNANCE IMPLEMENTATION)`
+- Objective: Triển khai chính thức các cải tiến quản trị được PO phê duyệt từ Prompt-110 đến Prompt-112 (Work Item ID vs Prompt ID separation, Prompt uniqueness & collision handling, Standard Prompt Header, Closure Sequence with mandatory Regression Check / N/A for discovery, Discovery vs Implementation Evidence separation, History Preservation, and Repository Source of Truth enforcement).
+- Scope: `00_KIM_CHI_NAM/KIM_CHI_NAM.md`, `KIM_CHI_NAM.html`, `AI_READ_FIRST.md`, `LOGGING_PROTOCOL.md`, `CURRENT_STATE.md`, `WORK_ITEM_HISTORY.md`.
+- Application Code Changes: `NONE` (100% Governance Implementation).
+- Technical Result: PASS — Hoàn tất triển khai quy định quản trị và tái phong tỏa baseline (`FREEZE AGAIN`).
+- PO Status: `PO_VERIFIED / PROTECTED`
+- Evidence: Governance baseline documents updated, HTML synchronized, committed, and synchronized to GitHub.
+- Next: Read-First & Determine next Clean Rebuild Work Item.
+
 ### WORK ITEM: PROMPT-113 — PO APPROVAL OF GOVERNANCE RECONCILIATION (PROMPT 110-112)
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (GOVERNANCE APPROVAL ONLY)`

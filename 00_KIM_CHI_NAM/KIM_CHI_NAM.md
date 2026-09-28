@@ -330,3 +330,38 @@ CODEX / CODING AGENT
 5. Không tự ý sửa đổi vùng đã PROTECTED / LOCKED khi chưa có lệnh UNLOCK của PO.
 6. Legacy System bị đóng băng (`FROZEN`); Clean Rebuild tuân thủ `Contract-First` và `Master Spec Gate`.
 7. Khi thiếu bằng chứng hoặc phát hiện mâu thuẫn chưa giải quyết → **STOP**.
+
+---
+
+## 16. Governance Enhancements (Prompt-110 to Prompt-114 Baseline)
+
+### 16.1. Work Item ID vs Prompt ID Separation
+- **Work Item ID:** Semantic, immutable entity identifier (e.g. `A6`, `A7`, `A8`, `GOV-IDENTITY-CLOSURE-EVIDENCE`).
+- **Prompt ID:** Execution record identifier (e.g. `PROMPT-110`, `PROMPT-111`), globally unique, never reused.
+- One Prompt has exactly 01 Primary Work Item and 0 or more Affected Work Items.
+
+### 16.2. Prompt ID Uniqueness & Historical Collision
+- Prompt IDs are globally unique and never reused.
+- Historical collisions (e.g., Prompt 101) are preserved as historical identity ambiguity resolved via reconciliation (Prompt-111/112). Correction/Addendum is the official mechanism.
+
+### 16.3. Standard Prompt Header
+Every prompt must declare:
+`PROMPT ID`, `WORK ITEM`, `WORK ITEM NAME`, `PRIMARY WORK ITEM`, `AFFECTED WORK ITEMS`, `BUILD MODE`, `OBJECTIVE`, `SCOPE`, `DEPENDENCY`, `PROTECTED SCOPE`, `EVIDENCE NEEDED`, `PO STATUS`, `NEXT`.
+
+### 16.4. Closure Sequence & Regression Check
+- Mandatory chain: `PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED`.
+- Regression Check is mandatory. For Discovery-only work items, `REGRESSION CHECK = N/A — NO IMPLEMENTATION / NO PROTECTED SCOPE TO REGRESS`.
+
+### 16.5. Discovery vs Implementation Evidence Separation
+- **Discovery Evidence:** Requirements, Business Rules, UX/Flow, Dependency, Conflict Check, PO Decision, Repository Traceability. (Cannot claim Code PASS, Build PASS, Deploy PASS).
+- **Implementation Evidence:** Source Diff, Test Evidence, Build Identity, Deployment Evidence, Device Evidence, Regression Evidence, PO Verification Evidence.
+
+### 16.6. History Preservation & Append-Only Rule
+- Append-only historical preservation via Correction / Addendum. Never delete old records or evidence.
+
+### 16.7. Repository Source of Truth Enforcement
+- Repository wins over AI memory. ChatGPT / AI PO decision input $\neq$ official repository record unless recorded via LAW-016.
+
+### 16.8. Multi-Work-Item Rule
+- Exactly one primary work item, zero or more affected work items. Affected items do not auto-inherit PASS / PO_VERIFIED / PROTECTED / LOCKED.
+
