@@ -25,7 +25,7 @@ Trước khi sửa code hoặc đưa ra quyết định kỹ thuật, hãy đọ
 - Phát hiện lỗi hồi quy ở phần đã bảo vệ → STOP.
 - Không xóa lịch sử.
 - Sau Work Item phải cập nhật đúng hồ sơ và ghi lịch sử Git.
-- Không tạo một file nhật ký mới cho mỗi lần Codex chạy.
+- Không tạo một file nhật ký mới cho mỗi lần Codex/Gemini chạy.
 
 ## Ghi nhật ký
 
@@ -40,6 +40,29 @@ Thông thường:
 - PO Decision Register = quyết định PO.
 
 Git commit history giữ lịch sử thay đổi file. Không cần chép cùng một Final Report vào hàng loạt file.
+
+## Đồng bộ lên GitHub — BẮT BUỘC SAU WORK ITEM
+
+Sau khi cập nhật các record trên máy, phải chạy:
+
+```
+INTEGRATION/SYNC_LOCAL_RECORDS_TO_GITHUB.ps1
+```
+
+Lệnh này:
+1. kiểm tra đăng nhập GitHub;
+2. cập nhật bản local governance từ GitHub trước;
+3. dừng nếu có thay đổi chưa xử lý để tránh ghi đè;
+4. chép các record governance từ project lên kho `TuanLamVi/boquytacfnb`;
+5. commit;
+6. push lên GitHub.
+
+Không coi Work Item đã đồng bộ cho đến khi lệnh báo **DONG BO THANH CONG**.
+
+Nếu push lỗi:
+- không bỏ qua;
+- không báo "đã đồng bộ";
+- báo `SYNC BLOCKED` trong Final Report.
 
 ## Vai trò
 
