@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-125 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — VERIFY & SYNC AFTER PO-PROVIDED CONTENT
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
+- Objective: Kiểm tra xác minh nội dung Master Specification V5.1 Draft V0.1 do PO Tuấn cập nhật thủ công, đối chiếu 4 Hợp đồng Kỹ thuật V5.1 (xác nhận P4 expirePaymentAttempt guards, Reversal write formula $L + S + F + D + 2R + 2A + U + 5$, Unallocated Funds F1-F3, Debt FIFO, Zalo/ZaloPay Future boundary), cập nhật blob SHA chuẩn (`ec35f5f2a696a54d4b3e05f8570f28c6c35614e9`), và đồng bộ hóa lên GitHub.
+- Scope: `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md` & `docs-123/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`.
+- Application Code Changes: `NONE` (100% Verification & Sync).
+- Technical Result: PASS — Master Spec Draft V0.1 verified exact and consistent with 4 Technical Contracts V5.1.
+- PO Status: `DRAFT V0.1 — READY FOR PO REVIEW`
+- Evidence: Exact git blob SHA `ec35f5f2a696a54d4b3e05f8570f28c6c35614e9`, GitHub sync output.
+- Next: PO Review of Clean Rebuild Master Specification V5.1 Draft V0.1.
+
 ### WORK ITEM: PROMPT-124 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — FINAL CONTRACT-EXACT RECONCILIATION
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
