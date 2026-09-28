@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-077 — POS ORDERING & DISPATCH PRODUCT DISCOVERY (FINAL DRAFT)
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN FINAL DRAFT)`
+- Objective: Hoàn thiện Prompt 076 thành bản Final Draft cho POS Ordering & Dispatch, chuẩn hóa offline storage engine thành `TECHNICAL DECISION — TBD`, giới hạn offline ordering chỉ với verified offline-eligible commands, và chuẩn hóa quy tắc gộp line sản phẩm trong giỏ hàng.
+- Scope: `docs-123/POS_ORDERING_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/POS_ORDERING_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery & UX Design Final Draft).
+- Technical Result: PASS — Hoàn tất các phần A đến G theo Prompt 077.
+- PO Status: `FINAL DRAFT — PO REVIEW REQUIRED`
+- Evidence: Discovery final draft created, archived, committed, and synced to GitHub.
+- Next: PO Review of Prompt 077.
+
 ### WORK ITEM: PROMPT-076 — ORDER / GỌI MÓN / POS PRODUCT DISCOVERY
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN ONLY)`
