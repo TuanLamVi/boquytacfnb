@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-081 — KDS FINAL CORRECTION & BOUNDARY LOCK
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY FINAL CORRECTION & BOUNDARY LOCK)`
+- Objective: Hoàn thiện Prompt 080 thành bản Final Correction & Boundary Lock cho KDS / Bếp, làm rõ ranh giới Ready/Served không phải payment gate, thanh toán độc lập với KDS, bàn chuyển qua `cleaning`, reservation độc lập với KDS, phân định Return vs Refund, và idempotency UUIDs.
+- Scope: `docs-123/KDS_KITCHEN_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/KDS_KITCHEN_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery Final Correction).
+- Technical Result: PASS — Hoàn tất tất cả các điểm Po decisions chốt theo Prompt 081.
+- PO Status: `FINAL DRAFT — PO REVIEW REQUIRED`
+- Evidence: Discovery final correction documentation created, archived, committed, and synced to GitHub.
+- Next: PO Review of Prompt 081.
+
 ### WORK ITEM: PROMPT-080 — KDS / BẾP / KITCHEN OPERATIONS PRODUCT DISCOVERY
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN ONLY)`
