@@ -1,17 +1,35 @@
 # REGRESSION LOG
 
-## Quy tắc
+## Nguyên tắc
 
-Khi phát hiện phần đã được xác nhận trước đó bị hỏng hoặc bị ảnh hưởng:
+Khi phát hiện một phần đã được xác nhận trước đó bị hỏng hoặc bị ảnh hưởng:
 
-1. STOP công việc hiện tại.
-2. Ghi sự cố vào file này.
-3. Cô lập phạm vi ảnh hưởng.
-4. Xác định nguyên nhân.
-5. Chỉ sửa sau khi phạm vi và nguyên nhân đã đủ rõ.
-6. Kiểm tra lại phần bị ảnh hưởng.
-7. Ghi evidence và kết luận.
+```
+STOP
+→ Evidence
+→ Root Cause
+→ Surgical Fix nếu được phép
+→ Test
+→ Report
+```
 
-## Nhật ký
+Không che lỗi bằng workaround rộng.
 
-Chưa có mục hồi quy mới trong repository governance này.
+## Trạng thái nguồn
+
+Bản `docs/rehabilitation/07_REGRESSION_LOG.md` không ghi nhận regression mới trong log đó.
+
+Từ nay mọi regression mới phải ghi tại đây.
+
+## Mẫu
+
+### REG-YYYY-NNN
+- Date:
+- Work Item:
+- Protected scope affected:
+- First failure:
+- Evidence:
+- Root cause:
+- Authorized fix:
+- Retest:
+- Final result:
