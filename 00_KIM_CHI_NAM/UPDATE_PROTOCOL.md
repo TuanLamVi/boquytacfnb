@@ -1,79 +1,44 @@
-# UPDATE PROTOCOL — CÁCH CẬP NHẬT BỘ QUY TẮC
+# UPDATE PROTOCOL — CÁCH CẬP NHẬT QUY TRÌNH & GOVERNANCE
 
 ## Mục tiêu
 
-Giữ repository gọn và để ChatGPT có thể đọc lại thông tin mới mà không phải lục hàng chục file.
+Giữ bộ quy tắc thống nhất, ngăn chặn việc tự ý sửa đổi luật giữa chừng và bảo đảm tài liệu quản trị luôn phản ánh chính xác quyết định của PO.
 
-## Những file thường xuyên cập nhật
+---
 
-### 1. Khi trạng thái dự án thay đổi
-Cập nhật:
-`01_STATE/CURRENT_STATE.md`
+## Quy trình Thay đổi Bộ luật Governance (PO Freeze Baseline Protocol)
 
-### 2. Khi Work Item có kết quả mới
-Cập nhật:
-`01_STATE/WORK_ITEM_HISTORY.md`
+Sau Work Item này, bộ KIM CHỈ NAM được xem là **BASELINE ĐÃ PHONG TOẢ (FREEZE)**.
+Nghiêm cấm AI / Coding Agent tự ý sửa đổi nội dung luật trong quá trình thực hiện các Work Item sản phẩm.
 
-### 3. Khi có PO Decision chính thức
-Cập nhật:
-`01_STATE/PO_DECISION_REGISTER.md`
+Mọi điều chỉnh luật trong tương lai bắt buộc phải trải qua 7 bước nghiêm ngặt:
 
-Theo LAW-016, PO decision trong ChatGPT chưa phải repository record cho đến khi được ghi nhận đúng quy trình.
-
-### 4. Khi có checkpoint hoặc thay đổi bảo vệ
-Cập nhật:
-`02_CONTROL/CHECKPOINTS.md`
-và/hoặc
-`02_CONTROL/PROTECTION_MAP.md`
-
-### 5. Khi có regression
-Chỉ cập nhật:
-`02_CONTROL/REGRESSION_LOG.md`
-
-### 6. Khi có bằng chứng test
-Cập nhật:
-`03_EVIDENCE/TEST_EVIDENCE.md`
-
-### 7. Khi cần bàn giao phiên
-Cập nhật:
-`05_SESSION/AI_HANDOFF.md`
-
-## Không làm
-
-Không tạo thêm file nhật ký mới chỉ vì một Work Item mới.
-
-Không copy cùng một thông tin vào nhiều registry nếu không cần.
-
-Không sửa KIM CHỈ NAM chỉ để cập nhật trạng thái công việc.
-
-## Sau mỗi lần cập nhật
-
+```text
+1. PO DECISION (Quyết định điều chỉnh luật từ PO Tuấn)
+2. GOVERNANCE CHANGE PROPOSAL (Đề xuất thay đổi cụ thể)
+3. IMPACT REVIEW (Phân tích ảnh hưởng toàn bộ quy trình & hợp đồng)
+4. PO APPROVAL (PO chính thức phê duyệt đề xuất)
+5. UPDATE REPOSITORY (Codex cập nhật file governance)
+6. VERIFY DIFF (Kiểm tra diff không làm phát sinh mâu thuẫn)
+7. FREEZE AGAIN (Tái phong tỏa bộ luật baseline mới)
 ```
-SỬA ĐÚNG FILE
+
+---
+
+## Cập nhật Hồ sơ Vận hành Thường xuyên
+
+Khác với bộ luật KIM CHỈ NAM, các hồ sơ vận hành (`CURRENT_STATE`, `WORK_ITEM_HISTORY`, `PO_DECISION_REGISTER`, `CHECKPOINTS`, `PROTECTION_MAP`, `AI_HANDOFF`) được cập nhật theo quy trình đóng task chuẩn (LAW-015):
+
+```text
+SỬA ĐÚNG HỒ SƠ TẬP TRUNG
 → KIỂM TRA DIFF
-→ GHI COMMIT
-→ PUSH GITHUB
+→ GHI COMMIT CHÍNH XÁC
+→ PUSH/SYNC GITHUB
 ```
 
-## Để ChatGPT theo dõi
+---
 
-Sau khi push, ChatGPT có thể đọc repository để:
-- xác định trạng thái mới;
-- đọc quyết định;
-- đọc Work Item history;
-- kiểm tra vùng bảo vệ;
-- đối chiếu thay đổi.
+## Đồng bộ Bản đọc HTML
 
-## Quy tắc đặc biệt
-
-Nếu thay đổi là **LAW / KIM CHỈ NAM**, không sửa như một cập nhật Work Item bình thường. Phải có quyết định/authorization phù hợp.
-
-Nếu chỉ là thay đổi trạng thái hoặc lịch sử, không sửa luật.
-
-## HTML
-
-`00_KIM_CHI_NAM/KIM_CHI_NAM.html` là bản đọc cho con người.
-
-Không dùng HTML làm nơi ghi trạng thái chính.
-
-Khi luật chính thay đổi, HTML cần được cập nhật lại để đồng bộ giao diện.
+`00_KIM_CHI_NAM/KIM_CHI_NAM.html` là bản đọc trực quan cho con người.
+Khi bộ luật `00_KIM_CHI_NAM/KIM_CHI_NAM.md` thay đổi chính thức, `KIM_CHI_NAM.html` phải được cập nhật tương ứng để bảo đảm tính đồng bộ giao diện hiển thị.

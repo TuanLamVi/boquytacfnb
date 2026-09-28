@@ -1,59 +1,52 @@
 # CURRENT STATE — F&B SMART V5
 
-> **Snapshot nguồn:** 2026-09-26.
-> Dữ liệu dưới đây lấy từ `docs/rehabilitation/02_CURRENT_STATE.md` trong bộ tài liệu PO cung cấp.
-> Đây là ảnh chụp lịch sử; không được coi là trạng thái runtime mới nhất nếu chưa kiểm tra repository ứng dụng.
+> **Trạng thái chính thức Repository:** 2026-09-28 (Sau khi hoàn tất Work Item Governance Baseline V5.1).
+> **Operating Mode:** `CLEAN_REBUILD MODE ACTIVE`
+> **Legacy System Status:** `FROZEN / READ-ONLY FORENSIC REFERENCE`
 
-## Repository governance
+---
 
-- Repository: `TuanLamVi/boquytacfnb`
-- Branch chính: `main`
-- Migration branch: `codex/migrate-kim-chi-nam-20260928`
+## 1. Tổng quan Repository & Mode
 
-## Snapshot dự án nguồn
+- **Repository governance:** `boquytacfnb` / `fnb-smart-v5`
+- **Branch chính:** `main`
+- **Active Mode:** `CLEAN_REBUILD MODE`
+- **Current Workstream:** `F&B SMART V5.1 CLEAN REBUILD`
+- **Legacy Application Codebase:** `FROZEN` (Toàn bộ legacy code, database cũ và artifacts cũ bị đóng băng làm Read-Only Forensic Reference).
+- **Application Code Changes in current Work Item:** `NONE` (Chỉ cập nhật governance).
 
-- Project: F&B SMART V5 / FnB-Smart
-- Project root: `C:\Users\Admin\Desktop\Android\fnb_smart`
-- Branch lịch sử: `fix/v4.6.9-rc17-patch4b-auth-logging`
-- HEAD lịch sử: `be00e47b7c69746d2d55e6c7a97ce55453b54c80`
-- Worktree: `DIRTY`
+---
 
-## Trạng thái được ghi trong snapshot
+## 2. Bảng Trạng thái Các Thành phần & Work Items
 
-| Item | Status | Ghi chú |
+| Item / Module | Status | Ghi chú & Ranh giới |
 |---|---|---|
-| A0 | `PO_VERIFIED / LOCKED` | Nền móng lịch sử |
-| A1 | `PO_VERIFIED / LOCKED` | Theo record đã chấp nhận |
-| A2 parent | `NOT VERIFIED` | Child không tự nâng parent |
-| A2-01 | `PO_VERIFIED / PROTECTED / LOCKED` | Duplicate Join Prevention |
-| A2-02 | `PO_VERIFIED / PROTECTED / LOCKED` | Employee Quầy POS + Table Map |
-| A3 parent | `UNRESOLVED` | Phạm vi/taxonomy parent chưa giải quyết |
-| A3-03 | `PO_VERIFIED / LOCKED` | Table Map Logout/Login recovery |
-| A4 parent | `Not accepted` | Snapshot không có product task được giao |
-| GP-01 | `PO_VERIFIED / LOCKED` | Orders tenant rules / open table scope |
-| GOV-025 | `PO_VERIFIED / PROTECTED / LOCKED` | Work Item closure |
-| GOV-026 | `PO_VERIFIED` | Governance consistency / closure sync |
-| GOV-027 | `PO_VERIFIED` | LAW-016 |
-| GOV-028 | `PO_VERIFIED` | LAW-017 |
-| A3-01 | `PO_VERIFIED / PROTECTED / LOCKED` | Money / Currency / Int64 |
-| A3-02 | `PO_VERIFIED / PROTECTED / LOCKED` | Orders & Order Lines |
-| A3-04 | `PAUSED` | Payment & Table Closure Synchronization |
-| A3-05 | `PO_VERIFIED / PROTECTED / LOCKED` | Shift foundation |
-| A3-06 | `PO_VERIFIED / PROTECTED / LOCKED` | Shift Management UI |
-| A6-02 | `BLOCKED / FIRST FAILURE` | Canonical POS Payment UI Integration & Test Surface (Legacy Frozen) |
-| CLEAN_REBUILD_V5.1 | `ACTIVE / IN_PROGRESS` | Clean Rebuild V5.1 Master Specification & Boundary Setup (DEC-2026-CLEAN-REBUILD-V5.1) |
+| Governance Baseline V5.1 | `PO_VERIFIED / BASELINE FREEZE` | Bộ luật KIM CHỈ NAM thống nhất cho Rehabilitation & Clean Rebuild (DEC-2026-GOVERNANCE-BASELINE-V5.1) |
+| A0 Foundation | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
+| A1 Account & Store | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
+| A2-01 Duplicate Join | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
+| A2-02 Staff & Table Map | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
+| A3-01 Money / Int64 | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
+| A3-02 Orders / Order Lines | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
+| A3-03 Logout/Login Recovery | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
+| A3-05 Shift Foundation | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
+| A3-06 Shift Management UI | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
+| GP-01 Tenant Rules | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
+| GOV-025 Closure Rule | `PO_VERIFIED / LOCKED` | Governance Rule |
+| GOV-026 Sync Rule | `PO_VERIFIED` | Governance Rule |
+| GOV-027 LAW-016 Bridge | `PO_VERIFIED` | Governance Rule |
+| GOV-028 LAW-017 Reentry | `PO_VERIFIED` | Governance Rule |
+| A6-02 POS Payment UI (Legacy) | `BLOCKED / FIRST FAILURE / LEGACY FROZEN` | Vá luồng cũ bị dừng vĩnh viễn theo DEC-2026-PO-PAYMENT-V5.1 |
+| CLEAN_REBUILD_V5.1 | `ACTIVE / IN_PROGRESS` | Clean Rebuild Master Specification & Boundary Setup |
 
-## A2-02
+---
 
-- Canonical ID: `A2-02`
-- Historical ID: `A2.2-02-FIX-03`
-- PO: Tuấn
-- Date: 2026-09-26
-- Result: `PO_VERIFIED / PROTECTED / LOCKED`
-- PO evidence: Employee Quầy POS nhìn thấy bàn, mở được bàn và nhìn thấy menu trong bàn.
+## 3. Trọng tâm Vận hành Tiếp theo (NEXT)
 
-## Cảnh báo
+```text
+CURRENT MODE: CLEAN_REBUILD MODE ACTIVE
+LEGACY STATUS: FROZEN
+NEXT STEP: CLEAN REBUILD MASTER SPECIFICATION
+```
 
-- Snapshot này không tự chứng minh trạng thái ngày 2026-09-28.
-- Trước khi xác định Work Item tiếp theo, phải READ-FIRST và đối chiếu các record hiện hành.
-- Không suy diễn A4 hoặc Work Item tiếp theo từ tên file, chat history hoặc memory.
+- Không ghi nhận `PO_VERIFIED` cho bất kỳ application code mới nào cho đến khi hoàn thành Master Specification Gate và được PO nghiệm thu.

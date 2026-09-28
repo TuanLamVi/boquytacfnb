@@ -1,401 +1,332 @@
 # KIM CHỈ NAM — F&B SMART V5
-# QUẢN TRỊ CẢI TẠO VÀ PHỤC HỒI
+# BỘ LUẬT QUẢN TRỊ QUY TRÌNH PHỤC HỒI (REHABILITATION) VÀ XÂY MỚI (CLEAN REBUILD)
 
-> **BẢN ÁP DỤNG CHÍNH:** Đây là bộ luật quản trị cho quy trình cải tạo/phục hồi F&B SMART.
-> Không thay thế nội dung chuyên môn của Product Charter, Database Schema, State Machines hoặc Query Cost Budget.
+> **BẢN LUẬT CHÍNH (BASELINE):** Đây là bộ luật quản trị thống nhất áp dụng cho cả hai giai đoạn: Phục hồi (Rehabilitation) hệ thống cũ và Xây mới (Clean Rebuild) F&B SMART V5.1 từ đầu.
+> Bộ luật này không thay thế nội dung chuyên môn của Product Charter V5.1, Database Schema V0.1, State Machines V0.1 hoặc Query Cost Budget V0.1.
 >
-> **GOVERNANCE V2:** Các file `governance_v2/*` trong bộ nguồn được ghi rõ là **DRAFT — NOT YET ADOPTED** và không tự động thay thế bộ luật hiện hành.
+> **BỘ LUẬT NỀN (PO FREEZE BASELINE):** Sau khi được PO phê duyệt, bộ quy tắc này là baseline cố định. Mọi thay đổi quy trình về sau bắt buộc phải có PO Decision chính thức.
 
-## 1. Thẩm quyền
+---
+
+## 1. Thẩm quyền (Authority Model)
 
 - **PO / Chủ đầu tư:** Tuấn.
-- AI/Coding Agent chỉ làm trong phạm vi PO giao.
-- Chỉ PO được xác nhận `PO_VERIFIED`, cho phép `UNLOCK`, và quyết định thay đổi luật/nghiệp vụ.
+- AI / Coding Agent (ChatGPT, Codex, Gemini) chỉ được hoạt động trong phạm vi được PO giao.
+- Chỉ PO có thẩm quyền:
+  - Xác nhận `PO_VERIFIED`;
+  - Cho phép `UNLOCK` vùng đã bảo vệ;
+  - Quyết định thay đổi quy định, kiến trúc hoặc nghiệp vụ;
+  - Phê duyệt Master Specification và kích hoạt các chế độ vận hành.
 
-## 2. Nguồn sự thật
+---
+
+## 2. Nguồn sự thật (Source of Truth)
 
 ### 2.1. Quản trị
+Bộ KIM CHỈ NAM (`00_KIM_CHI_NAM/KIM_CHI_NAM.md`) quyết định:
+- Thẩm quyền và hai chế độ vận hành;
+- Trạng thái công việc và lớp bảo vệ;
+- Quy trình nghiệm thu (`PO_VERIFIED`) và phong tỏa (`LOCKED`);
+- Luật dừng ngay khi có lỗi (`First Failure Stop`);
+- An toàn Git (`Git Safety`) và Nguồn gốc Build/Deploy (`Provenance`);
+- Đồng bộ hồ sơ (`Closure Synchronization` - LAW-015);
+- Cầu nối quyết định PO (`PO Decision Bridge` - LAW-016);
+- Tái nhập phiên làm việc (`Session Reentry` - LAW-017);
+- Nguyên tắc Contract-First, Master Spec Gate và Khống chế thay đổi thiết kế giữa chừng.
 
-Bộ KIM CHỈ NAM quyết định:
-- quyền hạn;
-- trạng thái;
-- PO verification;
-- checkpoint/protection;
-- First Failure Stop;
-- Git Safety;
-- Work Item closure;
-- AI handoff;
-- PO Decision Bridge;
-- Session Reentry.
+### 2.2. Chuyên môn V5.1
+Bốn tài liệu sau là hợp đồng chuẩn chính thức về nghiệp vụ và kỹ thuật cho F&B SMART V5.1:
+1. `PRODUCT_CHARTER_V5.1.md`
+2. `DATABASE_SCHEMA_V0.1.md`
+3. `STATE_MACHINES_V0.1.md`
+4. `FIRESTORE_QUERY_COST_BUDGET_V0.1.md`
 
-### 2.2. Chuyên môn
+Governance điều chỉnh quy trình quản lý; tuyệt đối không tự ý sửa đổi hoặc ghi đè nội dung chuyên môn của các hợp đồng này. Nếu phát hiện mâu thuẫn giữa các tài liệu chuyên môn, AI phải đánh dấu `CONFLICT / UNRESOLVED` và trình PO quyết định.
 
-Theo đúng phạm vi, bốn tài liệu là nguồn chính thức về nghiệp vụ/kỹ thuật:
+### 2.3. Hồ sơ vận hành
+Các hồ sơ vận hành chính thức trong repository:
+- `01_STATE/CURRENT_STATE.md`
+- `01_STATE/WORK_ITEM_HISTORY.md`
+- `01_STATE/PO_DECISION_REGISTER.md`
+- `01_STATE/ROADMAP.md`
+- `02_CONTROL/CHECKPOINTS.md`
+- `02_CONTROL/PROTECTION_MAP.md`
+- `02_CONTROL/REGRESSION_LOG.md`
+- `03_EVIDENCE/TEST_EVIDENCE.md`
+- `03_EVIDENCE/BUILD_BASELINE.md`
+- `05_SESSION/AI_HANDOFF.md`
 
-1. `docs/PRODUCT_CHARTER_V5.1.md`
-2. `docs/DATABASE_SCHEMA_V0.1.md`
-3. `docs/STATE_MACHINES_V0.1.md`
-4. `docs/FIRESTORE_QUERY_COST_BUDGET_V0.1.md`
+---
 
-Governance điều chỉnh quy trình quản lý; không tự ý sửa/ghi đè các hợp đồng chuyên môn.
+## 3. Hai Chế độ Vận hành (Operating Modes) & Ranh giới Hệ thống
 
-### 2.3. Vận hành
+### 3.1. REHABILITATION MODE (Chế độ Phục hồi & Cải tạo)
+- **Mục đích:** Sửa chữa, cải tạo trên nền hệ thống cũ (Legacy).
+- **Nguyên tắc:** Giữ phần đúng, sửa phần sai, bổ sung phần thiếu; không rewrite tự do toàn bộ ứng dụng khi chưa được PO cho phép.
 
-Các hồ sơ vận hành gồm:
-- ROADMAP
-- CURRENT_STATE
-- CHECKPOINTS
-- TEST_EVIDENCE
-- DECISION_LOG
-- CHANGE_LOG
-- REGRESSION_LOG
-- KNOWN_ISSUES
-- AI_HANDOFF
-- BUILD_BASELINE
-- WORK_ITEM_HISTORY / PROJECT_JOURNAL khi được chỉ định làm lịch sử
+### 3.2. CLEAN_REBUILD MODE (Chế độ Xây mới từ đầu)
+- **Mục đích:** Triển khai xây dựng codebase F&B SMART V5.1 mới hoàn toàn độc lập từ đầu theo đúng bộ hợp đồng chuyên môn V5.1.
+- **Kích hoạt:** Được kích hoạt khi có PO Authorization chính thức (chính thức kích hoạt qua `DEC-2026-CLEAN-REBUILD-V5.1`).
+- **Nguyên tắc:**
+  - Không dựa vào patch chain của legacy làm nền.
+  - Phải tuân thủ tuyệt đối quy trình Contract-First và Master Specification Gate.
+  - Có Build Boundary riêng, Source Boundary riêng, Namespace riêng.
 
-## 3. Luật nền
+### 3.3. Đóng băng Hệ thống cũ (Legacy Freeze)
+- Khi `CLEAN_REBUILD MODE` được PO kích hoạt: **LEGACY SYSTEM = FROZEN**.
+- Legacy codebase chỉ được sử dụng làm:
+  - Tham khảo nghiệp vụ thực tế;
+  - Tham khảo lịch sử và forensic;
+  - Tham khảo các lỗi đã từng xảy ra và bài học kỹ thuật.
+- **Tuyết đối không tiếp tục patch/sửa chữa legacy codebase** chỉ để hoàn thành một Work Item cũ.
+- Bất kỳ yêu cầu sửa chữa legacy codebase nào sau khi đã Freeze bắt buộc phải có PO Decision riêng biệt.
 
-- Cải tạo trên nền dự án hiện tại: giữ phần đúng, sửa phần sai, hoàn thiện phần thiếu; chỉ thay thế khi có evidence phù hợp.
-- Không rewrite toàn bộ ứng dụng.
-- Không scope creep.
-- Không suy đoán.
-- AI PASS không thay PO PASS.
-- Không tự sửa phần đã bảo vệ.
-- Không xóa hoặc viết lại lịch sử.
-- First Failure → STOP.
-- Không tự tạo trạng thái mới.
+### 3.4. Tách biệt tuyệt đối Bản cũ và Bản mới (Legacy ≠ New V5.1)
+Ranh giới giữa Legacy và New System V5.1 phải được tách biệt hoàn toàn:
+- Không trộn Source code, Repository, Folder structure;
+- Không dùng chung Firebase project / Database thử nghiệm mà không có ranh giới tenant/namespace;
+- Không trộn APK / Deployment artifacts;
+- Không dùng chung Work Items, Checkpoints, Protection Maps, Test Evidence.
+- Protection/LOCK của legacy codebase KHÔNG tự động áp dụng cho new system; new system vận hành hệ thống checkpoint và protection độc lập.
 
-## 4. Trạng thái
+---
 
-Các trạng thái được dùng:
+## 4. Nguyên tắc Xây dựng Mới (Clean Rebuild Rules)
 
-`NOT_STARTED`
-`IN_PROGRESS`
-`READY_FOR_PO_VERIFICATION`
-`PO_VERIFICATION_PENDING`
-`PO_VERIFIED`
-`PASS_TEMPORARY`
-`FAILED`
-`BLOCKED`
-`REGRESSION`
-`UNPROVEN`
-`REPORT_FORMAT_BLOCKED`
-
-Lớp bảo vệ:
-
-`PROTECTED`
-`LOCKED`
-
-Các trạng thái này không đồng nghĩa với nhau.
-
-Đặc biệt:
-
-`AI PASS` ≠ `READY_FOR_PO_VERIFICATION` ≠ `PO PASS` ≠ `PO_VERIFIED` ≠ `LOCKED`
-
-Bằng chứng không thay quyết định của PO.
-
-## 5. GOV-025 — Work Item Closure
-
-Chuỗi đóng Work Item:
-
+### 4.1. Contract-First (Thiết kế & Hợp đồng trước, Code sau)
+Clean Rebuild tuyệt đối không được bắt đầu bằng việc viết code ứng dụng.
+Trật tự thực hiện bắt buộc:
+```text
+YÊU CẦU (Requirements)
+→ THIẾT KẾ (Design)
+→ DỮ LIỆU (Data Schema)
+→ TRẠNG THÁI (State Machines)
+→ QUY TẮC GIAO TIẾP (Protocol Contracts)
+→ KIỂM TRA (Acceptance Test Plan)
+→ MỚI ĐƯỢC VIẾT CODE (Implementation)
 ```
-PASS
-→ PO_VERIFIED
-→ REGRESSION CHECK
-→ PROTECTED
-→ LOCKED
+Nghiêm cấm quy trình sai lệch: `CODE → TEST → LỖI → PATCH → LỖI KHÁC → PATCH`.
+
+### 4.2. Master Specification Gate (Cổng Đặc tả Master)
+Trước khi viết bất kỳ dòng application code mới nào cho Clean Rebuild, bắt buộc phải hoàn thành tài liệu **CLEAN REBUILD MASTER SPECIFICATION** và được PO duyệt.
+Master Specification phải chốt tối thiểu:
+- Phạm vi ứng dụng & các tính năng chính;
+- Cách các thành phần liên kết với nhau;
+- Cấu trúc dữ liệu & vòng đời dữ liệu;
+- Các state machines & chuyển đổi trạng thái;
+- Quy tắc tài chính & kế toán dòng tiền;
+- Phân quyền người dùng & tenant/store boundary;
+- Tiêu chuẩn kiểm tra và nghiệm thu.
+
+Không được phép viết code nếu Master Specification chưa hoàn tất và chưa có `PO_VERIFIED`.
+
+### 4.3. Cấm Tự ý Thay đổi Thiết kế Giữa chừng
+Sau khi Master Specification được PO phê duyệt:
+- AI / Coding Agent không được tự ý thay đổi: Kiến trúc, Cấu trúc dữ liệu, Trạng thái State Machine, Quy tắc nghiệp vụ, hoặc Quy tắc giao tiếp.
+- Nếu phát hiện vấn đề cần điều chỉnh thiết kế trong quá trình xây dựng:
+  ```text
+  STOP
+  → Ghi nhận vấn đề (Issue/Conflict)
+  → Phân tích ảnh hưởng (Impact Analysis)
+  → Trình PO DECISION
+  → Cập nhật lại tài liệu Master Spec / Hợp đồng
+  → Xác định phạm vi phải làm lại (Rework Scope)
+  → Mới được tiếp tục triển khai.
+  ```
+- Nghiêm cấm hành vi tự ý "sửa đại cho chạy" mà không qua phê duyệt thiết kế.
+
+### 4.4. Test-First (Xác định Tiêu chuẩn Kiểm tra trước)
+- Mỗi thành phần/chức năng quan trọng phải xác định kịch bản kiểm tra nghiệm thu (Acceptance Criteria & Test Plan) trước khi viết code implementation.
+- Khi phát hiện một lỗi trong quá trình xây dựng:
+  ```text
+  STOP
+  → Thu thập bằng chứng (Evidence)
+  → Tìm nguyên nhân gốc (Root Cause)
+  → Sửa đúng phạm vi (Scoped Fix)
+  → Retest nghiệm thu.
+  ```
+
+### 4.5. Truy xuất Nguồn gốc Build & Deploy (Provenance)
+Mọi bản build / deployment mới của Clean Rebuild phải bảo đảm tính truy xuất nguồn gốc chính xác:
+```text
+EXACT SOURCE COMMIT → EXACT BUILD → EXACT DEPLOYMENT
 ```
+- Nghiêm cấm sử dụng bản build từ "dirty worktree" (chưa commit sạch) làm bản chuẩn chính thức cho Clean Rebuild.
 
-`LOCKED` bảo vệ:
-- hành vi đã chấp nhận;
-- quy tắc;
-- invariant;
-- acceptance criteria;
-- evidence;
-- phạm vi đã chấp nhận.
+### 4.6. Ranh giới Git và Source Code
+- Source code Legacy và Clean Rebuild source code phải được tách biệt rõ ràng.
+- Giữ nguyên an toàn Git: Không `git force push`, không `git reset`, không `git clean`, không làm mất worktree dirty hiện tại của legacy.
 
-`LOCKED` **không có nghĩa là khóa cứng file**.
+---
 
-Trước Work Item mới phải kiểm tra:
+## 5. Trạng thái và Quy trình Bảo vệ (Status & Protection)
 
+### 5.1. Các Trạng thái Công việc
+- `NOT_STARTED`
+- `IN_PROGRESS`
+- `READY_FOR_PO_VERIFICATION`
+- `PO_VERIFICATION_PENDING`
+- `PO_VERIFIED`
+- `PASS_TEMPORARY`
+- `FAILED`
+- `BLOCKED`
+- `REGRESSION`
+- `UNPROVEN`
+- `REPORT_FORMAT_BLOCKED`
+
+### 5.2. Phân biệt Trạng thái (Nghiêm cấm Đánh đồng)
+```text
+AI PASS ≠ READY_FOR_PO_VERIFICATION ≠ PO PASS ≠ PO_VERIFIED ≠ LOCKED
 ```
-CURRENT A-STAGE
-TASK
-RELATED A-STAGES
-LOCKED SCOPE IMPACT
+- AI PASS chỉ chứng minh code chạy qua kiểm thử tự động của AI.
+- Bằng chứng kỹ thuật không thay thế quyết định chính thức của PO.
+- Child PASS không tự động nâng Parent thành PASS.
+
+### 5.3. Quy trình Đóng Work Item & Bảo vệ (GOV-025)
+Mọi Work Item hoàn tất phải đi qua chuỗi bắt buộc:
+```text
+PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED
 ```
+- `LOCKED` bảo vệ: Hành vi đã chấp nhận, Quy tắc, Invariant, Acceptance criteria, Bằng chứng (Evidence), Phạm vi đã chấp nhận.
+- `LOCKED` không đồng nghĩa với việc khóa cứng file vật lý.
+- Khi bắt buộc phải sửa vùng đã `LOCKED`, phải có lệnh `UNLOCK` chính thức từ PO kèm phạm vi giới hạn, lý do, phân tích ảnh hưởng và kế hoạch relock.
 
-Kết quả:
-- `NONE`: có evidence không ảnh hưởng vùng bảo vệ.
-- `DETECTED`: `REGRESSION_REQUIRED`.
-- `UNKNOWN`: chưa đủ thông tin → `REGRESSION_RISK` + STOP.
+---
 
-Chỉ PO được `UNLOCK`. Khi mở khóa phải có lý do, phạm vi, ảnh hưởng, kiểm tra hồi quy, PO test và đóng bảo vệ lại khi hoàn tất.
+## 6. Luật Dừng ngay khi có Lỗi (First Failure Stop)
 
-## 6. LAW-015 — Closure Synchronization
-
-Sau khi PO xác nhận PASS, Agent phải kiểm tra/cập nhật đồng bộ:
-
-```
-CHECKPOINTS
-DECISION_LOG
-CURRENT_STATE
-TEST_EVIDENCE
-CHANGE_LOG
-AI_HANDOFF
-```
-
-Cập nhật có điều kiện:
-
-```
-ROADMAP          → khi tiến độ child/parent thay đổi
-PROJECT_JOURNAL  → nếu journal đang dùng để truy xuất lịch sử
-REGRESSION_LOG   → chỉ khi có regression thật
-KNOWN_ISSUES     → khi issue được tạo/giải quyết/thay đổi
-```
-
-Nếu hồ sơ bắt buộc còn trạng thái cũ mâu thuẫn với kết quả mới → **CLOSURE INCOMPLETE**.
-
-Không tạo Registry/Log thứ hai khi hệ thống hiện hữu đã có.
-
-## 7. PO Verification
-
-- Chỉ Tuấn được xác nhận `PO_VERIFIED`.
-- Agent/AI chỉ được báo `READY_FOR_PO_VERIFICATION` khi hồ sơ đủ để PO kiểm tra.
-- Agent không tự biến AI PASS thành PO PASS.
-- Agent không tự ghi `PO_VERIFIED` nếu PO chưa xác nhận trực tiếp và chưa có lệnh ghi nhận hợp lệ.
-- Checkpoint chỉ được `LOCKED` sau `PO_VERIFIED` hợp lệ và đủ hồ sơ bảo vệ.
-
-## 8. First Failure Stop
-
-Khi phát hiện lỗi có ý nghĩa:
-
-```
+Khi phát hiện bất kỳ lỗi hoặc mâu thuẫn có ý nghĩa nào trong quá trình thực thi:
+```text
 STOP
-→ Evidence
-→ Root Cause
-→ Surgical Fix nếu được phép
-→ Test / Evidence
-→ Report
+→ Thu thập Bằng chứng (Evidence)
+→ Phân tích Nguyên nhân gốc (Root Cause)
+→ Sửa chữa chính xác đúng phạm vi (Surgical Fix) nếu được phép
+→ Retest & Thu thập Bằng chứng mới
+→ Lập Báo cáo đúng quy định
 ```
+- Không sử dụng workaround diện rộng để che giấu lỗi.
+- Không biến giả định thành lịch sử.
+- Thiếu bằng chứng → `UNPROVEN`.
+- Nguồn tài liệu mâu thuẫn → `UNRESOLVED` + STOP.
 
-Không workaround rộng để che lỗi. Không biến giả định thành lịch sử.
+---
 
-Thiếu evidence → `UNPROVEN`.
+## 7. Bảo tồn Lịch sử (History Preservation)
 
-Nguồn mâu thuẫn → `UNRESOLVED`.
+- Lịch sử vận hành (`WORK_ITEM_HISTORY`, `PO_DECISION_REGISTER`, `REGRESSION_LOG`,...) phải được giữ nguyên giá trị forensic.
+- Tuyệt đối không xóa, không sửa đè lịch sử quá khứ chỉ để làm hồ sơ đẹp hơn.
+- Nếu trạng thái hiện tại khác lịch sử, phải ghi mục bổ sung (`Correction/Addendum`) cho thời điểm hiện tại.
 
-## 9. History Preservation
+---
 
-Historical record phải được giữ nguyên.
+## 8. An toàn Git (Git Safety)
 
-Nếu current status khác lịch sử:
-- ghi Current Correction/Addendum;
-- không sửa historical evidence chỉ để làm hồ sơ đẹp hơn;
-- không xóa duplicate checkpoint/record lịch sử chỉ vì có bản mới hơn.
-
-## 10. Git Safety
-
-Không tự ý dùng để phá hoặc che thay đổi:
-
-```
+Nghiêm cấm các thao tác Git nguy hiểm sau trừ khi có lệnh trực tiếp từ PO:
+```text
 git reset
 git clean
 git restore
-git checkout để xóa thay đổi
+git checkout (với mục đích xóa thay đổi)
 git stash
 git rebase
+git push --force
 ```
+- Thay đổi dở dang (`DIRTY worktree`) của hệ thống cũ phải được bảo toàn tuyệt đối.
 
-Đồng thời, không tự ý commit/push khi prompt hoặc quyền hạn hiện tại không cho phép.
+---
 
-Working tree `DIRTY` phải được bảo toàn và phân biệt với thay đổi do Work Item mới tạo.
+## 9. Đồng bộ Hồ sơ khi Đóng Task (LAW-015 — Closure Synchronization)
 
-## 11. Build / Device
+Sau khi PO xác nhận PASS cho một Work Item, Agent bắt buộc phải kiểm tra và cập nhật đồng bộ các hồ sơ:
+- `CHECKPOINTS.md`
+- `PO_DECISION_REGISTER.md`
+- `CURRENT_STATE.md`
+- `TEST_EVIDENCE.md`
+- `AI_HANDOFF.md`
+- `WORK_ITEM_HISTORY.md`
+- `PROTECTION_MAP.md` (nếu có thay đổi bảo vệ)
+- `REGRESSION_LOG.md` (chỉ khi có regression thực sự)
 
-- Đọc `BUILD_BASELINE.md` trước khi build.
-- Agent chỉ build/cài khi Prompt cho phép.
-- Production/release/deploy không được tự suy ra từ build task.
-- Build/install fail → STOP và báo evidence.
-- Build SUCCESS chỉ chứng minh việc build; không chứng minh chức năng hoặc PO PASS.
-- PO trực tiếp kiểm tra UI/nghiệp vụ và quyết định PASS/FAIL.
+Nếu hồ sơ bắt buộc còn chứa trạng thái cũ mâu thuẫn → **CLOSURE INCOMPLETE**.
 
-## 12. LAW-013 — Final Report
+---
 
-Mỗi Prompt phải kết thúc bằng **đúng một fenced code block duy nhất** chứa toàn bộ Final Report.
+## 10. Cầu nối Quyết định PO (LAW-016 — PO Decision Bridge)
 
-Không:
-- chia report thành nhiều code block;
-- yêu cầu PO ghép nhiều phần;
-- ghi PASS/VERIFIED/PO_VERIFIED/LOCKED khi chưa đủ evidence/thẩm quyền.
-
-Mẫu chính thức nằm tại:
-
-`00_KIM_CHI_NAM/REPORT_TEMPLATE.md`
-
-## 13. LAW-016 — PO Decision Bridge & Repository Recording
-
-Mọi quyết định, xác nhận, chỉ định hoặc thay đổi phạm vi do PO đưa ra trong ChatGPT chỉ trở thành quyết định vận hành chính thức của repository sau khi được ghi nhận vào repository theo quy trình.
-
-Xác nhận của PO trong ChatGPT là **PO DECISION INPUT**; không tự động là repository evidence.
-
-### FLOW A — PO nói trực tiếp với Coding Agent
-
-```
-PO DECISION
-→ CODEX RECORD
-→ GOVERNANCE UPDATED
-→ VERIFY DIFF
-→ FINAL REPORT
-```
-
-### FLOW B — PO nói với ChatGPT trước
-
-```
-PO DECISION
+- Mọi quyết định của PO đưa ra trong ChatGPT chỉ là **PO DECISION INPUT**.
+- Quyết định chỉ trở thành văn bản vận hành chính thức khi được Codex ghi nhận vào repository.
+```text
+PO DECISION (trên Chat)
 → CHATGPT TẠO PROMPT COPY-READY
 → PO GỬI CODEX
-→ CODEX RECORD
-→ GOVERNANCE UPDATED
+→ CODEX RECORD VÀO REPOSITORY
+→ GOVERNANCE / STATE UPDATED
+→ VERIFY DIFF & FINAL REPORT
+```
+- Nguyên tắc: `CHATGPT CONFIRMATION ≠ REPOSITORY RECORD`. Repository record là bằng chứng chính thức duy nhất.
+
+---
+
+## 11. Tái nhập Phiên làm việc & Thẩm quyền Repository (LAW-017 — Session Reentry)
+
+Mỗi khi bắt đầu session mới, trang chat mới hoặc tiếp nhận lại dự án:
+- AI bắt buộc phải READ-FIRST lại toàn bộ bộ quy tắc governance và hồ sơ trạng thái hiện hành từ repository.
+- Tuyệt đối không dựa vào trí nhớ AI (Memory) để xác định luật, trạng thái, Work Item hoặc quyết định của PO.
+- Nguyên tắc: `REPOSITORY WINS OVER AI MEMORY`.
+
+---
+
+## 12. Báo cáo Kết thúc Prompt (LAW-013 — Final Report)
+
+Mỗi phản hồi kết thúc một Work Item/Prompt bắt buộc phải kết thúc bằng **đúng MỘT fenced code block duy nhất** chứa Final Report theo mẫu quy định tại `00_KIM_CHI_NAM/REPORT_TEMPLATE.md` (hoặc cấu trúc chuẩn được quy định).
+
+---
+
+## 13. Quy trình Cập nhật Luật Governance (PO Freeze Baseline)
+
+Bộ quy tắc này sau khi hoàn tất Work Item này được xem là **BASELINE ĐÃ PHONG TOẢ (FREEZE)**.
+Mọi điều chỉnh luật trong tương lai bắt buộc phải tuân theo quy trình nghiêm ngặt:
+```text
+PO DECISION
+→ GOVERNANCE CHANGE PROPOSAL
+→ IMPACT REVIEW
+→ PO APPROVAL
+→ UPDATE REPOSITORY
 → VERIFY DIFF
-→ FINAL REPORT
+→ FREEZE AGAIN
 ```
+Nghiêm cấm AI tự ý sửa đổi luật trong quá trình thực hiện các Work Item sản phẩm.
 
-Không tự suy diễn:
-- chưa có repository record → chưa coi task đã ASSIGNED;
-- chưa coi task đã bắt đầu;
-- chưa coi PASS;
-- chưa coi PO_VERIFIED;
-- chưa coi PROTECTED;
-- chưa coi LOCKED.
+---
 
-Quy tắc cốt lõi:
+## 14. Thứ tự Trách nhiệm
 
-`CHATGPT CONFIRMATION ≠ REPOSITORY RECORD`
-
-`CODEX REPOSITORY RECORD = OFFICIAL EXECUTION EVIDENCE`
-
-## 14. LAW-017 — Session Reentry & No-Memory Authority
-
-Mỗi khi bắt đầu:
-- session mới;
-- trang chat mới;
-- phiên tiếp nhận project;
-- phiên recovery sau gián đoạn;
-
-AI/Coding Agent phải đọc lại governance hiện hành từ repository.
-
-Không được dựa vào memory để xác định:
-- luật;
-- trạng thái;
-- Work Item;
-- PO decision;
-- PO_VERIFIED;
-- PROTECTED;
-- LOCKED;
-- NEXT WORK ITEM.
-
-### Repository wins
-
-```
-REPOSITORY GOVERNANCE
->
-AI MEMORY
-```
-
-Nếu memory khác repository:
-- repository được ưu tiên;
-- báo mâu thuẫn;
-- không sửa lịch sử chỉ để làm cho memory khớp.
-
-### Read-First tối thiểu
-
-```
-KIM_CHI_NAM
-→ SOURCE_OF_TRUTH
-→ CURRENT_STATE
-→ CHECKPOINTS
-→ DECISION_LOG
-→ AI_HANDOFF
-→ tài liệu kỹ thuật liên quan
-→ LOCKED SCOPE IMPACT
-```
-
-Nếu tài liệu bắt buộc:
-- không truy cập được;
-- không tồn tại;
-- đọc không đủ;
-- không đủ để xác định trạng thái;
-
-→ `UNPROVEN / BLOCKED`
-→ STOP.
-
-### Mục tiêu LAW-017
-
-`Đổi trang chat ≠ đổi luật`
-
-`Đổi AI ≠ mất trạng thái`
-
-`Mất chat history ≠ mất quyết định PO`
-
-Project phải đủ thông tin để một AI mới có thể tiếp quản đúng mà không cần biết cuộc trò chuyện trước đó.
-
-## 15. Roadmap và Work Item
-
-Roadmap hiện hành dùng:
-
-```
-A0 → A1 → A2 → A3 → A4 → A5 → A6 → A7 → A8 → A9 → A10 → A11
-```
-
-Child PASS không tự làm parent PASS.
-
-Mỗi Work Item phải xác định tối thiểu:
-
-```
-WORK ITEM
-OBJECTIVE
-SCOPE
-PROTECTED SCOPE
-EVIDENCE
-PO STATUS
-NEXT
-```
-
-Không scope creep. Không đoán crosswalk ID giữa các hệ thống cũ và mới.
-
-## 16. Thứ tự trách nhiệm
-
-```
+```text
 TUẤN / PO
-→ quyết định
-→ kiểm tra thực tế nghiệp vụ
-→ PO PASS / FAIL
-→ PO_VERIFIED / UNLOCK / thay đổi luật khi cần
+→ Quyết định phạm vi, kiến trúc & nghiệp vụ
+→ Kiểm tra thực tế & xác nhận PO PASS / FAIL
+→ Cấp thẩm quyền PO_VERIFIED, UNLOCK & Thay đổi luật
 
 CHATGPT
-→ đọc repository
-→ thẩm định phạm vi/evidence
-→ xác định thiếu gì
-→ chuẩn bị prompt copy-ready khi PO đi qua ChatGPT
-→ không thay PO quyết định
+→ Đọc repository, thẩm định phạm vi & evidence
+→ Chuẩn bị Prompt copy-ready cho PO
+→ Không tự thay PO quyết định
 
 CODEX / CODING AGENT
-→ READ-FIRST
-→ thực thi đúng scope
-→ tạo evidence
-→ ghi repository record theo quyền
-→ báo cáo đúng mẫu
+→ READ-FIRST repository
+→ Thực thi đúng scope được giao
+→ Thu thập evidence & ghi nhận repository record
+→ Lập Final Report đúng mẫu LAW-013
 ```
 
-## 17. Nguyên tắc cuối cùng
+---
 
-- Không lấy tên file để quyết định nguồn chuẩn.
-- Không dùng chat history để thay repository.
-- Không dùng memory để thay evidence.
-- Không dùng build success để thay functional test.
-- Không dùng AI PASS để thay PO PASS.
-- Không dùng child PASS để tuyên bố parent PASS.
-- Không sửa vùng PROTECTED/LOCKED khi chưa có cơ chế mở khóa hợp lệ.
-- Khi không đủ bằng chứng hoặc có xung đột chưa giải quyết → STOP.
+## 15. Nguyên tắc Cốt lõi Cuối cùng
+
+1. Repository là Nguồn Sự thật duy nhất (`REPOSITORY WINS`).
+2. Không dùng Memory thay Repository; không dùng Chat History thay Record.
+3. Không dùng Build Success thay cho Functional PASS.
+4. Không dùng AI PASS thay cho PO PASS / PO_VERIFIED.
+5. Không tự ý sửa đổi vùng đã PROTECTED / LOCKED khi chưa có lệnh UNLOCK của PO.
+6. Legacy System bị đóng băng (`FROZEN`); Clean Rebuild tuân thủ `Contract-First` và `Master Spec Gate`.
+7. Khi thiếu bằng chứng hoặc phát hiện mâu thuẫn chưa giải quyết → **STOP**.

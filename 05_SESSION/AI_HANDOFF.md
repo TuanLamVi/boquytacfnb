@@ -1,102 +1,59 @@
 # 09 — AI HANDOFF — F&B SMART V5
 
-> Dành cho AI/Coding Agent tiếp nhận phiên mới.
+> Dành cho AI/Coding Agent (ChatGPT, Codex, Gemini) tiếp nhận phiên làm việc tiếp theo.
 
-## 1. ĐỌC TRƯỚC
+---
 
+## 1. BẮT BUỘC ĐỌC TRƯỚC (READ-FIRST — LAW-017)
+
+Theo LAW-017, khi bắt đầu phiên mới, AI bắt buộc phải đọc các file theo thứ tự:
 ```text
-00_KIM_CHI_NAM_REHABILITATION.md
-KIM_CHI_NAM_CAI_TAO_FNB_SMART.md
-02_CURRENT_STATE.md
-03_CHECKPOINTS.md
-05_DECISION_LOG.md
-09_AI_HANDOFF.md
+1. 00_KIM_CHI_NAM/KIM_CHI_NAM.md
+2. 00_KIM_CHI_NAM/AI_READ_FIRST.md
+3. 00_KIM_CHI_NAM/SOURCE_OF_TRUTH.md
+4. 01_STATE/CURRENT_STATE.md
+5. 02_CONTROL/CHECKPOINTS.md
+6. 01_STATE/PO_DECISION_REGISTER.md
+7. 02_CONTROL/PROTECTION_MAP.md
+8. 05_SESSION/AI_HANDOFF.md
+9. Bốn hợp đồng chuyên môn V5.1 (Product Charter, Schema, State Machines, Query Budget)
 ```
 
-Sau đó đọc tài liệu chuyên môn đúng với Work Item.
+---
 
-## 2. TRẠNG THÁI CHỐT
-
-```text
-A0       = PO_VERIFIED / LOCKED
-A1       = PO_VERIFIED / LOCKED theo hồ sơ hiện hành
-A2       = NOT VERIFIED
-A2-01    = PO_VERIFIED / PROTECTED / LOCKED
-A2-02    = PO_VERIFIED / PROTECTED / LOCKED
-A3       = UNRESOLVED
-A3-03    = PO_VERIFIED / LOCKED
-GP-01    = PO_VERIFIED / LOCKED
-GOV-025  = PO_VERIFIED / PROTECTED / LOCKED
-GOV-026  = PO_VERIFIED
-GOV-027  = PO_VERIFIED
-GOV-028  = PO_VERIFIED
-A3-01    = PO_VERIFIED / PROTECTED / LOCKED
-A3-02    = PO_VERIFIED / PROTECTED / LOCKED
-A3-05    = PO_VERIFIED / PROTECTED / LOCKED
-A3-06    = PO_VERIFIED / PROTECTED / LOCKED
-A6-02    = BLOCKED / FIRST FAILURE (Legacy Frozen)
-CLEAN_REBUILD_V5.1 = ACTIVE / IN_PROGRESS (Master Spec Phase)
-```
-
-## 3. A2-02 — ĐÃ KHÓA
-
-- Canonical ID: `A2-02`
-- Historical ID: `A2.2-02-FIX-03`
-- PO: Tuấn
-- Result: `PO_VERIFIED / PROTECTED / LOCKED`
-- PO evidence: Employee Quầy POS thấy bàn, mở bàn, thấy menu trong bàn.
-
-**Không làm lại A2-02. Không tự unlock.**
-
-## 4. BẢO VỆ KHI SỬA TASK MỚI
-
-Nếu task mới liên quan POS permission, Table Map hoặc Table synchronization:
+## 2. TRẠNG THÁI DỰ ÁN VÀ BẢO VỆ CHỐT
 
 ```text
-CURRENT A-STAGE
-TASK
-RELATED A-STAGES
-LOCKED SCOPE IMPACT
+GOVERNANCE BASELINE V5.1 = PO_VERIFIED / BASELINE FREEZE (DEC-2026-GOVERNANCE-BASELINE-V5.1)
+OPERATING MODE           = CLEAN_REBUILD MODE ACTIVE
+LEGACY SYSTEM STATUS     = FROZEN / READ-ONLY FORENSIC REFERENCE
+APPLICATION CODE CHANGES = NONE (Legacy code untouched)
+
+A0, A1, A2-01, A2-02, A3-01, A3-02, A3-03, A3-05, A3-06, GP-01 = PO_VERIFIED / LOCKED (Legacy Frozen)
+GOV-025, GOV-026, GOV-027, GOV-028                             = PO_VERIFIED / PROTECTED / LOCKED
+A6-02 (Legacy POS Payment Fix)                                 = BLOCKED / FIRST FAILURE / LEGACY FROZEN
+CLEAN_REBUILD_V5.1                                             = ACTIVE / IN_PROGRESS
 ```
 
-Đặc biệt bảo vệ `A2-02` và `A3-03`.
+---
 
-## 5. CLOSURE SYNCHRONIZATION
+## 3. RANH GIỚI VÀ QUY TẮC BẮT BUỘC CHO PHIÊN TIẾP THEO
 
-Sau PO PASS của mọi Work Item:
+1. **CLEAN REBUILD MODE IS ACTIVE:** Mọi công việc hiện tại tập trung vào F&B SMART V5.1 Clean Rebuild.
+2. **LEGACY IS FROZEN:** Nghiêm cấm tiếp tục sửa chữa/patch legacy application code.
+3. **CONTRACT-FIRST & MASTER SPECIFICATION GATE:**
+   - Không được phép viết application code mới khi chưa hoàn thành **CLEAN REBUILD MASTER SPECIFICATION** và chưa được PO Tuấn phê duyệt (`PO_VERIFIED`).
+   - Order bắt buộc: Requirements → Design → Data Schema → State Machines → Protocol Contracts → Acceptance Test Plan → Code.
+4. **NO ARBITRARY MID-BUILD CHANGES:** Không tự ý sửa thiết kế/kiến trúc giữa chừng nếu chưa qua STOP → Impact Analysis → PO Decision.
+5. **NO APPLICATION PO_VERIFIED:** Không tự ý ghi nhận `PO_VERIFIED` cho code ứng dụng mới.
+
+---
+
+## 4. TRỌNG TÂM VIỆC TIẾP THEO (NEXT)
 
 ```text
-CHECKPOINTS
-DECISION_LOG
-CURRENT_STATE
-TEST_EVIDENCE
-CHANGE_LOG
-AI_HANDOFF
+CURRENT WORKSTREAM: F&B SMART V5.1 CLEAN REBUILD
+CURRENT STEP      : CLEAN REBUILD MASTER SPECIFICATION
 ```
 
-phải được kiểm tra/cập nhật đồng bộ. Các hồ sơ khác cập nhật khi điều kiện áp dụng.
-
-## 6. BUILD
-
-Dùng `docs/rehabilitation/BUILD_BASELINE.md`.
-
-Không tự đổi toolchain.
-
-## 7. GIT
-
-Working tree DIRTY; bảo toàn thay đổi có sẵn.
-
-## 8. NEXT
-
-```text
-CURRENT WORKSTREAM: F&B SMART V5.1 CLEAN REBUILD (DEC-2026-CLEAN-REBUILD-V5.1)
-CURRENT MODE: CLEAN_REBUILD MODE ACTIVE
-LEGACY STATUS: FROZEN / READ-ONLY FORENSIC REFERENCE
-NEXT: Finalize Clean Rebuild Master Specification & Boundaries before application coding.
-```
-
-Không tự suy ra task mới từ lịch sử cũ.
-
-## 9. LAW-016 & LAW-017 — PO DECISION BRIDGE & SESSION REENTRY
-- **LAW-016:** Quyết định của PO trong ChatGPT chưa phải là repository record cho đến khi Codex ghi nhận vào repository. Khi PO ra quyết định qua ChatGPT, AI phải cung cấp prompt copy-ready cho PO gửi Codex.
-- **LAW-017 (Session Reentry & No-Memory Authority):** Mỗi khi bắt đầu session mới, trang chat mới hoặc tiếp nhận lại project sau gián đoạn, AI KHÔNG ĐƯỢC dựa vào trí nhớ session trước (Repository Wins). AI bắt buộc phải đọc lại các tài liệu governance (00, KIM_CHI_NAM, 02, 03, 05, 09) trước khi thực thi bất kỳ task nào.
+Nhiệm vụ tiếp theo: Xây dựng bản thảo **CLEAN REBUILD MASTER SPECIFICATION** chốt toàn bộ phạm vi, chức năng, liên kết, schema, state machines, quy tắc tài chính, phân quyền và tiêu chuẩn kiểm thử cho F&B SMART V5.1 để trình PO Tuấn phê duyệt.

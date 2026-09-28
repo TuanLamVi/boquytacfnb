@@ -1,30 +1,36 @@
-# CHECKPOINTS
+# CHECKPOINTS REGISTRY
 
 ## Mục đích
 
-Registry các checkpoint và kết quả được ghi nhận trong bộ nguồn.
+Registry danh sách các Checkpoints và kết quả được ghi nhận chính thức trong repository.
 
-## Các checkpoint quan trọng được ghi nhận
+---
 
-- A0 — foundation / build baseline
-- A1.1 — account & store audit
-- A1.2 — account & store real-world verification
-- A2.2-01-FIX-02 — duplicate join prevention
-- A2-02 — employee POS + table map
-- A2.2-02-FIX-03-BUILD-001 — debug build & device install
-- A3.3-TABLEMAP-LOGOUT-LOGIN-FIX — table map logout/login
-- GP-01-SURGICAL-FIX-02 — orders tenant rules
-- GOV-025-CLOSURE-PROTECTION-RULE — work item closure
-- GOV-026 — governance consistency / closure synchronization
-- GOV-027 — LAW-016
-- GOV-028 — LAW-017
-- A3-01 — money/currency/int64
-- A3-02 — orders/order lines
-- A3-04 — payment/table closure synchronization
-- A3-05 — shift foundation
-- A3-06 — shift management UI
+## Danh sách Checkpoints Ghi nhận
 
-## Quy tắc
+- `GOVERNANCE-BASELINE-V5.1` — `PO_VERIFIED / BASELINE FREEZE` (Bộ quy tắc nền cho Rehabilitation & Clean Rebuild)
+- `A0` — `PO_VERIFIED / LOCKED` (Foundation / Build Baseline - Legacy Frozen)
+- `A1.1` — `PO_VERIFIED / LOCKED` (Account & Store Audit - Legacy Frozen)
+- `A1.2` — `PO_VERIFIED / LOCKED` (Account & Store Real-World Verification - Legacy Frozen)
+- `A2.2-01-FIX-02` — `PO_VERIFIED / LOCKED` (Duplicate Join Prevention - Legacy Frozen)
+- `A2-02` — `PO_VERIFIED / LOCKED` (Employee POS + Table Map - Legacy Frozen)
+- `A3.3-TABLEMAP-LOGOUT-LOGIN-FIX` — `PO_VERIFIED / LOCKED` (Table Map Logout/Login Recovery - Legacy Frozen)
+- `GP-01-SURGICAL-FIX-02` — `PO_VERIFIED / LOCKED` (Orders Tenant Rules - Legacy Frozen)
+- `GOV-025-CLOSURE-PROTECTION-RULE` — `PO_VERIFIED / LOCKED` (Work Item Closure & Protection Rule)
+- `GOV-026` — `PO_VERIFIED` (Governance Consistency & Closure Synchronization)
+- `GOV-027` — `PO_VERIFIED` (LAW-016 PO Decision Bridge)
+- `GOV-028` — `PO_VERIFIED` (LAW-017 Session Reentry & Repository Authority)
+- `A3-01` — `PO_VERIFIED / LOCKED` (Money / Currency / Int64 - Legacy Frozen)
+- `A3-02` — `PO_VERIFIED / LOCKED` (Orders & Order Lines - Legacy Frozen)
+- `A3-05` — `PO_VERIFIED / LOCKED` (Shift Foundation - Legacy Frozen)
+- `A3-06` — `PO_VERIFIED / LOCKED` (Shift Management UI - Legacy Frozen)
+- `A6-02` — `BLOCKED / FIRST FAILURE / LEGACY FROZEN` (Canonical POS Payment UI Integration - Frozen)
+- `CLEAN_REBUILD_V5.1` — `ACTIVE / IN_PROGRESS` (Master Specification & Boundary Setup)
 
-Checkpoint registry ghi nhận; không tự cấp thẩm quyền.
-Chi tiết evidence và quyết định xem WORK_ITEM_HISTORY / PO_DECISION_REGISTER / TEST_EVIDENCE.
+---
+
+## Quy tắc Checkpoint
+
+- Checkpoint registry lưu trữ kết quả chính thức; không tự cấp thẩm quyền.
+- Legacy checkpoints bị đóng băng hoàn toàn (`FROZEN`).
+- Clean Rebuild V5.1 sẽ xây dựng hệ thống Checkpoints mới độc lập dựa trên evidence và PO Verification mới.

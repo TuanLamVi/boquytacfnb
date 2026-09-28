@@ -1,144 +1,57 @@
-# GHI NHẬT KÝ — F&B SMART V5
+# LOGGING PROTOCOL — GHI NHẬT KÝ VẬN HÀNH
 
 ## Mục tiêu
 
-Ghi đủ để biết:
-- đã làm gì;
-- kết quả là gì;
-- bằng chứng ở đâu;
-- Tuấn đã xác nhận chưa;
-- phần nào đã được bảo vệ;
-- việc tiếp theo là gì.
+Ghi nhật ký tập trung, chính xác và minh bạch trong repository để đảm bảo truy xuất nguồn gốc đầy đủ mà không làm rối repository bằng hàng chục file rác.
 
-Không tạo nhiều file nhật ký cho cùng một việc.
+---
 
-## Sau mỗi Work Item
+## Mẫu Khai báo Work Item chuẩn
 
-Thông thường chỉ cần cập nhật:
-
-### 1. WORK_ITEM_HISTORY.md
-Ghi một mục ngắn:
-
-- Work Item
-- ngày
-- mục tiêu
-- kết quả
-- PO status
-- evidence
-- checkpoint
-- protection
-- commit
-- next
-
-### 2. CURRENT_STATE.md
-Chỉ cập nhật khi trạng thái hiện tại thay đổi.
-
-### 3. PROTECTION_MAP.md
-Chỉ cập nhật khi có thay đổi PROTECTED / LOCKED / UNLOCK.
-
-### 4. REGRESSION_LOG.md
-Chỉ cập nhật khi thật sự có regression.
-
-### 5. TEST_EVIDENCE.md
-Ghi bằng chứng test cần lưu lại.
-
-### 6. PO_DECISION_REGISTER.md
-Chỉ cập nhật khi có quyết định/xác nhận chính thức của PO cần ghi vào repository.
-
-### 7. AI_HANDOFF.md
-Chỉ cập nhật khi thông tin bàn giao thay đổi đáng kể.
-
-## Không cần ghi
-
-Không cần tạo:
-- LOG_001.md
-- LOG_002.md
-- LOG_003.md
-- một file mới cho mỗi lần Codex chạy;
-- một file mới chỉ để chép lại Final Report.
-
-GitHub commit history đã giữ lịch sử thay đổi của file.
-
-## Khi Work Item chưa hoàn tất
-
-Không ghi PASS giả.
-
-Có thể ghi:
-- IN_PROGRESS
-- BLOCKED
-- FAILED
-- UNPROVEN
-- READY_FOR_PO_VERIFICATION
-
-theo đúng trạng thái thực tế.
-
-## Khi phát hiện lỗi
-
-Làm:
-
-```
-STOP
-→ ghi lỗi vào REGRESSION_LOG nếu là regression
-→ giữ evidence
-→ xử lý theo KIM CHỈ NAM
-→ test lại
-→ cập nhật record
+Mọi Work Item mới khi triển khai phải khai báo đầy đủ các thông số:
+```text
+WORK ITEM: [Mã ID Work Item]
+BUILD MODE: [REHABILITATION | CLEAN_REBUILD]
+OBJECTIVE: [Mục tiêu công việc]
+SCOPE: [Phạm vi file/component tác động]
+DEPENDENCY: [Phụ thuộc kỹ thuật/tài liệu]
+PROTECTED SCOPE: [Vùng ảnh hưởng bảo vệ]
+EVIDENCE NEEDED: [Bằng chứng cần thiết]
+PO STATUS: [Trạng thái phê duyệt của PO]
+NEXT: [Bước tiếp theo]
 ```
 
-## Sau khi ghi
+---
 
-```
-CHECK DIFF
-→ COMMIT
-→ PUSH GITHUB
-```
+## Các File Hồ sơ Cần Cập nhật (LAW-015)
 
-## Quy tắc quan trọng
+Sau mỗi Work Item hoàn tất và có kết quả chính thức, cập nhật đúng các hồ sơ tập trung sau:
 
-**Repository record là nhật ký chính thức.**
+### 1. `01_STATE/WORK_ITEM_HISTORY.md`
+Ghi nhận một mục tóm tắt ngắn gọn: Work Item, Ngày, Build Mode, Mục tiêu, Kết quả kỹ thuật, PO Status, Evidence, Checkpoint, Protection, Commit, Next.
 
-Nhật ký tạm thời trên máy, cửa sổ terminal hoặc lịch sử chat không thay thế repository record.
+### 2. `01_STATE/CURRENT_STATE.md`
+Cập nhật khi trạng thái tổng quan dự án hoặc trạng thái của Work Item thay đổi.
 
-**Không cần chép toàn bộ Final Report vào mọi file.**
-Chỉ đưa những thông tin cần thiết vào đúng nơi.
+### 3. `01_STATE/PO_DECISION_REGISTER.md`
+Cập nhật ngay khi có quyết định/phê duyệt mới từ PO Tuấn được ghi nhận theo LAW-016.
 
-## Ví dụ
+### 4. `02_CONTROL/CHECKPOINTS.md` & `02_CONTROL/PROTECTION_MAP.md`
+Cập nhật khi có checkpoint mới hoặc thay đổi trạng thái `PROTECTED / LOCKED / UNLOCK`.
 
-Một Work Item hoàn tất:
+### 5. `02_CONTROL/REGRESSION_LOG.md`
+Chỉ cập nhật khi thực sự phát hiện lỗi regression ở tính năng đã xác nhận trước đây.
 
-```
-WORK_ITEM_HISTORY
-→ A4-01 = READY_FOR_PO_VERIFICATION
+### 6. `03_EVIDENCE/TEST_EVIDENCE.md`
+Lưu trữ bằng chứng kiểm thử (logs, screenshots, output test).
 
-CURRENT_STATE
-→ A4-01 đang chờ PO
+### 7. `05_SESSION/AI_HANDOFF.md`
+Cập nhật thông tin bàn giao phiên cho AI tiếp nối.
 
-TEST_EVIDENCE
-→ Evidence E-041
+---
 
-PROTECTION_MAP
-→ chưa bảo vệ vì chưa PO_VERIFIED
+## Những việc NGHIÊM CẤM
 
-GIT
-→ commit abc123
-→ push GitHub
-```
-
-Sau khi Tuấn xác nhận:
-
-```
-PO_DECISION_REGISTER
-→ PO_VERIFIED
-
-CURRENT_STATE
-→ A4-01 = PO_VERIFIED
-
-PROTECTION_MAP
-→ PROTECTED / LOCKED
-```
-
-## Nguyên tắc cuối
-
-**Một việc → một lịch sử chính.**
-
-Không biến repository thành kho chứa hàng trăm nhật ký vụn.
+- **Không tạo file log lẻ tẻ:** Nghiêm cấm tạo `LOG_001.md`, `LOG_002.md`, `LOG_20260928.md` cho từng lần chạy.
+- **Không chép toàn bộ Final Report vào mọi file:** Chỉ đưa thông tin tóm tắt cần thiết vào đúng file quy định.
+- **Không ghi PASS giả:** Chưa qua test thật hoặc chưa có PO Verification thì ghi đúng trạng thái (`IN_PROGRESS`, `READY_FOR_PO_VERIFICATION`, `UNPROVEN`, `BLOCKED`).

@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KIM CHỈ NAM — F&B SMART V5</title>
 <style>
-:root{--bg:#f5f6f8;--card:#fff;--text:#202124;--muted:#5f6368;--line:#dadce0}
+:root{--bg:#f5f6f8;--card:#fff;--text:#202124;--muted:#5f6368;--line:#dadce0;--primary:#1a73e8}
 *{box-sizing:border-box} body{margin:0;font-family:Arial,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 main{max-width:1100px;margin:auto;padding:28px}
 header,.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:18px}
 h1{margin:0 0 8px} h2{margin-top:0} .muted{color:var(--muted)}
-.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:#e8eaed;font-weight:700}
+.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:#e8f0fe;color:var(--primary);font-weight:700}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
 a{color:#174ea6;text-decoration:none} a:hover{text-decoration:underline}
 code{background:#f1f3f4;padding:2px 6px;border-radius:6px}
@@ -21,34 +21,48 @@ code{background:#f1f3f4;padding:2px 6px;border-radius:6px}
 <main>
 <header>
 <h1>KIM CHỈ NAM — F&B SMART V5</h1>
-<span class="badge">BẢN LUẬT CHÍNH</span>
-<p class="muted">Trang này để đọc nhanh. Nội dung chuẩn được lưu bằng Markdown để dễ theo dõi thay đổi trên GitHub.</p>
+<span class="badge">BẢN LUẬT CHÍNH — BASELINE FREEZE</span>
+<p class="muted">Thống nhất quy trình cho cả hai giai đoạn: Phục hồi (Rehabilitation) và Xây mới (Clean Rebuild V5.1).</p>
 </header>
-<section class="card"><h2>Đọc trước</h2>
+<section class="card"><h2>Đọc trước (Read-First)</h2>
 <div class="grid">
 <div><a href="AI_READ_FIRST.md">AI_READ_FIRST.md</a><br><span class="muted">Thứ tự đọc bắt buộc cho AI/Codex.</span></div>
 <div><a href="SOURCE_OF_TRUTH.md">SOURCE_OF_TRUTH.md</a><br><span class="muted">Xác định tài liệu nào là nguồn chuẩn.</span></div>
-<div><a href="AUTHORITY_MODEL.md">AUTHORITY_MODEL.md</a><br><span class="muted">Ai được quyết định việc gì.</span></div>
-<div><a href="STATUS_MODEL.md">STATUS_MODEL.md</a><br><span class="muted">Ý nghĩa các trạng thái.</span></div>
+<div><a href="AUTHORITY_MODEL.md">AUTHORITY_MODEL.md</a><br><span class="muted">Thẩm quyền PO Tuấn và AI Agent.</span></div>
+<div><a href="STATUS_MODEL.md">STATUS_MODEL.md</a><br><span class="muted">Ý nghĩa các trạng thái & Chế độ vận hành.</span></div>
 </div></section>
-<section class="card"><h2>17 phần của KIM CHỈ NAM</h2>
-<ol><li>Thẩm quyền</li><li>Nguồn sự thật</li><li>Luật nền</li><li>Trạng thái</li><li>GOV-025 — Work Item Closure</li><li>LAW-015 — Closure Synchronization</li><li>PO Verification</li><li>First Failure Stop</li><li>History Preservation</li><li>Git Safety</li><li>Build / Device</li><li>LAW-013 — Final Report</li><li>LAW-016 — PO Decision Bridge</li><li>LAW-017 — Session Reentry</li><li>Roadmap và Work Item</li><li>Thứ tự trách nhiệm</li><li>Nguyên tắc cuối cùng</li></ol>
-<p><a href="KIM_CHI_NAM.md">→ Mở toàn bộ luật chính</a></p></section>
-<section class="card"><h2>Chuỗi làm việc</h2><div class="flow">READ-FIRST
-→ CURRENT STATE
-→ CHECKPOINTS
-→ PO DECISIONS
-→ PROTECTED / LOCKED SCOPE
-→ WORK ITEM
-→ TEST / EVIDENCE
-→ UPDATE RECORD
-→ GIT HISTORY
-→ GITHUB</div></section>
-<section class="card"><h2>Trạng thái quan trọng</h2>
+<section class="card"><h2>15 phần Cốt lõi của KIM CHỈ NAM</h2>
+<ol>
+<li>Thẩm quyền (Authority Model)</li>
+<li>Nguồn sự thật (Source of Truth)</li>
+<li>Hai Chế độ Vận hành & Ranh giới (Rehabilitation vs Clean Rebuild, Legacy Freeze)</li>
+<li>Nguyên tắc Xây dựng Mới (Contract-First, Master Spec Gate, No Mid-Build Change, Test-First, Provenance)</li>
+<li>Trạng thái và Quy trình Bảo vệ (GOV-025 Work Item Closure & Protection)</li>
+<li>Luật Dừng ngay khi có Lỗi (First Failure Stop)</li>
+<li>Bảo tồn Lịch sử (History Preservation)</li>
+<li>An toàn Git (Git Safety)</li>
+<li>Đồng bộ Hồ sơ khi Đóng Task (LAW-015 Closure Synchronization)</li>
+<li>Cầu nối Quyết định PO (LAW-016 PO Decision Bridge)</li>
+<li>Tái nhập Phiên làm việc (LAW-017 Session Reentry & Repository Wins)</li>
+<li>Báo cáo Kết thúc Prompt (LAW-013 Final Report)</li>
+<li>Quy trình Cập nhật Luật Governance (PO Freeze Baseline Protocol)</li>
+<li>Thứ tự Trách nhiệm</li>
+<li>Nguyên tắc Cốt lõi Cuối cùng</li>
+</ol>
+<p><a href="KIM_CHI_NAM.md">→ Mở toàn bộ văn bản luật Markdown chính thức</a></p></section>
+<section class="card"><h2>Chuỗi Vận hành Clean Rebuild</h2><div class="flow">CONTRACT-FIRST
+→ MASTER SPECIFICATION GATE
+→ ACCEPTANCE TEST PLAN
+→ SCOPED IMPLEMENTATION
+→ EXACT SOURCE COMMIT
+→ EXACT BUILD & DEPLOYMENT
+→ PO VERIFICATION
+→ CLOSURE SYNCHRONIZATION (LAW-015)</div></section>
+<section class="card"><h2>Nguyên tắc Bắt buộc</h2>
 <p><code>AI PASS</code> ≠ <code>READY_FOR_PO_VERIFICATION</code> ≠ <code>PO PASS</code> ≠ <code>PO_VERIFIED</code> ≠ <code>LOCKED</code></p>
-<p>Child PASS không tự làm parent PASS.</p>
-<p>Không đủ bằng chứng hoặc có xung đột chưa giải quyết → <strong>STOP</strong>.</p></section>
-<section class="card"><h2>Trạng thái dự án</h2><div class="grid">
+<p><code>LEGACY SYSTEM = FROZEN</code> (Chỉ dùng làm Read-Only Forensic Reference).</p>
+<p>Không đủ bằng chứng hoặc có mâu thuẫn chưa giải quyết → <strong>STOP</strong>.</p></section>
+<section class="card"><h2>Hồ sơ Vận hành Repository</h2><div class="grid">
 <a href="../01_STATE/CURRENT_STATE.md">CURRENT_STATE.md</a>
 <a href="../01_STATE/PO_DECISION_REGISTER.md">PO_DECISION_REGISTER.md</a>
 <a href="../01_STATE/WORK_ITEM_HISTORY.md">WORK_ITEM_HISTORY.md</a>
@@ -60,7 +74,6 @@ code{background:#f1f3f4;padding:2px 6px;border-radius:6px}
 <a href="../03_EVIDENCE/BUILD_BASELINE.md">BUILD_BASELINE.md</a>
 <a href="../05_SESSION/AI_HANDOFF.md">AI_HANDOFF.md</a>
 </div></section>
-<section class="card"><h2>Bản nháp Governance V2</h2><p><strong>DRAFT — NOT YET ADOPTED.</strong> Không tự động thay thế KIM CHỈ NAM hiện hành.</p></section>
 </main>
 </body>
 </html>

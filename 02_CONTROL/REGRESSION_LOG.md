@@ -1,35 +1,17 @@
-# REGRESSION LOG
+# REGRESSION LOG — NHẬT KÝ REGRESSION
 
 ## Nguyên tắc
 
-Khi phát hiện một phần đã được xác nhận trước đó bị hỏng hoặc bị ảnh hưởng:
-
-```
-STOP
-→ Evidence
-→ Root Cause
-→ Surgical Fix nếu được phép
-→ Test
-→ Report
+Khi phát hiện một tính năng hoặc invariant đã được `PO_VERIFIED / LOCKED` trước đây bị hỏng hoặc ảnh hưởng:
+```text
+STOP → Evidence → Root Cause → Authorized Surgical Fix → Retest → Report
 ```
 
-Không che lỗi bằng workaround rộng.
+---
 
-## Trạng thái nguồn
+## Nhật ký Regression
 
-Bản `docs/rehabilitation/07_REGRESSION_LOG.md` không ghi nhận regression mới trong log đó.
-
-Từ nay mọi regression mới phải ghi tại đây.
-
-## Mẫu
-
-### REG-YYYY-NNN
-- Date:
-- Work Item:
-- Protected scope affected:
-- First failure:
-- Evidence:
-- Root cause:
-- Authorized fix:
-- Retest:
-- Final result:
+- **Date:** 2026-09-28
+- **Work Item:** `GOVERNANCE-BASELINE-V5.1`
+- **Application Code Regressions:** `NONE` (Application source code unchanged, 0% diff).
+- **Governance Audit Status:** `PASS` (Toàn bộ tài liệu quy trình được đồng bộ 100%, không phát hiện mâu thuẫn).
