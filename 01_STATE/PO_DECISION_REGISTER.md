@@ -101,3 +101,17 @@
 - **Affected Files:** `docs-123/REFERENCE_ARCHITECTURE_LIBRARY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/REFERENCE_ARCHITECTURE_LIBRARY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-BUSINESS-MODELS-MENU-V5.1
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức xác nhận `PO_VERIFIED / PROTECTED / LOCKED` cho **PROMPT 066 — 20 BUSINESS MODELS & MENU TEMPLATE STRUCTURE**.
+- **Content:**
+  1. Phê duyệt 20 mô hình kinh doanh và cấu trúc Menu Template.
+  2. Xác nhận cơ chế Store Menu clone độc lập từ System Menu Template.
+  3. Phê duyệt quy tắc Product Options có thể miễn phí hoặc có phụ phí tùy cấu hình.
+  4. Phê duyệt Topping min/max áp dụng ở cấp từng Topping riêng lẻ.
+  5. Xác nhận Bún/Phở và Cà phê là Representative Models.
+  6. Các mô hình giá phức tạp (Seafood, Buffet, Combo) được xếp loại TBD / deferred sang post-MVP.
+- **Affected Files:** `docs-123/BUSINESS_MODELS_MENU_TEMPLATES_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/BUSINESS_MODELS_MENU_TEMPLATES_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.

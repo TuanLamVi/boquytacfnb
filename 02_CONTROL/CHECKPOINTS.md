@@ -10,6 +10,7 @@ Registry danh sách các Checkpoints và kết quả được ghi nhận chính 
 
 - `GOVERNANCE-BASELINE-V5.1` — `PO_VERIFIED / BASELINE FREEZE` (Bộ quy tắc nền cho Rehabilitation & Clean Rebuild)
 - `REF-ARCHITECTURE-LIBRARY-V5.1` — `PO_VERIFIED / PROTECTED / LOCKED` (Prompt 061 - Reference Architecture Library REF-001 to REF-012)
+- `BUSINESS-MODELS-MENU-V5.1` — `PO_VERIFIED / PROTECTED / LOCKED` (Prompt 066 - 20 Business Models & Menu Template Structure)
 - `A0` — `PO_VERIFIED / LOCKED` (Foundation / Build Baseline - Legacy Frozen)
 - `A1.1` — `PO_VERIFIED / LOCKED` (Account & Store Audit - Legacy Frozen)
 - `A1.2` — `PO_VERIFIED / LOCKED` (Account & Store Real-World Verification - Legacy Frozen)

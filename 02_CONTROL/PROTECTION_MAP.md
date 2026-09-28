@@ -29,6 +29,11 @@ PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED
 - **Protected Content:** `REFERENCE_ARCHITECTURE_LIBRARY_V5.1.md` (REF-001 to REF-012 mapping, useful ideas, conflicts, and licensing notes).
 - **Rule:** Strict classification (`REFERENCE ONLY — NOT AUTHORITY — NO CODE COPY — NO REQUIREMENT INHERITANCE`). F&B Smart Authority wins. Cannot be modified or used to inherit unapproved requirements without PO Decision.
 
+### 5. BUSINESS MODELS & MENU TEMPLATE DESIGN V5.1 (PROMPT 066)
+- **Status:** `PO_VERIFIED / PROTECTED / LOCKED`
+- **Protected Content:** `BUSINESS_MODELS_MENU_TEMPLATES_V5.1.md` (20 Business Models, Menu Template Structure, Store Menu independent copy, Topping vs Product Options rules, Representative Models).
+- **Rule:** Locked product-design baseline. No work item may alter the 20 business models, store menu copy mechanism, topping quantity model, or product options pricing rules without valid PO Decision and Unlock.
+
 ---
 
 ## Phân tích Ảnh hưởng Vùng Bảo vệ (LOCKED SCOPE IMPACT)
