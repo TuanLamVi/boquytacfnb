@@ -29,15 +29,14 @@ Hồ sơ đó được giữ làm nguồn lịch sử. Các kết quả lịch s
 
 ## Mẫu thêm mục
 
-### WORK ITEM: AI START SCREEN — F&B SMART V5
+### WORK ITEM: AI-START-01 — ROLLBACK & CANCELLED
 - Date: 2026-09-28
-- Objective: Tạo màn hình tiện ích nội bộ AI Start Commands và tích hợp route `/ai-start`
-- Scope: `lib/features/ai_start/ai_start_commands_page.dart` và `lib/main.dart`
-- Technical Result: Màn hình utility hiển thị 2 nút copy prompt cho ChatGPT và Codex/Gemini bằng Flutter Clipboard API (`Clipboard.setData`), có SnackBar thông báo. Chạy `flutter analyze` thành công.
-- PO Verification: PENDING (READY_FOR_PO_REVIEW)
-- Evidence: `flutter analyze` PASSED, UI tiện ích độc lập không đụng chạm POS/Firestore/Business logic.
-- Checkpoint: AI-START-01
-- Protection: None (Chưa PO_VERIFIED, không đụng tới vùng LOCKED)
-- Commit: Uncommitted (DIRTY worktree)
-- Next: PO Verification
+- Objective: Gỡ bỏ hoàn toàn màn hình AI START khỏi ứng dụng F&B SMART theo chỉ đạo của PO.
+- Scope: `lib/features/ai_start/ai_start_commands_page.dart` (DELETED), `lib/main.dart` (RESTORED), `packages/feature_fnb_pos/lib/views/main_layout_view.dart` (RESTORED).
+- Technical Result: CANCELLED / VOID — WRONG TARGET. Đã thực hiện surgical rollback sạch sẽ, gỡ bỏ route `/ai-start`, xóa file `ai_start_commands_page.dart`. Chạy `flutter analyze` PASSED.
+- PO Verification: NOT PERFORMED (CANCELLED BY PO)
+- Code Rollback: COMPLETED
+- Reason: PO clarified AI START must be an external HTML utility, not an F&B SMART application feature.
+- Protection: NONE / NOT PROTECTED / NOT LOCKED
+- Next: A6-02 — PO verification on Samsung Note 8 & Samsung M51.
 

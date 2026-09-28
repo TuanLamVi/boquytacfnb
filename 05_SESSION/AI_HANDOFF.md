@@ -88,10 +88,10 @@ Working tree DIRTY; bảo toàn thay đổi có sẵn.
 ## 8. NEXT
 
 ```text
-CURRENT WORK ITEM: AI START SCREEN — F&B SMART V5
-STATUS: READY_FOR_PO_REVIEW
-CANONICAL ID: AI-START-01
-NEXT: PO verification for AI START SCREEN.
+CURRENT WORK ITEM: A6-02 — Canonical POS Payment UI Integration & Test Surface (Parallel Coexistence)
+STATUS: READY_FOR_PO_VERIFICATION
+CANONICAL ID: A6-02
+NEXT: PO verification on Samsung Note 8 & Samsung M51.
 ```
 
 Không tự suy ra task mới từ lịch sử cũ.
