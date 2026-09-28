@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-119 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — PROVENANCE RECONCILIATION & CONTRACT AUDIT
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
+- Objective: Reconcile provenance Prompt-118 (xác nhận path chuẩn duy nhất trên GitHub là `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`, commit `355bf92`), thực hiện kiểm toán Master Spec Draft V0.1 so với 4 Hợp đồng Kỹ thuật V5.1, đánh giá tính nhất quán state machines và ranh giới Zalo/ZaloPay.
+- Scope: `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md` & 4 Technical Contracts V5.1.
+- Application Code Changes: `NONE` (100% Governance & Document Audit).
+- Technical Result: PASS — Hoàn tất kiểm toán và hòa giải provenance.
+- PO Status: `DRAFT V0.1 — READY FOR PO REVIEW`
+- Evidence: Provenance audit reconciliation table, contract consistency audit findings.
+- Next: PO Review of Clean Rebuild Master Specification V5.1.
+
 ### WORK ITEM: PROMPT-118 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — COMMIT & SYNC DRAFT
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD`

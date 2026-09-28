@@ -21,7 +21,7 @@
 
 | Item / Module | Status | Ghi chú & Ranh giới |
 |---|---|---|
-| Master Specification Gate V5.1 (Prompt 118) | `DRAFT V0.1 — COMMITTED & SYNCED / READY FOR PO REVIEW` | Prompt 118: Clean Rebuild Master Specification V5.1 Draft V0.1 committed and synchronized to GitHub (`99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`). Full provenance restored (Commit `355bf92`). Status: DRAFT — READY FOR PO REVIEW. No app code written. |
+| Master Specification Gate V5.1 (Prompt 119 Audit) | `DRAFT V0.1 — PROVENANCE RECONCILED / READY FOR PO REVIEW` | Prompt 119 Audit: Reconciled canonical repository path (`99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md` on branch `codex/migrate-kim-chi-nam-20260928`, commit `355bf92`). Audited Master Spec Draft against 4 Technical Contracts (Product Charter, Schema, State Machines, Query Budget). Status: DRAFT — READY FOR PO REVIEW. No app code written. |
 | Governance Implementation V5.1 (Prompt 114) | `PO_VERIFIED / PROTECTED` | Prompt 114: Implemented Work Item ID vs Prompt ID separation, Prompt uniqueness & collision handling, Standard Prompt Header, Closure Sequence with mandatory Regression Check (N/A for discovery), Discovery vs Implementation Evidence separation, History Preservation, and Repository Source of Truth enforcement. |
 | Shift Management & Cash Drawer V5.1 (A6) | `PO_VERIFIED / PROTECTED / LOCKED` | Prompts 089/094/095/096/101: A6 Shift Management & Cash Drawer rules (DEC-2026-A6-SHIFT) |
 | Customer Profile & Debt Ledger V5.1 | `READY FOR PO_VERIFIED` | Prompt 107 Final Boundary: No overpayment rule (`Còn nợ < 0` blocked), Server-verified QR debt repayment, Cash repayment increasing shift cash drawer without sales revenue inflation, Store-scoped debt ledger |
