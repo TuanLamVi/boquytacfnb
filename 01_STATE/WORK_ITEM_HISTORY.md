@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-105 — A8 CUSTOMER PROFILE & DEBT LEDGER REVISED FOCUS
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY REVISED FOCUS)`
+- Objective: Tinh chỉnh A8 lấy "Sổ công nợ khách hàng (Customer Debt Ledger)" làm trọng tâm cốt lõi, tách bạch SĐT khách với OTP đăng nhập hệ thống, cấu trúc dữ liệu theo từng Store, và định vị Loyalty làm khung mở rộng.
+- Scope: `docs-123/CUSTOMER_LOYALTY_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/CUSTOMER_LOYALTY_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery Revision).
+- Technical Result: PASS — Hoàn tất tinh chỉnh trọng tâm A8 theo Prompt 105.
+- PO Status: `READY FOR PO_VERIFIED`
+- Evidence: Revised discovery documentation archived, committed, and synced to GitHub.
+- Next: PO_VERIFIED → PROTECTED → LOCKED.
+
 ### WORK ITEM: PROMPT-104 — A8 CUSTOMER PROFILE & LOYALTY FINAL CORRECTION
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN FINAL CORRECTION)`

@@ -23,7 +23,7 @@
 |---|---|---|
 | Governance Baseline V5.1 | `PO_VERIFIED / BASELINE FREEZE` | Bộ luật KIM CHỈ NAM thống nhất cho Rehabilitation & Clean Rebuild (DEC-2026-GOVERNANCE-BASELINE-V5.1) |
 | Table & Payment Operating Model V5.1 | `PO_VERIFIED / PROTECTED / LOCKED` | Prompts 090/091/092: Table flow (2 branches from Trống: Đặt trước or Walk-in → Vào bàn → Gọi món → Thanh toán → Chờ dọn → Dọn xong → Trống), Partial Collection (`Còn phải thu ≠ Nợ`), Multi-staff collection, Multi-tender, Cash drawer physical cash separation (DEC-2026-090, DEC-2026-091) |
-| Customer Profile & Loyalty V5.1 | `FINAL CONFIRMED / READY FOR PO_VERIFIED` | Prompt 104 Final Correction: Phone vs OTP authentication separation, Store-scoped customer profile, debt & loyalty, optional customer attach |
+| Customer Profile & Debt Ledger V5.1 | `READY FOR PO_VERIFIED` | Prompt 105 Revised Focus: Customer Debt Ledger as primary core focus (`Sổ công nợ khách hàng`), Store-scoped customer & debt records, independent phone search (no OTP), Loyalty as extended framework |
 | Reports & Analytics V5.1 | `FINAL CONFIRMED / READY FOR PO_VERIFIED` | Prompt 099 Final Correction: Revenue formula (`Tạm tính - Giảm giá`), `Đã thu ≠ Ghi nợ`, Cash drawer formula synced with A6, Excel/PDF & COGS deferred |
 | A0 Foundation | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
 | A1 Account & Store | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
