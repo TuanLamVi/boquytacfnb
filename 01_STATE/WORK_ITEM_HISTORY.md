@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-089 — SHIFT MANAGEMENT & CASH DRAWER PRODUCT DISCOVERY
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN ONLY)`
+- Objective: Thiết kế đầy đủ nghiệp vụ quản lý ca và két tiền (Shift lifecycle, Mở ca, Cash Drawer formula, Cash In/Out expenses, Giao ca, Đóng ca, Chênh lệch thừa/thiếu, Tách bạch tiền mặt/QR/ghi nợ, LEGO permissions) cho F&B Smart V5.1.
+- Scope: `docs-123/SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/SHIFT_MANAGEMENT_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery & UX Design).
+- Technical Result: PASS — Hoàn tất các phần A đến J theo Prompt 089.
+- PO Status: `PROPOSED — PO REVIEW REQUIRED`
+- Evidence: Discovery documentation created, archived, committed, and synced to GitHub.
+- Next: PO Review of Prompt 089 Shift Management Discovery.
+
 ### WORK ITEM: PROMPT-087 — CHECKOUT & PAYMENT PRODUCT RULES (CLOSE-OUT, PROTECT & LOCK)
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCK)`
