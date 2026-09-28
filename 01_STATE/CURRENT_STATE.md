@@ -22,7 +22,7 @@
 | Item / Module | Status | Ghi chú & Ranh giới |
 |---|---|---|
 | Governance Baseline V5.1 | `PO_VERIFIED / BASELINE FREEZE` | Bộ luật KIM CHỈ NAM thống nhất cho Rehabilitation & Clean Rebuild (DEC-2026-GOVERNANCE-BASELINE-V5.1) |
-| Reference Architecture V5.1 | `PO_VERIFIED / PROTECTED / LOCKED` | F&B Smart V5.1 Reference Architecture Library REF-001 to REF-012 (DEC-2026-REF-ARCHITECTURE-V5.1) |
+| Table & Payment Operating Model V5.1 | `PO CONFIRMED (PROMPT 090)` | Prompt 090: Table flow (`Trống → Đặt trước → Vào bàn → Gọi món → Thanh toán → Chờ dọn → Dọn xong → Trống`), Multi-staff collection, Paid → Chờ dọn, Chờ dọn → Gọi thêm món |
 | Shift Management & Cash Drawer V5.1 | `IN_PROGRESS / PROPOSED` | Prompt 089: Shift lifecycle, Open shift, Cash drawer formula, Cash In/Out expenses, Handover, Closing & Variance, LEGO permissions |
 | A0 Foundation | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
 | A1 Account & Store | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |

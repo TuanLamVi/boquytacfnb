@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-090 — TABLE & PAYMENT OPERATING MODEL PO CONFIRMATION
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PO DECISION CONFIRMATION)`
+- Objective: PO Tuấn chính thức chốt mô hình vận hành bàn và thanh toán (Table flow: Trống → Đặt trước → Vào bàn → Gọi món → Thanh toán → Chờ dọn → Dọn xong → Trống, Multi-staff collection, Paid → Chờ dọn, Chờ dọn → Gọi thêm món) và ghi nhận quyết định PO.
+- Scope: `docs-123/TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `PO_DECISION_REGISTER.md`.
+- Application Code Changes: `NONE` (100% PO Decision Record Update).
+- Technical Result: PASS — Hoàn tất ghi nhận chốt mô hình vận hành bàn và thanh toán.
+- PO Status: `PO_CONFIRMED`
+- Evidence: Governance and discovery records updated, archived, committed, and synced to GitHub.
+- Next: Continue Product Discovery / Close-out.
+
 ### WORK ITEM: PROMPT-089 — SHIFT MANAGEMENT & CASH DRAWER PRODUCT DISCOVERY
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN ONLY)`

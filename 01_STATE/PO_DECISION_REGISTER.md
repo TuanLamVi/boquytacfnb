@@ -102,6 +102,17 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt mô hình vận hành bàn và thanh toán cho F&B Smart V5.1 (Prompt 090):
+  1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
+  2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
+  3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
+  4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
+
 ### DEC-2026-071-01, 071-02, 071-03 (PROMPT 071 DECISIONS)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức chốt 03 quyết định quan trọng cho F&B Smart V5.1:
@@ -125,6 +136,17 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt mô hình vận hành bàn và thanh toán cho F&B Smart V5.1 (Prompt 090):
+  1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
+  2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
+  3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
+  4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
+
 ### DEC-2026-TM-03, TM-04, TM-05 (PROMPT 074 DECISIONS)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức phê duyệt các quyết định Table Merge & Transfer cho F&B Smart V5.1:
@@ -147,6 +169,17 @@
 - **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt mô hình vận hành bàn và thanh toán cho F&B Smart V5.1 (Prompt 090):
+  1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
+  2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
+  3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
+  4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
 
 ### DEC-2026-BUSINESS-MODELS-MENU-V5.1
 - **Date:** 2026-09-28
@@ -162,6 +195,17 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt mô hình vận hành bàn và thanh toán cho F&B Smart V5.1 (Prompt 090):
+  1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
+  2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
+  3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
+  4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
+
 ### DEC-2026-071-01, 071-02, 071-03 (PROMPT 071 DECISIONS)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức chốt 03 quyết định quan trọng cho F&B Smart V5.1:
@@ -185,6 +229,17 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
+### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt mô hình vận hành bàn và thanh toán cho F&B Smart V5.1 (Prompt 090):
+  1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
+  2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
+  3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
+  4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
+
 ### DEC-2026-TM-03, TM-04, TM-05 (PROMPT 074 DECISIONS)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức phê duyệt các quyết định Table Merge & Transfer cho F&B Smart V5.1:
@@ -207,3 +262,14 @@
 - **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-090 (PROMPT 090 TABLE & PAYMENT OPERATING MODEL)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức chốt mô hình vận hành bàn và thanh toán cho F&B Smart V5.1 (Prompt 090):
+  1. **Table Flow:** `Bàn trống → Đặt trước → Khách vào bàn → Gọi món / Phục vụ → Thanh toán → Chờ dọn (Cleaning) → Dọn xong → Bàn trống`. `Đặt trước` là booking, không phải KDS state.
+  2. **Payment by Table / Order & Multi-Staff Collection:** Payment is executed against total order amount, allowing multiple/partial collections. Any authorized staff member can collect payments, with operator audit logging.
+  3. **Paid → Chờ dọn (Cleaning):** Full payment transitions table to `Chờ dọn`, prohibiting direct `Occupied → Available`.
+  4. **Chờ dọn → Gọi thêm món:** If guests order more while in `Chờ dọn`, table returns to `Đang phục vụ` with supplementary order rounds while preserving prior payment history.
+- **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
