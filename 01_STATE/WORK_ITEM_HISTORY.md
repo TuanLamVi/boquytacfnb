@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-115 — CLEAN REBUILD MASTER SPECIFICATION — READ-FIRST & GAP AUDIT
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD`
+- Objective: Đọc toàn bộ repository hiện tại, thực hiện Contract Inventory, Product Discovery Inventory, PO Decision Inventory, Contract Consistency Audit, và Master Specification Gap Matrix nhằm chuẩn bị cho việc soạn thảo Clean Rebuild Master Specification V5.1 (Chưa viết application code).
+- Scope: Read-First & Gap Audit of 4 V5.1 Contracts and Product Discovery artifacts.
+- Application Code Changes: `NONE` (100% Read-First & Gap Audit).
+- Technical Result: PASS — Hoàn tất kiểm toán Read-First và Gap Audit cho Master Specification Gate.
+- PO Status: `READY FOR PO REVIEW / GATE READY FOR DRAFT`
+- Evidence: Contract & Product Discovery inventory audit completed, gap matrix established.
+- Next: Authoring Clean Rebuild Master Specification V5.1 upon PO approval.
+
 ### WORK ITEM: PROMPT-114 — GOVERNANCE IMPLEMENTATION (PROMPT 110-112 ENHANCEMENTS)
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (GOVERNANCE IMPLEMENTATION)`
