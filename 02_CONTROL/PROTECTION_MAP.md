@@ -2,23 +2,58 @@
 
 ## Mục đích
 
-Theo dõi những phần của dự án đã được xác nhận và bảo vệ khỏi việc sửa đổi tùy ý.
+Theo dõi các phần đã được PO chấp nhận và phải được kiểm tra tác động trước khi sửa.
 
-## Trạng thái
+## Chuỗi bảo vệ
 
-- OPEN — đang mở, có thể làm việc theo Work Item.
-- PASS — đã đạt yêu cầu của Work Item.
-- LOCKED — đã khóa sau khi xác nhận.
-- PROTECTED — được coi là baseline cần bảo vệ.
-- UNLOCK REQUIRED — phải có bước mở khóa phù hợp trước khi sửa.
+```
+PASS
+→ PO_VERIFIED
+→ REGRESSION CHECK
+→ PROTECTED
+→ LOCKED
+```
 
-## Quy tắc
+## `LOCKED` nghĩa là gì?
 
-- Không tự ý chuyển trạng thái bảo vệ.
-- Một Work Item PASS không tự động làm toàn bộ Phase PASS.
-- Khi thay đổi ảnh hưởng phần PROTECTED/LOCKED: STOP và xác định quy trình mở khóa.
-- Mỗi thay đổi quan trọng phải có Git history.
+Bảo vệ:
+- hành vi đã chấp nhận;
+- quy tắc;
+- invariant;
+- acceptance criteria;
+- evidence;
+- phạm vi đã chấp nhận.
 
-## Danh mục bảo vệ
+**Không đồng nghĩa khóa cứng file.**
 
-Chưa nhập dữ liệu lịch sử từ bộ RAR nguồn.
+## Trước khi sửa Work Item mới
+
+```
+CURRENT A-STAGE
+TASK
+RELATED A-STAGES
+LOCKED SCOPE IMPACT
+```
+
+Kết quả:
+- `NONE` → không thấy ảnh hưởng vùng bảo vệ.
+- `DETECTED` → `REGRESSION_REQUIRED`.
+- `UNKNOWN` → `REGRESSION_RISK` + STOP.
+
+## UNLOCK
+
+Chỉ PO được UNLOCK.
+
+Một lần mở khóa phải ghi:
+- lý do;
+- phạm vi;
+- ảnh hưởng;
+- kế hoạch kiểm tra;
+- PO test;
+- trạng thái bảo vệ sau khi hoàn tất.
+
+## Snapshot bảo vệ từ bộ nguồn
+
+Các vùng được ghi nhận lịch sử gồm A0, A1, A2-01, A2-02, A3-01, A3-02, A3-05, A3-06, GP-01 và GOV-025 cùng các checkpoint liên quan.
+
+Chi tiết xem `02_CONTROL/CHECKPOINTS.md`.
