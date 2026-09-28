@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-121 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — FINAL COMPLETENESS & PROVENANCE CORRECTION
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
+- Objective: Cập nhật sửa đổi blob SHA provenance chính xác (`70e730be7e73f65611054e785c667a76d4d73206`), mở rộng chi tiết các workflow tài chính MVP (Debt Allocation/Collection, Unallocated Funds F1/F2/F3, Payment Adjustments, Invoice Reversal formula, Cash/Bank Refunds), và chuẩn hóa tất cả state machines theo dạng `States → Command → Source → Target → Core Guard`.
+- Scope: `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md` & `docs-123/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`.
+- Application Code Changes: `NONE` (100% Document Completeness & Provenance Correction).
+- Technical Result: PASS — Master Spec Draft V0.1 fully complete and 100% traceable to 4 Technical Contracts V5.1.
+- PO Status: `DRAFT V0.1 — READY FOR PO REVIEW`
+- Evidence: Exact git blob SHA `70e730be7e73f65611054e785c667a76d4d73206`, GitHub sync output.
+- Next: PO Review of Clean Rebuild Master Specification V5.1 Draft V0.1.
+
 ### WORK ITEM: PROMPT-120 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — CORRECTIVE AUDIT & DRAFT RECONCILIATION
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
