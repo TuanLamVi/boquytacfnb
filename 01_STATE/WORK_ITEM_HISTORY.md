@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-078 — PO DECISIONS CONFIRMATION FOR POS ORDERING
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PO DECISION & PRODUCT DISCOVERY CONFIRMATION)`
+- Objective: PO Tuấn chính thức xác nhận DECISION-POS-03 (Cart line grouping confirmed) và DECISION-POS-04 (Offline boundary confirmed), cập nhật đăng ký quyết định PO và hồ sơ sản phẩm.
+- Scope: `docs-123/POS_ORDERING_DISCOVERY_V5.1.md`, `PO_DECISION_REGISTER.md`.
+- Application Code Changes: `NONE` (100% PO Decision & Governance Record Update).
+- Technical Result: PASS — Hoàn tất ghi nhận 2 quyết định POS.
+- PO Status: `PO_CONFIRMED`
+- Evidence: Governance and discovery records updated, archived, committed, and synced to GitHub.
+- Next: PO_VERIFIED → PROTECTED → LOCKED.
+
 ### WORK ITEM: PROMPT-077 — POS ORDERING & DISPATCH PRODUCT DISCOVERY (FINAL DRAFT)
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN FINAL DRAFT)`

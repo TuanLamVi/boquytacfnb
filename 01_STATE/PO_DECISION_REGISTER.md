@@ -112,6 +112,15 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
 
+### DEC-2026-POS-03, POS-04 (PROMPT 078 POS DECISIONS)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức xác nhận các quyết định POS Ordering cho F&B Smart V5.1:
+  1. **DECISION-POS-03 (Cart Line Grouping Confirmed):** Cho phép gộp Order Lines khi các thuộc tính chính trùng khớp hoàn toàn (Product, Size, Topping, Topping quantities, Product Options, Unit Price). Khác biệt bất kỳ thuộc tính nào thì giữ line riêng.
+  2. **DECISION-POS-04 (Offline Boundary Confirmed):** Chỉ các thao tác được Offline Contract/Governance xác định là `Offline-Eligible` mới được thực hiện offline và đưa vào Local Outbox. Thanh toán và nghiệp vụ tài chính bắt buộc online.
+- **Affected Files:** `POS_ORDERING_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
+
 ### DEC-2026-TM-03, TM-04, TM-05 (PROMPT 074 DECISIONS)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức phê duyệt các quyết định Table Merge & Transfer cho F&B Smart V5.1:
@@ -119,6 +128,15 @@
   2. **DECISION-TM-04 (Post-Checkout Restriction Confirmed):** Cấm Ghép bàn và Chuyển bàn sau khi Order đã bắt đầu Checkout hoặc Invoice đã được post.
   3. **DECISION-TM-05 (Partial Transfer Deferred to Post-MVP):** Chuyển một phần SaleLine (Partial Transfer) bị hoãn sang Post-MVP; MVP chỉ hỗ trợ chuyển toàn bộ Order / toàn bộ nhóm khách.
 - **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
+
+### DEC-2026-POS-03, POS-04 (PROMPT 078 POS DECISIONS)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức xác nhận các quyết định POS Ordering cho F&B Smart V5.1:
+  1. **DECISION-POS-03 (Cart Line Grouping Confirmed):** Cho phép gộp Order Lines khi các thuộc tính chính trùng khớp hoàn toàn (Product, Size, Topping, Topping quantities, Product Options, Unit Price). Khác biệt bất kỳ thuộc tính nào thì giữ line riêng.
+  2. **DECISION-POS-04 (Offline Boundary Confirmed):** Chỉ các thao tác được Offline Contract/Governance xác định là `Offline-Eligible` mới được thực hiện offline và đưa vào Local Outbox. Thanh toán và nghiệp vụ tài chính bắt buộc online.
+- **Affected Files:** `POS_ORDERING_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
 
@@ -146,6 +164,15 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
 
+### DEC-2026-POS-03, POS-04 (PROMPT 078 POS DECISIONS)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức xác nhận các quyết định POS Ordering cho F&B Smart V5.1:
+  1. **DECISION-POS-03 (Cart Line Grouping Confirmed):** Cho phép gộp Order Lines khi các thuộc tính chính trùng khớp hoàn toàn (Product, Size, Topping, Topping quantities, Product Options, Unit Price). Khác biệt bất kỳ thuộc tính nào thì giữ line riêng.
+  2. **DECISION-POS-04 (Offline Boundary Confirmed):** Chỉ các thao tác được Offline Contract/Governance xác định là `Offline-Eligible` mới được thực hiện offline và đưa vào Local Outbox. Thanh toán và nghiệp vụ tài chính bắt buộc online.
+- **Affected Files:** `POS_ORDERING_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
+
 ### DEC-2026-TM-03, TM-04, TM-05 (PROMPT 074 DECISIONS)
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức phê duyệt các quyết định Table Merge & Transfer cho F&B Smart V5.1:
@@ -153,5 +180,14 @@
   2. **DECISION-TM-04 (Post-Checkout Restriction Confirmed):** Cấm Ghép bàn và Chuyển bàn sau khi Order đã bắt đầu Checkout hoặc Invoice đã được post.
   3. **DECISION-TM-05 (Partial Transfer Deferred to Post-MVP):** Chuyển một phần SaleLine (Partial Transfer) bị hoãn sang Post-MVP; MVP chỉ hỗ trợ chuyển toàn bộ Order / toàn bộ nhóm khách.
 - **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_CONFIRMED`.
+
+### DEC-2026-POS-03, POS-04 (PROMPT 078 POS DECISIONS)
+- **Date:** 2026-09-28
+- **Decision:** PO Tuấn chính thức xác nhận các quyết định POS Ordering cho F&B Smart V5.1:
+  1. **DECISION-POS-03 (Cart Line Grouping Confirmed):** Cho phép gộp Order Lines khi các thuộc tính chính trùng khớp hoàn toàn (Product, Size, Topping, Topping quantities, Product Options, Unit Price). Khác biệt bất kỳ thuộc tính nào thì giữ line riêng.
+  2. **DECISION-POS-04 (Offline Boundary Confirmed):** Chỉ các thao tác được Offline Contract/Governance xác định là `Offline-Eligible` mới được thực hiện offline và đưa vào Local Outbox. Thanh toán và nghiệp vụ tài chính bắt buộc online.
+- **Affected Files:** `POS_ORDERING_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
