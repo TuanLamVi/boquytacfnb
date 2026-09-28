@@ -40,3 +40,18 @@ Hồ sơ đó được giữ làm nguồn lịch sử. Các kết quả lịch s
 - Protection: NONE / NOT PROTECTED / NOT LOCKED
 - Next: A6-02 — PO verification on Samsung Note 8 & Samsung M51.
 
+### WORK ITEM: A6-02 — FRESH ARTIFACT VERIFICATION
+- Date: 2026-09-28
+- Objective: Khởi tạo Fresh Debug APK Artifact cho PO Verification A6-02 theo chỉ đạo chọn Phương án 2 của PO Tuấn.
+- Technical Result: Build fresh debug APK thành công. Cài đặt và khởi động PASS trên Samsung Galaxy Note 8 (`SM-N950F`).
+- Artifact History:
+  - Artifact 1 (2026-09-26): SHA256 `4056223A8CA034D4BF68E58D8CDFFE1F2F56F25E22A5E700F680EE07DF0D3A52`
+  - Fresh Artifact (2026-09-28 13:39:37): SHA256 `AB42AFBFD9BEB239DE71E5207DBF4742E289FD09CF0CD67DD8C37C139D5AA6C7` | Size: 216,954,169 bytes | Package: `com.tuan.fnbsmart` | Version: 1.4.0 (13)
+- Device Verification:
+  - Samsung Galaxy Note 8 (`SM-N950F`): Streamed Install SUCCESS | `versionName=1.4.0`, `versionCode=13`.
+  - Samsung Galaxy M51: Chờ kết nối thiết bị để cài đặt.
+- PO Verification: PENDING (READY_FOR_PO_VERIFICATION)
+- Protection: NONE (Chưa PO_VERIFIED, duy trì bảo vệ A3-01, A3-02, A3-03, A3-05, A3-06, GP-01)
+- Next: PO Verification A6-02 trên Samsung Note 8 và Samsung M51.
+
+
