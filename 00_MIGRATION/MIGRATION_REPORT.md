@@ -4,7 +4,7 @@
 
 Đã đọc và phân loại bộ RAR nguồn do PO cung cấp.
 
-Tổng số file nguồn: **40** (bao gồm các file Markdown và thư mục rỗng trong archive inventory; nội dung thực tế gồm 40 tài liệu).
+**Tổng số file tài liệu thực: 36.**
 
 ## Kết luận phân loại
 
@@ -23,13 +23,23 @@ Tổng số file nguồn: **40** (bao gồm các file Markdown và thư mục r�
 01_STATE/
 02_CONTROL/
 03_EVIDENCE/
-04_PROJECT_REFERENCE/
 05_SESSION/
+00_MIGRATION/
 99_ARCHIVE/
 ```
 
-## Luật cập nhật
+## Nguyên tắc loại bỏ trùng
 
-Work Item hoàn tất → cập nhật đúng record → commit → push → GitHub.
+Không tạo thêm một file nhật ký chỉ để ghi lại cùng một thông tin.
 
-Không tạo thêm nhật ký trùng chỉ để báo cáo.
+- Luật → `KIM_CHI_NAM.md`
+- Trạng thái hiện tại → `CURRENT_STATE.md`
+- Quyết định PO → `PO_DECISION_REGISTER.md`
+- Lịch sử Work Item → `WORK_ITEM_HISTORY.md`
+- Checkpoint → `CHECKPOINTS.md`
+- Bảo vệ → `PROTECTION_MAP.md`
+- Hồi quy → `REGRESSION_LOG.md`
+- Bằng chứng test → `TEST_EVIDENCE.md`
+- Bàn giao → `AI_HANDOFF.md`
+
+Các file cũ chỉ giữ lại khi có giá trị lịch sử, bằng chứng hoặc nguồn riêng cần truy nguyên.
