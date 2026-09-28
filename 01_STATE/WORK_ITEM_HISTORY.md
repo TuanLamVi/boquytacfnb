@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-070 — STAFF MANAGEMENT + LEGO PERMISSION MODEL PRODUCT DISCOVERY (FINAL DRAFT)
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN FINAL DRAFT)`
+- Objective: Hoàn thiện Prompt 069 thành bản Final Draft cho Staff Management & Lego Permission Model, làm rõ multi-store/tenant open decisions, tinh chỉnh logic Suspend ở cấp store membership, và chuyển effective-time thành business policy options.
+- Scope: `docs-123/STAFF_LEGO_PERMISSION_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/STAFF_LEGO_PERMISSION_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery & UX Design Final Draft).
+- Technical Result: PASS — Hoàn tất các phần A đến G theo Prompt 070.
+- PO Status: `FINAL DRAFT — PO REVIEW REQUIRED`
+- Evidence: Discovery final draft created, archived, committed, and synced to GitHub.
+- Next: PO Review of Prompt 070.
+
 ### WORK ITEM: PROMPT-069 — STAFF MANAGEMENT + LEGO PERMISSION MODEL PRODUCT DISCOVERY
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY & UX DESIGN ONLY)`
