@@ -12,6 +12,7 @@ Registry danh sách các Checkpoints và kết quả được ghi nhận chính 
 - `REF-ARCHITECTURE-LIBRARY-V5.1` — `PO_VERIFIED / PROTECTED / LOCKED` (Prompt 061 - Reference Architecture Library REF-001 to REF-012)
 - `BUSINESS-MODELS-MENU-V5.1` — `PO_VERIFIED / PROTECTED / LOCKED` (Prompt 066 - 20 Business Models & Menu Template Structure)
 - `TABLE-MERGE-TRANSFER-V5.1` — `PO_VERIFIED / PROTECTED / LOCKED` (Prompt 074 - Table Merge & Transfer Rules)
+- `POS-ORDERING-DISPATCH-V5.1` — `PO_VERIFIED / PROTECTED / LOCKED` (Prompt 078 - POS Ordering, Cart Line Grouping & Offline Boundary)
 - `A0` — `PO_VERIFIED / LOCKED` (Foundation / Build Baseline - Legacy Frozen)
 - `A1.1` — `PO_VERIFIED / LOCKED` (Account & Store Audit - Legacy Frozen)
 - `A1.2` — `PO_VERIFIED / LOCKED` (Account & Store Real-World Verification - Legacy Frozen)

@@ -23,7 +23,7 @@
 |---|---|---|
 | Governance Baseline V5.1 | `PO_VERIFIED / BASELINE FREEZE` | Bộ luật KIM CHỈ NAM thống nhất cho Rehabilitation & Clean Rebuild (DEC-2026-GOVERNANCE-BASELINE-V5.1) |
 | Reference Architecture V5.1 | `PO_VERIFIED / PROTECTED / LOCKED` | F&B Smart V5.1 Reference Architecture Library REF-001 to REF-012 (DEC-2026-REF-ARCHITECTURE-V5.1) |
-| POS Ordering & Dispatch V5.1 | `PO CONFIRMED (PROMPT 078)` | Decisions POS-03 (Cart line grouping) & POS-04 (Offline boundary) confirmed by PO Tuấn |
+| POS Ordering & Dispatch V5.1 | `PO_VERIFIED / PROTECTED / LOCKED` | Prompt 078: POS Ordering & Dispatch rules (DEC-2026-POS-03, POS-04) |
 | A0 Foundation | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
 | A1 Account & Store | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |
 | A2-01 Duplicate Join | `PO_VERIFIED / LOCKED` | Legacy Baseline (Frozen) |

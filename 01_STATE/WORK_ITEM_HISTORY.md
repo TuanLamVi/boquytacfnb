@@ -8,16 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
-### WORK ITEM: PROMPT-078 — PO DECISIONS CONFIRMATION FOR POS ORDERING
+### WORK ITEM: PROMPT-078 — POS ORDERING & DISPATCH PRODUCT RULES (CLOSE-OUT & LOCK)
 - Date: 2026-09-28
-- Build Mode: `CLEAN_REBUILD (PO DECISION & PRODUCT DISCOVERY CONFIRMATION)`
-- Objective: PO Tuấn chính thức xác nhận DECISION-POS-03 (Cart line grouping confirmed) và DECISION-POS-04 (Offline boundary confirmed), cập nhật đăng ký quyết định PO và hồ sơ sản phẩm.
+- Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCK)`
+- Objective: PO Tuấn chính thức xác nhận PASS, PO_VERIFIED, PROTECTED, LOCKED cho Prompt 078 (POS Ordering rules: Cart line grouping DECISION-POS-03 & Offline boundary DECISION-POS-04).
 - Scope: `docs-123/POS_ORDERING_DISCOVERY_V5.1.md`, `PO_DECISION_REGISTER.md`.
-- Application Code Changes: `NONE` (100% PO Decision & Governance Record Update).
-- Technical Result: PASS — Hoàn tất ghi nhận 2 quyết định POS.
-- PO Status: `PO_CONFIRMED`
-- Evidence: Governance and discovery records updated, archived, committed, and synced to GitHub.
-- Next: PO_VERIFIED → PROTECTED → LOCKED.
+- Application Code Changes: `NONE` (100% Governance Close-out).
+- Technical Result: PASS — Hoàn tất đóng task, bảo vệ và khóa cứng baseline POS Ordering & Dispatch V5.1.
+- PO Decision Reference: `DEC-2026-POS-03, POS-04`
+- PO Status: `PO_VERIFIED / PROTECTED / LOCKED`
+- Evidence: Governance and discovery records updated, archived, committed, and synchronized to GitHub.
+- Next: Continue Product Discovery.
 
 ### WORK ITEM: PROMPT-077 — POS ORDERING & DISPATCH PRODUCT DISCOVERY (FINAL DRAFT)
 - Date: 2026-09-28

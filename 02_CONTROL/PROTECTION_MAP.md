@@ -39,6 +39,11 @@ PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED
 - **Protected Content:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md` (Non-destructive table merge preserving original orders via service group reference, strict table transfer state machine `occupied → cleaning → available`, post-checkout/invoice transfer/merge prohibition, and partial transfer deferred to post-MVP).
 - **Rule:** Locked product-design baseline. No work item may alter table merge/transfer rules without valid PO Decision and Unlock.
 
+### 7. POS ORDERING / CART / CUSTOMIZATION / KITCHEN DISPATCH / OFFLINE BOUNDARY V5.1 (PROMPT 078)
+- **Status:** `PO_VERIFIED / PROTECTED / LOCKED`
+- **Protected Content:** `POS_ORDERING_DISCOVERY_V5.1.md` (Open table flow, product customization, size, structured toppings `[-] N [+]`, product options, cart line grouping rules, kitchen dispatch rounds, and offline outbox eligibility boundary).
+- **Rule:** Locked product-design baseline. No work item may alter POS ordering or offline boundary rules without valid PO Decision and Unlock.
+
 ---
 
 ## Phân tích Ảnh hưởng Vùng Bảo vệ (LOCKED SCOPE IMPACT)
