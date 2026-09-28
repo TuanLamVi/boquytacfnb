@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-106 — A8 DEBT REPAYMENT FINAL ADDITION
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY FINAL ADDITION)`
+- Objective: Bổ sung nghiệp vụ trả nợ khách hàng (`Khách trả nợ` - một phần hoặc toàn bộ bằng Tiền mặt/QR, tách biệt doanh thu bán hàng mới khỏi thu hồi công nợ, ảnh hưởng két tiền ca A6, và quyền Lego `Repay Debt`).
+- Scope: `docs-123/CUSTOMER_LOYALTY_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/CUSTOMER_LOYALTY_DISCOVERY_V5.1.md`.
+- Application Code Changes: `NONE` (100% Product Discovery Final Addition).
+- Technical Result: PASS — Hoàn tất bổ sung nghiệp vụ trả nợ theo Prompt 106.
+- PO Status: `READY FOR PO_VERIFIED`
+- Evidence: Final addition discovery documentation created, archived, committed, and synced to GitHub.
+- Next: PO_VERIFIED → PROTECTED → LOCKED.
+
 ### WORK ITEM: PROMPT-105 — A8 CUSTOMER PROFILE & DEBT LEDGER REVISED FOCUS
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY REVISED FOCUS)`
