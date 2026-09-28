@@ -40,8 +40,8 @@
 | A3-04 | `PAUSED` | Payment & Table Closure Synchronization |
 | A3-05 | `PO_VERIFIED / PROTECTED / LOCKED` | Shift foundation |
 | A3-06 | `PO_VERIFIED / PROTECTED / LOCKED` | Shift Management UI |
-| A6-02 | `BLOCKED / FIRST FAILURE` | Canonical POS Payment UI Integration & Test Surface |
-| PAYMENT-V5.1-P1 | `IMPLEMENTATION_IN_PROGRESS` | Canonical Checkout + Invoice Foundation (A3-02 Limited Unlock Active) |
+| A6-02 | `BLOCKED / FIRST FAILURE` | Canonical POS Payment UI Integration & Test Surface (Legacy Frozen) |
+| CLEAN_REBUILD_V5.1 | `ACTIVE / IN_PROGRESS` | Clean Rebuild V5.1 Master Specification & Boundary Setup (DEC-2026-CLEAN-REBUILD-V5.1) |
 
 ## A2-02
 

@@ -88,10 +88,10 @@ Working tree DIRTY; bảo toàn thay đổi có sẵn.
 ## 8. NEXT
 
 ```text
-CURRENT WORK ITEM: PAYMENT-V5.1-P1 — Canonical Checkout + Invoice Foundation
-STATUS: IMPLEMENTATION_IN_PROGRESS (A3-02 Limited Unlock Active)
-CANONICAL ID: PAYMENT-V5.1-P1
-NEXT: Implement canonical Checkout + Invoice integration ensuring Flow A & Flow B convergence.
+CURRENT WORKSTREAM: F&B SMART V5.1 CLEAN REBUILD (DEC-2026-CLEAN-REBUILD-V5.1)
+CURRENT MODE: CLEAN_REBUILD MODE ACTIVE
+LEGACY STATUS: FROZEN / READ-ONLY FORENSIC REFERENCE
+NEXT: Finalize Clean Rebuild Master Specification & Boundaries before application coding.
 ```
 
 Không tự suy ra task mới từ lịch sử cũ.
