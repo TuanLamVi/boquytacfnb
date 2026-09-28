@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-120 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — CORRECTIVE AUDIT & DRAFT RECONCILIATION
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
+- Objective: Khắc phục kết luận sai của Prompt-119, tái tích hợp Unallocated Funds (F1/F2/F3), Return Lines & Refunds (R1/R2/R3, reverseInvoice), và Firebase Auth + App Check vào phạm vi MVP của Master Specification Draft V0.1; chuẩn hóa độ chính xác state machines theo 4 Hợp đồng Kỹ thuật V5.1.
+- Scope: `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md` & `docs-123/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`.
+- Application Code Changes: `NONE` (100% Corrective Audit & Master Spec Reconciliation).
+- Technical Result: PASS — Master Spec Draft V0.1 updated & reconciled; 100% consistent with 4 Technical Contracts V5.1.
+- PO Status: `DRAFT V0.1 — READY FOR PO REVIEW`
+- Evidence: Master specification corrected draft, git commit, GitHub sync output.
+- Next: PO Review of Clean Rebuild Master Specification V5.1 Draft V0.1.
+
 ### WORK ITEM: PROMPT-119 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — PROVENANCE RECONCILIATION & CONTRACT AUDIT
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
