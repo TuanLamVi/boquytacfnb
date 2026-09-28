@@ -8,16 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
-### WORK ITEM: PROMPT-086 — CHECKOUT & PAYMENT FINAL PO DECISION LOCK
+### WORK ITEM: PROMPT-087 — CHECKOUT & PAYMENT PRODUCT RULES (CLOSE-OUT, PROTECT & LOCK)
 - Date: 2026-09-28
-- Build Mode: `CLEAN_REBUILD (PRODUCT DISCOVERY FINAL CONFIRMED & DOCUMENTATION UPDATE)`
-- Objective: Cập nhật tài liệu Checkout & Payment theo các quyết định nghiệp vụ chính thức của PO Tuấn (Prompt 086): Thanh toán độc lập với KDS (Ready/Served không phải payment gate), Ghi nợ hợp lệ đóng order và chuyển bàn qua cleaning (`Ghi nợ ≠ Đã nhận tiền`), Table cleaning sequence (`Occupied → Cleaning → Available`), Simple Promotions/Discounts, và Post-invoice immutable history.
-- Scope: `docs-123/CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`.
-- Application Code Changes: `NONE` (100% Product Discovery & Governance Update).
-- Technical Result: PASS — Hoàn tất cập nhật toàn bộ tài liệu theo các quyết định PO chốt.
-- PO Status: `READY FOR PO_VERIFIED`
-- Evidence: Discovery documentation finalized, archived, committed, and synced to GitHub.
-- Next: PO_VERIFIED → PROTECTED → LOCKED.
+- Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCK)`
+- Objective: PO Tuấn chính thức xác nhận PASS, PO_VERIFIED, PROTECTED, LOCKED cho phân hệ Checkout & Payment V5.1 (Prompt 084/085/086 rules: Checkout UX, Cash, payOS QR, Split payment, Debt Lite `Ghi nợ ≠ Đã nhận tiền`, promotions/discounts, invoice lifecycle, settlement, order closure & table cleaning sequence, LEGO permissions, offline boundary, KDS payment independence).
+- Scope: `docs-123/CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, `PO_DECISION_REGISTER.md`.
+- Application Code Changes: `NONE` (100% Governance Close-out).
+- Technical Result: PASS — Hoàn tất đóng task, bảo vệ và khóa cứng baseline Checkout & Payment V5.1.
+- PO Decision Reference: `DEC-2026-CHECKOUT-PAYMENT-V5.1`
+- PO Status: `PO_VERIFIED / PROTECTED / LOCKED`
+- Evidence: Governance and discovery records updated, archived, committed, and synchronized to GitHub.
+- Next: Continue Product Discovery.
 
 ### WORK ITEM: PROMPT-085 — CHECKOUT & PAYMENT FINAL CORRECTION
 - Date: 2026-09-28

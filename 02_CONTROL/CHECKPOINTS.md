@@ -14,6 +14,7 @@ Registry danh sách các Checkpoints và kết quả được ghi nhận chính 
 - `TABLE-MERGE-TRANSFER-V5.1` — `PO_VERIFIED / PROTECTED / LOCKED` (Prompt 074 - Table Merge & Transfer Rules)
 - `POS-ORDERING-DISPATCH-V5.1` — `PO_VERIFIED / PROTECTED / LOCKED` (Prompt 078 - POS Ordering, Cart Line Grouping & Offline Boundary)
 - `KDS-KITCHEN-DISCOVERY-V5.1` — `PO_VERIFIED / PROTECTED / LOCKED` (Prompt 081 - KDS & Kitchen Operations Product Discovery)
+- `CHECKOUT-PAYMENT-DISCOVERY-V5.1` — `PO_VERIFIED / PROTECTED / LOCKED` (Prompt 084/085/086 - Checkout & Payment Product Discovery)
 - `A0` — `PO_VERIFIED / LOCKED` (Foundation / Build Baseline - Legacy Frozen)
 - `A1.1` — `PO_VERIFIED / LOCKED` (Account & Store Audit - Legacy Frozen)
 - `A1.2` — `PO_VERIFIED / LOCKED` (Account & Store Real-World Verification - Legacy Frozen)

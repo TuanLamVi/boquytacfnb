@@ -112,17 +112,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
 
-### DEC-2026-KDS-081 (PROMPT 081 KDS OPERATIONS)
+### DEC-2026-CHECKOUT-PAYMENT-V5.1 (PROMPT 084/085/086 CHECKOUT & PAYMENT)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **KDS & Kitchen Operations Product Discovery** (Prompt 081):
-  1. **KDS State Flow:** `queued → acknowledged → preparing → ready → served`.
-  2. **Ready / Served Independence:** `Ready ≠ Payment Gate` and `Served ≠ Payment Gate`.
-  3. **Payment Independence:** Payment workflow is fully independent of KDS states.
-  4. **Table Cleaning Boundary:** Table transitions strictly `OCCUPIED → CLEANING → AVAILABLE` upon payment/order close; KDS does not directly control table states.
-  5. **Reservation Boundary:** Reservation is managed via Table Management / Booking, not a KDS state.
-  6. **Inventory & Hardware:** Inventory deduction is deferred; KDS printer formatting/hardware details are deferred.
-  7. **Multi-Round Dispatches & Idempotency:** Distinct rounds (`Round 1`, `Round 2`, `Round 3`) with client-side UUIDs for idempotency.
-- **Affected Files:** `KDS_KITCHEN_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ phân hệ **Checkout & Payment Product Discovery** (Prompts 084/085/086):
+  1. **Payment & KDS Independence:** Checkout, Cash, payOS QR, Split payment, and Debt Lite are completely independent of KDS readiness (`Ready ≠ Payment Gate`, `Served ≠ Payment Gate`).
+  2. **Debt Lite (Sổ nợ):** `Ghi nợ ≠ Đã nhận tiền` (recording debt adds to customer ledger). Valid debt recording leads to Order closure and Table cleaning (`Occupied → Cleaning → Available`).
+  3. **Promotions & Discounts:** Simple MVP scope covering item-level, order-level discounts, and vouchers/coupons with strict precedence/non-stacking rules.
+  4. **Post-Invoice Immutable History:** Prohibits direct staff editing of historical monetary amounts post-invoice posting.
+  5. **LEGO Permission Model:** Governed strictly by store membership capabilities; effective immediately.
+  6. **Offline Boundary:** Financial settlement is strictly online-required / server final authority.
+- **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -136,17 +135,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
 
-### DEC-2026-KDS-081 (PROMPT 081 KDS OPERATIONS)
+### DEC-2026-CHECKOUT-PAYMENT-V5.1 (PROMPT 084/085/086 CHECKOUT & PAYMENT)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **KDS & Kitchen Operations Product Discovery** (Prompt 081):
-  1. **KDS State Flow:** `queued → acknowledged → preparing → ready → served`.
-  2. **Ready / Served Independence:** `Ready ≠ Payment Gate` and `Served ≠ Payment Gate`.
-  3. **Payment Independence:** Payment workflow is fully independent of KDS states.
-  4. **Table Cleaning Boundary:** Table transitions strictly `OCCUPIED → CLEANING → AVAILABLE` upon payment/order close; KDS does not directly control table states.
-  5. **Reservation Boundary:** Reservation is managed via Table Management / Booking, not a KDS state.
-  6. **Inventory & Hardware:** Inventory deduction is deferred; KDS printer formatting/hardware details are deferred.
-  7. **Multi-Round Dispatches & Idempotency:** Distinct rounds (`Round 1`, `Round 2`, `Round 3`) with client-side UUIDs for idempotency.
-- **Affected Files:** `KDS_KITCHEN_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ phân hệ **Checkout & Payment Product Discovery** (Prompts 084/085/086):
+  1. **Payment & KDS Independence:** Checkout, Cash, payOS QR, Split payment, and Debt Lite are completely independent of KDS readiness (`Ready ≠ Payment Gate`, `Served ≠ Payment Gate`).
+  2. **Debt Lite (Sổ nợ):** `Ghi nợ ≠ Đã nhận tiền` (recording debt adds to customer ledger). Valid debt recording leads to Order closure and Table cleaning (`Occupied → Cleaning → Available`).
+  3. **Promotions & Discounts:** Simple MVP scope covering item-level, order-level discounts, and vouchers/coupons with strict precedence/non-stacking rules.
+  4. **Post-Invoice Immutable History:** Prohibits direct staff editing of historical monetary amounts post-invoice posting.
+  5. **LEGO Permission Model:** Governed strictly by store membership capabilities; effective immediately.
+  6. **Offline Boundary:** Financial settlement is strictly online-required / server final authority.
+- **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -174,17 +172,16 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
 
-### DEC-2026-KDS-081 (PROMPT 081 KDS OPERATIONS)
+### DEC-2026-CHECKOUT-PAYMENT-V5.1 (PROMPT 084/085/086 CHECKOUT & PAYMENT)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **KDS & Kitchen Operations Product Discovery** (Prompt 081):
-  1. **KDS State Flow:** `queued → acknowledged → preparing → ready → served`.
-  2. **Ready / Served Independence:** `Ready ≠ Payment Gate` and `Served ≠ Payment Gate`.
-  3. **Payment Independence:** Payment workflow is fully independent of KDS states.
-  4. **Table Cleaning Boundary:** Table transitions strictly `OCCUPIED → CLEANING → AVAILABLE` upon payment/order close; KDS does not directly control table states.
-  5. **Reservation Boundary:** Reservation is managed via Table Management / Booking, not a KDS state.
-  6. **Inventory & Hardware:** Inventory deduction is deferred; KDS printer formatting/hardware details are deferred.
-  7. **Multi-Round Dispatches & Idempotency:** Distinct rounds (`Round 1`, `Round 2`, `Round 3`) with client-side UUIDs for idempotency.
-- **Affected Files:** `KDS_KITCHEN_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ phân hệ **Checkout & Payment Product Discovery** (Prompts 084/085/086):
+  1. **Payment & KDS Independence:** Checkout, Cash, payOS QR, Split payment, and Debt Lite are completely independent of KDS readiness (`Ready ≠ Payment Gate`, `Served ≠ Payment Gate`).
+  2. **Debt Lite (Sổ nợ):** `Ghi nợ ≠ Đã nhận tiền` (recording debt adds to customer ledger). Valid debt recording leads to Order closure and Table cleaning (`Occupied → Cleaning → Available`).
+  3. **Promotions & Discounts:** Simple MVP scope covering item-level, order-level discounts, and vouchers/coupons with strict precedence/non-stacking rules.
+  4. **Post-Invoice Immutable History:** Prohibits direct staff editing of historical monetary amounts post-invoice posting.
+  5. **LEGO Permission Model:** Governed strictly by store membership capabilities; effective immediately.
+  6. **Offline Boundary:** Financial settlement is strictly online-required / server final authority.
+- **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
 
@@ -198,16 +195,15 @@
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_CONFIRMED`.
 
-### DEC-2026-KDS-081 (PROMPT 081 KDS OPERATIONS)
+### DEC-2026-CHECKOUT-PAYMENT-V5.1 (PROMPT 084/085/086 CHECKOUT & PAYMENT)
 - **Date:** 2026-09-28
-- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho **KDS & Kitchen Operations Product Discovery** (Prompt 081):
-  1. **KDS State Flow:** `queued → acknowledged → preparing → ready → served`.
-  2. **Ready / Served Independence:** `Ready ≠ Payment Gate` and `Served ≠ Payment Gate`.
-  3. **Payment Independence:** Payment workflow is fully independent of KDS states.
-  4. **Table Cleaning Boundary:** Table transitions strictly `OCCUPIED → CLEANING → AVAILABLE` upon payment/order close; KDS does not directly control table states.
-  5. **Reservation Boundary:** Reservation is managed via Table Management / Booking, not a KDS state.
-  6. **Inventory & Hardware:** Inventory deduction is deferred; KDS printer formatting/hardware details are deferred.
-  7. **Multi-Round Dispatches & Idempotency:** Distinct rounds (`Round 1`, `Round 2`, `Round 3`) with client-side UUIDs for idempotency.
-- **Affected Files:** `KDS_KITCHEN_DISCOVERY_V5.1.md`, Governance State files.
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED / PROTECTED / LOCKED` cho toàn bộ phân hệ **Checkout & Payment Product Discovery** (Prompts 084/085/086):
+  1. **Payment & KDS Independence:** Checkout, Cash, payOS QR, Split payment, and Debt Lite are completely independent of KDS readiness (`Ready ≠ Payment Gate`, `Served ≠ Payment Gate`).
+  2. **Debt Lite (Sổ nợ):** `Ghi nợ ≠ Đã nhận tiền` (recording debt adds to customer ledger). Valid debt recording leads to Order closure and Table cleaning (`Occupied → Cleaning → Available`).
+  3. **Promotions & Discounts:** Simple MVP scope covering item-level, order-level discounts, and vouchers/coupons with strict precedence/non-stacking rules.
+  4. **Post-Invoice Immutable History:** Prohibits direct staff editing of historical monetary amounts post-invoice posting.
+  5. **LEGO Permission Model:** Governed strictly by store membership capabilities; effective immediately.
+  6. **Offline Boundary:** Financial settlement is strictly online-required / server final authority.
+- **Affected Files:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.

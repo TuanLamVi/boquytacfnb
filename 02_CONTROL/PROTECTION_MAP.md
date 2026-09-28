@@ -49,6 +49,11 @@ PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED
 - **Protected Content:** `KDS_KITCHEN_DISCOVERY_V5.1.md` (KDS main screen UX, kitchen ticket model, state flow `queued → acknowledged → preparing → ready → served`, Ready/Served independence from payment gate, payment independence, table cleaning boundary, reservation boundary, multi-round dispatches, and idempotency UUIDs).
 - **Rule:** Locked product-design baseline. No work item may alter KDS or kitchen operations rules without valid PO Decision and Unlock.
 
+### 9. CHECKOUT & PAYMENT PRODUCT RULES V5.1 (PROMPT 084/085/086)
+- **Status:** `PO_VERIFIED / PROTECTED / LOCKED`
+- **Protected Content:** `CHECKOUT_PAYMENT_DISCOVERY_V5.1.md` (Checkout UX, Cash, payOS QR webhook verification, Split Payment, Debt Lite `Ghi nợ ≠ Đã nhận tiền`, simple promotions/discounts, invoice lifecycle, 3-layer payment attempt/allocation/settlement, order closure & table cleaning sequence `occupied → cleaning → available`, LEGO permissions effective immediately, and online-required financial boundary).
+- **Rule:** Locked product-design baseline. No work item may alter checkout or payment rules without valid PO Decision and Unlock.
+
 ---
 
 ## Phân tích Ảnh hưởng Vùng Bảo vệ (LOCKED SCOPE IMPACT)
