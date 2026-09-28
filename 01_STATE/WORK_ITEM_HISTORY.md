@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-116 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — DRAFT AUTHORING
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD`
+- Objective: Soạn thảo bản Draft chính thức của Clean Rebuild Master Specification V5.1 (`docs-123/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`) bao gồm 32 phần bắt buộc dựa trên Governance, 4 hợp đồng V5.1, Product Discovery đã khóa, và PO Decisions.
+- Scope: `docs-123/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`, `fnb-smart-v5/99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`.
+- Application Code Changes: `NONE` (100% Master Specification Draft Authoring).
+- Technical Result: PASS — Hoàn tất soạn thảo Master Specification Draft V0.1 tuân thủ source traceability và Zalo/ZaloPay future boundary.
+- PO Status: `DRAFT — READY FOR PO REVIEW`
+- Evidence: Master specification draft document created, archived, committed, and synced to GitHub.
+- Next: PO Review and Approval of Clean Rebuild Master Specification V5.1.
+
 ### WORK ITEM: PROMPT-115 — CLEAN REBUILD MASTER SPECIFICATION — READ-FIRST & GAP AUDIT
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD`

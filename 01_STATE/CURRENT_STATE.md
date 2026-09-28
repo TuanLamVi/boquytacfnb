@@ -21,7 +21,7 @@
 
 | Item / Module | Status | Ghi chú & Ranh giới |
 |---|---|---|
-| Master Specification Gate V5.1 (Prompt 115) | `IN_PROGRESS / READY FOR DRAFT` | Prompt 115: Read-First & Gap Audit for Clean Rebuild Master Specification V5.1. Contracts & Product Discovery inventory audited. Gate status: READY FOR DRAFT / OPEN. No app code written. |
+| Master Specification Gate V5.1 (Prompt 116) | `READY_FOR_PO_VERIFICATION — DRAFT V0.1` | Prompt 116: Clean Rebuild Master Specification V5.1 Draft authored (`docs-123/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`). 32 required sections covered. Status: DRAFT — READY FOR PO REVIEW. No app code written. |
 | Governance Implementation V5.1 (Prompt 114) | `PO_VERIFIED / PROTECTED` | Prompt 114: Implemented Work Item ID vs Prompt ID separation, Prompt uniqueness & collision handling, Standard Prompt Header, Closure Sequence with mandatory Regression Check (N/A for discovery), Discovery vs Implementation Evidence separation, History Preservation, and Repository Source of Truth enforcement. |
 | Shift Management & Cash Drawer V5.1 (A6) | `PO_VERIFIED / PROTECTED / LOCKED` | Prompts 089/094/095/096/101: A6 Shift Management & Cash Drawer rules (DEC-2026-A6-SHIFT) |
 | Customer Profile & Debt Ledger V5.1 | `READY FOR PO_VERIFIED` | Prompt 107 Final Boundary: No overpayment rule (`Còn nợ < 0` blocked), Server-verified QR debt repayment, Cash repayment increasing shift cash drawer without sales revenue inflation, Store-scoped debt ledger |
