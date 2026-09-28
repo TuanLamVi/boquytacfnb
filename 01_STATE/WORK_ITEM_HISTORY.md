@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-122 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — FINAL CONTRACT-EXACT AUDIT
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
+- Objective: Thực hiện vòng kiểm toán kỹ thuật hợp đồng cuối cùng, chuẩn hóa đầy đủ 13 state machines theo dạng `States → Command → Source → Target → Core Guards`, đính chính các guards (phân biệt postInvoice vs confirmPayment), sửa quy định safety target size (< 8 MiB general, <= 500 KiB KDS ticket payload), và cập nhật blob SHA chuẩn (`48d0c12bfa451ad90d35f30e4168db2910a374f0`).
+- Scope: `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md` & `docs-123/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`.
+- Application Code Changes: `NONE` (100% Contract-Exact Document Audit).
+- Technical Result: PASS — Master Spec Draft V0.1 100% exact and consistent with 4 Technical Contracts V5.1.
+- PO Status: `DRAFT V0.1 — READY FOR PO REVIEW`
+- Evidence: Exact git blob SHA `48d0c12bfa451ad90d35f30e4168db2910a374f0`, GitHub sync output.
+- Next: PO Review of Clean Rebuild Master Specification V5.1 Draft V0.1.
+
 ### WORK ITEM: PROMPT-121 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — FINAL COMPLETENESS & PROVENANCE CORRECTION
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
