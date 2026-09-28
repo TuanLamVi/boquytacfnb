@@ -2,66 +2,65 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KIM CHỈ NAM — F&B SMART V5</title>
 <style>
-body{font-family:Arial,system-ui,sans-serif;max-width:1000px;margin:0 auto;padding:30px;line-height:1.6;background:#f7f7f7;color:#222}
-.card{background:#fff;border:1px solid #ddd;border-radius:12px;padding:24px;margin:16px 0}
-h1{margin-top:0} h2{margin-top:28px}
-.badge{display:inline-block;padding:4px 10px;border-radius:999px;background:#eee;font-weight:700}
-.notice{border-left:5px solid #555;padding:12px 16px;background:#f0f0f0}
-a{color:#0645ad}
-code{background:#eee;padding:2px 5px;border-radius:4px}
+:root{--bg:#f5f6f8;--card:#fff;--text:#202124;--muted:#5f6368;--line:#dadce0}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+main{max-width:1100px;margin:auto;padding:28px}
+header,.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:18px}
+h1{margin:0 0 8px} h2{margin-top:0} .muted{color:var(--muted)}
+.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:#e8eaed;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+a{color:#174ea6;text-decoration:none} a:hover{text-decoration:underline}
+code{background:#f1f3f4;padding:2px 6px;border-radius:6px}
+.flow{font-family:Consolas,monospace;background:#f1f3f4;padding:14px;border-radius:10px;white-space:pre-wrap}
 </style>
 </head>
 <body>
-<div class="card">
+<main>
+<header>
 <h1>KIM CHỈ NAM — F&B SMART V5</h1>
-<p><span class="badge">ĐANG MIGRATE</span></p>
-<div class="notice">
-Đây là trang đọc cho con người. <strong>Nội dung chuẩn nằm ở các file Markdown trong repository.</strong>
-HTML không phải nơi lưu trạng thái chính.
-</div>
-</div>
-
-<div class="card">
-<h2>1. Đọc trước khi làm việc</h2>
-<p><a href="AI_READ_FIRST.md">AI_READ_FIRST.md</a></p>
-<p>Quy định thứ tự đọc và các nguyên tắc làm việc của ChatGPT/Codex.</p>
-</div>
-
-<div class="card">
-<h2>2. Bộ quy tắc chính</h2>
-<p><a href="KIM_CHI_NAM.md">KIM_CHI_NAM.md</a></p>
-<p>Đây là nơi đặt bộ quy tắc chính thức sau khi nhập xong tài liệu nguồn.</p>
-</div>
-
-<div class="card">
-<h2>3. Nguồn chuẩn</h2>
-<p><a href="SOURCE_OF_TRUTH.md">SOURCE_OF_TRUTH.md</a></p>
-<p>Giải thích file nào được xem là nguồn chuẩn và cách xử lý khi có tài liệu trùng hoặc mâu thuẫn.</p>
-</div>
-
-<div class="card">
-<h2>4. Trạng thái</h2>
-<ul>
-<li><a href="../01_STATE/CURRENT_STATE.md">CURRENT_STATE.md</a></li>
-<li><a href="../01_STATE/WORK_ITEM_HISTORY.md">WORK_ITEM_HISTORY.md</a></li>
-</ul>
-</div>
-
-<div class="card">
-<h2>5. Bảo vệ và hồi quy</h2>
-<ul>
-<li><a href="../02_CONTROL/PROTECTION_MAP.md">PROTECTION_MAP.md</a></li>
-<li><a href="../02_CONTROL/REGRESSION_LOG.md">REGRESSION_LOG.md</a></li>
-</ul>
-</div>
-
-<div class="card">
-<h2>6. Quy tắc cập nhật</h2>
-<p>Thay đổi nội dung chuẩn bằng Markdown trước. HTML chỉ cần cập nhật khi cấu trúc hiển thị thay đổi.</p>
-<p>Mọi thay đổi phải có Git history.</p>
-</div>
+<span class="badge">BẢN LUẬT CHÍNH</span>
+<p class="muted">Trang này để đọc nhanh. Nội dung chuẩn được lưu bằng Markdown để dễ theo dõi thay đổi trên GitHub.</p>
+</header>
+<section class="card"><h2>Đọc trước</h2>
+<div class="grid">
+<div><a href="AI_READ_FIRST.md">AI_READ_FIRST.md</a><br><span class="muted">Thứ tự đọc bắt buộc cho AI/Codex.</span></div>
+<div><a href="SOURCE_OF_TRUTH.md">SOURCE_OF_TRUTH.md</a><br><span class="muted">Xác định tài liệu nào là nguồn chuẩn.</span></div>
+<div><a href="AUTHORITY_MODEL.md">AUTHORITY_MODEL.md</a><br><span class="muted">Ai được quyết định việc gì.</span></div>
+<div><a href="STATUS_MODEL.md">STATUS_MODEL.md</a><br><span class="muted">Ý nghĩa các trạng thái.</span></div>
+</div></section>
+<section class="card"><h2>17 phần của KIM CHỈ NAM</h2>
+<ol><li>Thẩm quyền</li><li>Nguồn sự thật</li><li>Luật nền</li><li>Trạng thái</li><li>GOV-025 — Work Item Closure</li><li>LAW-015 — Closure Synchronization</li><li>PO Verification</li><li>First Failure Stop</li><li>History Preservation</li><li>Git Safety</li><li>Build / Device</li><li>LAW-013 — Final Report</li><li>LAW-016 — PO Decision Bridge</li><li>LAW-017 — Session Reentry</li><li>Roadmap và Work Item</li><li>Thứ tự trách nhiệm</li><li>Nguyên tắc cuối cùng</li></ol>
+<p><a href="KIM_CHI_NAM.md">→ Mở toàn bộ luật chính</a></p></section>
+<section class="card"><h2>Chuỗi làm việc</h2><div class="flow">READ-FIRST
+→ CURRENT STATE
+→ CHECKPOINTS
+→ PO DECISIONS
+→ PROTECTED / LOCKED SCOPE
+→ WORK ITEM
+→ TEST / EVIDENCE
+→ UPDATE RECORD
+→ GIT HISTORY
+→ GITHUB</div></section>
+<section class="card"><h2>Trạng thái quan trọng</h2>
+<p><code>AI PASS</code> ≠ <code>READY_FOR_PO_VERIFICATION</code> ≠ <code>PO PASS</code> ≠ <code>PO_VERIFIED</code> ≠ <code>LOCKED</code></p>
+<p>Child PASS không tự làm parent PASS.</p>
+<p>Không đủ bằng chứng hoặc có xung đột chưa giải quyết → <strong>STOP</strong>.</p></section>
+<section class="card"><h2>Trạng thái dự án</h2><div class="grid">
+<a href="../01_STATE/CURRENT_STATE.md">CURRENT_STATE.md</a>
+<a href="../01_STATE/PO_DECISION_REGISTER.md">PO_DECISION_REGISTER.md</a>
+<a href="../01_STATE/WORK_ITEM_HISTORY.md">WORK_ITEM_HISTORY.md</a>
+<a href="../01_STATE/ROADMAP.md">ROADMAP.md</a>
+<a href="../02_CONTROL/CHECKPOINTS.md">CHECKPOINTS.md</a>
+<a href="../02_CONTROL/PROTECTION_MAP.md">PROTECTION_MAP.md</a>
+<a href="../02_CONTROL/REGRESSION_LOG.md">REGRESSION_LOG.md</a>
+<a href="../03_EVIDENCE/TEST_EVIDENCE.md">TEST_EVIDENCE.md</a>
+<a href="../03_EVIDENCE/BUILD_BASELINE.md">BUILD_BASELINE.md</a>
+<a href="../05_SESSION/AI_HANDOFF.md">AI_HANDOFF.md</a>
+</div></section>
+<section class="card"><h2>Bản nháp Governance V2</h2><p><strong>DRAFT — NOT YET ADOPTED.</strong> Không tự động thay thế KIM CHỈ NAM hiện hành.</p></section>
+</main>
 </body>
 </html>
