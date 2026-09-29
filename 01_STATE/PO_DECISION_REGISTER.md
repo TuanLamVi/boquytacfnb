@@ -8,6 +8,14 @@
 
 ## 2. DANH SÁCH QUYẾT ĐỊNH
 
+### DEC-2026-SHIFT-CLOSING-S2-S3-RULE
+- **Date:** 2026-09-29
+- **Decision:** PO Tuấn chính thức xác nhận quy tắc đóng ca cho Clean Rebuild V5.1: `Closing Shift is blocked by pending payment attempts only.` Không dùng `active orders` làm guard bắt buộc của S2/S3 trong Clean Rebuild V5.1.
+- **Supersedes:** Điểm 5 của `DEC-2026-A6-SHIFT`.
+- **Scope:** Clean Rebuild V5.1 (S2/S3 require `pendingAttemptCount = 0`).
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** PO Decision Recorded & Superseded.
+
 ### DEC-2026-MASTER-SPEC-PO-VERIFIED
 - **Date:** 2026-09-29
 - **Decision:** PO Tuấn chính thức phê duyệt (PO_VERIFIED) cho **Clean Rebuild Master Specification V5.1** (`99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`).

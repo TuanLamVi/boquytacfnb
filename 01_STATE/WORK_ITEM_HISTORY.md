@@ -8,6 +8,18 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-129 — SHIFT CLOSING RULE SUPERSESSION (DEC-2026-SHIFT-CLOSING-S2-S3-RULE)
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD (GOVERNANCE RECORD UPDATE ONLY)`
+- Objective: Ghi nhận quyết định PO mới nhất: Quy tắc đóng ca trong Clean Rebuild V5.1 chỉ bị chặn bởi pending payment attempts (`pendingAttemptCount = 0`), chính thức supersede yêu cầu active orders của `DEC-2026-A6-SHIFT`.
+- Scope: `PO_DECISION_REGISTER.md`, `CURRENT_STATE.md`, `WORK_ITEM_HISTORY.md`.
+- Application Code Changes: `NONE` (100% Governance Record Update).
+- Technical Result: PASS — PO decision recorded and synchronized.
+- PO Decision Reference: `DEC-2026-SHIFT-CLOSING-S2-S3-RULE`
+- PO Status: `PO_VERIFIED / LOCKED`
+- Evidence: PO Decision registered, records committed and synchronized to GitHub.
+- Next: Proceed per Clean Rebuild governance.
+
 ### WORK ITEM: PROMPT-128 — MASTER-SPECIFICATION-GATE — PO_VERIFICATION & CLOSE-OUT (PROTECT & LOCK)
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCKED)`
