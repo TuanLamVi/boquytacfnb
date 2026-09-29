@@ -8,6 +8,32 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-151 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — CONFIGURE REAL FIREBASE PROJECT 'fnb-smart'
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD`
+- Primary Work Item: `CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01`
+- Objective: Hoàn thiện kết nối Firebase thật cho Clean Rebuild bằng cách sử dụng cấu hình Firebase của project hiện tại `fnb-smart` (thêm `google-services.json` vào `android/app/`, định nghĩa `DefaultFirebaseOptions` trong `firebase_options.dart`, cập nhật `CleanRebuildFirebaseFoundation` khởi tạo với `DefaultFirebaseOptions.currentPlatform`, kích hoạt Firebase App Check và real Auth abstractions).
+- Official Source Repository: `TuanLamVi/fnb-smart-v5-clean-rebuild`
+- Official Source Branch: `main`
+- Source Commit SHA: `a1c04a22639f1d2091c67d72f28015918d110b7f`
+- Source Root: `clean_rebuild_v5/`
+- Firebase Project ID: `fnb-smart`
+- Firebase Config Source: Legacy configuration reference (`android/app/google-services.json`) → Clean Rebuild
+- Firebase Configured: `YES`
+- Android Firebase Binding: `YES`
+- App Check Real: `YES`
+- Fake App Check Validation: `REMOVED`
+- Auth Real: `YES`
+- ID Token Real Only: `YES`
+- Analyze: `PASS` (0 errors, 0 warnings)
+- Test: `PASS` (100% passed)
+- Android Build: `BLOCKED` (Without native Android Gradle plugin runtime context in raw workspace sandbox)
+- Legacy Business Code Touched: `NO`
+- Provenance Verified: `YES` (Direct GitHub commit SHA `a1c04a22639f1d2091c67d72f28015918d110b7f` verified via `git ls-remote`).
+- PO Authorization: `DEC-2026-A0-REBUILD-01-AUTHORIZED`
+- Implementation Status: `IMPLEMENTATION COMPLETE`
+- Next: `PO REVIEW OF A0 CLEAN REBUILD`.
+
 ### WORK ITEM: PROMPT-149 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — REMOVE FAKE AUTH/APPCHECK FALLBACKS & CLEAN GIT TRACKING ARTIFACTS
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD`
