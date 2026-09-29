@@ -26,6 +26,7 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 - Scope: Canonical application workspace infrastructure setup (`packages/core_saas`, core services, security & tenant isolation baseline).
 - Application Code Changes: `YES` (Core infrastructure bootstrap & foundation scaffolding; zero business features).
 - Technical Result: PASS — A0 Foundation implementation completed successfully.
+- Regression Check: `PASS — First implementation phase of Clean Rebuild V5.1; zero prior clean rebuild protected scope to regress against (Legacy is frozen and separate).`
 - PO Authorization: `APPROVED — BEGIN A0`
 - PO Status: `READY_FOR_PO_VERIFICATION`
 - Evidence: Application workspace structure, core infrastructure skeleton, security and tenant isolation foundation established, records committed and synchronized to GitHub.
