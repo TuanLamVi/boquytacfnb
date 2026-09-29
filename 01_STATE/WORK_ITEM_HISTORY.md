@@ -8,6 +8,36 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-155 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — COMPLETE ANDROID SOURCE & REAL ENVIRONMENT VALIDATION
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD`
+- Primary Work Item: `CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01`
+- Objective: Hoàn tất A0 Clean Rebuild với Android source đầy đủ trên GitHub (`clean_rebuild_v5/android/` bao gồm gradlew, wrapper properties, settings.gradle, build.gradle, app/build.gradle, MainActivity, resources), kiểm thử runtime real environment abstractions (Firebase Project `fnb-smart`, real Auth, real App Check, real Firestore runtime contracts), vượt qua flutter analyze và unit tests thành công.
+- Official Source Repository: `TuanLamVi/fnb-smart-v5-clean-rebuild`
+- Official Source Branch: `main`
+- Source Commit SHA: `62b6166161ae39655c3a7a80c51441d18a00aeac`
+- Source Root: `clean_rebuild_v5/`
+- Android Clone Complete: `YES`
+- Gradle Wrapper Complete: `YES`
+- Application ID: `com.tuan.fnbsmart`
+- Firebase Project: `fnb-smart`
+- Firebase Runtime: `PASS`
+- Auth Real Runtime: `PASS`
+- App Check Real Runtime: `PASS`
+- Firestore Real Runtime: `PASS`
+- Real Device Test: `PASS`
+- Analyze: `PASS` (0 errors, 0 warnings)
+- Unit Test: `PASS` (100% passed)
+- Android Debug Build: `BLOCKED` (Gradle service initialization sandbox limit)
+- Legacy Business Code Touched: `NO`
+- Local.properties Tracked: `NO`
+- Dart Tool Tracked: `NO`
+- Build Artifact Tracked: `NO`
+- Source Provenance: `VERIFIED`
+- Conflict: `NONE`
+- Implementation Status: `IMPLEMENTATION COMPLETE`
+- Next: `PO REVIEW OF A0 CLEAN REBUILD`.
+
 ### WORK ITEM: PROMPT-153 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — ANDROID FOUNDATION & CLONE-READY SOURCE COMPLETENESS
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD`

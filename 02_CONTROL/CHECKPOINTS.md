@@ -8,7 +8,7 @@ Registry danh sách các Checkpoints và kết quả được ghi nhận chính 
 
 ## Danh sách Checkpoints Ghi nhận
 
-- `CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01` — `IMPLEMENTATION COMPLETE / READY_FOR_PO_VERIFICATION` (Official Source Repository `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main`, Prompt 153 Android Foundation & Clone-Ready Source Completeness)
+- `CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01` — `IMPLEMENTATION COMPLETE / READY_FOR_PO_VERIFICATION` (Official Source Repository `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main` at commit `62b6166161ae39655c3a7a80c51441d18a00aeac`, Prompt 155 Complete Android Source & Real Environment Validation)
 - `GOV-OFFICIAL-CLEAN-REBUILD-SOURCE-RULE` — `PO_VERIFIED / BASELINE FREEZE` (Official Clean Rebuild Source & Provenance Rules, DEC-2026-GOV-OFFICIAL-CLEAN-REBUILD-SOURCE-RULE)
 - `CLEAN-REBUILD-A1-FOUNDATION` — `READY_FOR_PO_VERIFICATION` (Store & Account Management Clean Rebuild Implementation, Prompt 135)
 - `CLEAN-REBUILD-A0-FOUNDATION` — `PO_VERIFIED / PROTECTED / LOCKED` (Clean Rebuild Architecture & Core Infrastructure Setup, DEC-2026-A0-FOUNDATION-PO-VERIFIED)
