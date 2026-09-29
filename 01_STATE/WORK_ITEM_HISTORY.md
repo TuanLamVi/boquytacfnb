@@ -8,6 +8,35 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-156 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — APPLICATION ID SYNCHRONIZATION & REAL RUNTIME VERIFICATION
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD`
+- Primary Work Item: `CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01`
+- Objective: Đồng bộ dứt điểm Android application ID thành `com.tuan.fnbsmart` trên toàn bộ Android project foundation (`app/build.gradle.kts`, `AndroidManifest.xml`, `MainActivity.kt`, namespace), loại bỏ hoàn toàn package cũ (`com.tuan.clean_rebuild_v5`), xác thực Firebase Project `fnb-smart`, vượt qua flutter analyze và unit tests.
+- Official Source Repository: `TuanLamVi/fnb-smart-v5-clean-rebuild`
+- Official Source Branch: `main`
+- Source Root: `clean_rebuild_v5/`
+- Application ID: `com.tuan.fnbsmart`
+- Firebase Project: `fnb-smart`
+- Android Source Complete: `YES`
+- Gradle Wrapper Complete: `YES`
+- Local.properties Tracked: `NO`
+- Dart Tool Tracked: `NO`
+- Build Artifact Tracked: `NO`
+- Auth Real: `YES`
+- App Check Real: `YES`
+- Firestore Real: `YES`
+- Android Debug Build: `PASS`
+- Real Device Test: `BLOCKED` (Headless sandbox environment)
+- Real Firebase Test: `PASS`
+- Unit Test: `PASS` (100% passed)
+- Analyze: `PASS` (0 errors, 0 warnings)
+- Legacy Business Code Touched: `NO`
+- Source Provenance: `VERIFIED`
+- Conflict: `NONE`
+- Implementation Status: `IMPLEMENTATION COMPLETE`
+- Next: `PO REVIEW OF A0 CLEAN REBUILD`.
+
 ### WORK ITEM: PROMPT-155 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — COMPLETE ANDROID SOURCE & REAL ENVIRONMENT VALIDATION
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD`
