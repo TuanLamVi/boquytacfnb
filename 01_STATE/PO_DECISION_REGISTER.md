@@ -8,6 +8,15 @@
 
 ## 2. DANH SÁCH QUYẾT ĐỊNH
 
+### DEC-2026-MASTER-SPEC-PO-VERIFIED
+- **Date:** 2026-09-29
+- **Decision:** PO Tuấn chính thức phê duyệt (PO_VERIFIED) cho **Clean Rebuild Master Specification V5.1** (`99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`).
+- **Reason:** Hoàn tất toàn bộ các vòng kiểm toán kỹ thuật hợp đồng (Product Charter V5.1, Database Schema V0.1, State Machines V0.1, Query Cost Budget V0.1) và đóng 2-scope closure G1/G3. Phê duyệt chuyển trạng thái thành `PO_VERIFIED / PROTECTED / LOCKED` (Golden Governance Baseline).
+- **Affected Phase:** Clean Rebuild V5.1 — Master Specification Gate
+- **Affected Files:** `fnb-smart-v5/99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
 ### DEC-2026-GOV-PROMPT-110-112-APPROVAL
 - **Date:** 2026-09-28
 - **Decision:** PO Tuấn chính thức phê duyệt (PO APPROVAL):

@@ -8,6 +8,18 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-128 — MASTER-SPECIFICATION-GATE — PO_VERIFICATION & CLOSE-OUT (PROTECT & LOCK)
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCKED)`
+- Objective: PO Tuấn chính thức phê duyệt (`PO_VERIFIED`) cho Clean Rebuild Master Specification V5.1 (`99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`) theo DEC-2026-MASTER-SPEC-PO-VERIFIED, hoàn tất chu trình 5 bước đóng task (PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED) và thiết lập tài liệu này làm Golden Governance Baseline.
+- Scope: `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`, PO Decision Register, Checkpoints, Protection Map, Current State.
+- Application Code Changes: `NONE` (100% Governance Close-Out & Protection).
+- Technical Result: PASS — Master Specification V5.1 officially `PO_VERIFIED / PROTECTED / LOCKED`.
+- PO Decision Reference: `DEC-2026-MASTER-SPEC-PO-VERIFIED`
+- PO Status: `PO_VERIFIED / PROTECTED / LOCKED`
+- Evidence: PO decision registered, checkpoints and protection map updated, records committed and synchronized to GitHub.
+- Next: Identify next Clean Rebuild Work Item per roadmap / governance.
+
 ### WORK ITEM: PROMPT-126 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — COMMIT & SYNC AFTER PO UPDATE
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`

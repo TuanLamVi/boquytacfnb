@@ -10,7 +10,12 @@ PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED
 
 ## Các Vùng Đang được Bảo vệ (Protected & Locked Scope)
 
-### 1. GOVERNANCE BASELINE V5.1
+### 1. CLEAN REBUILD MASTER SPECIFICATION V5.1 (PROMPTS 115–127)
+- **Status:** `PO_VERIFIED / PROTECTED / LOCKED` (Golden Governance Baseline)
+- **Protected Content:** `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md` (Complete MVP scope, 14 exact operational state machines, financial invariants, unallocated funds, invoice reversals, refunds, security baseline).
+- **Rule:** Locked Golden Governance Baseline (DEC-2026-MASTER-SPEC-PO-VERIFIED). No work item may alter the Master Specification without formal PO decision, UNLOCK command, and change-control process.
+
+### 2. GOVERNANCE BASELINE V5.1
 - **Status:** `PROTECTED / BASELINE FREEZE`
 - **Protected Content:** Toàn bộ bộ quy tắc KIM CHỈ NAM (`00_KIM_CHI_NAM/*`), bao gồm hai chế độ vận hành (Rehabilitation vs Clean Rebuild), Legacy Freeze, Contract-First, Master Spec Gate, Provenance rule, Git boundary, và quy trình đóng task.
 - **Rule:** Bắt buộc có PO Decision riêng biệt mới được điều chỉnh luật (PO Freeze Baseline Protocol).
