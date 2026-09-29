@@ -54,9 +54,9 @@
 ```text
 CURRENT MODE: CLEAN_REBUILD MODE ACTIVE
 LEGACY STATUS: FROZEN
-NEXT STEP: CLEAN-REBUILD-A1-FOUNDATION — CANDIDATE / AWAITING PO AUTHORIZATION
+NEXT STEP: PO REVIEW / PO VERIFICATION OF A1
 ```
 
 - Master Specification V5.1 is `PO_VERIFIED / PROTECTED / LOCKED` (Golden Governance Baseline).
 - Clean Rebuild A0 Foundation is `PO_VERIFIED / PROTECTED / LOCKED`.
-- Next Work Item Candidate: `CLEAN-REBUILD-A1-FOUNDATION — CANDIDATE / AWAITING PO AUTHORIZATION`. No application work item may start without explicit PO authorization.
+- Clean Rebuild A1 Foundation is `READY_FOR_PO_VERIFICATION`. Awaiting PO review and formal verification gate before proceeding to A2.

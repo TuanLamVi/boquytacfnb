@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-137 — GOV-AI-WORKING-DISCIPLINE — CORRECTIVE GOVERNANCE & STALE STATUS SYNC
+- Date: 2026-09-29
+- Build Mode: `GOVERNANCE_ONLY`
+- Objective: Thực hiện correction/addendum theo góp ý của PO Tuấn, chuẩn hóa section 17 của KIM CHỈ NAM thành đúng 17 rule riêng biệt (`17.1` đến `17.17`), loại bỏ mọi stale status reference cho A1 (`READY_FOR_PO_VERIFICATION`), và đồng bộ hóa `CURRENT_STATE.md`, `CHECKPOINTS.md`, và `AI_HANDOFF.md` sang trạng thái NEXT chuẩn `PO REVIEW / PO VERIFICATION OF A1`.
+- Scope: `00_KIM_CHI_NAM/KIM_CHI_NAM.md`, `CURRENT_STATE.md`, `CHECKPOINTS.md`, `AI_HANDOFF.md`, `WORK_ITEM_HISTORY.md`.
+- Application Code Changes: `NONE` (100% Governance Corrective Audit & Synchronization).
+- Technical Result: PASS — Corrective audit and zero stale status synchronization completed successfully.
+- PO Status: `PO_VERIFIED / BASELINE FREEZE`
+- Evidence: Governance records updated, committed, and synchronized to GitHub.
+- Next: PO Review / PO Verification of A1.
+
 ### WORK ITEM: PROMPT-136 — GOV-AI-WORKING-DISCIPLINE — AI WORKING DISCIPLINE & PROMPT QUALITY GATE
 - Date: 2026-09-29
 - Build Mode: `GOVERNANCE_ONLY`

@@ -367,7 +367,7 @@ Every prompt must declare:
 
 ---
 
-## 17. AI Working Discipline & Prompt Quality Gate (Prompt-136 Baseline)
+## 17. AI Working Discipline & Prompt Quality Gate (Prompt-136/137 Baseline)
 
 ### 17.1. Repository-First
 Before drafting any coordination prompt:
@@ -383,7 +383,7 @@ Before drafting any coordination prompt:
 - Before drafting implementation prompts, verify Work Item, PO authorization, dependency, protected scope, and out-of-scope boundaries. Distinguish candidate/proposed/ready-for-verification from `PO_VERIFIED`.
 
 ### 17.4. Prompt Self-Audit (Pre-Flight)
-Before handing a prompt to Codex, AI must audit its own prompt against 15 quality gates (Prompt ID uniqueness, Primary Work Item accuracy, Build Mode, PO authorization existence, scope correctness, zero violation of protected/locked scope, no legacy creep, confirmed dependencies, evidence requirements, regression plan, NEXT status, no unauthorized grant of PO_VERIFIED/PROTECTED/LOCKED, read-back requirement, stale status check, and actual diff inspection). If any check fails, `STOP`.
+Before handing a prompt to Codex, AI must audit its own prompt against quality gates (Prompt ID uniqueness, Primary Work Item accuracy, Build Mode, PO authorization existence, scope correctness, zero violation of protected/locked scope, no legacy creep, confirmed dependencies, evidence requirements, regression plan, NEXT status, no unauthorized grant of PO_VERIFIED/PROTECTED/LOCKED, read-back requirement, stale status check, and actual diff inspection). If any check fails, `STOP`.
 
 ### 17.5. Zero Stale Status Rule
 - Synchronization/closure prompts must demand repository-wide verification of stale statuses (`READY_FOR_PO_VERIFICATION`, `IN_PROGRESS`, `AWAITING PO AUTHORIZATION`, old `NEXT STEP`). Zero unexpected stale status is required.
@@ -412,13 +412,17 @@ Before handing a prompt to Codex, AI must audit its own prompt against 15 qualit
 ### 17.13. ChatGPT Role Boundary
 - ChatGPT reads repository, validates logic, detects conflict, checks evidence, and drafts prompts. ChatGPT does NOT self-assign `PO_VERIFIED`, unlock, lock, or decide for PO.
 
-### 17.14. Pre-Flight & Post-Prompt Review
-- Strict adherence to Pre-Flight checklist before implementation and rigorous Post-Prompt Review of repository state, commits, files changed, and evidence after execution.
+### 17.14. Pre-Flight Checklist Enforcement
+- Strict adherence to Pre-Flight checklist before implementation to ensure all prerequisites, security baselines, and test plans are fully validated.
 
-### 17.15. Principle of Responsibility
+### 17.15. Post-Prompt Review
+- Rigorous Post-Prompt Review of repository state, commits, files changed, and evidence after execution.
+
+### 17.16. Principle of Responsibility
 - `ĐÚNG > NHANH`. Prioritize correctness and evidence over speed.
 
-### 17.16. Prompt as Technical Instruction
-- Every AI prompt is treated as a technical instruction capable of mutating the repository. Therefore, `AI MUST AUDIT ITS OWN PROMPT BEFORE EXECUTION`.
+### 17.17. Prompt as Technical Instruction (`AI MUST AUDIT ITS OWN PROMPT BEFORE EXECUTION`)
+- Every AI prompt is treated as a technical instruction capable of mutating the repository. Therefore, AI must audit its own prompt before execution.
+
 
 
