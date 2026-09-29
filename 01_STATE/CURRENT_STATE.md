@@ -21,6 +21,7 @@
 
 | Item / Module | Status | Ghi chú & Ranh giới |
 |---|---|---|
+| AI Working Discipline V5.1 (Prompt 136) | `PO_VERIFIED / BASELINE FREEZE` | PO Decision (DEC-2026-GOV-AI-WORKING-DISCIPLINE, 2026-09-29): AI Working Discipline & Prompt Quality Gate established in KIM CHỈ NAM (17 rules covering Repository-First, No Work Item Guessing, Prompt Self-Audit, Zero Stale Status, Evidence-First, Pre-Flight, Post-Prompt Review). |
 | Clean Rebuild A1 Foundation (Prompt 135) | `READY_FOR_PO_VERIFICATION` | Store & Account Management Clean Rebuild Implementation (`CLEAN-REBUILD-A1-FOUNDATION`) successfully completed. Tenant, Store, Staff Authentication (Firebase Auth + App Check), Store Membership, Role / LEGO Permissions, and Store Join foundation established. Zero business features touched. |
 | Clean Rebuild A0 Foundation (Prompt 133) | `PO_VERIFIED / PROTECTED / LOCKED` | PO Verified (DEC-2026-A0-FOUNDATION-PO-VERIFIED, 2026-09-29): Clean Rebuild Architecture & Core Infrastructure Setup (`CLEAN-REBUILD-A0-FOUNDATION`) successfully verified, protected, and locked. Workspace structure, `packages/core_saas`, core infrastructure skeleton, security baseline (Firebase Auth + App Check contracts), and tenant/store isolation foundation established. |
 | Shift Closing Rule V5.1 (Prompt 129) | `PO_VERIFIED / LOCKED` | PO Decision (DEC-2026-SHIFT-CLOSING-S2-S3-RULE, 2026-09-29): Closing Shift is blocked by pending payment attempts only (`pendingAttemptCount = 0`). Supersedes active orders requirement from `DEC-2026-A6-SHIFT`. |

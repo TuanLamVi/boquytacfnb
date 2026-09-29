@@ -365,3 +365,60 @@ Every prompt must declare:
 ### 16.8. Multi-Work-Item Rule
 - Exactly one primary work item, zero or more affected work items. Affected items do not auto-inherit PASS / PO_VERIFIED / PROTECTED / LOCKED.
 
+---
+
+## 17. AI Working Discipline & Prompt Quality Gate (Prompt-136 Baseline)
+
+### 17.1. Repository-First
+Before drafting any coordination prompt:
+- AI must read the current repository.
+- Do not use Memory or Chat History to determine state.
+- All states must have repository evidence. `REPOSITORY WINS OVER AI MEMORY`.
+
+### 17.2. No Work Item Guessing
+- AI must not guess Work Items from chat history, memory, old prompt names, old NEXT lines, or old roadmaps.
+- Determine next Work Item strictly from `CURRENT_STATE`, `CHECKPOINTS`, `WORK_ITEM_HISTORY`, `PROTECTION_MAP`, `AI_HANDOFF`, and Master Specification. If ambiguous, `STOP / UNRESOLVED`.
+
+### 17.3. Authorization Check
+- Before drafting implementation prompts, verify Work Item, PO authorization, dependency, protected scope, and out-of-scope boundaries. Distinguish candidate/proposed/ready-for-verification from `PO_VERIFIED`.
+
+### 17.4. Prompt Self-Audit (Pre-Flight)
+Before handing a prompt to Codex, AI must audit its own prompt against 15 quality gates (Prompt ID uniqueness, Primary Work Item accuracy, Build Mode, PO authorization existence, scope correctness, zero violation of protected/locked scope, no legacy creep, confirmed dependencies, evidence requirements, regression plan, NEXT status, no unauthorized grant of PO_VERIFIED/PROTECTED/LOCKED, read-back requirement, stale status check, and actual diff inspection). If any check fails, `STOP`.
+
+### 17.5. Zero Stale Status Rule
+- Synchronization/closure prompts must demand repository-wide verification of stale statuses (`READY_FOR_PO_VERIFICATION`, `IN_PROGRESS`, `AWAITING PO AUTHORIZATION`, old `NEXT STEP`). Zero unexpected stale status is required.
+
+### 17.6. Next ≠ Authorization
+- Strictly distinguish `NEXT WORK ITEM CANDIDATE` from `NEXT AUTHORIZED WORK ITEM`. Only PO grants authorization.
+
+### 17.7. Evidence-First
+- Generic statements like "Test PASS", "Security PASS", "Tenant Isolation PASS" are forbidden without explicit test cases, test results, source evidence, and regression proof.
+
+### 17.8. Implementation ≠ Verification
+- `APPLICATION CODE CHANGED = YES` does not mean documentation-only, no-implementation, or automatic `PO_VERIFIED`. Implementation PASS leads only to `READY_FOR_PO_VERIFICATION`. PO decides `PO_VERIFIED`.
+
+### 17.9. Close-Out Synchronization
+- Every work item after PO verification must synchronize at least `CURRENT_STATE`, `CHECKPOINTS`, `PO_DECISION_REGISTER`, `WORK_ITEM_HISTORY`, `PROTECTION_MAP`, `AI_HANDOFF`, and `TEST_EVIDENCE`.
+
+### 17.10. Clean Rebuild / Legacy Boundary
+- Maintain strict separation between Clean Rebuild source code and Legacy source code. Zero inheritance from legacy without PO approval.
+
+### 17.11. Report Format Gate
+- Final reports must strictly adhere to LAW-013 and `REPORT_TEMPLATE.md`. Non-compliant reports trigger `REPORT_FORMAT_BLOCKED`.
+
+### 17.12. No Assumption Rule
+- Missing evidence = `UNPROVEN`. Conflicts = `CONFLICT / UNRESOLVED`. Do not convert assumptions into repository facts.
+
+### 17.13. ChatGPT Role Boundary
+- ChatGPT reads repository, validates logic, detects conflict, checks evidence, and drafts prompts. ChatGPT does NOT self-assign `PO_VERIFIED`, unlock, lock, or decide for PO.
+
+### 17.14. Pre-Flight & Post-Prompt Review
+- Strict adherence to Pre-Flight checklist before implementation and rigorous Post-Prompt Review of repository state, commits, files changed, and evidence after execution.
+
+### 17.15. Principle of Responsibility
+- `ĐÚNG > NHANH`. Prioritize correctness and evidence over speed.
+
+### 17.16. Prompt as Technical Instruction
+- Every AI prompt is treated as a technical instruction capable of mutating the repository. Therefore, `AI MUST AUDIT ITS OWN PROMPT BEFORE EXECUTION`.
+
+

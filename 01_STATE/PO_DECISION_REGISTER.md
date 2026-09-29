@@ -8,6 +8,14 @@
 
 ## 2. DANH SÁCH QUYẾT ĐỊNH
 
+### DEC-2026-GOV-AI-WORKING-DISCIPLINE
+- **Date:** 2026-09-29
+- **Decision:** PO Tuấn yêu cầu chính thức lưu quy tắc làm việc của AI / ChatGPT / Coding Agent (`AI Working Discipline & Prompt Quality Gate`) vào KIM CHỈ NAM để mọi phiên làm việc sau bắt buộc tuân thủ (Repository-First, No Work Item Guessing, Authorization Check, Prompt Self-Audit, Zero Stale Status, Next ≠ Authorization, Evidence-First, Implementation ≠ Verification, Close-Out Synchronization, Clean Rebuild/Legacy Boundary, Report Format Gate, No Assumption Rule, ChatGPT Role Boundary, Pre-Flight, Post-Prompt Review, Principle responsibility, Prompt as technical instruction).
+- **Affected Phase:** Governance V5.1
+- **Affected Files:** `00_KIM_CHI_NAM/KIM_CHI_NAM.md`, `KIM_CHI_NAM.html`
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / BASELINE FREEZE`.
+
 ### DEC-2026-A0-FOUNDATION-PO-VERIFIED
 - **Date:** 2026-09-29
 - **Decision:** PO Tuấn chính thức phê duyệt (PO_VERIFIED) cho **Clean Rebuild A0 Foundation** (`CLEAN-REBUILD-A0-FOUNDATION`).

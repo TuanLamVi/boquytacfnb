@@ -8,6 +8,18 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-136 — GOV-AI-WORKING-DISCIPLINE — AI WORKING DISCIPLINE & PROMPT QUALITY GATE
+- Date: 2026-09-29
+- Build Mode: `GOVERNANCE_ONLY`
+- Objective: Bổ sung quy tắc governance chính thức vào KIM CHỈ NAM (`00_KIM_CHI_NAM/KIM_CHI_NAM.md` và `KIM_CHI_NAM.html`) quy định AI Working Discipline & Prompt Quality Gate (17 quy tắc gồm Repository-First, No Work Item Guessing, Authorization Check, Prompt Self-Audit, Zero Stale Status, Evidence-First, Implementation vs Verification, Close-Out Synchronization, Clean Rebuild Boundary, Report Format Gate, Pre-Flight & Post-Prompt Review, Principle of Responsibility).
+- Scope: `00_KIM_CHI_NAM/KIM_CHI_NAM.md`, `KIM_CHI_NAM.html`, `PO_DECISION_REGISTER.md`, `CURRENT_STATE.md`, `AI_HANDOFF.md`, `WORK_ITEM_HISTORY.md`.
+- Application Code Changes: `NONE` (100% Governance Enhancement).
+- Technical Result: PASS — AI Working Discipline successfully codified into KIM CHỈ NAM.
+- PO Decision Reference: `DEC-2026-GOV-AI-WORKING-DISCIPLINE`
+- PO Status: `PO_VERIFIED / BASELINE FREEZE`
+- Evidence: KIM CHỈ NAM updated, records committed and synchronized to GitHub.
+- Next: Awaiting PO decision.
+
 ### WORK ITEM: PROMPT-135 — CLEAN-REBUILD-A1-FOUNDATION — STORE & ACCOUNT MANAGEMENT IMPLEMENTATION
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD`
