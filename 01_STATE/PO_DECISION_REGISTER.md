@@ -8,6 +8,14 @@
 
 ## 2. DANH SÁCH QUYẾT ĐỊNH
 
+### DEC-2026-A0-REBUILD-01-AUTHORIZED
+- **Date:** 2026-09-29
+- **Decision:** PO Tuấn chính thức cho phép và ủy quyền: `Cho phép làm lại A0 Clean Rebuild thật sự` (`CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01`), xây dựng nền móng A0 mới hoàn toàn từ đầu (`clean_rebuild_v5/`) tách biệt hoàn toàn với Legacy / Rehabilitation.
+- **Affected Phase:** Clean Rebuild V5.1 — A0 Rebuild Foundation Gate
+- **Affected Files:** `clean_rebuild_v5/**/*`
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `AUTHORIZED FOR IMPLEMENTATION`.
+
 ### DEC-2026-GOV-AI-WORKING-DISCIPLINE
 - **Date:** 2026-09-29
 - **Decision:** PO Tuấn yêu cầu chính thức lưu quy tắc làm việc của AI / ChatGPT / Coding Agent (`AI Working Discipline & Prompt Quality Gate`) vào KIM CHỈ NAM để mọi phiên làm việc sau bắt buộc tuân thủ (Repository-First, No Work Item Guessing, Authorization Check, Prompt Self-Audit, Zero Stale Status, Next ≠ Authorization, Evidence-First, Implementation ≠ Verification, Close-Out Synchronization, Clean Rebuild/Legacy Boundary, Report Format Gate, No Assumption Rule, ChatGPT Role Boundary, Pre-Flight, Post-Prompt Review, Principle responsibility, Prompt as technical instruction).

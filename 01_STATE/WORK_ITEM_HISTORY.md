@@ -8,6 +8,18 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-142 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — CLEAN REBUILD A0 FROM ZERO
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD`
+- Objective: Xây dựng lại A0 của F&B SMART V5.1 thật sự từ đầu (`clean_rebuild_v5/`) với source code mới 100%, không kế thừa legacy/rehabilitation code, thiết lập application workspace, package structure, core infrastructure contracts, Security Baseline (Auth + App Check), Tenant/Store isolation, Local Outbox, và unit tests.
+- Scope: `clean_rebuild_v5/**/*`
+- Application Code Changes: `YES` (Brand new Clean Rebuild A0 core infrastructure foundation & tests).
+- Technical Result: PASS — A0 Rebuild-01 successfully implemented from zero with pristine provenance.
+- PO Authorization: `AUTHORIZED FOR IMPLEMENTATION` (DEC-2026-A0-REBUILD-01-AUTHORIZED)
+- PO Status: `READY_FOR_PO_VERIFICATION`
+- Evidence: New files created under `clean_rebuild_v5/`, unit tests passed, git diff verified, committed and synchronized to GitHub.
+- Next: PO Review & Verification of A0 Rebuild-01.
+
 ### WORK ITEM: PROMPT-141 — CLEAN-REBUILD-A0-FOUNDATION — ACTUAL SOURCE VERIFICATION
 - Date: 2026-09-29
 - Build Mode: `FORENSIC / DISCOVERY ONLY`
