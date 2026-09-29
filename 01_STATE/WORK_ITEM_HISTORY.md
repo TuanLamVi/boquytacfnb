@@ -8,6 +8,31 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-148 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — UPGRADE REAL FIREBASE, AUTH, APP CHECK, SHA-256 HASHING & GIT HYGIENE
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD`
+- Primary Work Item: `CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01`
+- Objective: Nâng cấp toàn diện A0 Clean Rebuild khắc phục các điểm hạn chế đã xác định: chuyển từ giả lập sang tích hợp abstraction thật với Firebase Core, Firebase Auth, Firebase App Check; thay thế Dart hashCode bằng SHA-256 stable request hashing; thiết lập Git hygiene (.gitignore); viết lại bộ unit test chứng minh behavior thực tế.
+- Official Source Repository: `TuanLamVi/fnb-smart-v5-clean-rebuild`
+- Official Source Branch: `main`
+- Source Commit SHA: `0c862a6a8f7e2bc9120e7a656ff662cdd1b3d483`
+- Source Root: `clean_rebuild_v5/`
+- Firebase Real API: `YES`
+- Auth Real API: `YES`
+- App Check Real API: `YES`
+- Tenant Isolation: `PASS`
+- Outbox: `PASS`
+- Stable Hash: `YES` (SHA-256)
+- Build Artifacts Removed / Gitignore: `YES`
+- Analyze: `PASS` (0 errors, 0 warnings)
+- Test: `PASS` (100% passed)
+- Build Result: `BLOCKED — CONFIGURATION MISSING` (native google-services.json absent in sandbox)
+- Legacy Touched: `NO`
+- Provenance Verified: `YES` (Direct GitHub commit SHA `0c862a6a8f7e2bc9120e7a656ff662cdd1b3d483` verified via `git ls-remote`).
+- PO Authorization: `DEC-2026-A0-REBUILD-01-AUTHORIZED`
+- Implementation Status: `IMPLEMENTATION COMPLETE`
+- Next: `PO REVIEW OF A0 CLEAN REBUILD`.
+
 ### WORK ITEM: PROMPT-147 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — COMPLETE REAL FOUNDATION IMPLEMENTATION
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD`
