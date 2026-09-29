@@ -8,11 +8,11 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
-### WORK ITEM: PROMPT-157 — CLEAN-REBUILD-A0-FOUNDATION — REAL DEVICE BUILD, INSTALL & REAL RUNTIME VERIFICATION
+### WORK ITEM: PROMPT-157 — CLEAN-REBUILD-A0-FOUNDATION — DUAL REAL DEVICE BUILD, INSTALL & REAL RUNTIME VERIFICATION (M51 & NOTE 8)
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD`
 - Primary Work Item: `CLEAN-REBUILD-A0-FOUNDATION`
-- Objective: Tự thực hiện toàn bộ chuỗi: READ-FIRST → kiểm tra source → kiểm tra build identity → build debug APK (`app-debug.apk`) → phát hiện thiết bị Samsung Galaxy M51 (`SM-M515F`, Android 12) qua ADB → cài APK → mở app → xác thực runtime Real Firebase (`fnb-smart`), Auth, App Check (`f95f6a9d-8be8-4041-b28e-0375ae1bc2c3`), Firestore → chụp bằng chứng screenshot UI.
+- Objective: Tự thực hiện toàn bộ chuỗi: READ-FIRST → kiểm tra source → kiểm tra build identity → build debug APK (`app-debug.apk`) → phát hiện 2 thiết bị thật Samsung Galaxy M51 (`SM-M515F`, Android 12) & Samsung Galaxy Note 8 (`SM-N950F`, Android 9) qua ADB → cài APK lên cả 2 máy → mở app → xác thực runtime Real Firebase (`fnb-smart`), Auth, App Check, Firestore → chụp bằng chứng screenshot UI trên cả 2 thiết bị thật.
 - Official Source Repository: `TuanLamVi/fnb-smart-v5-clean-rebuild`
 - Official Source Branch: `main`
 - Source Commit SHA: `8e7cc12bac86eb66b398d6aeaab686689593147e`
@@ -26,19 +26,21 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 - APK Size: `148,775,253 bytes`
 - APK SHA-256: `6CC0829075BDFDB26044F30D769EF340CE3229CC82D369A0514A972AD597AE18`
 - Build Identity Match: `MATCH`
-- Device Used: `Samsung Galaxy M51 (SM-M515F, Android 12, ADB: RF8NC11QQVM)`
+- Devices Used:
+  1. `Samsung Galaxy M51 (SM-M515F, Android 12, ADB: RF8NC11QQVM)` — Install PASS, Launch PASS, Real Firebase PASS
+  2. `Samsung Galaxy Note 8 (SM-N950F, Android 9, ADB: 988e50385a3931435330)` — Install PASS, Launch PASS, Real Firebase PASS
 - Install Status: `PASS`
 - Device Package: `com.tuan.fnbsmart`
 - Device Version Name: `5.1.0-alpha.0`
 - Device Version Code: `1`
-- Device Build Identity Match: `MATCH`
-- App Launch Status: `PASS`
-- Firebase Real Runtime: `PASS`
+- Device Build Identity Match: `MATCH` (Both devices)
+- App Launch Status: `PASS` (Both devices)
+- Firebase Real Runtime: `PASS` (Both devices)
 - Auth Real Runtime: `PASS`
 - App Check Real Runtime: `PASS` (Debug Secret: `f95f6a9d-8be8-4041-b28e-0375ae1bc2c3`)
 - Firestore Real Runtime: `PASS`
 - Real Device Test: `PASS`
-- UI Screenshot Verified: `YES`
+- UI Screenshot Verified: `YES` (Both devices)
 - Legacy Code Touched: `NO`
 - Conflict: `NONE`
 - Implementation Status: `IMPLEMENTATION COMPLETE`
