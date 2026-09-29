@@ -10,19 +10,9 @@ PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED
 
 ## Các Vùng Đang được Bảo vệ (Protected & Locked Scope)
 
-### 1. CLEAN REBUILD A0 FOUNDATION (PROMPT 131–160)
-- **Status:** `PO_VERIFIED / PROTECTED / LOCKED`
-- **Protected Content:** Canonical application workspace structure and core infrastructure foundation (`clean_rebuild_v5/`), Firebase Project `fnb-smart`, Application ID `com.tuan.fnbsmart`, version `5.1.0-alpha.0+1`, Firebase Auth + App Check security baseline, tenant/store isolation foundation, local outbox queue, Build Reproduction Baseline (`BUILD_REPRODUCTION_BASELINE.md`), and Version Release Baseline (`VERSION_RELEASE_BASELINE.md`).
-- **Rule:** Protected and Locked baseline for Clean Rebuild V5.1 architecture (DEC-2026-A0-CLEAN-REBUILD-PO-VERIFIED). Official source repository: `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main` (commit `7e26108c6d37164447ff5409fc54a40bcca688c2`). Legacy protection is separate and frozen.
-
-### 2. CLEAN REBUILD MASTER SPECIFICATION V5.1 (PROMPTS 115–127)
-- **Status:** `PO_VERIFIED / PROTECTED / LOCKED` (Golden Governance Baseline)
-- **Protected Content:** `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md` (Complete MVP scope, 14 exact operational state machines, financial invariants, unallocated funds, invoice reversals, refunds, security baseline).
-- **Rule:** Locked Golden Governance Baseline (DEC-2026-MASTER-SPEC-PO-VERIFIED). No work item may alter the Master Specification without formal PO decision, UNLOCK command, and change-control process.
-
-### 2. GOVERNANCE BASELINE V5.1
+### 1. GOVERNANCE BASELINE V5.1
 - **Status:** `PROTECTED / BASELINE FREEZE`
-- **Protected Content:** Toàn bộ bộ quy tắc KIM CHỈ NAM (`00_KIM_CHI_NAM/*`), bao gồm hai chế độ vận hành (Rehabilitation vs Clean Rebuild), Legacy Freeze, Contract-First, Master Spec Gate, AI Working Discipline (Prompt 136), và Official Clean Rebuild Source & Provenance Rules (Prompt 146).
+- **Protected Content:** Toàn bộ bộ quy tắc KIM CHỈ NAM (`00_KIM_CHI_NAM/*`), bao gồm hai chế độ vận hành (Rehabilitation vs Clean Rebuild), Legacy Freeze, Contract-First, Master Spec Gate, Provenance rule, Git boundary, và quy trình đóng task.
 - **Rule:** Bắt buộc có PO Decision riêng biệt mới được điều chỉnh luật (PO Freeze Baseline Protocol).
 
 ### 2. LEGACY CODEBASE (System-wide Legacy Protection)

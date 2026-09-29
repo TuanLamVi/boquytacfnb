@@ -8,16 +8,6 @@ Registry danh sách các Checkpoints và kết quả được ghi nhận chính 
 
 ## Danh sách Checkpoints Ghi nhận
 
-- `CLEAN-REBUILD-A1-FOUNDATION` — `IMPLEMENTATION COMPLETE / READY_FOR_PO_VERIFICATION` (Store & Account Management Clean Rebuild Implementation, Prompt 163, Official Source Repo `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main`, Commit `6e042de0a927fa1cd0ad09efbeee5041cdca3fbb`, Real Device Tested M51 & Note 8, APK SHA-256 `41E6F3775F6CBEB3FC90FD9184FBCC634B84306C8D5978BEA0EEFDD53D6145FE`)
-- `GOV-COMMIT-DISCIPLINE` — `PO_VERIFIED / BASELINE FREEZE` (Codified Commit Discipline Rule Section 19 in KIM CHỈ NAM, DEC-2026-GOV-COMMIT-DISCIPLINE, Prompt 161)
-- `CLEAN-REBUILD-A0-FOUNDATION` — `PO_VERIFIED / PROTECTED / LOCKED` (PO Tuấn verified PASS on dual real devices M51 & Note 8, DEC-2026-A0-CLEAN-REBUILD-PO-VERIFIED, Official Source Repo `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main`, Commit `7e26108c6d37164447ff5409fc54a40bcca688c2`)
-- `CLEAN-REBUILD-A0-FOUNDATION-VERSION-BUILD-BASELINE-01` — `IMPLEMENTATION COMPLETE / READY_FOR_PO_VERIFICATION` (Finalized Version & Build Baseline Repository Sync, Prompt 159, Official Source Repo `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main`, Commit `7e26108c6d37164447ff5409fc54a40bcca688c2`)
-- `CLEAN-REBUILD-A0-FOUNDATION-DUAL-REAL-DEVICE-01` — `IMPLEMENTATION COMPLETE / READY_FOR_PO_VERIFICATION` (Dual Real Device Samsung Galaxy M51 & Samsung Galaxy Note 8 Build + Install + Real Firebase Runtime Verification PASS, Prompt 157, Official Source Repo `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main`, Commit `8e7cc12bac86eb66b398d6aeaab686689593147e`)
-- `CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01` — `IMPLEMENTATION COMPLETE / READY_FOR_PO_VERIFICATION` (Official Source Repository `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main`, Prompt 156 Application ID Synchronization & Real Runtime)
-- `GOV-OFFICIAL-CLEAN-REBUILD-SOURCE-RULE` — `PO_VERIFIED / BASELINE FREEZE` (Official Clean Rebuild Source & Provenance Rules, DEC-2026-GOV-OFFICIAL-CLEAN-REBUILD-SOURCE-RULE)
-- `CLEAN-REBUILD-A1-FOUNDATION` — `READY_FOR_PO_VERIFICATION` (Store & Account Management Clean Rebuild Implementation, Prompt 135)
-- `CLEAN-REBUILD-A0-FOUNDATION` — `PO_VERIFIED / PROTECTED / LOCKED` (Clean Rebuild Architecture & Core Infrastructure Setup, DEC-2026-A0-FOUNDATION-PO-VERIFIED)
-- `MASTER-SPECIFICATION-V5.1` — `PO_VERIFIED / PROTECTED / LOCKED` (Clean Rebuild Master Specification V5.1 - Golden Governance Baseline, DEC-2026-MASTER-SPEC-PO-VERIFIED)
 - `GOVERNANCE-BASELINE-V5.1` — `PO_VERIFIED / BASELINE FREEZE` (Bộ quy tắc nền cho Rehabilitation & Clean Rebuild)
 - `REF-ARCHITECTURE-LIBRARY-V5.1` — `PO_VERIFIED / PROTECTED / LOCKED` (Prompt 061 - Reference Architecture Library REF-001 to REF-012)
 - `BUSINESS-MODELS-MENU-V5.1` — `PO_VERIFIED / PROTECTED / LOCKED` (Prompt 066 - 20 Business Models & Menu Template Structure)

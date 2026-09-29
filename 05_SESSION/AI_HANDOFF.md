@@ -24,12 +24,6 @@ Theo LAW-017, khi bắt đầu phiên mới, AI bắt buộc phải đọc các 
 ## 2. TRẠNG THÁI DỰ ÁN VÀ BẢO VỆ CHỐT
 
 ```text
-OFFICIAL FIREBASE PROJECT ID        = fnb-smart (DEC-2026-FIREBASE-PROJECT-FNB-SMART)
-OFFICIAL CLEAN REBUILD SOURCE RULE = PO_VERIFIED / BASELINE FREEZE (DEC-2026-GOV-OFFICIAL-CLEAN-REBUILD-SOURCE-RULE)
-CLEAN-REBUILD-A0-FOUNDATION         = PO_VERIFIED / PROTECTED / LOCKED (DEC-2026-A0-CLEAN-REBUILD-PO-VERIFIED, Commit 7e26108c6d37164447ff5409fc54a40bcca688c2 on TuanLamVi/fnb-smart-v5-clean-rebuild main)
-CI/CD FUTURE WORK ITEM              = CI-01 — GitHub Automated Build & Test
-AI WORKING DISCIPLINE V5.1          = PO_VERIFIED / BASELINE FREEZE (DEC-2026-GOV-AI-WORKING-DISCIPLINE)
-CLEAN REBUILD MASTER SPECIFICATION V5.1 = PO_VERIFIED / PROTECTED / LOCKED (DEC-2026-MASTER-SPEC-PO-VERIFIED)
 GOVERNANCE BASELINE V5.1            = PO_VERIFIED / BASELINE FREEZE (DEC-2026-GOVERNANCE-BASELINE-V5.1)
 REFERENCE ARCHITECTURE V5.1         = PO_VERIFIED / PROTECTED / LOCKED (DEC-2026-REF-ARCHITECTURE-V5.1)
 BUSINESS MODELS & MENU TEMPLATES V5.1 = PO_VERIFIED / PROTECTED / LOCKED (DEC-2026-BUSINESS-MODELS-MENU-V5.1)
@@ -41,11 +35,12 @@ TABLE & PAYMENT OPERATING MODEL V5.1 = PO_VERIFIED / PROTECTED / LOCKED (DEC-202
 A6 SHIFT MANAGEMENT V5.1            = PO_VERIFIED / PROTECTED / LOCKED (DEC-2026-A6-SHIFT)
 OPERATING MODE                      = CLEAN_REBUILD MODE ACTIVE
 LEGACY SYSTEM STATUS                = FROZEN / READ-ONLY FORENSIC REFERENCE
+APPLICATION CODE CHANGES            = NONE (Legacy code untouched)
 
 A0, A1, A2-01, A2-02, A3-01, A3-02, A3-03, A3-05, A3-06, GP-01 = PO_VERIFIED / LOCKED (Legacy Frozen)
 GOV-025, GOV-026, GOV-027, GOV-028                             = PO_VERIFIED / PROTECTED / LOCKED
 A6-02 (Legacy POS Payment Fix)                                 = BLOCKED / FIRST FAILURE / LEGACY FROZEN
-CLEAN_REBUILD_V5.1                                             = ACTIVE / A0 FOUNDATION PO_VERIFIED, PROTECTED & LOCKED
+CLEAN_REBUILD_V5.1                                             = ACTIVE / DESIGN & RESEARCH
 ```
 
 ---
@@ -58,7 +53,7 @@ CLEAN_REBUILD_V5.1                                             = ACTIVE / A0 FOU
    - Không được phép viết application code mới khi chưa hoàn thành **CLEAN REBUILD MASTER SPECIFICATION** và chưa được PO Tuấn phê duyệt (`PO_VERIFIED`).
    - Order bắt buộc: Requirements → Design → Data Schema → State Machines → Protocol Contracts → Acceptance Test Plan → Code.
 4. **NO ARBITRARY MID-BUILD CHANGES:** Không tự ý sửa thiết kế/kiến trúc giữa chừng nếu chưa qua STOP → Impact Analysis → PO Decision.
-5. **A0 IS PROTECTED & LOCKED:** A0 Foundation đã `PO_VERIFIED / PROTECTED / LOCKED` theo DEC-2026-A0-CLEAN-REBUILD-PO-VERIFIED. Mọi thay đổi chạm vào A0 phải qua UNLOCK REQUIRED.
+5. **NO APPLICATION PO_VERIFIED:** Không tự ý ghi nhận `PO_VERIFIED` cho code ứng dụng mới.
 
 ---
 
@@ -66,8 +61,7 @@ CLEAN_REBUILD_V5.1                                             = ACTIVE / A0 FOU
 
 ```text
 CURRENT WORKSTREAM: F&B SMART V5.1 CLEAN REBUILD
-NEXT WORK ITEM    : CLEAN-REBUILD-A2-FOUNDATION — Table & Floor Plan Management Clean Rebuild Implementation (A1 Ready for PO Verification)
-FUTURE WORK ITEM  : CI-01 — GitHub Automated Build & Test (PO Requested)
+CURRENT STEP      : CLEAN REBUILD MASTER SPECIFICATION
 ```
 
-Clean Rebuild A1 Foundation (Store & Account Management) đã hoàn tất triển khai thực tế 8 nhóm module, pass `flutter analyze` (0 errors), pass 100% unit tests, build debug APK thành công (`41E6F3775F6CBEB3FC90FD9184FBCC634B84306C8D5978BEA0EEFDD53D6145FE`), cài đặt và kiểm thử thực tế trên dual real devices Samsung Galaxy M51 & Note 8 kết nối Firebase `fnb-smart`. Trạng thái: `READY_FOR_PO_VERIFICATION`.
+Nhiệm vụ tiếp theo: Xây dựng bản thảo **CLEAN REBUILD MASTER SPECIFICATION** chốt toàn bộ phạm vi, chức năng, liên kết, schema, state machines, quy tắc tài chính, phân quyền và tiêu chuẩn kiểm thử cho F&B SMART V5.1 để trình PO Tuấn phê duyệt.

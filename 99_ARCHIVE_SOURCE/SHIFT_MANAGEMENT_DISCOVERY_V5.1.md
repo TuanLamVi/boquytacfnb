@@ -1,22 +1,12 @@
-# F&B SMART V5.1 — SHIFT MANAGEMENT & CASH DRAWER PRODUCT DISCOVERY (PROMPT 095 FINAL CORRECTION)
+# F&B SMART V5.1 — SHIFT MANAGEMENT & CASH DRAWER PRODUCT DISCOVERY (PROMPT 094 FINAL CORRECTION)
 
 ## DOCUMENT METADATA & STATUS
 - **Project:** F&B Smart V5.1 (SaaS Multi-Tenant POS & Management Suite)
-- **Document Type:** Product Discovery & UX Design Specification (Prompt 095 Final Correction)
+- **Document Type:** Product Discovery & UX Design Specification (Prompt 094 Final Correction)
 - **Author:** Product Owner (Tuấn) & Product Design Team
 - **Build Mode:** Clean Rebuild V5.1 (Product Discovery & UX Design Only)
-- **Status:** `FINAL DRAFT — READY FOR PO_VERIFIED`
+- **Status:** `FINAL DRAFT — PO REVIEW REQUIRED`
 - **Source of Truth Reference:** `PRODUCT_CHARTER_V5.1.md`, `DATABASE_SCHEMA_V0.1.md`, `STATE_MACHINES_V0.1.md`, `MASTER_DESIGN_V4.4.md`
-
----
-
-## 1. OBJECTIVE & PO CONFIRMED RULES (PROMPT 095)
-Per PO Tuấn's formal confirmation under Prompt 095, the remaining open shift management rules are locked as follows:
-
-1. **Opening Cash Immutability:** Opening cash (`Tiền đầu ca`) **cannot be edited directly** after the shift has started. Any necessary corrections must be executed via cash in / cash out / adjustment entries, preserving full audit history.
-2. **Closing Shift Blocking Rules:** A shift **cannot be closed** while there are active unbilled orders/tables or pending payment transactions. However, **shift handover** (bàn giao ca) to the next team is permitted while orders remain active.
-3. **Table Flow Wording Correction:** "Dọn xong" is an **action of confirming cleaning**, NOT a distinct table state:
-   $$\text{Đang phục vụ} \longrightarrow \text{Chờ dọn (Cleaning)} \longrightarrow \text{Nhân viên xác nhận đã dọn} \longrightarrow \text{Bàn trống (Available)}$$
 
 ---
 
@@ -46,22 +36,32 @@ Per PO Tuấn's formal confirmation under Prompt 095, the remaining open shift m
 ---
 
 ## PART D — FLEXIBLE SHIFT HANDOVER & CLOSE SHIFT
-1. **Shift Handover Optionality:** Shift handover is a situational workflow (e.g. Morning team handing over to Evening team). It is permitted even if orders remain active.
+1. **Shift Handover Optionality:** Shift handover is a situational workflow (e.g. Morning team handing over to Evening team). It is **not** required between individual waiter or cashier transactions.
 2. **End Shift Cash Count & Variance:**
    $$\text{Variance (Chênh lệch)} = \text{Actual Cash Counted} - \text{Expected Cash}$$
    - Shorts (`Thiếu`) or Surpluses (`Thừa`) are logged immutably. The system **never** auto-corrects sales revenue to mask variances.
 
 ---
 
-## PART E — LEGO PERMISSIONS MODEL
+## PART E — TABLE & ORDER BOUNDARY COMPLIANCE
+- Partial payments do **not** close an order.
+- Full payment transitions table state:
+  $$\text{Đang phục vụ (Occupied)} \longrightarrow \text{Chờ dọn (Cleaning)} \longrightarrow \text{Dọn xong} \longrightarrow \text{Bàn trống (Available)}$$
+- If guests order additional items while table is in `Chờ dọn`:
+  $$\text{Chờ dọn} \longrightarrow \text{Gọi thêm món} \longrightarrow \text{Đang phục vụ (Occupied)}$$
+  (Prior payment history is strictly preserved).
+
+---
+
+## PART F — LEGO PERMISSIONS MODEL
 - Governed strictly by **Store Membership → LEGO Capability / Permission**:
   - Open Shift, Cash Collection, QR Collection, Debt Recording, Cash Expense, Handover, Cash Count, Close Shift.
 - Permission changes take effect **immediately** (`Permission effective immediately` per Prompt 071).
 
 ---
 
-## PART F — SCOPE BOUNDARY LOCK
+## PART G — SCOPE BOUNDARY LOCK
 - Shift Management is strictly focused on: **Shift lifecycle + store cash float + cash in/out + cash count + optional handover + close shift**. It does not expand into full corporate ERP, general ledger, or payroll accounting.
 
 ---
-*End of Shift Management & Cash Drawer Discovery V5.1 (Prompt 095 Final Correction)*
+*End of Shift Management & Cash Drawer Discovery V5.1 (Prompt 094 Final Correction)*
