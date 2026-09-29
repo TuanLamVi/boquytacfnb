@@ -8,6 +8,36 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-145 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — OFFICIAL SOURCE REPOSITORY SYNCHRONIZATION
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD`
+- Primary Work Item: `CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01`
+- Objective: Đồng bộ chính thức 100% source code Clean Rebuild A0 mới (`clean_rebuild_v5/`) được tạo từ đầu ở Prompt-142 vào Official Clean Rebuild Source Repository (`TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main`).
+- Official Source Repository: `TuanLamVi/fnb-smart-v5-clean-rebuild`
+- Official Source Branch: `main`
+- Source Commit SHA: `a44ab1b9fbe9a39448c57295bbbc4adff9ac025e`
+- Source Root: `clean_rebuild_v5/`
+- Application Files Verified on GitHub: `clean_rebuild_v5/pubspec.yaml`, `clean_rebuild_v5/lib/core/security/app_check_contract.dart`, `clean_rebuild_v5/lib/core/tenant/tenant_isolation_contract.dart`, `clean_rebuild_v5/lib/core/infrastructure/outbox_mutation_contract.dart`, `clean_rebuild_v5/test/core_foundation_test.dart`
+- Application Code Changes: `YES` (Pristine Clean Rebuild A0 Core Foundation source committed to official clean rebuild repository).
+- Legacy Touched: `NO`
+- Provenance Verified: `YES` (Direct GitHub commit SHA verified via `git ls-remote`).
+- PO Authorization: `CHO PHÉP LÀM LẠI A0 CLEAN REBUILD THẬT SỰ` (`DEC-2026-A0-REBUILD-01-AUTHORIZED`)
+- PO Status: `SOURCE REPOSITORY VERIFIED` / `READY_FOR_PO_VERIFICATION`
+- Technical Result: PASS — Clean Rebuild A0 source code successfully pushed and verified on `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main` at commit `a44ab1b9fbe9a39448c57295bbbc4adff9ac025e`.
+- Next: `PO REVIEW OF A0 CLEAN REBUILD`.
+
+### WORK ITEM: PROMPT-146 — GOVERNANCE — OFFICIAL CLEAN REBUILD SOURCE RULE
+- Date: 2026-09-29
+- Build Mode: `GOVERNANCE_ONLY`
+- Objective: Bổ sung Section 18 vào KIM CHỈ NAM (`00_KIM_CHI_NAM/KIM_CHI_NAM.md` và `KIM_CHI_NAM.html`) quy định 10 quy tắc bắt buộc về Official Clean Rebuild Source Repository (`TuanLamVi/fnb-smart-v5-clean-rebuild`), phân định rõ ràng giữa Governance Repo (`boquytacfnb`), Legacy Source (`fnb-smart-source`), và Clean Rebuild Source; cấm báo cáo False Implementation.
+- Scope: Governance Baseline documents & Operational State Records.
+- Application Code Changes: `NONE` (100% Governance Rule Baseline Codification).
+- Technical Result: PASS — Official Clean Rebuild Source Rule codified permanently.
+- PO Decision Reference: `DEC-2026-GOV-OFFICIAL-CLEAN-REBUILD-SOURCE-RULE`
+- PO Status: `GOVERNANCE RULE UPDATED`
+- Evidence: KIM CHỈ NAM Section 18 added, REPORT_TEMPLATE updated, state records synchronized, verified via read-back and git diff.
+- Next: `AWAITING PO INSPECTION`.
+
 ### WORK ITEM: PROMPT-143 — CLEAN-REBUILD-A0-FOUNDATION — SOURCE REPOSITORY & PROVENANCE CORRECTION
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD / SOURCE PROVENANCE CORRECTION`

@@ -8,6 +8,14 @@
 
 ## 2. DANH SÁCH QUYẾT ĐỊNH
 
+### DEC-2026-GOV-OFFICIAL-CLEAN-REBUILD-SOURCE-RULE
+- **Date:** 2026-09-29
+- **Decision:** PO Tuấn chính thức quy định và phê duyệt (PROMPT-146): Ban hành 10 quy tắc bắt buộc về phân định 3 repository (`Official Clean Rebuild Source Repository` = `TuanLamVi/fnb-smart-v5-clean-rebuild`, `Governance Repository` = `TuanLamVi/boquytacfnb`, `Legacy Source Mirror` = `TuanLamVi/fnb-smart-source`). Mọi Work Item Clean Rebuild chỉ được công nhận `IMPLEMENTATION DONE` khi có source commit thực tế trên `TuanLamVi/fnb-smart-v5-clean-rebuild`. Cấm báo cáo false implementation chỉ dựa trên governance diff.
+- **Affected Phase:** Governance V5.1 — Official Clean Rebuild Source Rule Baseline
+- **Affected Files:** `00_KIM_CHI_NAM/KIM_CHI_NAM.md`, `KIM_CHI_NAM.html`, `SOURCE_OF_TRUTH.md`, `REPORT_TEMPLATE.md`, `CURRENT_STATE.md`, `CHECKPOINTS.md`, `PO_DECISION_REGISTER.md`, `WORK_ITEM_HISTORY.md`, `PROTECTION_MAP.md`, `AI_HANDOFF.md`
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / BASELINE FREEZE`.
+
 ### DEC-2026-A0-REBUILD-01-AUTHORIZED
 - **Date:** 2026-09-29
 - **Decision:** PO Tuấn chính thức cho phép và ủy quyền: `Cho phép làm lại A0 Clean Rebuild thật sự` (`CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01`), xây dựng nền móng A0 mới hoàn toàn từ đầu (`clean_rebuild_v5/`) tách biệt hoàn toàn với Legacy / Rehabilitation.

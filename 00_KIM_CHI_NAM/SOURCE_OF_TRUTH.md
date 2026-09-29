@@ -42,6 +42,21 @@ Hồ sơ phản ánh trạng thái thực tế và lịch sử vận hành của
 
 ---
 
+## Ranh giới Phân định 3 Repositories (Prompt-146)
+
+1. **OFFICIAL CLEAN REBUILD APPLICATION SOURCE REPOSITORY:**
+   - URL GitHub: `TuanLamVi/fnb-smart-v5-clean-rebuild` (Root local: `clean_rebuild_v5/`).
+   - Branch chính: `main`.
+   - Nơi duy nhất chứa application source code chính thức của F&B SMART V5.1 Clean Rebuild.
+2. **GOVERNANCE REPOSITORY:**
+   - URL GitHub: `TuanLamVi/boquytacfnb` (Thư mục `00_KIM_CHI_NAM`, `01_STATE`, `02_CONTROL`, `05_SESSION`,...).
+   - Chỉ lưu trữ quy tắc quản trị, state records, và evidence. Tuyệt đối không phải là Clean Rebuild Application Source.
+3. **LEGACY SOURCE MIRROR:**
+   - URL GitHub: `TuanLamVi/fnb-smart-source` (`LEGACY / REHABILITATION / FROZEN / FORENSIC REFERENCE`).
+   - Chỉ dùng làm tham khảo forensic. Cấm dùng làm bằng chứng implementation cho Clean Rebuild.
+
+---
+
 ## Quy tắc Chống Nhầm lẫn & Giải quyết Mâu thuẫn
 
 1. **Tên file không quyết định bản chuẩn:** Ngày tạo hay tên file như `LATEST`, `FINAL`, `V2` không tự động biến tài liệu thành nguồn chuẩn.

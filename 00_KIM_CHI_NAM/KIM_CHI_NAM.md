@@ -424,5 +424,59 @@ Before handing a prompt to Codex, AI must audit its own prompt against quality g
 ### 17.17. Prompt as Technical Instruction (`AI MUST AUDIT ITS OWN PROMPT BEFORE EXECUTION`)
 - Every AI prompt is treated as a technical instruction capable of mutating the repository. Therefore, AI must audit its own prompt before execution.
 
+---
+
+## 18. Quy tắc Repository Nguồn Clean Rebuild & Provenance (Prompt-146 Baseline)
+
+### 18.1. Official Clean Rebuild Application Source
+- Repository chính thức duy nhất của Clean Rebuild V5.1: `TuanLamVi/fnb-smart-v5-clean-rebuild` (Root local: `clean_rebuild_v5/`).
+- Branch chính thức: `main`.
+
+### 18.2. Governance Repository Boundary
+- `TuanLamVi/boquytacfnb` (chứa thư mục `00_KIM_CHI_NAM`, `01_STATE`, `02_CONTROL`,...) chỉ là Governance Repository.
+- Nghiêm cấm tuyệt đối việc coi Governance Repository là Application Source của Clean Rebuild.
+
+### 18.3. Legacy Source Mirror Boundary
+- `TuanLamVi/fnb-smart-source` là `LEGACY / REHABILITATION / FROZEN / FORENSIC REFERENCE`.
+- Nghiêm cấm sử dụng Legacy Source làm bằng chứng rằng Clean Rebuild đã được implementation.
+
+### 18.4. Source Provenance Gate
+- Mọi Work Item Clean Rebuild chỉ được công nhận là `IMPLEMENTATION DONE` khi có bằng chứng trực tiếp rằng source code thực tế đã được commit vào `TuanLamVi/fnb-smart-v5-clean-rebuild`.
+- Bất kỳ thay đổi nào CHỈ nằm trên các tài liệu governance (`CURRENT_STATE`, `WORK_ITEM_HISTORY`, `PO_DECISION_REGISTER`, `CHECKPOINTS`, `PROTECTION_MAP`, `AI_HANDOFF`,...) KHÔNG ĐƯỢC COI LÀ Application Implementation.
+
+### 18.5. False Implementation Report Prevention
+- Nghiêm cấm ghi: `APPLICATION CODE CHANGED = YES`, `IMPLEMENTATION DONE`, hoặc `READY_FOR_PO_VERIFICATION` nếu Git diff/commit của Official Clean Rebuild Source (`TuanLamVi/fnb-smart-v5-clean-rebuild`) không chứng minh được source code mới tương ứng.
+
+### 18.6. Mandatory Read-First
+- Trước khi bắt đầu bất kỳ Work Item Clean Rebuild nào, AI bắt buộc phải:
+  1. Đọc KIM CHỈ NAM.
+  2. Xác định Official Clean Rebuild Source Repository (`TuanLamVi/fnb-smart-v5-clean-rebuild`).
+  3. Kiểm tra branch (`main`).
+  4. Kiểm tra source thực tế trong folder local tương ứng (`clean_rebuild_v5/`).
+  5. Kiểm tra commit / provenance.
+
+### 18.7. First Failure Stop on Provenance Defect
+- Nếu source không tồn tại, sai repository, sai branch, hoặc provenance không chứng minh được: **STOP NGAY LẬP TỨC**.
+- Nghiêm cấm tự chuyển trạng thái sang `PASS`, `PO_VERIFIED`, `PROTECTED`, hoặc `LOCKED`.
+
+### 18.8. Protection Gate
+- Nghiêm cấm bảo vệ/khóa (`PROTECTED / LOCKED`) một Work Item Clean Rebuild chỉ dựa trên governance record nếu application source thực tế chưa được chứng minh bằng commit/diff trên Official Clean Rebuild Source Repository.
+
+### 18.9. Mandatory Clean Rebuild Reporting Metadata
+- Mọi Final Report của Clean Rebuild phải ghi rõ các thông số:
+  - `OFFICIAL SOURCE REPOSITORY`: `TuanLamVi/fnb-smart-v5-clean-rebuild`
+  - `BRANCH`: `main`
+  - `SOURCE COMMIT`: [Mã commit HEAD của Clean Rebuild repo hoặc N/A nếu GOVERNANCE ONLY]
+  - `SOURCE ROOT`: `clean_rebuild_v5/`
+  - `APPLICATION FILES VERIFIED`: [Danh sách file hoặc NONE]
+  - `GOVERNANCE FILES CHANGED`: [Danh sách file governance đã cập nhật]
+  - `LEGACY TOUCHED`: `NO` (Hoặc YES kèm cảnh báo vi phạm)
+  - `PROVENANCE VERIFIED`: `YES / NO / GOVERNANCE_ONLY`
+
+### 18.10. Permanent Rule & Anti-Memory Enforcement
+- Mọi Work Item mới trong tương lai bắt buộc phải tuân thủ nghiêm ngặt 10 quy tắc trên.
+- Nghiêm cấm phụ thuộc vào trí nhớ của ChatGPT / Codex về các cuộc trò chuyện trước. `REPOSITORY WINS OVER AI MEMORY`.
+
+
 
 

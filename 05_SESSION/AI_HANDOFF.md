@@ -24,6 +24,8 @@ Theo LAW-017, khi bắt đầu phiên mới, AI bắt buộc phải đọc các 
 ## 2. TRẠNG THÁI DỰ ÁN VÀ BẢO VỆ CHỐT
 
 ```text
+OFFICIAL CLEAN REBUILD SOURCE RULE = PO_VERIFIED / BASELINE FREEZE (DEC-2026-GOV-OFFICIAL-CLEAN-REBUILD-SOURCE-RULE)
+CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 = SOURCE REPOSITORY VERIFIED (Commit a44ab1b9fbe9a39448c57295bbbc4adff9ac025e on TuanLamVi/fnb-smart-v5-clean-rebuild main)
 AI WORKING DISCIPLINE V5.1          = PO_VERIFIED / BASELINE FREEZE (DEC-2026-GOV-AI-WORKING-DISCIPLINE)
 CLEAN REBUILD MASTER SPECIFICATION V5.1 = PO_VERIFIED / PROTECTED / LOCKED (DEC-2026-MASTER-SPEC-PO-VERIFIED)
 CLEAN-REBUILD-A0-FOUNDATION         = PO_VERIFIED / PROTECTED / LOCKED (DEC-2026-A0-FOUNDATION-PO-VERIFIED)
@@ -63,7 +65,7 @@ CLEAN_REBUILD_V5.1                                             = ACTIVE / INFRAS
 
 ```text
 CURRENT WORKSTREAM: F&B SMART V5.1 CLEAN REBUILD
-CURRENT STEP      : PO REVIEW / PO VERIFICATION OF A1
+CURRENT STEP      : PO REVIEW OF A0 CLEAN REBUILD
 ```
 
-Nhiệm vụ tiếp theo: A1 Store & Account Management Clean Rebuild Implementation đã hoàn tất và đạt trạng thái `READY_FOR_PO_VERIFICATION`. Trọng tâm tiếp theo là chờ PO Tuấn nghiệm thu và xác nhận `PO_VERIFIED` cho A1 trước khi chuyển sang các Work Item tiếp theo.
+Nhiệm vụ tiếp theo: Clean Rebuild A0 Foundation Core Infrastructure source code đã được đẩy lên và xác minh trực tiếp trên GitHub repository `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main` (commit `a44ab1b9fbe9a39448c57295bbbc4adff9ac025e`). Trọng tâm tiếp theo là chờ PO Tuấn nghiệm thu A0 Clean Rebuild.

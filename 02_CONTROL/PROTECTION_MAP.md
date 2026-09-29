@@ -22,7 +22,7 @@ PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED
 
 ### 2. GOVERNANCE BASELINE V5.1
 - **Status:** `PROTECTED / BASELINE FREEZE`
-- **Protected Content:** Toàn bộ bộ quy tắc KIM CHỈ NAM (`00_KIM_CHI_NAM/*`), bao gồm hai chế độ vận hành (Rehabilitation vs Clean Rebuild), Legacy Freeze, Contract-First, Master Spec Gate, Provenance rule, Git boundary, và quy trình đóng task.
+- **Protected Content:** Toàn bộ bộ quy tắc KIM CHỈ NAM (`00_KIM_CHI_NAM/*`), bao gồm hai chế độ vận hành (Rehabilitation vs Clean Rebuild), Legacy Freeze, Contract-First, Master Spec Gate, AI Working Discipline (Prompt 136), và Official Clean Rebuild Source & Provenance Rules (Prompt 146).
 - **Rule:** Bắt buộc có PO Decision riêng biệt mới được điều chỉnh luật (PO Freeze Baseline Protocol).
 
 ### 2. LEGACY CODEBASE (System-wide Legacy Protection)

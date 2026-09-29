@@ -21,6 +21,16 @@ GIT:
 - Git Mutation: [NONE / ...]
 - Remote Push: [NONE / ... nếu có]
 
+CLEAN REBUILD SOURCE PROVENANCE (PROMPT-146 RULE):
+- Official Source Repository: TuanLamVi/fnb-smart-v5-clean-rebuild
+- Branch: main
+- Source Commit: [Commit SHA or N/A for GOVERNANCE_ONLY]
+- Source Root: clean_rebuild_v5/
+- Application Files Verified: [List or NONE]
+- Governance Files Changed: [List]
+- Legacy Touched: NO
+- Provenance Verified: YES / NO / GOVERNANCE_ONLY
+
 SCOPE:
 [Mô tả phạm vi thực tế đã thực hiện]
 
