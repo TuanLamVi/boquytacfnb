@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-141 — CLEAN-REBUILD-A0-FOUNDATION — ACTUAL SOURCE VERIFICATION
+- Date: 2026-09-29
+- Build Mode: `FORENSIC / DISCOVERY ONLY`
+- Objective: Thực hiện kiểm toán forensic Git history cho A0 (`packages/core_saas/*`), xác nhận tính xác thực của nền code Clean Rebuild A0, phát hiện nguồn code thực tế xuất phát từ giai đoạn Rehabilitation cũ thay vì các commit Clean Rebuild mới.
+- Scope: Git log audit for `packages/core_saas/*`.
+- Application Code Changes: `NONE` (100% Forensic Audit).
+- Technical Result: A0 SOURCE EXISTS BUT IS LEGACY / PROVENANCE MISSING.
+- PO Status: `A0 SOURCE EXISTS BUT IS LEGACY / PROVENANCE MISSING`
+- Evidence: Git log history audit, git blame/log analysis for `packages/core_saas`.
+- Next: `AWAITING PO DECISION`.
+
 ### WORK ITEM: PROMPT-140 — CLEAN-REBUILD-A1-FOUNDATION — SOURCE RECOVERY & PROVENANCE DISCOVERY
 - Date: 2026-09-29
 - Build Mode: `FORENSIC / DISCOVERY ONLY`
