@@ -52,7 +52,8 @@
 ```text
 CURRENT MODE: CLEAN_REBUILD MODE ACTIVE
 LEGACY STATUS: FROZEN
-NEXT STEP: CLEAN REBUILD MASTER SPECIFICATION
+NEXT STEP: PO VERIFICATION OF A0 FOUNDATION
 ```
 
-- Không ghi nhận `PO_VERIFIED` cho bất kỳ application code mới nào cho đến khi hoàn thành Master Specification Gate và được PO nghiệm thu.
+- Master Specification V5.1 is `PO_VERIFIED / PROTECTED / LOCKED` (Golden Governance Baseline).
+- A0 Clean Rebuild Foundation is `READY_FOR_PO_VERIFICATION`. Awaiting PO verification gate before proceeding to A1 Store & Account Management Clean Rebuild.

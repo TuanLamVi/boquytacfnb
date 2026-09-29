@@ -61,7 +61,7 @@ CLEAN_REBUILD_V5.1                                             = ACTIVE / DESIGN
 
 ```text
 CURRENT WORKSTREAM: F&B SMART V5.1 CLEAN REBUILD
-CURRENT STEP      : CLEAN REBUILD MASTER SPECIFICATION
+CURRENT STEP      : PO VERIFICATION OF A0 FOUNDATION
 ```
 
-Nhiệm vụ tiếp theo: Xây dựng bản thảo **CLEAN REBUILD MASTER SPECIFICATION** chốt toàn bộ phạm vi, chức năng, liên kết, schema, state machines, quy tắc tài chính, phân quyền và tiêu chuẩn kiểm thử cho F&B SMART V5.1 để trình PO Tuấn phê duyệt.
+Nhiệm vụ tiếp theo: Master Specification V5.1 đã được `PO_VERIFIED / PROTECTED / LOCKED`. A0 Clean Rebuild Foundation đã hoàn tất và đạt trạng thái `READY_FOR_PO_VERIFICATION`. Trọng tâm tiếp theo là chờ PO Tuấn nghiệm thu A0 trước khi chuyển sang triển khai A1 Store & Account Management Clean Rebuild.
