@@ -479,3 +479,18 @@
 - **Affected Files:** `TABLE_MANAGEMENT_DISCOVERY_V5.1.md`, Governance State files.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-FNB-SMART-ONE-APP-DUAL-FLOWS (PROMPT-178)
+- **Date:** 2026-09-29
+- **Decision:** PO Tuấn chính thức phê duyệt quy định **MỘT ỨNG DỤNG / HÀNH TRÌNH ĐỐI TƯỢNG THEO QUAN HỆ STORE (ONE APP / TWO ENTRY FLOWS)**:
+  1. **One App Dual Entry:** Một app duy nhất cho cả Chủ quán và Nhân viên.
+     - Common Flow: SĐT → Real Firebase OTP → Firebase UID.
+     - Owner Flow: Chưa có Store / Tạo thêm Store → Create Store → Owner (`role_owner`, active) → Vào hệ thống.
+     - Employee Flow: Tài khoản cá nhân → Nhập Mã Store → Gửi Yêu cầu Tham gia (`pending`) → Chờ Owner duyệt → Granted Membership + Role (`active`) → Vào hệ thống.
+  2. **Identity Rules:** Firebase UID là identity duy nhất của một người. Không bao giờ tạo UID mới hay tạo lại tài khoản khi đổi/tham gia Store khác.
+  3. **Membership Lifecycle & Offboarding:** Một tài khoản có thể có Membership tại nhiều Store. Khi nhân viên nghỉ việc: KHÔNG xóa Firebase User, KHÔNG xóa lịch sử, chỉ chuyển `membership.status = 'inactive'/'revoked'`. Người dùng có thể dùng chính tài khoản đó xin tham gia Store khác.
+  4. **Roles per Store:** Role thuộc về quan hệ User ↔ Store. Một người có thể giữ Role khác nhau tại các Store khác nhau.
+  5. **Devices:** Device binding là lớp quản lý thiết bị, không được dùng để thay thế Firebase UID hay tạo tài khoản mới.
+- **Affected Files:** `docs-123/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`, `docs-123/EMPLOYEE_ONBOARDING_V1.md`, `fnb-smart-v5/01_STATE/PO_DECISION_REGISTER.md`.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / APPROVED`.
