@@ -8,6 +8,18 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-130 — CLEAN-REBUILD-A0-FOUNDATION — ARCHITECTURE & CORE INFRASTRUCTURE SETUP
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD`
+- Objective: Bắt đầu triển khai Clean Rebuild Architecture & Core Infrastructure Setup (A0) theo sự cho phép chính thức của PO Tuấn (`APPROVED — BEGIN A0`), thiết lập workspace structure, module boundaries, core infrastructure skeleton và bảo mật/tenant isolation baseline tuân thủ tuyệt đối Master Specification V5.1 và 4 Hợp đồng Kỹ thuật V5.1.
+- Scope: Core architecture scaffolding & infrastructure baseline setup.
+- Application Code Changes: `NONE` (Scaffolding & Architecture Foundation Phase).
+- Technical Result: IN_PROGRESS — Khởi động A0 Foundation setup.
+- PO Authorization: `APPROVED — BEGIN A0`
+- PO Status: `IN_PROGRESS / READY_FOR_PO_VERIFICATION (khi hoàn tất)`
+- Evidence: Architecture setup initiated, governance records updated, committed, and synchronized to GitHub.
+- Next: Complete A0 foundation scaffolding and submit for PO review.
+
 ### WORK ITEM: PROMPT-129 — SHIFT CLOSING RULE SUPERSESSION (DEC-2026-SHIFT-CLOSING-S2-S3-RULE)
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD (GOVERNANCE RECORD UPDATE ONLY)`

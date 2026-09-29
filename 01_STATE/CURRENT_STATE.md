@@ -21,6 +21,7 @@
 
 | Item / Module | Status | Ghi chú & Ranh giới |
 |---|---|---|
+| Clean Rebuild A0 Foundation (Prompt 130) | `IN_PROGRESS / ARCHITECTURE & INFRASTRUCTURE SETUP` | PO Authorized (2026-09-29): Clean Rebuild Architecture & Core Infrastructure Setup (`CLEAN-REBUILD-A0-FOUNDATION`). Establishing workspace structure, architecture module boundaries, core infrastructure skeleton, and security/tenant isolation baseline. No business features. |
 | Shift Closing Rule V5.1 (Prompt 129) | `PO_VERIFIED / LOCKED` | PO Decision (DEC-2026-SHIFT-CLOSING-S2-S3-RULE, 2026-09-29): Closing Shift is blocked by pending payment attempts only (`pendingAttemptCount = 0`). Supersedes active orders requirement from `DEC-2026-A6-SHIFT`. |
 | Master Specification Gate V5.1 (Prompt 128 PO Close-Out) | `PO_VERIFIED / PROTECTED / LOCKED` | PO Verified (DEC-2026-MASTER-SPEC-PO-VERIFIED, 2026-09-29): Clean Rebuild Master Specification V5.1 (`99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`) officially accepted as Golden Governance Baseline. Protected and Locked. No app code written. |
 | Governance Implementation V5.1 (Prompt 114) | `PO_VERIFIED / PROTECTED` | Prompt 114: Implemented Work Item ID vs Prompt ID separation, Prompt uniqueness & collision handling, Standard Prompt Header, Closure Sequence with mandatory Regression Check (N/A for discovery), Discovery vs Implementation Evidence separation, History Preservation, and Repository Source of Truth enforcement. |
