@@ -8,6 +8,7 @@ Registry danh sách các Checkpoints và kết quả được ghi nhận chính 
 
 ## Danh sách Checkpoints Ghi nhận
 
+- `CLEAN-REBUILD-A0-FOUNDATION-REAL-DEVICE-01` — `IMPLEMENTATION COMPLETE / READY_FOR_PO_VERIFICATION` (Real Device Samsung Galaxy M51 Build + Install + Real Firebase Runtime Verification PASS, Prompt 157, Official Source Repo `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main`, Commit `8e7cc12bac86eb66b398d6aeaab686689593147e`)
 - `CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01` — `IMPLEMENTATION COMPLETE / READY_FOR_PO_VERIFICATION` (Official Source Repository `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main`, Prompt 156 Application ID Synchronization & Real Runtime)
 - `GOV-OFFICIAL-CLEAN-REBUILD-SOURCE-RULE` — `PO_VERIFIED / BASELINE FREEZE` (Official Clean Rebuild Source & Provenance Rules, DEC-2026-GOV-OFFICIAL-CLEAN-REBUILD-SOURCE-RULE)
 - `CLEAN-REBUILD-A1-FOUNDATION` — `READY_FOR_PO_VERIFICATION` (Store & Account Management Clean Rebuild Implementation, Prompt 135)
