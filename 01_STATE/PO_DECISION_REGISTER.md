@@ -8,6 +8,15 @@
 
 ## 2. DANH SÁCH QUYẾT ĐỊNH
 
+### DEC-2026-A0-FOUNDATION-PO-VERIFIED
+- **Date:** 2026-09-29
+- **Decision:** PO Tuấn chính thức phê duyệt (PO_VERIFIED) cho **Clean Rebuild A0 Foundation** (`CLEAN-REBUILD-A0-FOUNDATION`).
+- **Reason:** Nghiệm thu thực tế cấu trúc workspace, packages/core_saas, core infrastructure skeleton, security baseline (Firebase Auth + App Check contracts), và tenant/store isolation foundation. Phê duyệt chuyển trạng thái thành `PO_VERIFIED / PROTECTED / LOCKED`.
+- **Affected Phase:** Clean Rebuild V5.1 — A0 Foundation Gate
+- **Affected Files:** `packages/core_saas/lib/*`, State & Control Records
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
 ### DEC-2026-SHIFT-CLOSING-S2-S3-RULE
 - **Date:** 2026-09-29
 - **Decision:** PO Tuấn chính thức xác nhận quy tắc đóng ca cho Clean Rebuild V5.1: `Closing Shift is blocked by pending payment attempts only.` Không dùng `active orders` làm guard bắt buộc của S2/S3 trong Clean Rebuild V5.1.

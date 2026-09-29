@@ -8,6 +8,18 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-133 — CLEAN-REBUILD-A0-FOUNDATION — PO VERIFICATION, PROTECTION & LOCK
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCKED)`
+- Objective: PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED` cho Clean Rebuild A0 Foundation (`CLEAN-REBUILD-A0-FOUNDATION`) theo DEC-2026-A0-FOUNDATION-PO-VERIFIED, hoàn tất chu trình 5 bước đóng task (PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED) cho foundational architecture và core infrastructure scaffolding.
+- Scope: `packages/core_saas/*`, PO Decision Register, Checkpoints, Protection Map, Current State.
+- Application Code Changes: `YES` (Core infrastructure foundation & package scaffolding setup).
+- Technical Result: PASS — Clean Rebuild A0 Foundation officially `PO_VERIFIED / PROTECTED / LOCKED`.
+- PO Decision Reference: `DEC-2026-A0-FOUNDATION-PO-VERIFIED`
+- PO Status: `PO_VERIFIED / PROTECTED / LOCKED`
+- Evidence: PO decision registered, checkpoints and protection map updated, records committed and synchronized to GitHub.
+- Next: `CLEAN-REBUILD-A1-FOUNDATION — Store & Account Management Clean Rebuild Implementation (Candidate)`.
+
 ### WORK ITEM: PROMPT-132 — MASTER-SPECIFICATION-GATE — STATUS CORRECTION & REPOSITORY SYNCHRONIZATION
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENTATION ONLY)`

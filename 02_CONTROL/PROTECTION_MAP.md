@@ -10,7 +10,12 @@ PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED
 
 ## Các Vùng Đang được Bảo vệ (Protected & Locked Scope)
 
-### 1. CLEAN REBUILD MASTER SPECIFICATION V5.1 (PROMPTS 115–127)
+### 1. CLEAN REBUILD A0 FOUNDATION (PROMPT 131–133)
+- **Status:** `PO_VERIFIED / PROTECTED / LOCKED`
+- **Protected Content:** Canonical application workspace structure and core infrastructure foundation (`packages/core_saas`, core services, Firebase Auth + App Check security baseline, tenant/store isolation foundation).
+- **Rule:** Protected and Locked baseline for Clean Rebuild V5.1 architecture (DEC-2026-A0-FOUNDATION-PO-VERIFIED). Legacy protection is separate and frozen; A0 has independent Clean Rebuild protection.
+
+### 2. CLEAN REBUILD MASTER SPECIFICATION V5.1 (PROMPTS 115–127)
 - **Status:** `PO_VERIFIED / PROTECTED / LOCKED` (Golden Governance Baseline)
 - **Protected Content:** `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md` (Complete MVP scope, 14 exact operational state machines, financial invariants, unallocated funds, invoice reversals, refunds, security baseline).
 - **Rule:** Locked Golden Governance Baseline (DEC-2026-MASTER-SPEC-PO-VERIFIED). No work item may alter the Master Specification without formal PO decision, UNLOCK command, and change-control process.
