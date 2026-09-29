@@ -8,6 +8,25 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-161 — GOV-COMMIT-DISCIPLINE — CODIFY COMMIT DISCIPLINE
+- Date: 2026-09-29
+- Build Mode: `GOVERNANCE_ONLY`
+- Governance Work Item: `GOV-COMMIT-DISCIPLINE`
+- Objective: Bổ sung quy tắc chính thức về kỷ luật commit Git vào KIM CHỈ NAM (`00_KIM_CHI_NAM/KIM_CHI_NAM.md` Section 19 và `KIM_CHI_NAM.html`). Quy định Commit by Meaningful Milestone (không commit thụ động theo từng prompt, nhóm nhiều prompt trong cùng Work Item thành một commit có ý nghĩa khi đạt mốc, commit message rõ ràng, giữ nguyên cấm đoán Git Safety, làm việc linh hoạt trên working tree dở dang, giữ nguyên lịch sử Git quá khứ).
+- Document Updated: `00_KIM_CHI_NAM/KIM_CHI_NAM.md`, `KIM_CHI_NAM.html`
+- Section Updated: Section 19 (Quy tắc Commit Git theo Mốc Công việc có Ý nghĩa)
+- New Rule: `COMMIT BY MEANINGFUL MILESTONE`
+- Rule Status: `ACTIVE / BASELINE FREEZE`
+- Prompt-by-Prompt Commit: `NOT REQUIRED / PROHIBITED WITHOUT MILESTONE`
+- Work Item Milestone Commit: `REQUIRED WHEN MILESTONE IS REACHED`
+- Git Safety: `PRESERVED`
+- Legacy Git History: `UNCHANGED`
+- PO Decision Log: `UPDATED` (DEC-2026-GOV-COMMIT-DISCIPLINE)
+- Application Code Touched: `NO`
+- Conflict: `NONE`
+- Implementation Status: `COMPLETE`
+- Next Work Item: `CLEAN-REBUILD-A1-FOUNDATION — Store & Account Management Clean Rebuild Implementation`.
+
 ### WORK ITEM: PROMPT-160 — CLEAN-REBUILD-A0-FOUNDATION — PO VERIFICATION, PROTECTION, LOCK & CLOSE-OUT
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD`

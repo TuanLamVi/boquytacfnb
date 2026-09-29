@@ -8,6 +8,19 @@
 
 ## 2. DANH SÁCH QUYẾT ĐỊNH
 
+### DEC-2026-GOV-COMMIT-DISCIPLINE
+- **Date:** 2026-09-29
+- **Decision:** PO Tuấn chính thức ban hành quy tắc "Commit theo Mốc Công việc có Ý nghĩa" (Commit by Meaningful Milestone, PROMPT-161):
+  1. **No Prompt-by-Prompt Commit:** Không commit chỉ vì có một prompt mới.
+  2. **Milestone-Based Commit:** Chỉ commit khi thuộc 1 trong 4 mốc: Work Item hoàn thành (Implementation → Test → Build → PASS), Đạt Checkpoint quan trọng (Foundation, Build/Release baseline, PO_VERIFIED, PROTECTED, LOCKED), Thay đổi Governance quan trọng, hoặc Điểm an toàn cần bảo toàn.
+  3. **Multi-Prompt Single Commit:** Nhóm nhiều prompt trong cùng một Work Item thành một commit duy nhất có ý nghĩa khi đạt mốc.
+  4. **Meaningful Commit Message:** Commit message phải mô tả rõ nội dung bảo toàn, cấm dùng message vô nghĩa (`update`, `PROMPT-xxx`, `sync`).
+  5. **Git Safety Preserved:** "Chưa cần commit" không đồng nghĩa với được phép `reset`/`clean`/`restore` làm mất dữ liệu. Lịch sử Git cũ giữ nguyên bất biến.
+- **Affected Phase:** Governance V5.1 — Commit Discipline Baseline
+- **Affected Files:** `00_KIM_CHI_NAM/KIM_CHI_NAM.md`, `KIM_CHI_NAM.html`, Governance State records
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / BASELINE FREEZE`.
+
 ### DEC-2026-A0-CLEAN-REBUILD-PO-VERIFIED
 - **Date:** 2026-09-29
 - **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED A0 — PASS` cho **Clean Rebuild A0 Foundation** (`CLEAN-REBUILD-A0-FOUNDATION`).

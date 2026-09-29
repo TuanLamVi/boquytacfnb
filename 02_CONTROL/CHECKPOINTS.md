@@ -8,6 +8,7 @@ Registry danh sách các Checkpoints và kết quả được ghi nhận chính 
 
 ## Danh sách Checkpoints Ghi nhận
 
+- `GOV-COMMIT-DISCIPLINE` — `PO_VERIFIED / BASELINE FREEZE` (Codified Commit Discipline Rule Section 19 in KIM CHỈ NAM, DEC-2026-GOV-COMMIT-DISCIPLINE, Prompt 161)
 - `CLEAN-REBUILD-A0-FOUNDATION` — `PO_VERIFIED / PROTECTED / LOCKED` (PO Tuấn verified PASS on dual real devices M51 & Note 8, DEC-2026-A0-CLEAN-REBUILD-PO-VERIFIED, Official Source Repo `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main`, Commit `7e26108c6d37164447ff5409fc54a40bcca688c2`)
 - `CLEAN-REBUILD-A0-FOUNDATION-VERSION-BUILD-BASELINE-01` — `IMPLEMENTATION COMPLETE / READY_FOR_PO_VERIFICATION` (Finalized Version & Build Baseline Repository Sync, Prompt 159, Official Source Repo `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main`, Commit `7e26108c6d37164447ff5409fc54a40bcca688c2`)
 - `CLEAN-REBUILD-A0-FOUNDATION-DUAL-REAL-DEVICE-01` — `IMPLEMENTATION COMPLETE / READY_FOR_PO_VERIFICATION` (Dual Real Device Samsung Galaxy M51 & Samsung Galaxy Note 8 Build + Install + Real Firebase Runtime Verification PASS, Prompt 157, Official Source Repo `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main`, Commit `8e7cc12bac86eb66b398d6aeaab686689593147e`)

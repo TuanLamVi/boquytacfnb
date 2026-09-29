@@ -477,6 +477,57 @@ Before handing a prompt to Codex, AI must audit its own prompt against quality g
 - Mọi Work Item mới trong tương lai bắt buộc phải tuân thủ nghiêm ngặt 10 quy tắc trên.
 - Nghiêm cấm phụ thuộc vào trí nhớ của ChatGPT / Codex về các cuộc trò chuyện trước. `REPOSITORY WINS OVER AI MEMORY`.
 
+---
+
+## 19. Quy tắc Commit Git theo Mốc Công việc có Ý nghĩa (Prompt-161 Baseline)
+
+### 19.1. Commit by Meaningful Milestone
+- Commit Git phải thực hiện theo **mốc công việc có ý nghĩa (Meaningful Milestone)**, không commit theo số lượng prompt.
+- Nghiêm cấm hành vi commit thụ động chỉ vì vừa bắt đầu hoặc nhận một prompt mới (`NO PROMPT-BY-PROMPT COMMIT`).
+- Một Work Item có thể trải qua nhiều prompt, nhiều sửa đổi, hoặc nhiều lần build/test dở dang trong working tree trước khi đạt mốc commit chính thức.
+
+### 19.2. Khi nào Bắt buộc / Nên Commit
+Codex / Coding Agent chỉ tạo commit khi rơi vào một trong các trường hợp sau:
+1. **Work Item Hoàn thành:** Implementation → Test → Build → PASS → Commit 01 lần để lưu trạng thái hoàn tất.
+2. **Đạt Checkpoint Quan trọng:** Foundation hoàn chỉnh, Build Reproduction Baseline, Version Release Baseline, PO_VERIFIED, PROTECTED, LOCKED.
+3. **Thay đổi Governance Quan trọng:** Cập nhật bộ luật KIM CHỈ NAM, quy trình hoặc chính sách quản trị repository.
+4. **Điểm An toàn Cần Bảo toàn:** Tác vụ lớn, phức tạp có rủi ro cao cần lưu điểm khôi phục an toàn để tránh mất mát dữ liệu lớn.
+
+### 19.3. Khi nào KHÔNG CẦN Commit
+Không bắt buộc commit chỉ vì:
+- Có một prompt mới trong chuỗi làm việc;
+- Sửa lỗi nhỏ dở dang trong quá trình triển khai;
+- Chạy test / build nhiều lần;
+- Chỉnh code tạm thời để debug / điều tra;
+- Cập nhật tài liệu trung gian chưa hoàn tất.
+Các thay đổi này tiếp tục tồn tại trong working tree (`DIRTY worktree`) cho đến khi đạt mốc commit thích hợp.
+
+### 19.4. Nhiều Prompt → Một Commit (Multi-Prompt to Single Commit)
+```text
+PROMPT-001 → PROMPT-002 → PROMPT-003 → Implementation PASS → ONE MEANINGFUL COMMIT
+```
+- Không tạo các commit nhỏ lẻ chỉ để ghi `PROMPT-001`, `PROMPT-002` khi công việc vẫn thuộc cùng một Work Item và chưa đạt mốc.
+
+### 19.5. Close-Out Commit
+- Khi Work Item đạt `PASS → PO_VERIFIED → PROTECTED → LOCKED`, Agent ưu tiên gom tất cả thay đổi close-out liên quan thành **MỘT commit duy nhất có ý nghĩa**, tránh tạo nhiều commit vụn vặt.
+
+### 19.6. Format Commit Message
+- Commit message phải phản ánh rõ **đã hoàn thành hoặc bảo toàn điều gì**, theo cấu trúc chuẩn:
+  - `feat(scope): description` (ví dụ: `feat(a0): complete clean rebuild foundation`)
+  - `docs(scope): description` (ví dụ: `docs: finalize version and build baseline`)
+  - `chore(governance): description` (ví dụ: `chore(governance): codify commit discipline`)
+- Nghiêm cấm dùng commit message vô nghĩa như: `PROMPT-xxx`, `update`, `fix`, `changes`, `sync` nếu không mô tả nội dung thực tế.
+
+### 19.7. Giữ nguyên An toàn Git (Git Safety Preserved)
+- Quy tắc này KHÔNG thay đổi các cấm đoán Git Safety (Section 8). "Chưa cần commit" KHÔNG ĐƯỢC HIỂU LÀ được phép `git reset`, `git clean`, `git restore`, hay `git stash` làm mất thay đổi trong working tree.
+
+### 19.8. Working Tree Discipline
+- Trong quá trình thực hiện Work Item, working tree có thể ở trạng thái `DIRTY`. Agent phải quản lý chính xác các thay đổi thuộc Work Item đang làm, bảo toàn làm việc dở dang cho đến mốc commit chính thức.
+
+### 19.9. Lịch sử Quá khứ Bất biến (Legacy History Unchanged)
+- Quy tắc này chỉ áp dụng cho các commit từ thời điểm ban hành trở về sau. Tuyệt đối không rebase hay rewrite lịch sử Git cũ.
+
+
 
 
 
