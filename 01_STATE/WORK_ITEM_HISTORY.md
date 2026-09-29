@@ -8,6 +8,37 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-153 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — ANDROID FOUNDATION & CLONE-READY SOURCE COMPLETENESS
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD`
+- Primary Work Item: `CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01`
+- Objective: Hoàn thiện A0 Android foundation sao cho repository GitHub (`TuanLamVi/fnb-smart-v5-clean-rebuild`) chứa đầy đủ source cần thiết để một môi trường mới clone và build trực tiếp không phụ thuộc file local trên máy Codex (`settings.gradle.kts`, `build.gradle.kts`, `app/build.gradle.kts`, `AndroidManifest.xml`, `MainActivity.kt`, styles, launcher backgrounds, google-services.json, firebase_options.dart với App ID thật của `fnb-smart`, loại bỏ các placeholder web/ios/macos không cấu hình). Đồng bộ quyết định `fnb-smart` vào toàn bộ hồ sơ Governance.
+- Official Source Repository: `TuanLamVi/fnb-smart-v5-clean-rebuild`
+- Official Source Branch: `main`
+- Source Root: `clean_rebuild_v5/`
+- Firebase Project: `fnb-smart`
+- Android Project Complete: `YES`
+- Android Source Clone-Complete: `YES`
+- Gradle Wrapper Committed: `YES`
+- Main Activity Committed: `YES`
+- Android Resources Committed: `YES`
+- Application ID: `com.tuan.fnbsmart`
+- Firebase Android Client Match: `YES`
+- Fake App IDs Present: `NO`
+- App Check Real: `YES`
+- Analyze: `PASS` (0 errors, 0 warnings)
+- Test: `PASS` (100% passed)
+- Android Debug Build: `PASS`
+- Build from Clean Clone: `PASS`
+- Local.properties Tracked: `NO`
+- Dart Tool Tracked: `NO`
+- Build Artifact Tracked: `NO`
+- Legacy Business Code Touched: `NO`
+- Source Provenance: `VERIFIED`
+- Conflict: `NONE`
+- Implementation Status: `IMPLEMENTATION COMPLETE`
+- Next: `PO REVIEW OF A0 CLEAN REBUILD`.
+
 ### WORK ITEM: PROMPT-152 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — OFFICIAL 'fnb-smart' FIREBASE & ANDROID FOUNDATION COMPLETE
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD`
