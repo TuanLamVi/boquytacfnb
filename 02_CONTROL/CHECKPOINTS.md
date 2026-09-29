@@ -32,6 +32,7 @@ Registry danh sách các Checkpoints và kết quả được ghi nhận chính 
 - `A3-05` — `PO_VERIFIED / LOCKED` (Shift Foundation - Legacy Frozen)
 - `A3-06` — `PO_VERIFIED / LOCKED` (Shift Management UI - Legacy Frozen)
 - `A6-02` — `BLOCKED / FIRST FAILURE / LEGACY FROZEN` (Canonical POS Payment UI Integration - Frozen)
+- `CLEAN-REBUILD-A2` — `PO_VERIFIED / PROTECTED / LOCKED` (Clean Rebuild A2 - Store Membership, Employee Onboarding, Staff Management & Device Foundation)
 - `CLEAN_REBUILD_V5.1` — `ACTIVE / IN_PROGRESS` (Master Specification & Boundary Setup)
 
 ---

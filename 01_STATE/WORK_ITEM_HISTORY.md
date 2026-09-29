@@ -8,6 +8,18 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-194 — CLEAN-REBUILD-A2-FOUNDATION (CLOSE-OUT, PROTECT & LOCKED)
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD (CLOSE-OUT, PROTECT & LOCKED)`
+- Objective: PO Tuấn chính thức xác nhận PASS, PO_VERIFIED, PROTECTED, LOCKED cho A2 — Store Membership, Employee Onboarding, Staff Management & Device Foundation (One App Dual Entry flows, Owner vs Employee onboarding, Store join requests, Owner approve/reject, membership lifecycle [pending, active, inactive/revoked], employee offboarding preserving Firebase User, multi-store membership, store code 6 chars with ambiguous characters excluded, store device binding, and join access settings).
+- Scope: `clean_rebuild_v5/lib/features/account/`, `firestore.rules`, `docs-123/EMPLOYEE_ONBOARDING_V1.md`, `PO_DECISION_REGISTER.md`.
+- Application Code Changes: `YES` (Clean Rebuild A2 implementation, phone normalization, session restoration, membership resilience, and Firestore security rules).
+- Technical Result: PASS — Hoàn tất đóng task, bảo vệ và khóa cứng baseline A2 Store & Account Operations theo quyết định PO.
+- PO Decision Reference: `DEC-2026-FNB-SMART-ONE-APP-DUAL-FLOWS` (PROMPT-178/186/194)
+- PO Status: `PO_VERIFIED / PROTECTED / LOCKED`
+- Evidence: 21 unit tests passed, static analysis clean, deployed successfully to Samsung Galaxy M51 and Samsung Galaxy Note 8, and verified on real device runtimes.
+- Next: CLEAN-REBUILD-A3-FOUNDATION (POS & Orders).
+
 ### WORK ITEM: PROMPT-111 — GOVERNANCE IDENTITY & CLOSURE RECONCILIATION
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (GOVERNANCE RECONCILIATION)`

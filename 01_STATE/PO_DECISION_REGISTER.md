@@ -494,3 +494,13 @@
 - **Affected Files:** `docs-123/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`, `docs-123/EMPLOYEE_ONBOARDING_V1.md`, `fnb-smart-v5/01_STATE/PO_DECISION_REGISTER.md`.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / APPROVED`.
+
+### DEC-2026-A2-CLOSE-OUT (PROMPT-194)
+- **Date:** 2026-09-29
+- **Decision:** PO Tuấn chính thức xác nhận `PO_VERIFIED / PROTECTED / LOCKED` cho **CLEAN-REBUILD-A2-FOUNDATION** (Store Membership, Employee Onboarding, Staff Management & Device Foundation):
+  1. **A2 Implementation Complete:** Real Firebase Auth, session restoration, phone normalization (local vs E.164), 6-char store code (`CleanRebuildStoreModel.generateStoreCode`), Post-OTP Two-Flow Entry UI (`AccountManagementDashboardView`), Join Request / Approval, Offboarding (`inactive` status preserving Firebase User), Staff Lego Permissions (`updateMemberLegoPermissions`), Device Binding & Revocation, and Firestore Security Rules.
+  2. **Real Device Verification:** Deployed and verified on Samsung Galaxy M51 and Samsung Galaxy Note 8.
+  3. **Close-out & Lock:** Official state transitioned to `PO_VERIFIED → PROTECTED → LOCKED`.
+- **Affected Files:** `clean_rebuild_v5/lib/`, `firestore.rules`, Governance records.
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.

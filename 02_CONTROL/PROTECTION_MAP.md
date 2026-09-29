@@ -57,7 +57,10 @@ PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED
 ### 10. A6 SHIFT MANAGEMENT & CASH DRAWER PRODUCT DISCOVERY V5.1 (PROMPT 095)
 - **Status:** `PO_VERIFIED / PROTECTED / LOCKED`
 - **Protected Content:** `SHIFT_MANAGEMENT_DISCOVERY_V5.1.md` (Shift lifecycle, opening cash immutability post-opening, expected cash formula, physical cash isolation excluding QR/debt/uncollected balance, optional shift handover, close shift blocking rules, LEGO permissions, multi-store scoping, and offline boundary).
-- **Rule:** Locked product-design baseline. No work item may alter shift management or cash drawer rules without valid PO Decision and Unlock.
+### 11. CLEAN REBUILD A2 FOUNDATION — STORE MEMBERSHIP & ACCOUNT MANAGEMENT (PROMPT-194)
+- **Status:** `PO_VERIFIED / PROTECTED / LOCKED`
+- **Protected Content:** Clean Rebuild A2 implementation (`clean_rebuild_v5/lib/features/account/`), Phone normalization, Auth session restoration, One App / Dual Entry routing (`AccountManagementDashboardView`), Store Code generation (6 chars, no ambiguous characters), Membership lifecycle (`pending`, `active`, `inactive/revoked`), Staff offboarding preserving Firebase User, and Firestore Security Rules.
+- **Rule:** Locked baseline. No subsequent work item may alter A2 authentication session, store membership, or device binding rules without valid PO Decision and Unlock.
 
 ---
 

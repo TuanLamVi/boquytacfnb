@@ -21,6 +21,7 @@
 
 | Item / Module | Status | Ghi chú & Ranh giới |
 |---|---|---|
+| Clean Rebuild A2 Foundation (Store Operations & Account Management) | `PO_VERIFIED / PROTECTED / LOCKED` | PROMPT-176 to PROMPT-194: One App Dual Entry, Real Firebase Phone Auth, Session Restoration, Membership Lifecycle, Staff Management, Device Binding, 6-char Store Code, and Firestore Security Rules (DEC-2026-FNB-SMART-ONE-APP-DUAL-FLOWS) |
 | Governance Reconciliation V5.1 (Prompt 111) | `READY FOR PO APPROVAL` | Prompt 111: Governance Identity Model, Prompt 101 collision resolution, A6/A7/A8 reconciliation, Closure sequence enforcement |
 | Shift Management & Cash Drawer V5.1 (A6) | `PO_VERIFIED / PROTECTED / LOCKED` | Prompts 089/094/095/096/101: A6 Shift Management & Cash Drawer rules (DEC-2026-A6-SHIFT) |
 | Customer Profile & Debt Ledger V5.1 | `READY FOR PO_VERIFIED` | Prompt 107 Final Boundary: No overpayment rule (`Còn nợ < 0` blocked), Server-verified QR debt repayment, Cash repayment increasing shift cash drawer without sales revenue inflation, Store-scoped debt ledger |
