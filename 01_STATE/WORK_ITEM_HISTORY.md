@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-140 — CLEAN-REBUILD-A1-FOUNDATION — SOURCE RECOVERY & PROVENANCE DISCOVERY
+- Date: 2026-09-29
+- Build Mode: `FORENSIC / DISCOVERY ONLY`
+- Objective: Thực hiện khám phá nguồn gốc và phục hồi provenance cho A1 (`packages/core_saas/*`), kiểm tra git-tracked files, git history toàn bộ branch/ref, và phân loại nguồn thực tế.
+- Scope: `packages/core_saas/*` file tracking & git history discovery.
+- Application Code Changes: `NONE` (100% Forensic Discovery).
+- Technical Result: A1 SOURCE EXISTS BUT PROVENANCE MISSING (Files exist in `packages/core_saas` and are git-tracked from prior rehabilitation history, but lack direct provenance linking them to Prompt-135 Clean Rebuild implementation commits).
+- PO Status: `A1 SOURCE EXISTS BUT PROVENANCE MISSING`
+- Evidence: Git ls-files audit, git history check.
+- Next: `AWAITING PO DECISION`.
+
 ### WORK ITEM: PROMPT-139 — CLEAN-REBUILD-A1-FOUNDATION — FORENSIC VERIFICATION BEFORE PO TEST
 - Date: 2026-09-29
 - Build Mode: `FORENSIC / GOVERNANCE AUDIT`
