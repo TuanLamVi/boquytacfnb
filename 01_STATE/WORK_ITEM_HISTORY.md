@@ -8,6 +8,36 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-152 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — OFFICIAL 'fnb-smart' FIREBASE & ANDROID FOUNDATION COMPLETE
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD`
+- Primary Work Item: `CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01`
+- Objective: Ghi nhận quyết định chính thức Firebase Project ID = `fnb-smart` vào Governance; xây dựng clean Android project foundation (`settings.gradle.kts`, `build.gradle.kts`, `app/build.gradle.kts`, `AndroidManifest.xml`, `google-services.json`); định nghĩa chuẩn `DefaultFirebaseOptions` trong `firebase_options.dart`; cấu hình `.gitignore` loại bỏ `android/local.properties`, `.dart_tool/`, `build/`; thực thi `flutter analyze`, `flutter test`, `flutter build apk --debug`.
+- Official Source Repository: `TuanLamVi/fnb-smart-v5-clean-rebuild`
+- Official Source Branch: `main`
+- Source Root: `clean_rebuild_v5/`
+- Firebase Project ID: `fnb-smart`
+- Governance Updated: `YES`
+- Firebase Options Real: `YES`
+- Fake App IDs Removed: `YES`
+- App Check Real: `YES`
+- App Check Fake Validation Removed: `YES`
+- Android Project Complete: `YES`
+- Android Application ID: `com.tuan.fnbsmart`
+- Firebase Android Client Match: `YES`
+- Google Play Identity Preserved: `YES`
+- Android Build: `PASS` (Debug APK build verified)
+- Analyze: `PASS` (0 errors, 0 warnings)
+- Test: `PASS` (100% passed)
+- Local.properties Tracked: `NO`
+- Dart Tool Tracked: `NO`
+- Build Artifact Tracked: `NO`
+- Legacy Business Code Touched: `NO`
+- Source Provenance: `VERIFIED`
+- Conflict: `NONE`
+- Implementation Status: `IMPLEMENTATION COMPLETE`
+- Next: `PO REVIEW OF A0 CLEAN REBUILD`.
+
 ### WORK ITEM: PROMPT-151 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — CONFIGURE REAL FIREBASE PROJECT 'fnb-smart'
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD`

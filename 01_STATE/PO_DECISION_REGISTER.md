@@ -8,6 +8,14 @@
 
 ## 2. DANH SÁCH QUYẾT ĐỊNH
 
+### DEC-2026-FIREBASE-PROJECT-FNB-SMART
+- **Date:** 2026-09-29
+- **Decision:** PO Tuấn quyết định chính thức và có hiệu lực ngay lập tức (PROMPT-152): F&B Smart V5.1 Clean Rebuild sử dụng Firebase Project hiện tại `fnb-smart`. Không tạo Firebase Project mới, không chuyển sang `fnb-smart-dev` hay bất kỳ Project ID nào khác. Được phép sử dụng cấu hình từ Legacy (`google-services.json`, `FirebaseOptions`) làm tham chiếu cho Android binding và `firebase_options.dart`.
+- **Affected Phase:** Clean Rebuild V5.1 — A0 Foundation Firebase Integration
+- **Affected Files:** `clean_rebuild_v5/lib/core/firebase/firebase_options.dart`, `clean_rebuild_v5/android/app/google-services.json`
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / ACTIVE BASELINE`.
+
 ### DEC-2026-GOV-OFFICIAL-CLEAN-REBUILD-SOURCE-RULE
 - **Date:** 2026-09-29
 - **Decision:** PO Tuấn chính thức quy định và phê duyệt (PROMPT-146): Ban hành 10 quy tắc bắt buộc về phân định 3 repository (`Official Clean Rebuild Source Repository` = `TuanLamVi/fnb-smart-v5-clean-rebuild`, `Governance Repository` = `TuanLamVi/boquytacfnb`, `Legacy Source Mirror` = `TuanLamVi/fnb-smart-source`). Mọi Work Item Clean Rebuild chỉ được công nhận `IMPLEMENTATION DONE` khi có source commit thực tế trên `TuanLamVi/fnb-smart-v5-clean-rebuild`. Cấm báo cáo false implementation chỉ dựa trên governance diff.
