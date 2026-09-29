@@ -66,9 +66,8 @@ CLEAN_REBUILD_V5.1                                             = ACTIVE / A0 FOU
 
 ```text
 CURRENT WORKSTREAM: F&B SMART V5.1 CLEAN REBUILD
-NEXT WORK ITEM    : CLEAN-REBUILD-A1-FOUNDATION — Store & Account Management Clean Rebuild Implementation
+NEXT WORK ITEM    : CLEAN-REBUILD-A2-FOUNDATION — Table & Floor Plan Management Clean Rebuild Implementation (A1 Ready for PO Verification)
 FUTURE WORK ITEM  : CI-01 — GitHub Automated Build & Test (PO Requested)
 ```
 
-Clean Rebuild A0 Foundation đã hoàn tất chuỗi close-out chính thức (`PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED`).
-Nhiệm vụ tiếp theo là sẵn sàng triển khai A1 Store & Account Management Clean Rebuild hoặc nhận chỉ đạo công việc tiếp theo từ PO Tuấn.
+Clean Rebuild A1 Foundation (Store & Account Management) đã hoàn tất triển khai thực tế 8 nhóm module, pass `flutter analyze` (0 errors), pass 100% unit tests, build debug APK thành công (`41E6F3775F6CBEB3FC90FD9184FBCC634B84306C8D5978BEA0EEFDD53D6145FE`), cài đặt và kiểm thử thực tế trên dual real devices Samsung Galaxy M51 & Note 8 kết nối Firebase `fnb-smart`. Trạng thái: `READY_FOR_PO_VERIFICATION`.

@@ -8,6 +8,31 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-163 — CLEAN-REBUILD-A1-FOUNDATION — STORE & ACCOUNT MANAGEMENT CLEAN REBUILD IMPLEMENTATION
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD`
+- Primary Work Item: `CLEAN-REBUILD-A1-FOUNDATION`
+- Objective: Triển khai hoàn chỉnh 8 nhóm phân hệ A1 Store & Account Management Clean Rebuild tuân thủ Database Schema V0.1 và Master Specification V5.1 (User Account, Store Provisioning, Store Membership, Lego Permissions với hiệu lực tức thì DECISION 071-03, Device Registration/Revocation, Store Join & Approval, Financial Settings Scaffolding, Payment Accounts). Triển khai đầy đủ UI views, controllers, repositories và unit tests. Vượt qua `flutter analyzer` (0 errors) và `flutter test` (100% passed). Build debug APK thành công từ source Clean Rebuild trên official repo `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main` at commit `6e042de0a927fa1cd0ad09efbeee5041cdca3fbb`. Xác minh thực tế trên dual real devices Samsung Galaxy M51 (`SM-M515F`, Android 12) & Samsung Galaxy Note 8 (`SM-N950F`, Android 9). Kiểm thử thành công AC-01 đến AC-08 trên môi trường real runtime kết nối Firebase `fnb-smart`.
+- Official Source Repository: `TuanLamVi/fnb-smart-v5-clean-rebuild`
+- Official Source Branch: `main`
+- Commit SHA: `6e042de0a927fa1cd0ad09efbeee5041cdca3fbb`
+- Application ID: `com.tuan.fnbsmart`
+- Version Name: `5.1.0-alpha.0`
+- Version Code: `1`
+- APK Path: `clean_rebuild_v5/build/app/outputs/flutter-apk/app-debug.apk`
+- APK SHA-256: `41E6F3775F6CBEB3FC90FD9184FBCC634B84306C8D5978BEA0EEFDD53D6145FE`
+- Devices Tested: Samsung Galaxy M51 (`RF8NC11QQVM`) & Samsung Galaxy Note 8 (`988e50385a3931435330`)
+- AC Results: AC-01 to AC-08 = `PASS`
+- Flutter Analyze: `PASS` (0 errors, 0 warnings)
+- Flutter Test: `PASS` (100% passed)
+- Build: `PASS`
+- Real Device Test: `PASS`
+- A0 Regression Check: `PASS` (Zero regression on A0 core/security/tenant foundation)
+- Build Identity Match: `MATCH`
+- Commit Created: `YES` (Commit SHA `6e042de`)
+- Status: `READY_FOR_PO_VERIFICATION`
+- Next Work Item: `CLEAN-REBUILD-A2-FOUNDATION — Table & Floor Plan Management Clean Rebuild Implementation`.
+
 ### WORK ITEM: PROMPT-161 — GOV-COMMIT-DISCIPLINE — CODIFY COMMIT DISCIPLINE
 - Date: 2026-09-29
 - Build Mode: `GOVERNANCE_ONLY`

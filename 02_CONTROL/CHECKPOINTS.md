@@ -8,6 +8,7 @@ Registry danh sách các Checkpoints và kết quả được ghi nhận chính 
 
 ## Danh sách Checkpoints Ghi nhận
 
+- `CLEAN-REBUILD-A1-FOUNDATION` — `IMPLEMENTATION COMPLETE / READY_FOR_PO_VERIFICATION` (Store & Account Management Clean Rebuild Implementation, Prompt 163, Official Source Repo `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main`, Commit `6e042de0a927fa1cd0ad09efbeee5041cdca3fbb`, Real Device Tested M51 & Note 8, APK SHA-256 `41E6F3775F6CBEB3FC90FD9184FBCC634B84306C8D5978BEA0EEFDD53D6145FE`)
 - `GOV-COMMIT-DISCIPLINE` — `PO_VERIFIED / BASELINE FREEZE` (Codified Commit Discipline Rule Section 19 in KIM CHỈ NAM, DEC-2026-GOV-COMMIT-DISCIPLINE, Prompt 161)
 - `CLEAN-REBUILD-A0-FOUNDATION` — `PO_VERIFIED / PROTECTED / LOCKED` (PO Tuấn verified PASS on dual real devices M51 & Note 8, DEC-2026-A0-CLEAN-REBUILD-PO-VERIFIED, Official Source Repo `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main`, Commit `7e26108c6d37164447ff5409fc54a40bcca688c2`)
 - `CLEAN-REBUILD-A0-FOUNDATION-VERSION-BUILD-BASELINE-01` — `IMPLEMENTATION COMPLETE / READY_FOR_PO_VERIFICATION` (Finalized Version & Build Baseline Repository Sync, Prompt 159, Official Source Repo `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main`, Commit `7e26108c6d37164447ff5409fc54a40bcca688c2`)
