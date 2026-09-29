@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-126 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — COMMIT & SYNC AFTER PO UPDATE
+- Date: 2026-09-28
+- Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
+- Objective: Xác minh diff và commit/sync bản Clean Rebuild Master Specification V5.1 Draft V0.1 do PO Tuấn cập nhật thủ công vào `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md` lên GitHub (`TuanLamVi/boquytacfnb`, branch `codex/migrate-kim-chi-nam-20260928`), giữ nguyên an toàn Git và ranh giới không thay đổi code ứng dụng.
+- Scope: `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md` & `docs-123/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`.
+- Application Code Changes: `NONE` (100% Document Commit & Sync).
+- Technical Result: PASS — Master Spec Draft V0.1 committed và synced thành công.
+- PO Status: `DRAFT V0.1 — READY FOR PO REVIEW`
+- Evidence: Exact git blob SHA, GitHub sync output.
+- Next: PO Review of Clean Rebuild Master Specification V5.1 Draft V0.1.
+
 ### WORK ITEM: PROMPT-125 — CLEAN REBUILD MASTER SPECIFICATION V5.1 — VERIFY & SYNC AFTER PO-PROVIDED CONTENT
 - Date: 2026-09-28
 - Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENT AUDIT ONLY)`
