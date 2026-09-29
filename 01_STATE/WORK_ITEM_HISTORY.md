@@ -8,6 +8,35 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-149 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — REMOVE FAKE AUTH/APPCHECK FALLBACKS & CLEAN GIT TRACKING ARTIFACTS
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD`
+- Primary Work Item: `CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01`
+- Objective: Sửa dứt điểm các điểm chưa đạt xác định sau kiểm tra PROMPT-148: loại bỏ hoàn toàn fallback giả lập trong Firebase Auth và App Check; yêu cầu getIdToken() và App Check token chỉ sử dụng API/abstraction thật; cài đặt recursive deterministic canonicalization cho Outbox SHA-256 request hashing; xóa `.dart_tool/` và `build/` khỏi Git tracking trên Official Clean Rebuild Source Repository; cập nhật `.gitignore`; viết lại bộ unit test kiểm thử abstraction với mock/fake rõ ràng.
+- Official Source Repository: `TuanLamVi/fnb-smart-v5-clean-rebuild`
+- Official Source Branch: `main`
+- Source Commit SHA: `51fdab1e9f175800fdd936c225693143c7b31406`
+- Source Root: `clean_rebuild_v5/`
+- Auth Real: `YES`
+- Fake Auth Fallback Removed: `YES`
+- Real ID Token Only: `YES`
+- App Check Real: `YES`
+- Fake App Check Acceptance Removed: `YES`
+- App Check Activation: `BLOCKED`
+- Firebase Ready State Correct: `YES`
+- Stable SHA-256: `YES`
+- Nested Canonicalization: `YES`
+- Dart Tool Tracked: `NO`
+- Build Artifact Tracked: `NO`
+- Analyze: `PASS` (0 errors, 0 warnings)
+- Test: `PASS` (100% passed)
+- Build: `BLOCKED — FIREBASE NATIVE CONFIGURATION MISSING`
+- Legacy Touched: `NO`
+- Provenance Verified: `YES` (Direct GitHub commit SHA `51fdab1e9f175800fdd936c225693143c7b31406` verified via `git ls-remote`).
+- PO Authorization: `DEC-2026-A0-REBUILD-01-AUTHORIZED`
+- Implementation Status: `IMPLEMENTATION COMPLETE`
+- Next: `PO REVIEW OF A0 CLEAN REBUILD`.
+
 ### WORK ITEM: PROMPT-148 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — UPGRADE REAL FIREBASE, AUTH, APP CHECK, SHA-256 HASHING & GIT HYGIENE
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD`
