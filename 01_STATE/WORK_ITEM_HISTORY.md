@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-143 — CLEAN-REBUILD-A0-FOUNDATION — SOURCE REPOSITORY & PROVENANCE CORRECTION
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD / SOURCE PROVENANCE CORRECTION`
+- Objective: Khắc phục sai lệch provenance của Prompt-142, xác lập chính thức Clean Rebuild application source repository là `TuanLamVi/fnb-smart-v5-clean-rebuild` (local root `clean_rebuild_v5/`), tách biệt hoàn toàn với governance repository (`boquytacfnb`) và legacy source mirror (`fnb-smart-source`).
+- Scope: Source repository provenance mapping & correction.
+- Application Code Changes: `NONE` (100% Provenance Correction & Source Repository Designation).
+- Technical Result: A0 SOURCE PRESENT IN OFFICIAL CLEAN REBUILD REPOSITORY (`clean_rebuild_v5/` mapped to `TuanLamVi/fnb-smart-v5-clean-rebuild`).
+- PO Status: `A0 SOURCE PRESENT IN OFFICIAL CLEAN REBUILD REPOSITORY`
+- Evidence: Verified local existence, contents, and source cleanliness of `clean_rebuild_v5/` files, governance records updated, committed, and synchronized to GitHub.
+- Next: `PO REVIEW AFTER SOURCE PROVENANCE IS ESTABLISHED`.
+
 ### WORK ITEM: PROMPT-142 — CLEAN-REBUILD-A0-FOUNDATION-REBUILD-01 — CLEAN REBUILD A0 FROM ZERO
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD`
