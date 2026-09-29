@@ -8,6 +8,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-138 — CLEAN-REBUILD-A1-FOUNDATION — PO VERIFICATION PREPARATION
+- Date: 2026-09-29
+- Build Mode: `PO_VERIFICATION_PREPARATION`
+- Objective: Chuẩn bị tài liệu nghiệm thu thực tế bằng tiếng Việt (Bài test PO cho A1 Store & Account Management) giúp PO Tuấn kiểm chứng trực tiếp các tính năng A1 (Auth, Tenant, Store, Membership, LEGO Permissions, Store Join) mà không cần đọc code kỹ thuật; thực hiện kiểm tra regression PASS đối với A0 protected scope.
+- Scope: PO Test Package preparation & A1 verification readiness.
+- Application Code Changes: `NONE` (100% PO Verification Preparation & Documentation).
+- Technical Result: PASS — PO Test Guide created and regression check confirmed against A0.
+- PO Status: `READY_FOR_PO_VERIFICATION`
+- Evidence: PO test guide established, governance records updated, committed, and synchronized to GitHub.
+- Next: `PO REVIEW / PO VERIFICATION OF A1`.
+
 ### WORK ITEM: PROMPT-137 — GOV-AI-WORKING-DISCIPLINE — CORRECTIVE GOVERNANCE & STALE STATUS SYNC
 - Date: 2026-09-29
 - Build Mode: `GOVERNANCE_ONLY`
