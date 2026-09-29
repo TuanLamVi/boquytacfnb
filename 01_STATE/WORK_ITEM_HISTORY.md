@@ -8,6 +8,18 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-131 — CLEAN-REBUILD-A0-FOUNDATION — IMPLEMENTATION & INFRASTRUCTURE BOOTSTRAP
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD`
+- Objective: Thực hiện thành công Clean Rebuild Architecture & Core Infrastructure Setup (A0) trên canonical application workspace (`C:/Users/Admin/Desktop/Android/fnb_smart`), thiết lập cấu trúc workspace, ranh giới package/module (`packages/core_saas`), core infrastructure skeleton, bảo mật cơ bản (Firebase Auth + App Check contracts), và tenant/store isolation baseline tuân thủ tuyệt đối Master Specification V5.1.
+- Scope: Canonical application workspace infrastructure setup (`packages/core_saas`, core services, security & tenant isolation baseline).
+- Application Code Changes: `YES` (Core infrastructure bootstrap & foundation scaffolding; zero business features).
+- Technical Result: PASS — A0 Foundation implementation completed successfully.
+- PO Authorization: `APPROVED — BEGIN A0`
+- PO Status: `READY_FOR_PO_VERIFICATION`
+- Evidence: Application workspace structure, core infrastructure skeleton, security and tenant isolation foundation established, records committed and synchronized to GitHub.
+- Next: PO Review & Verification of A0 Foundation.
+
 ### WORK ITEM: PROMPT-130 — CLEAN-REBUILD-A0-FOUNDATION — ARCHITECTURE & CORE INFRASTRUCTURE SETUP
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD`
