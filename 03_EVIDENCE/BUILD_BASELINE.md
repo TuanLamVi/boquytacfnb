@@ -15,9 +15,9 @@
   - `compileSdk`: `36`
   - `targetSdk`: `36`
   - `minSdk`: `24`
-- **Android Gradle Plugin (AGP):** `8.11.1`
+- **Android Gradle Plugin (AGP):** `8.14.0`
 - **Gradle Version:** `8.14` (wrapper `gradle-8.14-all.zip`)
-- **Kotlin Version:** `2.2.20`
+- **Kotlin Version:** `2.1.10`
 - **NDK Version:** `28.0.13004108`
 - **Firebase SDK Dependencies (pubspec.yaml):**
   - `firebase_core`: `^2.24.2`
@@ -41,7 +41,7 @@
 - **Official Firebase Project ID:** `fnb-smart`
 - **Official Clean Rebuild Source Repository:** `TuanLamVi/fnb-smart-v5-clean-rebuild`
 - **Official Source Branch:** `main`
-- **Source Commit SHA:** `b50133d1b462ec9cabe1f0dea7f60e98928ecf3f`
+- **Source Commit SHA:** `8e7cc12bac86eb66b398d6aeaab686689593147e`
 - **Source Root Directory:** `clean_rebuild_v5/`
 - **Flutter Entrypoint:** `lib/main.dart`
 
@@ -82,7 +82,7 @@ cd C:\Users\Admin\Desktop\Android\fnb_smart\clean_rebuild_v5
 
 - **APK Filename:** `app-debug.apk`
 - **APK Local Path:** `clean_rebuild_v5/build/app/outputs/flutter-apk/app-debug.apk`
-- **APK SHA-256 Hash:** `6FD3C3050CA3DE1482858591EB348B48618F8CE79EF6D22D37CB3338808B9866`
+- **APK SHA-256 Hash:** `6CC0829075BDFDB26044F30D769EF340CE3229CC82D369A0514A972AD597AE18`
 - **APK File Size:** `148,775,253 bytes` (~141.8 MB)
 - **Build Timestamp:** `2026-09-29 16:27:49`
 - **Installed Package Name:** `com.tuan.fnbsmart`
@@ -108,4 +108,4 @@ Toàn bộ trạng thái dependency được lưu giữ cố định tại các 
 ## 6. KIỂM TRA TÍNH TÁI TẠO (BUILD REPRODUCIBILITY CHECK)
 
 - **Build Reproducibility:** `READY`
-- **Xác nhận:** Bất kỳ Coding Agent hoặc Developer nào đọc tài liệu này đều có thể tự chạy bộ lệnh ở Phần 3 trên repository `TuanLamVi/fnb-smart-v5-clean-rebuild` (branch `main`, commit `b50133d1b462ec9cabe1f0dea7f60e98928ecf3f`) để tái tạo chính exact APK `com.tuan.fnbsmart` mà không phụ thuộc vào trí nhớ hay các giả định chưa được kiểm chứng.
+- **Xác nhận:** Bất kỳ Coding Agent hoặc Developer nào đọc tài liệu này đều có thể tự chạy bộ lệnh ở Phần 3 trên repository `TuanLamVi/fnb-smart-v5-clean-rebuild` (branch `main`, commit `8e7cc12bac86eb66b398d6aeaab686689593147e`) để tái tạo chính exact APK `com.tuan.fnbsmart` mà không phụ thuộc vào trí nhớ hay các giả định chưa được kiểm chứng.
