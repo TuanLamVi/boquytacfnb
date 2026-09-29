@@ -8,6 +8,18 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-135 — CLEAN-REBUILD-A1-FOUNDATION — STORE & ACCOUNT MANAGEMENT IMPLEMENTATION
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD`
+- Objective: Triển khai thành công Work Item A1 của F&B SMART V5.1 (Store & Account Management Clean Rebuild Implementation) bao gồm Tenant, Store provisioning, Staff Authentication (Firebase Auth + App Check), Store Membership, Role / LEGO Permissions, Device binding, và Store Join flow tuân thủ tuyệt đối Master Specification V5.1 và 4 Hợp đồng Kỹ thuật V5.1.
+- Scope: Tenant, Store, Auth, Membership, LEGO Permissions, and Store Join implementation (`packages/core_saas/*`).
+- Application Code Changes: `YES` (Store & Account Management Foundation implementation).
+- Technical Result: PASS — A1 Store & Account Management Clean Rebuild implementation completed successfully with zero regression against A0 protected scope.
+- PO Authorization: `CHO PHÉP A1 — CLEAN-REBUILD-A1-FOUNDATION`
+- PO Status: `READY_FOR_PO_VERIFICATION`
+- Evidence: Tenant/Store models, repos, services, auth/membership flows implemented, regression check passed against A0 protected scope, records committed and synchronized to GitHub.
+- Next: `PO REVIEW / PO VERIFICATION OF A1`.
+
 ### WORK ITEM: PROMPT-134 — A0 FOUNDATION — FINAL CLOSURE SYNCHRONIZATION
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD (GOVERNANCE / DOCUMENTATION ONLY)`

@@ -62,7 +62,7 @@ CLEAN_REBUILD_V5.1                                             = ACTIVE / INFRAS
 
 ```text
 CURRENT WORKSTREAM: F&B SMART V5.1 CLEAN REBUILD
-CURRENT STEP      : CLEAN-REBUILD-A1-FOUNDATION — CANDIDATE / AWAITING PO AUTHORIZATION
+CURRENT STEP      : PO REVIEW / PO VERIFICATION OF A1
 ```
 
-Nhiệm vụ tiếp theo: Master Specification V5.1 và Clean Rebuild A0 Foundation đều đã đạt trạng thái `PO_VERIFIED / PROTECTED / LOCKED`. A1 chưa được phép triển khai nếu chưa có PO authorization chính thức. Next work item candidate: `CLEAN-REBUILD-A1-FOUNDATION — CANDIDATE / AWAITING PO AUTHORIZATION`.
+Nhiệm vụ tiếp theo: A1 Store & Account Management Clean Rebuild Implementation đã hoàn tất và đạt trạng thái `READY_FOR_PO_VERIFICATION`. Trọng tâm tiếp theo là chờ PO Tuấn nghiệm thu và xác nhận `PO_VERIFIED` cho A1 trước khi chuyển sang các Work Item tiếp theo.
