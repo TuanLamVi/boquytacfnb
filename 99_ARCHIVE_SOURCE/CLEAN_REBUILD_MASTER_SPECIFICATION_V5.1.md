@@ -2,11 +2,11 @@
 
 ## 1. Document Control
 - **Document Title:** F&B Smart V5.1 — Clean Rebuild Master Specification
-- **Version:** DRAFT V0.1
-- **Status:** DRAFT — READY FOR PO REVIEW
+- **Version:** V5.1 (Final Locked)
+- **Status:** PO_VERIFIED / PROTECTED / LOCKED (Golden Governance Baseline)
 - **Build Mode:** CLEAN_REBUILD
 - **Primary Work Item:** MASTER-SPECIFICATION-GATE
-- **Prompt ID:** PROMPT-127
+- **Prompt ID:** PROMPT-132
 - **Author:** Architecture Governance & Product Team
 - **Source Authority:** KIM CHỈ NAM, PO Decisions, Four V5.1 Contracts (`PRODUCT_CHARTER_V5.1.md`, `DATABASE_SCHEMA_V0.1.md`, `STATE_MACHINES_V0.1.md`, `FIRESTORE_QUERY_COST_BUDGET_V0.1.md`), and Locked Product Discovery modules.
 - **Canonical Remote Repository Path:** `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md` (Repository: `TuanLamVi/boquytacfnb`, Branch: `codex/migrate-kim-chi-nam-20260928`).
@@ -338,5 +338,5 @@ The scope encompasses the complete end-to-end lifecycle for F&B Smart V5.1 MVP:
 ---
 
 ## 32. Master Specification Gate / Approval
-- **Status:** DRAFT V0.1 — READY FOR PO REVIEW
-- **Next Gate:** Awaiting PO review and formal verification gate (`PO_VERIFIED`).
+- **Status:** PO_VERIFIED / PROTECTED / LOCKED (Golden Governance Baseline)
+- **Next Gate:** Master Specification Gate officially closed and locked.
