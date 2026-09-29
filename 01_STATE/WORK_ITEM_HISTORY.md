@@ -8,6 +8,35 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-159 — CLEAN-REBUILD-A0-FOUNDATION — FINALIZE VERSION & BUILD BASELINE REPOSITORY SYNC
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD`
+- Primary Work Item: `CLEAN-REBUILD-A0-FOUNDATION`
+- Objective: Hoàn tất lưu mốc version/build chính thức vào official repository `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main`. Xác minh HEAD commit thực tế (`8f734cbf9f1b76d378e8379d3ba48b2c9697a82c`), đối chiếu commit `8e7cc12bac86eb66b398d6aeaab686689593147e` từ Prompt-158 (đây là commit trên local root workspace), đồng bộ `clean_rebuild_v5/docs/release/VERSION_RELEASE_BASELINE.md` và `clean_rebuild_v5/docs/build/BUILD_REPRODUCTION_BASELINE.md` lên official repo branch `main` tại commit `7e26108c6d37164447ff5409fc54a40bcca688c2`.
+- Official Source Repository: `TuanLamVi/fnb-smart-v5-clean-rebuild`
+- Official Source Branch: `main`
+- Official HEAD: `8f734cbf9f1b76d378e8379d3ba48b2c9697a82c`
+- Prompt-158 Reported Source Commit: `8e7cc12bac86eb66b398d6aeaab686689593147e`
+- Prompt-158 Source Commit Verified on Remote: `NO` (Local workspace root commit)
+- Legacy Version: `1.4.0`
+- Legacy Build Number: `13`
+- Legacy Application ID: `com.tuan.fnbsmart`
+- Clean Rebuild Version: `5.1.0-alpha.0`
+- Clean Rebuild Version Code: `1`
+- Clean Rebuild Application ID: `com.tuan.fnbsmart`
+- Firebase Project: `fnb-smart`
+- Version Baseline File: `clean_rebuild_v5/docs/release/VERSION_RELEASE_BASELINE.md`
+- Version Baseline Committed: `YES`
+- Build Baseline File: `clean_rebuild_v5/docs/build/BUILD_REPRODUCTION_BASELINE.md`
+- Build Baseline Committed: `YES`
+- Final Documentation Commit SHA: `7e26108c6d37164447ff5409fc54a40bcca688c2`
+- Documentation Sync: `PASS`
+- Source Code Changed: `NO`
+- APK Rebuild Required: `NO`
+- Conflict: `NONE`
+- Implementation Status: `IMPLEMENTATION COMPLETE`
+- Next: `AWAITING PO VERIFICATION OF A0 CLEAN REBUILD`.
+
 ### WORK ITEM: PROMPT-157 — CLEAN-REBUILD-A0-FOUNDATION — DUAL REAL DEVICE BUILD, INSTALL & REAL RUNTIME VERIFICATION (M51 & NOTE 8)
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD`
