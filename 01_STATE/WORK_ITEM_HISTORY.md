@@ -8,6 +8,38 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 
 ## Danh sách Lịch sử Work Item
 
+### WORK ITEM: PROMPT-160 — CLEAN-REBUILD-A0-FOUNDATION — PO VERIFICATION, PROTECTION, LOCK & CLOSE-OUT
+- Date: 2026-09-29
+- Build Mode: `CLEAN_REBUILD`
+- Primary Work Item: `CLEAN-REBUILD-A0-FOUNDATION`
+- PO Decision: `PO_VERIFIED A0 — PASS`
+- PO: Tuấn
+- Result: `PASS`
+- PO_VERIFIED: `YES`
+- Regression Check: `PASS`
+- Protected: `YES`
+- Locked: `YES`
+- Close-Out Chain: `PASS → PO_VERIFIED → REGRESSION CHECK (PASS) → PROTECTED → LOCKED`
+- Official Source Repository: `TuanLamVi/fnb-smart-v5-clean-rebuild`
+- Official Source Branch: `main`
+- Official Source Commit SHA: `7e26108c6d37164447ff5409fc54a40bcca688c2`
+- Application ID: `com.tuan.fnbsmart`
+- Version Name: `5.1.0-alpha.0`
+- Version Code: `1`
+- Firebase Project: `fnb-smart`
+- Legacy Baseline: `1.4.0+13`
+- Real Device Evidence: Samsung Galaxy M51 (`SM-M515F`, Android 12) & Samsung Galaxy Note 8 (`SM-N950F`, Android 9)
+- APK SHA-256: `6CC0829075BDFDB26044F30D769EF340CE3229CC82D369A0514A972AD597AE18`
+- Work Item History: `UPDATED`
+- PO Decision Log: `UPDATED` (DEC-2026-A0-CLEAN-REBUILD-PO-VERIFIED)
+- Protection Map: `UPDATED` (`PO_VERIFIED / PROTECTED / LOCKED`)
+- Checkpoints: `UPDATED` (`PO_VERIFIED / PROTECTED / LOCKED`)
+- Current State: `UPDATED` (`PO_VERIFIED / PROTECTED / LOCKED`)
+- AI Handoff: `UPDATED`
+- CI/CD Future Work Item Recorded: `CI-01 — GitHub Automated Build & Test`
+- Implementation Status: `PO_VERIFIED / PROTECTED / LOCKED`
+- Next Work Item: `CLEAN-REBUILD-A1-FOUNDATION — Store & Account Management Clean Rebuild Implementation`.
+
 ### WORK ITEM: PROMPT-159 — CLEAN-REBUILD-A0-FOUNDATION — FINALIZE VERSION & BUILD BASELINE REPOSITORY SYNC
 - Date: 2026-09-29
 - Build Mode: `CLEAN_REBUILD`

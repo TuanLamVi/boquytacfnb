@@ -10,10 +10,10 @@ PASS → PO_VERIFIED → REGRESSION CHECK → PROTECTED → LOCKED
 
 ## Các Vùng Đang được Bảo vệ (Protected & Locked Scope)
 
-### 1. CLEAN REBUILD A0 FOUNDATION (PROMPT 131–133)
+### 1. CLEAN REBUILD A0 FOUNDATION (PROMPT 131–160)
 - **Status:** `PO_VERIFIED / PROTECTED / LOCKED`
-- **Protected Content:** Canonical application workspace structure and core infrastructure foundation (`packages/core_saas`, core services, Firebase Auth + App Check security baseline, tenant/store isolation foundation).
-- **Rule:** Protected and Locked baseline for Clean Rebuild V5.1 architecture (DEC-2026-A0-FOUNDATION-PO-VERIFIED). Legacy protection is separate and frozen; A0 has independent Clean Rebuild protection.
+- **Protected Content:** Canonical application workspace structure and core infrastructure foundation (`clean_rebuild_v5/`), Firebase Project `fnb-smart`, Application ID `com.tuan.fnbsmart`, version `5.1.0-alpha.0+1`, Firebase Auth + App Check security baseline, tenant/store isolation foundation, local outbox queue, Build Reproduction Baseline (`BUILD_REPRODUCTION_BASELINE.md`), and Version Release Baseline (`VERSION_RELEASE_BASELINE.md`).
+- **Rule:** Protected and Locked baseline for Clean Rebuild V5.1 architecture (DEC-2026-A0-CLEAN-REBUILD-PO-VERIFIED). Official source repository: `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main` (commit `7e26108c6d37164447ff5409fc54a40bcca688c2`). Legacy protection is separate and frozen.
 
 ### 2. CLEAN REBUILD MASTER SPECIFICATION V5.1 (PROMPTS 115–127)
 - **Status:** `PO_VERIFIED / PROTECTED / LOCKED` (Golden Governance Baseline)

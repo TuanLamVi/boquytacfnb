@@ -8,6 +8,16 @@
 
 ## 2. DANH SÁCH QUYẾT ĐỊNH
 
+### DEC-2026-A0-CLEAN-REBUILD-PO-VERIFIED
+- **Date:** 2026-09-29
+- **Decision:** PO Tuấn chính thức xác nhận và phê duyệt `PO_VERIFIED A0 — PASS` cho **Clean Rebuild A0 Foundation** (`CLEAN-REBUILD-A0-FOUNDATION`).
+- **Reason:** Trực tiếp nghiệm thu thực tế ứng dụng Clean Rebuild A0 Foundation chạy trên 2 thiết bị thật Samsung Galaxy M51 (`SM-M515F`, Android 12) và Samsung Galaxy Note 8 (`SM-N950F`, Android 9), kết nối Firebase Project `fnb-smart`, xác thực Firebase Auth, App Check (`f95f6a9d-8be8-4041-b28e-0375ae1bc2c3`), Firestore, Build Identity `com.tuan.fnbsmart`, version `5.1.0-alpha.0+1`, APK SHA-256 (`6CC0829075BDFDB26044F30D769EF340CE3229CC82D369A0514A972AD597AE18`).
+- **Close-Out Chain:** `PASS → PO_VERIFIED → REGRESSION CHECK (PASS) → PROTECTED → LOCKED`.
+- **Affected Phase:** Clean Rebuild V5.1 — A0 Foundation Gate
+- **Affected Files:** Official Clean Rebuild Source Repository `TuanLamVi/fnb-smart-v5-clean-rebuild` branch `main` (commit `7e26108c6d37164447ff5409fc54a40bcca688c2`).
+- **Decided By:** Tuấn — Chủ đầu tư / PO
+- **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
 ### DEC-2026-FIREBASE-PROJECT-FNB-SMART
 - **Date:** 2026-09-29
 - **Decision:** PO Tuấn quyết định chính thức và có hiệu lực ngay lập tức (PROMPT-152): F&B Smart V5.1 Clean Rebuild sử dụng Firebase Project hiện tại `fnb-smart`. Không tạo Firebase Project mới, không chuyển sang `fnb-smart-dev` hay bất kỳ Project ID nào khác. Được phép sử dụng cấu hình từ Legacy (`google-services.json`, `FirebaseOptions`) làm tham chiếu cho Android binding và `firebase_options.dart`.
