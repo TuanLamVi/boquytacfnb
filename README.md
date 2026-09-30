@@ -15,7 +15,6 @@ Repository nguồn chuẩn cho bộ Governance / KIM CHỈ NAM của F&B SMART V
 
 Repository vừa được khởi tạo. Bộ tài liệu chuẩn đang được migrate từ gói tài liệu nguồn của PO.
 
-Xem:
-- `docs/00_MIGRATION/CODEX_MIGRATION_INSTRUCTIONS.md`
+Xem:codex/migrate-kim-chi-nam-20260928
 
 ## Không được coi repository này là hoàn chỉnh cho đến khi migration được xác nhận.
