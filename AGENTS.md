@@ -4,19 +4,19 @@
 
 Trước khi sửa code hoặc đưa ra quyết định kỹ thuật, hãy đọc:
 
-1. `docs/boquytacfnb/00_KIM_CHI_NAM/AI_READ_FIRST.md`
-2. `docs/boquytacfnb/00_KIM_CHI_NAM/KIM_CHI_NAM.md`
-3. `docs/boquytacfnb/00_KIM_CHI_NAM/SOURCE_OF_TRUTH.md`
-4. `docs/boquytacfnb/01_STATE/CURRENT_STATE.md`
-5. `docs/boquytacfnb/02_CONTROL/CHECKPOINTS.md`
-6. `docs/boquytacfnb/02_CONTROL/PROTECTION_MAP.md`
-7. `docs/boquytacfnb/02_CONTROL/REGRESSION_LOG.md`
-8. `docs/boquytacfnb/00_KIM_CHI_NAM/LOGGING_PROTOCOL.md`
+1. `00_KIM_CHI_NAM/AI_READ_FIRST.md`
+2. `00_KIM_CHI_NAM/KIM_CHI_NAM.md`
+3. `00_KIM_CHI_NAM/SOURCE_OF_TRUTH.md`
+4. `01_STATE/CURRENT_STATE.md`
+5. `02_CONTROL/CHECKPOINTS.md`
+6. `02_CONTROL/PROTECTION_MAP.md`
+7. `02_CONTROL/REGRESSION_LOG.md`
+8. `00_KIM_CHI_NAM/LOGGING_PROTOCOL.md`
 9. Tài liệu kỹ thuật liên quan trực tiếp đến việc đang làm.
 
 ## Quy tắc dễ nhớ
 
-- Repository governance là nguồn chính.
+- Repository governance là nguồn chính (`TuanLamVi/boquytacfnb`).
 - Không dùng trí nhớ AI để thay tài liệu trong repository.
 - Không tự sửa KIM CHỈ NAM / LAW.
 - Không tự ghi `PO_VERIFIED`.
@@ -43,24 +43,7 @@ Git commit history giữ lịch sử thay đổi file. Không cần chép cùng 
 
 ## Đồng bộ lên GitHub — BẮT BUỘC SAU WORK ITEM
 
-Sau khi cập nhật các record trên máy, phải chạy:
-
-`INTEGRATION/SYNC_LOCAL_RECORDS_TO_GITHUB.ps1`
-
-Lệnh này:
-1. kiểm tra đăng nhập GitHub;
-2. cập nhật bản local governance từ GitHub trước;
-3. dừng nếu có thay đổi chưa xử lý để tránh ghi đè;
-4. chép các record governance từ project lên kho `TuanLamVi/boquytacfnb`;
-5. commit;
-6. push lên GitHub.
-
-Không coi Work Item đã đồng bộ cho đến khi lệnh báo **DONG BO THANH CONG**.
-
-Nếu push lỗi:
-- không bỏ qua;
-- không báo "đã đồng bộ";
-- báo `SYNC BLOCKED` trong Final Report.
+Đồng bộ trực tiếp các record governance lên repository chuẩn `TuanLamVi/boquytacfnb` branch `main`.
 
 ## Vai trò
 
