@@ -1,0 +1,7 @@
+GitHub repository:
+https://github.com/TuanLamVi/boquytacfnb
+
+Governance branch currently used for migration:
+codex/migrate-kim-chi-nam-20260928
+
+After PO approval, the canonical branch can be changed to main.
