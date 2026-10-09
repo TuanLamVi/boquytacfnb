@@ -54,3 +54,15 @@ NEXT STEP: CLEAN REBUILD MASTER SPECIFICATION
 ```
 
 - Không ghi nhận `PO_VERIFIED` cho bất kỳ application code mới nào cho đến khi hoàn thành Master Specification Gate và được PO nghiệm thu.
+
+## 4. Master Specification Gate — Remote Evidence Snapshot (2026-10-09)
+
+- **Four V5.1 technical contracts:** Present under `99_ARCHIVE_SOURCE/` on canonical `main`; verified source blob SHAs preserved.
+- **Clean Rebuild Master Specification:** `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`, status `DRAFT — READY FOR PO REVIEW`; not PO_VERIFIED.
+- **V5.2 prepaid employee billing:** Draft addendum exists at `99_ARCHIVE_SOURCE/WI-PREPAID-EMPLOYEE-BILLING-01_SPECIFICATION_ADDENDUM_V5.2.md`; not approved for implementation.
+- **Prepaid trial threshold:** Explicit PO direction (100 successful commercial orders, excluding 5 test orders) recorded in PO Decision Register; runtime order-count evidence is separate.
+- **Low-wallet warning Decision 2:** OPEN / PENDING PO DECISION (trigger, channel, frequency, duplicate suppression).
+- **Gate verdict:** `INCOMPLETE — BLOCKED ON FORMAL PO REVIEW/APPROVAL AND OPEN DECISION 2`.
+- **Application code changes:** NONE.
+- **Canonical NEXT:** `CLEAN REBUILD MASTER SPECIFICATION` (unchanged).
+- **Evidence:** `03_EVIDENCE/GOV-MASTER-SPEC-RECONCILIATION-01_2026-10-09.md`.
