@@ -40,7 +40,7 @@ APPLICATION CODE CHANGES            = NONE (Legacy code untouched)
 A0, A1, A2-01, A2-02, A3-01, A3-02, A3-03, A3-05, A3-06, GP-01 = PO_VERIFIED / LOCKED (Legacy Frozen)
 GOV-025, GOV-026, GOV-027, GOV-028                             = PO_VERIFIED / PROTECTED / LOCKED
 A6-02 (Legacy POS Payment Fix)                                 = BLOCKED / FIRST FAILURE / LEGACY FROZEN
-CLEAN_REBUILD_V5.1                                             = ACTIVE / DESIGN & RESEARCH
+CLEAN_REBUILD_V5.1                                             = MASTER SPECIFICATION PO_VERIFIED / PROTECTED / LOCKED
 ```
 
 ---
@@ -50,7 +50,8 @@ CLEAN_REBUILD_V5.1                                             = ACTIVE / DESIGN
 1. **CLEAN REBUILD MODE IS ACTIVE:** Mọi công việc hiện tại tập trung vào F&B SMART V5.1 Clean Rebuild.
 2. **LEGACY IS FROZEN:** Nghiêm cấm tiếp tục sửa chữa/patch legacy application code.
 3. **CONTRACT-FIRST & MASTER SPECIFICATION GATE:**
-   - Không được phép viết application code mới khi chưa hoàn thành **CLEAN REBUILD MASTER SPECIFICATION** và chưa được PO Tuấn phê duyệt (`PO_VERIFIED`).
+   - **CLEAN REBUILD MASTER SPECIFICATION V5.1 đã được PO duyệt** ngày 2026-10-09 (`PO_VERIFIED / PROTECTED / LOCKED`). Mọi Work Item triển khai V5.1 vẫn cần được ủy quyền riêng và phải có bằng chứng kiểm thử.
+   - **Ví trả trước V5.2 là phạm vi riêng:** chưa viết code ví cho đến khi phụ lục V5.2 được PO duyệt và Decision 2 về cảnh báo số dư thấp được chốt.
    - Order bắt buộc: Requirements → Design → Data Schema → State Machines → Protocol Contracts → Acceptance Test Plan → Code.
 4. **NO ARBITRARY MID-BUILD CHANGES:** Không tự ý sửa thiết kế/kiến trúc giữa chừng nếu chưa qua STOP → Impact Analysis → PO Decision.
 5. **NO APPLICATION PO_VERIFIED:** Không tự ý ghi nhận `PO_VERIFIED` cho code ứng dụng mới.
@@ -61,10 +62,10 @@ CLEAN_REBUILD_V5.1                                             = ACTIVE / DESIGN
 
 ```text
 CURRENT WORKSTREAM: F&B SMART V5.1 CLEAN REBUILD
-CURRENT STEP      : CLEAN REBUILD MASTER SPECIFICATION
+CURRENT STEP      : V5.2 PREPAID WALLET SPECIFICATION FINALIZATION
 ```
 
-Nhiệm vụ tiếp theo: Xây dựng bản thảo **CLEAN REBUILD MASTER SPECIFICATION** chốt toàn bộ phạm vi, chức năng, liên kết, schema, state machines, quy tắc tài chính, phân quyền và tiêu chuẩn kiểm thử cho F&B SMART V5.1 để trình PO Tuấn phê duyệt.
+Nhiệm vụ tiếp theo: Hoàn thiện phụ lục ví trả trước V5.2, chốt quyết định cảnh báo số dư thấp, đối chiếu dữ liệu/trạng thái/bảo mật và trình PO duyệt trước khi mở Work Item lập trình ví.
 
 ## 4. Latest Remote Read-Back — Master Specification Reconciliation (2026-10-09)
 
@@ -76,3 +77,12 @@ Nhiệm vụ tiếp theo: Xây dựng bản thảo **CLEAN REBUILD MASTER SPECIF
 - Decision 2 remains OPEN: low-wallet warning trigger, channel, frequency, and duplicate suppression.
 - `01_STATE/CURRENT_STATE.md` remains authoritative; NEXT is unchanged until formal gate closure.
 - Evidence record: `03_EVIDENCE/GOV-MASTER-SPEC-RECONCILIATION-01_2026-10-09.md`.
+
+## 5. Latest PO Approval Update — 2026-10-09
+
+- PO Tuấn approved the full F&B SMART V5.1 Master Specification and all four V5.1 baseline contracts.
+- Master Specification Gate: PO_VERIFIED / APPROVED / PROTECTED / LOCKED.
+- Evidence: 03_EVIDENCE/MASTER-SPEC-PO-APPROVAL-2026-10-09.md.
+- This is specification approval, not a claim that all application code has been implemented or runtime-tested.
+- V5.2 prepaid wallet addendum remains pending PO approval; low-wallet warning Decision 2 remains open.
+- NEXT: finalize and approve the V5.2 prepaid wallet specification before opening its implementation Work Item.
