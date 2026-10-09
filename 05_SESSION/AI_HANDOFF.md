@@ -65,7 +65,7 @@ CURRENT WORKSTREAM: F&B SMART V5.1 CLEAN REBUILD
 CURRENT STEP      : V5.2 PREPAID WALLET SPECIFICATION FINALIZATION
 ```
 
-Nhiệm vụ tiếp theo: Hoàn thiện phụ lục ví trả trước V5.2, chốt quyết định cảnh báo số dư thấp, đối chiếu dữ liệu/trạng thái/bảo mật và trình PO duyệt trước khi mở Work Item lập trình ví.
+Nhiệm vụ tiếp theo: Hoàn thiện phụ lục ví trả trước V5.2, giữ nguyên quyết định cảnh báo trước 3 ngày, chỉ xử lý các chi tiết thông báo còn mở (kênh gửi, tần suất nhắc lại, chống gửi trùng), đối chiếu dữ liệu/trạng thái/bảo mật và trình PO duyệt trước khi mở Work Item lập trình ví.
 
 ## 4. Historical Remote Read-Back — Before PO Approval (2026-10-09)
 
@@ -84,5 +84,5 @@ Nhiệm vụ tiếp theo: Hoàn thiện phụ lục ví trả trước V5.2, ch�
 - Master Specification Gate: PO_VERIFIED / APPROVED / PROTECTED / LOCKED.
 - Evidence: 03_EVIDENCE/MASTER-SPEC-PO-APPROVAL-2026-10-09.md.
 - This is specification approval, not a claim that all application code has been implemented or runtime-tested.
-- V5.2 prepaid wallet addendum remains pending PO approval; low-wallet warning Decision 2 remains open.
+- V5.2 prepaid wallet addendum remains pending PO approval. Low-wallet warning lead time is confirmed as 3 days before projected insufficient balance; channel, repeat frequency, and duplicate suppression remain open.
 - NEXT: finalize and approve the V5.2 prepaid wallet specification before opening its implementation Work Item.
