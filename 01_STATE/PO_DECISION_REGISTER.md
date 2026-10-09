@@ -504,3 +504,12 @@
 - **Affected Files:** `clean_rebuild_v5/lib/`, `firestore.rules`, Governance records.
 - **Decided By:** Tuấn — Chủ đầu tư / PO
 - **Result:** `PO_VERIFIED / PROTECTED / LOCKED`.
+
+### DEC-2026-PREPAID-TRIAL-THRESHOLD-01
+- **Date:** 2026-10-09
+- **Decision:** Trial eligibility threshold is 100 successful commercial orders; exclude the 5 test orders.
+- **Scope:** Trial threshold for WI-PREPAID-EMPLOYEE-BILLING-01 / F&B SMART prepaid employee billing.
+- **Source:** Explicit PO decision stated by Tuấn in the project conversation; this record documents that decision and is not evidence of live order telemetry.
+- **Decided By:** Tuấn — Chủ đầu tư / Product Owner
+- **Status:** PO DECISION RECORDED; implementation and runtime evidence remain separate.
+- **Limit:** This decision does not approve the Master Specification, does not resolve Decision 2, and does not authorize application-code implementation before the Master Specification Gate is approved.
