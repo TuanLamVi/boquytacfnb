@@ -83,17 +83,22 @@ Do not implement these labels as canonical enum values until the state machine a
 13. Billing/ledger state can be reconciled after a simulated interrupted transaction or retry.
 14. Lock and restore operations preserve audit history and do not modify unrelated orders or store state.
 
-## 7. Explicit Open PO Decision — Decision 2
+## 7. PO Decision 2 — Low-Wallet Warning
 
-**Requirement already decided:** Warn before locking employee/kitchen connections because of low wallet balance.
+**PO-confirmed trigger:** Warn **3 days before the wallet balance is projected to become insufficient** to cover the daily charges for eligible employee/kitchen connections. The warning must arrive before those connections are locked due to insufficient funds.
+
+For forecasting, use the current eligible billable connections and the approved daily rate of 3,000 VND per connection per Vietnam service day. The implementation contract must define the calculation precisely, including changes in eligible connection count, so the warning is reliable and does not create duplicate charges.
+
+**Already decided:**
+- Warning is required before connection lock.
+- Warning lead time is 3 days before projected insufficient balance.
 
 **Still OPEN / PENDING PO DECISION:**
-- Warning threshold or trigger (for example, a fixed remaining balance or projected remaining service days).
 - Delivery channel(s).
-- Frequency / schedule.
+- Frequency / schedule for repeated reminders within the 3-day window.
 - Duplicate suppression and re-notification behavior.
 
-No threshold, channel, frequency, or duplicate policy is assumed by this draft. Implementation must not proceed on these parameters until the PO decision is recorded.
+Do not reopen the 3-day lead time as an unresolved choice. Do not invent the remaining delivery and repeat-notification parameters. Implementation must wait until the addendum and remaining parameters are approved.
 
 ## 8. Technical Decisions Required Before Implementation
 
