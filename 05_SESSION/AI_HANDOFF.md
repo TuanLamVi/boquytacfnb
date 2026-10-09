@@ -65,3 +65,14 @@ CURRENT STEP      : CLEAN REBUILD MASTER SPECIFICATION
 ```
 
 Nhiệm vụ tiếp theo: Xây dựng bản thảo **CLEAN REBUILD MASTER SPECIFICATION** chốt toàn bộ phạm vi, chức năng, liên kết, schema, state machines, quy tắc tài chính, phân quyền và tiêu chuẩn kiểm thử cho F&B SMART V5.1 để trình PO Tuấn phê duyệt.
+
+## 4. Latest Remote Read-Back — Master Specification Reconciliation (2026-10-09)
+
+- Selective reconciliation merged to canonical `main` at `f57e01b8fc274aaf917aeadcce9c2eb04e8a414f` (PR #1).
+- Master Specification draft and all four V5.1 contracts are available under `99_ARCHIVE_SOURCE/`.
+- V5.2 prepaid billing specification addendum is present as DRAFT only.
+- Prepaid trial threshold direction (100 successful commercial orders excluding 5 test orders) is recorded in `01_STATE/PO_DECISION_REGISTER.md`.
+- Do not write application code until the Master Specification Gate is formally PO-approved.
+- Decision 2 remains OPEN: low-wallet warning trigger, channel, frequency, and duplicate suppression.
+- `01_STATE/CURRENT_STATE.md` remains authoritative; NEXT is unchanged until formal gate closure.
+- Evidence record: `03_EVIDENCE/GOV-MASTER-SPEC-RECONCILIATION-01_2026-10-09.md`.
