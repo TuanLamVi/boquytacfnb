@@ -522,3 +522,13 @@
 - **Result:** PO_VERIFIED / APPROVED / PROTECTED / LOCKED for the V5.1 Master Specification baseline.
 - **Evidence:** 03_EVIDENCE/MASTER-SPEC-PO-APPROVAL-2026-10-09.md.
 - **Boundary:** V5.2 prepaid wallet/employee billing addendum is separate and remains pending PO approval. Low-wallet warning Decision 2 remains open. This V5.1 decision does not authorize V5.2 wallet implementation.
+
+
+### DEC-2026-V5.2-LOW-WALLET-WARNING-LEADTIME
+- **Date:** 2026-10-09
+- **Decision:** PO confirms that the low-wallet warning must be sent **3 days before the prepaid wallet balance is projected to become insufficient** for eligible employee/kitchen connection billing, before those connections are locked for insufficient funds.
+- **Calculation boundary:** Forecast against the current eligible billable connections and the daily rate of 3,000 VND per connection per Vietnam service day. The final specification must define calculation behavior when eligible connection counts change.
+- **Still open:** Delivery channel(s), reminder frequency/schedule within the 3-day window, and duplicate suppression/re-notification behavior. These are not to be treated as reopening the already-decided 3-day lead time.
+- **Affected File:** `99_ARCHIVE_SOURCE/WI-PREPAID-EMPLOYEE-BILLING-01_SPECIFICATION_ADDENDUM_V5.2.md`
+- **Decided By:** PO — confirmed in conversation on 2026-10-09
+- **Result:** 3-day warning lead time recorded; V5.2 addendum remains DRAFT pending resolution of the remaining notification details and formal approval. No application-code authorization is granted by this decision alone.
