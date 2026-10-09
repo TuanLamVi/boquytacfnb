@@ -33,7 +33,8 @@ Registry danh sách các Checkpoints và kết quả được ghi nhận chính 
 - `A3-06` — `PO_VERIFIED / LOCKED` (Shift Management UI - Legacy Frozen)
 - `A6-02` — `BLOCKED / FIRST FAILURE / LEGACY FROZEN` (Canonical POS Payment UI Integration - Frozen)
 - `CLEAN-REBUILD-A2` — `PO_VERIFIED / PROTECTED / LOCKED` (Clean Rebuild A2 - Store Membership, Employee Onboarding, Staff Management & Device Foundation)
-- `CLEAN_REBUILD_V5.1` — `ACTIVE / IN_PROGRESS` (Master Specification & Boundary Setup)
+- `CLEAN_REBUILD_V5.1` — `MASTER SPECIFICATION PO_VERIFIED / PROTECTED / LOCKED` (PO approval recorded 2026-10-09; implementation Work Items require separate authorization)
+- `MASTER-SPECIFICATION-GATE-V5.1` — `PO_VERIFIED / APPROVED / PROTECTED / LOCKED` (Full V5.1 Master Specification and four baseline contracts; governance/specification-only approval; evidence: `03_EVIDENCE/MASTER-SPEC-PO-APPROVAL-2026-10-09.md`)
 
 ---
 
