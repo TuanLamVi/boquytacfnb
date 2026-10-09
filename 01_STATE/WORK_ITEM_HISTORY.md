@@ -495,3 +495,17 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 - **Application code:** NONE changed. No build, deployment, or runtime billing claim is made.
 - **Canonical NEXT:** Remains `CLEAN REBUILD MASTER SPECIFICATION`; no NEXT transition is claimed.
 - **Evidence:** `03_EVIDENCE/GOV-MASTER-SPEC-RECONCILIATION-01_2026-10-09.md`.
+
+### WORK ITEM: MASTER-SPECIFICATION-GATE — F&B SMART V5.1 PO APPROVAL
+- **Date:** 2026-10-09
+- **Mode:** GOVERNANCE_ONLY / SPECIFICATION APPROVAL
+- **Objective:** Record PO Tuấn's explicit approval of the complete F&B SMART V5.1 Clean Rebuild Master Specification and its four baseline contracts.
+- **Decision Source:** Project conversation, 2026-10-09: “V5.1 tôi đồng ý duyệt hết.”
+- **Scope:** CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md, Product Charter V5.1, Database Schema V0.1, State Machines V0.1, Firestore Query Cost Budget V0.1, and associated governance records.
+- **Result:** PO_VERIFIED / APPROVED / PROTECTED / LOCKED for the V5.1 specification baseline.
+- **Regression Check:** N/A — governance/specification-only update; no application code changed.
+- **Application Code Changes:** NONE.
+- **Build / Deployment / Runtime Evidence:** NONE claimed.
+- **Evidence:** 03_EVIDENCE/MASTER-SPEC-PO-APPROVAL-2026-10-09.md.
+- **Boundary:** V5.2 prepaid wallet addendum remains pending PO approval; low-wallet warning Decision 2 remains open.
+- **Next:** Finalize and obtain PO approval for the V5.2 prepaid wallet specification before implementation.
