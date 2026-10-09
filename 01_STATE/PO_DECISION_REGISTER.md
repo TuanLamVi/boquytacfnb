@@ -513,3 +513,12 @@
 - **Decided By:** Tuấn — Chủ đầu tư / Product Owner
 - **Status:** PO DECISION RECORDED; implementation and runtime evidence remain separate.
 - **Limit:** This decision does not approve the Master Specification, does not resolve Decision 2, and does not authorize application-code implementation before the Master Specification Gate is approved.
+
+### DEC-2026-MASTER-SPEC-APPROVAL-V5.1
+- **Date:** 2026-10-09
+- **Decision:** PO approves the complete F&B SMART V5.1 Clean Rebuild Master Specification and the four V5.1 baseline contracts: Product Charter V5.1, Database Schema V0.1, State Machines V0.1, and Firestore Query Cost Budget V0.1.
+- **Source:** Explicit PO statement in the project conversation: “V5.1 tôi đồng ý duyệt hết.”
+- **Scope:** Product/design specification approval only. This does not claim that all application code is implemented, built, deployed, or runtime-tested.
+- **Result:** PO_VERIFIED / APPROVED / PROTECTED / LOCKED for the V5.1 Master Specification baseline.
+- **Evidence:** 03_EVIDENCE/MASTER-SPEC-PO-APPROVAL-2026-10-09.md.
+- **Boundary:** V5.2 prepaid wallet/employee billing addendum is separate and remains pending PO approval. Low-wallet warning Decision 2 remains open. This V5.1 decision does not authorize V5.2 wallet implementation.
