@@ -532,3 +532,13 @@
 - **Affected File:** `99_ARCHIVE_SOURCE/WI-PREPAID-EMPLOYEE-BILLING-01_SPECIFICATION_ADDENDUM_V5.2.md`
 - **Decided By:** PO — confirmed in conversation on 2026-10-09
 - **Result:** 3-day warning lead time recorded; V5.2 addendum remains DRAFT pending resolution of the remaining notification details and formal approval. No application-code authorization is granted by this decision alone.
+
+
+### DEC-2026-V5.2-PREPAID-WALLET-IMPLEMENTATION-AUTHORIZATION
+- **Date:** 2026-10-09
+- **Decision:** PO directs the project to proceed with implementation of the V5.2 prepaid wallet because the PO considers the specification complete.
+- **Preserved requirements:** 3,000 VND per Vietnam service day for each eligible employee/kitchen connection; owner exempt; trial eligibility after 100 successful commercial orders excluding 5 test orders; low-wallet warning 3 days before projected insufficiency.
+- **Implementation boundary:** Implement only in the official Clean Rebuild repository. The legacy application repository remains FROZEN / READ-ONLY.
+- **First Failure:** Read-only inspection found the Clean Rebuild source tree does not contain account files exported by `clean_rebuild_core.dart`, and has no `functions/` or `firestore.rules`. Secure wallet implementation is therefore BLOCKED until the source baseline and server-side security foundation are reconciled.
+- **Evidence:** https://github.com/TuanLamVi/fnb-smart-v5-clean-rebuild/issues/1
+- **Result:** Implementation authorized by PO; current Work Item status `FIRST FAILURE / BLOCKED`. No application-code changes, tests, build, or deployment are claimed.
