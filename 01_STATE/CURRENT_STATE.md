@@ -1,6 +1,6 @@
 # CURRENT STATE — F&B SMART V5
 
-> **Trạng thái chính thức Repository:** 2026-09-28 (Sau khi hoàn tất Work Item Governance Baseline V5.1).
+> **Trạng thái chính thức Repository:** 2026-10-09 (Sau khi PO phê duyệt Master Specification V5.1).
 > **Operating Mode:** `CLEAN_REBUILD MODE ACTIVE`
 > **Legacy System Status:** `FROZEN / READ-ONLY FORENSIC REFERENCE`
 
@@ -41,7 +41,7 @@
 | GOV-027 LAW-016 Bridge | `PO_VERIFIED` | Governance Rule |
 | GOV-028 LAW-017 Reentry | `PO_VERIFIED` | Governance Rule |
 | A6-02 POS Payment UI (Legacy) | `BLOCKED / FIRST FAILURE / LEGACY FROZEN` | Vá luồng cũ bị dừng vĩnh viễn theo DEC-2026-PO-PAYMENT-V5.1 |
-| CLEAN_REBUILD_V5.1 | `ACTIVE / DESIGN & RESEARCH` | Clean Rebuild Master UX/UI Blueprint V5.1 & Reference Architecture Library V5.1 completed (Prompts 060 & 061) |
+| CLEAN_REBUILD_V5.1 | `MASTER SPECIFICATION PO_VERIFIED / PROTECTED / LOCKED` | PO approved the full V5.1 Master Specification and four baseline contracts on 2026-10-09; each implementation Work Item still requires its own authorization and evidence |
 
 ---
 
@@ -50,12 +50,13 @@
 ```text
 CURRENT MODE: CLEAN_REBUILD MODE ACTIVE
 LEGACY STATUS: FROZEN
-NEXT STEP: CLEAN REBUILD MASTER SPECIFICATION
+NEXT STEP: V5.2 PREPAID WALLET SPECIFICATION FINALIZATION
 ```
 
-- Không ghi nhận `PO_VERIFIED` cho bất kỳ application code mới nào cho đến khi hoàn thành Master Specification Gate và được PO nghiệm thu.
+- Master Specification Gate V5.1 đã được PO duyệt và khóa. Trạng thái này không tự động nghiệm thu application code.
+- Trước khi viết code ví trả trước V5.2, phải hoàn thiện và được PO duyệt phụ lục V5.2 cùng quyết định cảnh báo số dư thấp.
 
-## 4. Master Specification Gate — Remote Evidence Snapshot (2026-10-09)
+## 4. Master Specification Gate — Remote Evidence Snapshot Before PO Approval (2026-10-09)
 
 - **Four V5.1 technical contracts:** Present under `99_ARCHIVE_SOURCE/` on canonical `main`; verified source blob SHAs preserved.
 - **Clean Rebuild Master Specification:** `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`, status `DRAFT — READY FOR PO REVIEW`; not PO_VERIFIED.
@@ -66,3 +67,14 @@ NEXT STEP: CLEAN REBUILD MASTER SPECIFICATION
 - **Application code changes:** NONE.
 - **Canonical NEXT:** `CLEAN REBUILD MASTER SPECIFICATION` (unchanged).
 - **Evidence:** `03_EVIDENCE/GOV-MASTER-SPEC-RECONCILIATION-01_2026-10-09.md`.
+
+## 5. Latest PO Approval Update — 2026-10-09
+
+- **PO decision:** Tuấn explicitly approved the complete F&B SMART V5.1 Master Specification and all four V5.1 baseline contracts.
+- **Master Specification Gate:** PO_VERIFIED / APPROVED / PROTECTED / LOCKED.
+- **Evidence:** 03_EVIDENCE/MASTER-SPEC-PO-APPROVAL-2026-10-09.md.
+- **Supersedes:** The pre-approval status in Section 4 that said the Master Specification was awaiting PO review. Section 4 is retained as historical evidence of the earlier state.
+- **V5.2 prepaid wallet addendum:** Still DRAFT — PENDING PO REVIEW / NOT APPROVED FOR IMPLEMENTATION.
+- **Open V5.2 decision:** Low-wallet warning trigger, delivery channel, frequency, and duplicate suppression remain unresolved.
+- **Application code/build/deployment:** No application code was changed by this governance update; no new build, deployment, or runtime test is claimed.
+- **Canonical NEXT:** Finalize and obtain PO approval for the V5.2 prepaid wallet specification, including the low-wallet warning decision. Then authorize a separate implementation Work Item.
