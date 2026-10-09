@@ -51,7 +51,7 @@ CLEAN_REBUILD_V5.1                                             = MASTER SPECIFIC
 2. **LEGACY IS FROZEN:** Nghiêm cấm tiếp tục sửa chữa/patch legacy application code.
 3. **CONTRACT-FIRST & MASTER SPECIFICATION GATE:**
    - **CLEAN REBUILD MASTER SPECIFICATION V5.1 đã được PO duyệt** ngày 2026-10-09 (`PO_VERIFIED / PROTECTED / LOCKED`). Mọi Work Item triển khai V5.1 vẫn cần được ủy quyền riêng và phải có bằng chứng kiểm thử.
-   - **Ví trả trước V5.2 là phạm vi riêng:** chưa viết code ví cho đến khi phụ lục V5.2 được PO duyệt và Decision 2 về cảnh báo số dư thấp được chốt.
+   - **Ví trả trước V5.2 là phạm vi riêng:** chưa viết code ví cho đến khi phụ lục V5.2 được PO duyệt. Thời điểm cảnh báo đã được PO xác nhận là trước 3 ngày khi số dư dự kiến không đủ; chỉ kênh gửi, tần suất nhắc lại và chống gửi trùng còn mở.
    - Order bắt buộc: Requirements → Design → Data Schema → State Machines → Protocol Contracts → Acceptance Test Plan → Code.
 4. **NO ARBITRARY MID-BUILD CHANGES:** Không tự ý sửa thiết kế/kiến trúc giữa chừng nếu chưa qua STOP → Impact Analysis → PO Decision.
 5. **NO APPLICATION PO_VERIFIED:** Không tự ý ghi nhận `PO_VERIFIED` cho code ứng dụng mới.
