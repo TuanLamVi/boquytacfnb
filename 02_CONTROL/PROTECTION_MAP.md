@@ -75,3 +75,11 @@ LOCKED SCOPE IMPACT
 ```
 - Nếu tác động đến vùng Legacy: **STOP** (Legacy is Frozen).
 - Clean Rebuild được thực hiện độc lập trong boundary mới mà không xâm phạm vùng Legacy đã `LOCKED`.
+
+### 12. F&B SMART V5.1 MASTER SPECIFICATION BASELINE
+- **Status:** PO_VERIFIED / APPROVED / PROTECTED / LOCKED
+- **Approval Date:** 2026-10-09
+- **Protected Content:** 99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md and the four baseline contracts: Product Charter V5.1, Database Schema V0.1, State Machines V0.1, and Firestore Query Cost Budget V0.1.
+- **Evidence:** 03_EVIDENCE/MASTER-SPEC-PO-APPROVAL-2026-10-09.md.
+- **Rule:** Changes to the approved V5.1 specification baseline require the governance change process and explicit PO decision. This protects the specification baseline and does not claim that all application code is complete.
+- **Boundary:** V5.2 prepaid wallet/employee billing addendum is separate and remains pending PO approval; its low-wallet warning decision remains open.
