@@ -2,8 +2,8 @@
 
 ## 1. Document Control
 - **Document Title:** F&B Smart V5.1 — Clean Rebuild Master Specification
-- **Version:** DRAFT V0.1
-- **Status:** DRAFT — READY FOR PO REVIEW
+- **Version:** V0.1
+- **Status:** PO_VERIFIED / APPROVED / PROTECTED / LOCKED
 - **Build Mode:** CLEAN_REBUILD
 - **Primary Work Item:** MASTER-SPECIFICATION-GATE
 - **Prompt ID:** PROMPT-116
@@ -220,5 +220,10 @@ The scope encompasses the complete end-to-end lifecycle for F&B Smart V5.1:
 ---
 
 ## 32. Master Specification Gate / Approval
-- **Status:** DRAFT — READY FOR PO REVIEW
-- **Next Gate:** Awaiting PO review and formal verification gate (`PO_VERIFIED`).
+- **Status:** PO_VERIFIED / APPROVED / PROTECTED / LOCKED
+- **PO Approval Date:** 2026-10-09
+- **Approval Evidence:** `03_EVIDENCE/MASTER-SPEC-PO-APPROVAL-2026-10-09.md`
+- **Approved Scope:** Full F&B SMART V5.1 Clean Rebuild Master Specification and its four baseline contracts: Product Charter V5.1, Database Schema V0.1, State Machines V0.1, and Firestore Query Cost Budget V0.1.
+- **Boundary:** This approval approves the V5.1 specification baseline. It does not claim that all application code has been implemented, built, deployed, or runtime-tested. Individual implementation work still requires its own authorized Work Item and evidence.
+- **Protection:** Protected and locked as the approved V5.1 specification baseline. Any later change must follow the governance change process and explicit PO decision.
+- **Next:** V5.2 prepaid wallet specification finalization and separate PO approval. The V5.2 addendum and low-wallet warning Decision 2 are not approved/closed by this V5.1 decision.
