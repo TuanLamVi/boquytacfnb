@@ -50,7 +50,7 @@
 ```text
 CURRENT MODE: CLEAN_REBUILD MODE ACTIVE
 LEGACY STATUS: FROZEN
-NEXT STEP: V5.2 PREPAID WALLET SPECIFICATION FINALIZATION
+NEXT STEP: RESOLVE FIRST FAILURE — CLEAN REBUILD SOURCE BASELINE
 ```
 
 - Master Specification Gate V5.1 đã được PO duyệt và khóa. Trạng thái này không tự động nghiệm thu application code.
@@ -77,4 +77,17 @@ NEXT STEP: V5.2 PREPAID WALLET SPECIFICATION FINALIZATION
 - **V5.2 prepaid wallet addendum:** Still DRAFT — PENDING PO REVIEW / NOT APPROVED FOR IMPLEMENTATION.
 - **V5.2 low-wallet warning:** PO-confirmed trigger is 3 days before the wallet balance is projected to become insufficient; delivery channel, reminder frequency, and duplicate suppression/re-notification remain unresolved.
 - **Application code/build/deployment:** No application code was changed by this governance update; no new build, deployment, or runtime test is claimed.
-- **Canonical NEXT:** Update and finalize the V5.2 prepaid wallet specification with the already-confirmed 3-day low-wallet warning, resolve only the remaining notification details and technical contracts, then obtain PO approval before authorizing a separate implementation Work Item.
+- **PO direction (2026-10-09):** Proceed with V5.2 prepaid wallet implementation; preserve the confirmed 3-day warning lead time.
+- **Current Work Item:** WI-PREPAID-EMPLOYEE-BILLING-01 — `FIRST FAILURE / BLOCKED` due to incomplete Clean Rebuild source baseline and missing server-side functions/security rules.
+- **Evidence:** https://github.com/TuanLamVi/fnb-smart-v5-clean-rebuild/issues/1
+- **Canonical NEXT:** Reconcile the Clean Rebuild source baseline and establish server-side security foundation, then resume implementation. No application code was changed and no tests/build/deployment are claimed by this forensic step.
+
+
+## 6. V5.2 Prepaid Wallet Implementation — First Failure (2026-10-09)
+
+- **PO authorization:** Proceed with implementation; specification considered complete by PO.
+- **Preserved requirements:** 3,000 VND/day per eligible employee/kitchen connection; owner exempt; trial threshold 100 successful commercial orders excluding 5 test orders; warning 3 days before projected insufficiency.
+- **First Failure:** Canonical Clean Rebuild recursive tree contains 106 entries (not truncated), lacks `clean_rebuild_v5/lib/features/account/` despite exports in `clean_rebuild_core.dart`, and contains no `functions/` or `firestore.rules`.
+- **Safety consequence:** Do not implement financial billing as client-authoritative Firestore writes. Stop code changes until the baseline/server-side foundation is reconciled.
+- **Issue/evidence:** https://github.com/TuanLamVi/fnb-smart-v5-clean-rebuild/issues/1
+- **Status:** `FIRST FAILURE / BLOCKED`; no application code/build/deployment/test pass claimed.
