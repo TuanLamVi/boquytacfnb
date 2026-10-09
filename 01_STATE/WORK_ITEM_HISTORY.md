@@ -509,3 +509,13 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 - **Evidence:** 03_EVIDENCE/MASTER-SPEC-PO-APPROVAL-2026-10-09.md.
 - **Boundary:** V5.2 prepaid wallet addendum remains pending PO approval; low-wallet warning Decision 2 remains open.
 - **Next:** Finalize and obtain PO approval for the V5.2 prepaid wallet specification before implementation.
+
+
+## WI-PREPAID-EMPLOYEE-BILLING-01 — V5.2 PREPAID WALLET IMPLEMENTATION
+- **Date:** 2026-10-09
+- **PO Direction:** Proceed with implementation; PO states the specification is complete.
+- **Scope:** Store prepaid wallet, daily billing, top-up codes, 3-day low-wallet warning, insufficient-funds lock/restore, trial eligibility and auditable ledger.
+- **First Failure:** Canonical Clean Rebuild source tree is structurally incomplete: `clean_rebuild_core.dart` exports account files absent from the tracked tree; the repository has no server-side `functions/` or `firestore.rules`.
+- **Action Taken:** Read-only forensic inspection; opened blocker issue https://github.com/TuanLamVi/fnb-smart-v5-clean-rebuild/issues/1.
+- **Verdict:** `FIRST FAILURE / BLOCKED`. No application-code changes, tests, build, deployment, or runtime behavior claimed.
+- **Next:** Reconcile official Clean Rebuild source baseline and server-side security foundation, then continue the authorized Work Item.
