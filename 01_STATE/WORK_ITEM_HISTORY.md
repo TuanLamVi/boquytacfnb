@@ -478,3 +478,20 @@ Lưu lịch sử các Work Item đã thực hiện trong dự án theo cách ng�
 - Evidence: Full repository governance audit & diff verification.
 - Protection: `PROTECTED / BASELINE FREEZE`
 - Next: CLEAN REBUILD MASTER SPECIFICATION.
+
+### WORK ITEM: GOV-MASTER-SPEC-RECONCILIATION-01 — V5.1 CONTRACTS + MASTER SPEC DRAFT + V5.2 PREPAID ADDENDUM
+- **Date:** 2026-10-09
+- **Mode:** GOVERNANCE_ONLY
+- **Objective:** Reconcile the four V5.1 technical contracts and locate/promote the Clean Rebuild Master Specification draft without importing the migration branch wholesale; record the explicit prepaid trial-threshold PO decision and document V5.2 prepaid billing requirements.
+- **Repository / branch:** `TuanLamVi/boquytacfnb`, canonical `main`.
+- **Result:** MERGED / REMOTE READ-BACK VERIFIED for selective documentation reconciliation.
+- **Merge commit:** `f57e01b8fc274aaf917aeadcce9c2eb04e8a414f`.
+- **PR:** https://github.com/TuanLamVi/boquytacfnb/pull/1 (merged).
+- **Files promoted / added:** `99_ARCHIVE_SOURCE/CLEAN_REBUILD_MASTER_SPECIFICATION_V5.1.md`, four V5.1 contracts under `99_ARCHIVE_SOURCE/`, `99_ARCHIVE_SOURCE/WI-PREPAID-EMPLOYEE-BILLING-01_SPECIFICATION_ADDENDUM_V5.2.md`, and `01_STATE/PO_DECISION_REGISTER.md`.
+- **Source integrity:** Four contract blob SHAs and Master Specification source SHA preserved exactly; each was read back from canonical main.
+- **PO Decision 1:** Recorded explicit direction: 100 successful commercial orders, excluding 5 test orders. This records the PO direction only; live order-count telemetry is not verified here.
+- **Decision 2:** OPEN / PENDING PO DECISION — low-wallet warning trigger, channel, frequency, and duplicate suppression are not invented.
+- **Gate:** MASTER SPECIFICATION GATE remains INCOMPLETE — the Master Specification is DRAFT / READY FOR PO REVIEW, not PO_VERIFIED. The V5.2 prepaid addendum is DRAFT / NOT APPROVED FOR IMPLEMENTATION.
+- **Application code:** NONE changed. No build, deployment, or runtime billing claim is made.
+- **Canonical NEXT:** Remains `CLEAN REBUILD MASTER SPECIFICATION`; no NEXT transition is claimed.
+- **Evidence:** `03_EVIDENCE/GOV-MASTER-SPEC-RECONCILIATION-01_2026-10-09.md`.
