@@ -75,6 +75,6 @@ NEXT STEP: V5.2 PREPAID WALLET SPECIFICATION FINALIZATION
 - **Evidence:** 03_EVIDENCE/MASTER-SPEC-PO-APPROVAL-2026-10-09.md.
 - **Supersedes:** The pre-approval status in Section 4 that said the Master Specification was awaiting PO review. Section 4 is retained as historical evidence of the earlier state.
 - **V5.2 prepaid wallet addendum:** Still DRAFT — PENDING PO REVIEW / NOT APPROVED FOR IMPLEMENTATION.
-- **Open V5.2 decision:** Low-wallet warning trigger, delivery channel, frequency, and duplicate suppression remain unresolved.
+- **V5.2 low-wallet warning:** PO-confirmed trigger is 3 days before the wallet balance is projected to become insufficient; delivery channel, reminder frequency, and duplicate suppression/re-notification remain unresolved.
 - **Application code/build/deployment:** No application code was changed by this governance update; no new build, deployment, or runtime test is claimed.
-- **Canonical NEXT:** Finalize and obtain PO approval for the V5.2 prepaid wallet specification, including the low-wallet warning decision. Then authorize a separate implementation Work Item.
+- **Canonical NEXT:** Update and finalize the V5.2 prepaid wallet specification with the already-confirmed 3-day low-wallet warning, resolve only the remaining notification details and technical contracts, then obtain PO approval before authorizing a separate implementation Work Item.
