@@ -86,3 +86,13 @@ Nhiệm vụ tiếp theo: Hoàn thiện phụ lục ví trả trước V5.2, gi�
 - This is specification approval, not a claim that all application code has been implemented or runtime-tested.
 - V5.2 prepaid wallet addendum remains pending PO approval. Low-wallet warning lead time is confirmed as 3 days before projected insufficient balance; channel, repeat frequency, and duplicate suppression remain open.
 - NEXT: finalize and approve the V5.2 prepaid wallet specification before opening its implementation Work Item.
+
+
+## 6. Latest Work Item Handoff — V5.2 Prepaid Wallet (2026-10-09)
+
+- **PO direction:** Proceed with V5.2 prepaid wallet implementation; PO says specification is complete.
+- **Do not reopen:** 3,000 VND per service day per eligible employee/kitchen connection; owner exempt; 100 successful commercial orders excluding 5 test orders; low-wallet warning 3 days before projected insufficiency.
+- **FIRST FAILURE / BLOCKED:** Official Clean Rebuild repository has exports to missing account source paths and lacks server-side `functions/` and `firestore.rules`.
+- **Evidence/issue:** https://github.com/TuanLamVi/fnb-smart-v5-clean-rebuild/issues/1
+- **Next:** Resolve the source-baseline and server-side security foundation in the official Clean Rebuild repository. Do not patch frozen legacy source or implement wallet financial mutations as client-authoritative writes.
+- **No claims:** No application code changed, no tests/build/deployment passed, and no PO verification of app behavior.
